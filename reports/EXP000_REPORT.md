@@ -1,4 +1,20 @@
-# Meme Quant Lab — EXP-000 review, 22 september 2026
+# Meme Quant Lab — EXP-000, 22 september 2026
+
+## Actuele aanvulling: CPI-herstel afgerond
+
+75 tests en GitHub Actions slagen. `real-pilot-v4` bevat 3.082 events zonder issues.
+`archive-preflight-v3` bevat 168 events, waaronder 165 trades, en één onbevestigd
+administratief event. Eén ontbrekende koop is hersteld; twee bekende kopen zijn
+zonder dubbeltelling bevestigd. EXP-000 blijft FAIL.
+
+Zie [het herstelrapport](CPI_RECOVERY_REPORT.md) en
+[het controlebewijs](CPI_RECOVERY_VERIFICATION.json) voor de actuele runs en beperkingen.
+De volgende stap is census- en historische regime-reconciliatie; de resterende kandidaat
+blijft in quarantaine.
+
+---
+
+## Eerdere review vóór CPI-herstel (historisch verslag)
 
 **Status: FAIL. Geen vrijgave voor EXP-001. De pilot met 1.000 echte launches is niet uitgevoerd.**
 

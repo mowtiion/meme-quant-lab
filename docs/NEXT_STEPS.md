@@ -4,12 +4,13 @@ GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
 
 De drie eerdere onopgeloste AMM-events zijn gereconcilieerde protocol buy-and-burn-acties.
-De oorspronkelijke proef heeft nu nul normalisatiefouten. De nieuwe historische proef heeft
-nog twee PumpSwap-transacties met afgebroken logs. EXP-000 blijft FAIL.
+De oorspronkelijke proef heeft nul normalisatiefouten. CPI-herstel van de twee historische
+transacties is geïmplementeerd en getest: één ontbrekende koop hersteld, twee bekende kopen
+zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EXP-000 blijft FAIL.
 
-1. Herstel ontbrekende eventlogs uit de inner CPI-instructies van de twee vastgelegde transacties.
-   Valideer programma-attributie, invocation-scope, eventvolgorde en voorkoming van dubbeltelling
-   tegen volledige transacties. Eventuele onbewijsbare gevallen blijven in quarantaine.
+1. CPI-herstel is afgerond voor de gevalideerde varianten; zie `reports/CPI_RECOVERY_REPORT.md`.
+   Bewaar het resterende `CPI_EXECUTION_UNPROVEN`-event in quarantaine totdat aanvullend
+   uitvoeringsbewijs of gevalideerde historische programmasemantiek beschikbaar is.
 2. Vergelijk alle create-instructies met CreateEvents en een tweede bron. Leg historische
    IDL/deployment-versies en regimes vast. Onbekende regimes blijven zichtbaar.
 3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn
@@ -33,7 +34,7 @@ veld-/kostenvergelijking en kostenlimiet, pas daarna eventuele goedkeuring voor 
 ## Uitvoerbare readiness-controle
 
 ```bash
-python -m meme_quant.cli preflight --report experiments/exp000/archive-preflight-v2.json
+python -m meme_quant.cli preflight --report experiments/exp000/archive-preflight-v3.json
 ```
 
 Verwacht: `BLOCKED`, exitcode 2. Dit start geen download en verlaagt geen onderzoekscriteria.

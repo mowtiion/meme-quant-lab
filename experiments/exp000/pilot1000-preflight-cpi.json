@@ -1,0 +1,40 @@
+{
+  "plan_id": "MEME-EXP-000-PILOT-1000-v1",
+  "dataset_version": "260231a35dca90c12b42befce65f04c567843cc468abc37678f52e60bea6160a",
+  "status": "BLOCKED",
+  "blockers": [
+    "complete_snapshot_coverage",
+    "creator_wallet_point_in_time_history",
+    "decoding_and_normalization",
+    "historical_idl_regime_validation",
+    "holder_transfer_ledger",
+    "launch_census_independent_reconciliation",
+    "observed_availability_and_latency",
+    "outcome_coverage_and_entry_reference",
+    "pump_swap_cross_venue_ledger",
+    "real_launch_sample_1000",
+    "Insufficient real launches for the frozen 1000-launch sample"
+  ],
+  "bulk_download_started": false,
+  "counts": {
+    "events": 168,
+    "issues": 1,
+    "launch_census": 1,
+    "outcomes": 25,
+    "sampled_launches": 1,
+    "snapshots": 5
+  },
+  "gates": {
+    "complete_snapshot_coverage": "FAIL",
+    "creator_wallet_point_in_time_history": "FAIL",
+    "decoding_and_normalization": "FAIL",
+    "historical_idl_regime_validation": "FAIL",
+    "holder_transfer_ledger": "FAIL",
+    "launch_census_independent_reconciliation": "FAIL",
+    "observed_availability_and_latency": "FAIL",
+    "outcome_coverage_and_entry_reference": "FAIL",
+    "pump_swap_cross_venue_ledger": "FAIL",
+    "raw_block_coverage": "PASS",
+    "real_launch_sample_1000": "FAIL"
+  }
+}

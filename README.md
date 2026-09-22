@@ -13,7 +13,7 @@ Onderzoek of vroege on-chain signalen toekomstige Solana/Pump.fun-runners kunnen
 - Handelsstromen, buyer/trade/volume-dynamiek en conditionele prijs/curve-afgeleiden.
 - Gescheiden diagnostische outcomes; onuitvoerbare prijzen worden geen winstlabels.
 - Parquet-tabellen, DuckDB-database, reproduceerbare configuratie en runrapporten.
-- 54 tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
+- 75 tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
 - Protocol buy-and-burn-acties apart gereconcilieerd; ze tellen niet als walletkopers of gewone koopdruk.
 
 ## Starten — Python 3.12
@@ -56,16 +56,17 @@ Daarom blijven de onderzoeksgates dicht, ook bij een foutloze smoke-run. De code
 ML-training, wallet-signing, live trading of verborgen betaalde integraties.
 
 De herhaalde 41-blokkenproef bevat 3.082 events zonder decodeer-/normalisatiefouten.
-Een extra archiefproef bevat twee transacties met afgebroken logs: volledige reconstructie
-van 1.000 echte launches blijft daarom geblokkeerd. Het pilotplan staat in `configs/pilot1000.json`.
+CPI-herstel voegt in de archiefproef één ontbrekend koop-event toe, zonder dubbeltelling.
+Die proef bevat nu 168 events en één onbevestigd administratief event. De volledige
+reconstructie van 1.000 echte launches blijft geblokkeerd. Het pilotplan staat in `configs/pilot1000.json`.
 
 ```bash
-python -m meme_quant.cli preflight --report experiments/exp000/archive-preflight-v2.json
+python -m meme_quant.cli preflight --report experiments/exp000/archive-preflight-v3.json
 ```
 
 Deze controle geeft exitcode 2 zolang de onderzoeksvoorwaarden niet zijn gehaald.
 
-Zie [het onderzoeksrapport](reports/EXP000_REPORT.md), [databronnen](docs/DATA_SOURCES.md),
+Zie [het CPI-herstelrapport](reports/CPI_RECOVERY_REPORT.md), [het onderzoeksrapport](reports/EXP000_REPORT.md), [databronnen](docs/DATA_SOURCES.md),
 [schema's](docs/SCHEMAS.md) en [het vervolgplan](docs/NEXT_STEPS.md).
 
 De officiële repository staat op [github.com/mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).

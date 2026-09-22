@@ -1,0 +1,76 @@
+{
+  "source_commit": "38fea1685405e412ce1a2b86e472f7d62203dbde",
+  "tests_passed": 75,
+  "ci_url": "https://github.com/mowtiion/meme-quant-lab/actions/runs/35776709066",
+  "runs": {
+    "real-pilot-v4": {
+      "counts": {
+        "issues": 0,
+        "events": 3082,
+        "launch_sample": 5,
+        "outcomes": 125,
+        "snapshots": 25,
+        "decoded_events": 3258
+      },
+      "event_kinds": {
+        "trade": 3072,
+        "protocol_buy_burn": 3,
+        "create": 5,
+        "complete": 1,
+        "migration": 1
+      },
+      "dataset_version": "2d85b330927834b689325bf5812030914108702786a3cc69b4017cd7d4843569",
+      "metrics": {
+        "cpi_recovery_transactions": 0,
+        "issue_reasons": {},
+        "label_status": {
+          "CENSORED": 40,
+          "UNPRICED": 85
+        },
+        "recovered_missing_logs": 0,
+        "snapshot_status": {
+          "INCOMPLETE_COVERAGE": 25
+        },
+        "verified_cpi_events": 0
+      },
+      "all_table_payloads_equal": true,
+      "standalone_database": true,
+      "additional_economic_events": 0
+    },
+    "archive-preflight-v3": {
+      "counts": {
+        "issues": 1,
+        "events": 168,
+        "launch_sample": 1,
+        "outcomes": 25,
+        "snapshots": 5,
+        "decoded_events": 175
+      },
+      "event_kinds": {
+        "trade": 165,
+        "protocol_buy_burn": 2,
+        "create": 1
+      },
+      "dataset_version": "260231a35dca90c12b42befce65f04c567843cc468abc37678f52e60bea6160a",
+      "metrics": {
+        "cpi_recovery_transactions": 2,
+        "issue_reasons": {
+          "CPI_EXECUTION_UNPROVEN": 1
+        },
+        "label_status": {
+          "CENSORED": 10,
+          "UNPRICED": 15
+        },
+        "recovered_missing_logs": 1,
+        "snapshot_status": {
+          "INCOMPLETE_COVERAGE": 5
+        },
+        "verified_cpi_events": 3
+      },
+      "all_table_payloads_equal": true,
+      "standalone_database": true,
+      "additional_economic_events": 1
+    }
+  },
+  "fixture_raw_matches": 2
+}
