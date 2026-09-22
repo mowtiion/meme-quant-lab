@@ -57,4 +57,5 @@ ML-training, wallet-signing, live trading of verborgen betaalde integraties.
 Zie [het onderzoeksrapport](reports/EXP000_REPORT.md), [databronnen](docs/DATA_SOURCES.md),
 [schema's](docs/SCHEMAS.md) en [het vervolgplan](docs/NEXT_STEPS.md).
 
-Deze checkout heeft lokale Git-historie; er is nog geen GitHub-remote gekoppeld.
+De officiële repository staat op [github.com/mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
+Grote raw datasets en gegenereerde tabellen blijven buiten GitHub; code, schema's, tests en rapporten staan daar wel.
