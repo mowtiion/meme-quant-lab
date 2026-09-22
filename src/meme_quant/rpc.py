@@ -14,6 +14,22 @@ from .storage import immutable_write, json_bytes, store_raw
 READ_METHODS = {"getSlot", "getBlocks", "getBlock", "getTransaction", "getSignaturesForAddress", "getBlockTime", "getAccountInfo"}
 
 
+def read_response(response, deadline):
+    """A trickling HTTP body must not reset the total request deadline forever."""
+    chunks=[]
+    while True:
+        if time.monotonic() >= deadline:
+            raise TimeoutError('RPC response deadline exceeded')
+        chunk=response.read1(64*1024)
+        if not chunk:break
+        chunks.append(chunk)
+    raw=b''.join(chunks)
+    length=response.headers.get('Content-Length')
+    if length is not None and int(length)!=len(raw):
+        raise http.client.IncompleteRead(b'',int(length)-len(raw))
+    return raw
+
+
 class RPC:
     def __init__(self, url: str | None = None, min_interval: float = 0.6, attempts: int = 3):
         self.url = url or os.environ.get("SOLANA_RPC_URL", "https://api.mainnet-beta.solana.com")
@@ -30,8 +46,9 @@ class RPC:
             self.last = time.monotonic()
             request = urllib.request.Request(self.url, data=payload, headers={"Content-Type":"application/json"})
             try:
+                deadline=time.monotonic()+25
                 with urllib.request.urlopen(request, timeout=25) as response:
-                    raw = response.read()
+                    raw = read_response(response,deadline)
                 envelope = json.loads(raw)
                 if "error" in envelope:
                     # Do not log arbitrary provider messages that may contain credentials.

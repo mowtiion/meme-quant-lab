@@ -9,7 +9,7 @@ from meme_quant.buffer_replay import BufferReplay,history_rows,read_hashed
 from meme_quant.decoder import ZERO,unbase58
 from meme_quant.domain import IntegrityError
 from meme_quant.regimes import LOADER
-from meme_quant.rpc import RPC
+from meme_quant.rpc import RPC,read_response
 from meme_quant.storage import store_raw,json_bytes
 
 class UploadReplay(unittest.TestCase):
@@ -113,11 +113,22 @@ class HistoryIntegrity(unittest.TestCase):
             with self.assertRaisesRegex(IntegrityError,'SHA256'):read_hashed(root,h)
 
     def test_partial_http_response_is_retried_without_becoming_raw_data(self):
-        broken=MagicMock();broken.__enter__.return_value.read.side_effect=http.client.IncompleteRead(b'partial',10)
-        good=MagicMock();good.__enter__.return_value.read.return_value=b'{"result":42}'
+        broken=MagicMock();broken.__enter__.return_value.read1.side_effect=http.client.IncompleteRead(b'partial',10)
+        good=MagicMock();good.__enter__.return_value.read1.side_effect=[b'{"result":42}',b''];good.__enter__.return_value.headers.get.return_value=None
         with patch('urllib.request.urlopen',side_effect=[broken,good]) as call,patch('time.sleep'):
             envelope,raw=RPC('https://example.invalid',attempts=2).call('getSlot',[])
         self.assertEqual(envelope,{'result':42});self.assertEqual(call.call_count,2)
         self.assertEqual(raw,b'{"result":42}')
+
+    def test_trickling_body_cannot_reset_request_deadline(self):
+        response=MagicMock();response.read1.return_value=b'x'
+        with patch('time.monotonic',side_effect=[1,6]),self.assertRaises(TimeoutError):
+            read_response(response,5)
+
+    def test_premature_eof_fails_content_length_check(self):
+        response=MagicMock();response.read1.side_effect=[b'part',b'']
+        response.headers.get.return_value='10'
+        with self.assertRaises(http.client.IncompleteRead):
+            read_response(response,float('inf'))
 
 if __name__=='__main__':unittest.main()
