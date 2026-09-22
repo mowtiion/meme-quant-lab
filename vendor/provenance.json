@@ -1,0 +1,20 @@
+{
+  "PUMP_SWAP_README.md": {
+    "sha256": "58edc63278cf87ff464f8ff7efd55bed83f55045319e483454abd075c34956fa",
+    "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/docs/PUMP_SWAP_README.md"
+  },
+  "pump.json": {
+    "sha256": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+    "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump.json"
+  },
+  "PUMP_PROGRAM_README.md": {
+    "sha256": "ce6c84112e9ec870a2341562eaf825fe05059b157ce35cdf9d59a533262edc90",
+    "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/docs/PUMP_PROGRAM_README.md"
+  },
+  "pump_amm.json": {
+    "sha256": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1",
+    "url": "https://raw.githubusercontent.com/pump-fun/pump-public-docs/main/idl/pump_amm.json"
+  },
+  "retrieved_date": "2026-09-22",
+  "warning": "Content hashes pin bytes; historical deployment-slot mapping NOT validated."
+}

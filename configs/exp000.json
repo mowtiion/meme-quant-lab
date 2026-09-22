@@ -1,0 +1,13 @@
+{
+  "experiment_id": "MEME-EXP-000",
+  "seed": 20260922,
+  "sample_size": 1000,
+  "snapshot_seconds": [10, 30, 60, 120, 300],
+  "horizon_seconds": [1800, 3600, 21600, 86400, 604800],
+  "multiples": [2, 5, 10, 20, 50, 100],
+  "time_mode": "chain_replay",
+  "boundary_guard_ms": 1000,
+  "entry_mark_max_age_ms": 30000,
+  "execution_validated": false,
+  "live_enabled": false
+}

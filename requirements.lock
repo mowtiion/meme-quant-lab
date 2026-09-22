@@ -1,0 +1,4 @@
+# Direct/runtime dependencies; neither package declares runtime dependencies.
+# Python 3.12; regenerate deliberately and re-run the integrity suite on upgrades.
+pyarrow==25.0.1
+duckdb==1.5.5

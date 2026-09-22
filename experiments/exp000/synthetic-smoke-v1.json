@@ -1,0 +1,98 @@
+{
+  "code_dirty": false,
+  "conclusion": "Engineering smoke run only",
+  "continue_to_exp001": false,
+  "counts": {
+    "events": 5040,
+    "issues": 0,
+    "launch_census": 1200,
+    "outcomes": 25000,
+    "sampled_launches": 1000,
+    "snapshots": 5000
+  },
+  "data_provenance": {
+    "coverage_end_ms": 1791804800000,
+    "coverage_start_ms": 1790000000000,
+    "enumeration_complete": true,
+    "source": "SYNTHETIC_FIXTURE",
+    "synthetic": true
+  },
+  "dataset_version": "ec34a96330ec4c16013e83563fff45786604c10230457c3f6a35f4380aeada39",
+  "experiment_id": "MEME-EXP-000",
+  "feature_families": {
+    "creator": "FAIL: prior launch history not ingested",
+    "distribution": "FAIL: transfer and owner ledger missing",
+    "dynamics": "FAIL: algorithms tested; complete historical inputs not established",
+    "outcomes": "FAIL: horizon coverage and executable entry reference unavailable",
+    "token_market": "FAIL: incomplete regime validation and no certified reserve replay",
+    "trading": "FAIL: no independent complete-ledger reconciliation",
+    "wallets_graphs": "FAIL: prior wallet history and clusters not ingested"
+  },
+  "features": "trade flow and trajectory; other families explicitly unavailable",
+  "gates": {
+    "complete_snapshot_coverage": "FAIL",
+    "creator_wallet_point_in_time_history": "FAIL",
+    "decoding_and_normalization": "FAIL",
+    "historical_idl_regime_validation": "FAIL",
+    "holder_transfer_ledger": "FAIL",
+    "launch_census_independent_reconciliation": "FAIL",
+    "observed_availability_and_latency": "FAIL",
+    "outcome_coverage_and_entry_reference": "FAIL",
+    "pump_swap_cross_venue_ledger": "FAIL",
+    "raw_block_coverage": "FAIL",
+    "real_launch_sample_1000": "FAIL"
+  },
+  "git_commit": "2b649a011551e726924d26315df1810d558ae66d",
+  "holdout_window": null,
+  "hypothesis": "Historical point-in-time reconstruction is reliable",
+  "labels": "diagnostic tape marks only; executable labels NULL",
+  "metrics": {
+    "label_status": {
+      "DIAGNOSTIC_ONLY": 11985,
+      "UNPRICED": 13015
+    },
+    "snapshot_status": {
+      "DIAGNOSTIC_UNVALIDATED": 5000
+    }
+  },
+  "parameters": {
+    "boundary_guard_ms": 1000,
+    "entry_mark_max_age_ms": 30000,
+    "execution_validated": false,
+    "experiment_id": "MEME-EXP-000",
+    "horizon_seconds": [
+      1800,
+      3600,
+      21600,
+      86400,
+      604800
+    ],
+    "live_enabled": false,
+    "multiples": [
+      2,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "sample_size": 1000,
+    "seed": 20260922,
+    "snapshot_seconds": [
+      10,
+      30,
+      60,
+      120,
+      300
+    ],
+    "time_mode": "chain_replay"
+  },
+  "plots": [],
+  "reason": "Essential data-integrity gates are unproven or failed; no predictive modelling",
+  "run_at": "2026-09-22T13:12:38.153289+00:00",
+  "status": "FAIL",
+  "synthetic": true,
+  "train_window": null,
+  "validation_window": null,
+  "artifact_path": "data/processed/synthetic-smoke-v1"
+}
