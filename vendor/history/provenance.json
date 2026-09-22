@@ -1,0 +1,22 @@
+{
+  "publication_commit": "e0687ae9b7e064a0f54efc7297c65eecfbba3a8f",
+  "publication_date": "2026-09-12T14:28:42Z",
+  "source": "https://github.com/pump-fun/pump-public-docs/tree/e0687ae9b7e064a0f54efc7297c65eecfbba3a8f/idl",
+  "claimed_monorepo_reference": "062c00b",
+  "files": {
+    "pump.json": {
+      "local_file": "vendor/pump.json",
+      "git_blob_sha": "2f1c65d4ff209d0f233c0e95552dd82873e4afb5",
+      "sha256": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+      "same_bytes_as_current_vendor": true
+    },
+    "pump_amm.json": {
+      "local_file": "vendor/pump_amm.json",
+      "git_blob_sha": "5aaae7708cb5f020e0af2b55f05d6dd922d8f7a6",
+      "sha256": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1",
+      "same_bytes_as_current_vendor": true
+    }
+  },
+  "binary_binding": "UNPROVEN",
+  "warning": "Git publication and interface equality do not prove a deployed binary or its historical execution semantics."
+}

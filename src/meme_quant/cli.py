@@ -36,8 +36,32 @@ def main() -> None:
     observe = sub.add_parser("observe-programs",help="Read current metadata of two programs; four bounded public RPC calls")
     observe.add_argument("--raw-root",type=Path,default=Path("data/raw"))
     observe.add_argument("--out",type=Path,required=True)
+    buffer = sub.add_parser("reconstruct-buffer",help="Reconstruct a historical loader buffer offline; never execute the binary")
+    buffer.add_argument("--manifest",type=Path,required=True)
+    buffer.add_argument("--raw-root",type=Path,default=Path("data/raw"))
+    buffer.add_argument("--program",required=True)
+    buffer.add_argument("--programdata",required=True)
+    buffer.add_argument("--upgrade-signature",required=True)
+    buffer.add_argument("--out",type=Path,required=True)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO,format="%(levelname)s %(message)s")
+    if args.command == "reconstruct-buffer":
+        from .buffer_replay import reconstruct
+        from .storage import immutable_write, json_bytes
+        import hashlib
+        import subprocess
+        if args.out.exists():
+            parser.error("Output already exists; choose a fresh reconstruction directory")
+        manifest_raw = args.manifest.read_bytes()
+        binary, report = reconstruct(json.loads(manifest_raw),args.raw_root,args.program,
+                                     args.programdata,args.upgrade_signature)
+        report.update(git_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
+                      code_dirty=bool(subprocess.check_output(["git","status","--porcelain"],text=True).strip()),
+                      manifest_sha256=hashlib.sha256(manifest_raw).hexdigest())
+        immutable_write(args.out/"program.elf",binary)
+        immutable_write(args.out/"report.json",json_bytes(report))
+        print(json.dumps({k:report[k] for k in ("status","binary_sha256","binary_bytes","write_operations")}))
+        return
     if args.command in {"census","observe-programs"}:
         from .census import audit_manifests, save_audit
         if args.out.exists():

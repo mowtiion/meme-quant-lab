@@ -1,5 +1,6 @@
 """Bounded READ-ONLY RPC collection. No signing, sending, or credentials in logs."""
 import json
+import http.client
 import os
 import time
 import urllib.error
@@ -43,7 +44,7 @@ class RPC:
                     raise IntegrityError(f"RPC HTTP {exc.code}") from None
                 delay = exc.headers.get("Retry-After", "")
                 time.sleep(min(30, max(2**attempt, float(delay) if delay.isdigit() else 0)))
-            except (urllib.error.URLError, TimeoutError, OSError):
+            except (urllib.error.URLError, TimeoutError, OSError, http.client.IncompleteRead):
                 if attempt+1 == self.attempts:
                     raise IntegrityError("RPC network/timeout failure") from None
                 time.sleep(2**attempt)
