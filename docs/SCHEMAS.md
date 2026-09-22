@@ -6,7 +6,7 @@
 |---|---|---|
 | RPC-response | Exacte JSON-bytes in `data/raw/objects/<prefix>/<sha256>.json` | SHA-256 wordt opnieuw gecontroleerd voor iedere replay; geen bewerking of overschrijving |
 | Collectiemanifest | Bron, finalized, begin/eindslot, enumeratie-hash, enumerated_slots, block-hashes, issues, collected_at, complete | Een ontbrekend blok sluit complete uit; enumeratie wordt apart geverifieerd |
-| Gedecodeerd event | slot, tx_index, event_index, signature, program, event_ms, name, payload, raw_sha256, decoder_hash | Event-index is log-index binnen transactie; identieke CPI-kopie wordt niet opnieuw ingelezen |
+| Gedecodeerd event | slot, tx_index, event_index, signature, program, event_ms, name, payload, raw_sha256, decoder_hash | Event-index is log-index, of instructie-preorder bij geverifieerd CPI-herstel; zie herstelcontract hieronder |
 | Genormaliseerd event | Event-contract in domain.py | Logische identiteit plus tijd, mint, kind, bedragen/decimals, wallet, quote-unit en herkomst |
 
 Raw JSON is de bron van waarheid; Parquet is een lossless herleidbare projectie, geen vervanging
@@ -84,3 +84,29 @@ met gevalideerde decimals. `wallet` en `side` zijn NULL. `extra.economic_actor =
 legt de gebruikte bewijssoort vast. Raw en decoded logs blijven beschikbaar.
 Dit event telt niet mee in wallet-tradefeatures of trade-mark-labels. Een volledig gereconcilieerde
 reserve/supply-ledger die het prijseffect verwerkt is nog niet beschikbaar.
+
+## CPI-herstelcontract
+
+Bij `TRUNCATED_LOGS` (eventueel met `UNCLOSED_LOG_STACK`) wordt één complete
+transactiestroom uit interne eventinstructies opgebouwd. De fallback vereist correcte
+programma- en ouderattributie, stackHeight, event-authority-account, vastgelegde IDL,
+exacte log/CPI-payloadvergelijking en succesvolle uitvoering van de CPI en zijn voorouders.
+Een geslaagde transactie bewijst alleen succes van top-level-instructies; ontbrekend
+succesbewijs voor inner calls blijft `CPI_EXECUTION_UNPROVEN`. Zulke kandidaten staan
+alleen in issues, niet in decoded_events of trades. Onbekende instructievarianten en
+ontbrekende verwachte events blijven blockers. Dit is geen historische deploymentvalidatie.
+
+Ondersteunde PumpSwap-varianten: buy, buy_exact_quote_in, sell,
+close_user_volume_accumulator en boost_buy_and_burn. Pump-eventherstel is nog niet gevalideerd.
+Fouten in structuur, autoriteit of payload wijzen de gehele fallback af; oorspronkelijke
+logs en hun issues blijven dan zichtbaar. De gate blijft FAIL.
+
+Bij geslaagd herstel heeft ieder bevestigd event `event_source=verified_self_cpi`,
+`instruction_path=[outer_index,inner_index]`, `parent_instruction_path`,
+`source_log_index` (NULL indien afwezig), `recovered_missing_log` en
+`recovery_original_issues`. `event_index` is de nulgebaseerde preorderpositie van de
+CPI in alle outer/inner-instructies van de transactie. De logstroom wordt vervangen,
+niet eraan toegevoegd. Normalisatie kopieert dit bewijs naar `extra.recovery`.
+Event-ID's kunnen daardoor tussen oude logdatasets en herstelde datasets verschillen;
+combineer ze nooit zonder datasetversie en expliciete reconciliatie op transactie/instructie.
+Binnen één replay is er één geordende stroom per transactie, zonder dubbele log/CPI-kopieën.

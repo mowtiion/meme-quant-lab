@@ -151,7 +151,11 @@ def run(events: list[Event], config: dict, info: dict, out: Path,
                   "wallets_graphs":"FAIL: prior wallet history and clusters not ingested",
                   "outcomes":"FAIL: horizon coverage and executable entry reference unavailable"},
               "metrics":{"snapshot_status":dict(Counter(s['status'] for s in snaps)),
-                         "label_status":dict(Counter(l['status'] for l in labels))},
+                         "label_status":dict(Counter(l['status'] for l in labels)),
+                         "verified_cpi_events":sum(r.get('event_source') == 'verified_self_cpi' for r in decoded or []),
+                         "recovered_missing_logs":sum(r.get('recovered_missing_log', False) for r in decoded or []),
+                         "cpi_recovery_transactions":len({r['signature'] for r in decoded or [] if r.get('event_source') == 'verified_self_cpi'}),
+                         "issue_reasons":dict(Counter(i['reason'] for i in issues))},
               "conclusion":"Engineering smoke run only" if synthetic else "Real-data reconnaissance; EXP-000 NOT passed"}
     out.mkdir(parents=True)
     tables = {"events":[asdict(e) for e in events],"launch_sample":[asdict(e) for e in sample],

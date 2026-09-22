@@ -1,7 +1,7 @@
 """Pinned Anchor IDL log decoder. Unknown bytes and missing fields are surfaced.
 
     Logs are attributed to the active program, never to an arbitrary base64 string.
-    CPI copies are not ingested again. Missing/truncated logs block completeness.
+    Truncated logs use a scoped, execution-verified CPI fallback when possible.
 """
 import base64
 import hashlib
@@ -107,6 +107,7 @@ def decode_block(block: dict, slot: int, raw_hash: str, decoders: dict[str, IDLD
     if block.get("blockTime") is None:
         return [], [{"slot":slot, "reason":"NULL_BLOCK_TIME"}]
     for tx_index, tx in enumerate(block.get("transactions", [])):
+        transaction_start, issue_start = len(decoded), len(issues)
         meta = tx.get("meta")
         if meta is None:
             issues.append({"slot":slot,"tx_index":tx_index,"reason":"NULL_META"})
@@ -156,6 +157,20 @@ def decode_block(block: dict, slot: int, raw_hash: str, decoders: dict[str, IDLD
                                    "reason":"DECODE_ERROR", "detail":str(exc)})
         if stack:
             issues.append({"slot":slot,"signature":signature,"reason":"UNCLOSED_LOG_STACK"})
+        transaction_issues = issues[issue_start:]
+        reasons = {i["reason"] for i in transaction_issues}
+        if "TRUNCATED_LOGS" in reasons and reasons <= {"TRUNCATED_LOGS", "UNCLOSED_LOG_STACK"}:
+            from .cpi import recover_transaction
+            try:
+                recovered, recovery_issues = recover_transaction(
+                    tx, decoded[transaction_start:], slot, tx_index, block["blockTime"]*1000,
+                    raw_hash, decoders, transaction_issues)
+            except (KeyError, IndexError, TypeError, ValueError) as exc:
+                issues.append({"slot":slot,"signature":signature,"reason":"CPI_RECOVERY_REJECTED",
+                               "detail":str(exc)})
+            else:
+                decoded[transaction_start:] = recovered
+                issues[issue_start:] = recovery_issues
     return decoded, issues
 
 
@@ -322,6 +337,10 @@ def normalize_block(block: dict, decoded: list[dict], amm_decoder: IDLDecoder | 
             quote_decimals = 9 if quote_mint == SOL else decimals.get(quote_mint)
             common = {k:row[k] for k in ["slot","tx_index","event_index","signature","program",
                                        "event_ms","raw_sha256","decoder_hash"]}
+            if row.get("event_source") == "verified_self_cpi":
+                extra = {**extra, "recovery": {k: row[k] for k in (
+                    "event_source", "instruction_path", "parent_instruction_path",
+                    "source_log_index", "recovered_missing_log", "recovery_original_issues")}}
             event = Event(**common, event_id=f"{row['slot']}:{row['signature']}:{row['event_index']}:{row['program']}",
                           mint=mint, kind=kind, wallet=None if kind=="protocol_buy_burn" else p.get("user"),
                           side=side, base_raw=base_raw, quote_raw=quote_raw,
