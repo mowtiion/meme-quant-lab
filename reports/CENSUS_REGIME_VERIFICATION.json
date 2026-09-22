@@ -1,0 +1,63 @@
+{
+  "census_result": {
+    "blocks": 44,
+    "create_instructions": 6,
+    "issues": 0,
+    "matched_creates": 6
+  },
+  "conclusion": "Internal launch agreement confirmed; full-day independent census and binary-to-IDL deployment mapping remain unproven.",
+  "independent_probe": {
+    "attempts": 1,
+    "independent_census_verified": false,
+    "method": "getBlocks",
+    "params": [
+      447000000,
+      447000002,
+      {
+        "commitment": "finalized"
+      }
+    ],
+    "source": "https://solana-rpc.publicnode.com",
+    "status": "HTTP_403"
+  },
+  "launch_fixtures_verified_against_raw": 6,
+  "program_metadata_reparsed_against_raw": 2,
+  "source_commit": "b802d4c9be6ab76d4b6fe5b412add385cefe0e15",
+  "tests_passed": 100,
+  "upgrade_fixtures_verified_against_raw": 2,
+  "verified_upgrade_calls": [
+    {
+      "block_time": 1789468472,
+      "block_time_utc": "2026-09-15T10:34:32+00:00",
+      "historical_binary_idl_mapping": "UNPROVEN",
+      "instruction": "loader_v3_upgrade",
+      "instruction_path": [
+        3,
+        0
+      ],
+      "manifest_sha256": "fb5bde9975157c7092b897cb9255f1ab744116f4f4233d3b0184f55b44de0c9f",
+      "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "programdata": "B5MvUwXdiW1NMM6QFFD3ssPKBujD4zMohncbM73Z2BQu",
+      "raw_sha256": "f97361bb97c51a284eee8ddeabb133e5260e8b491f39b1de360415872347c14c",
+      "signature": "5mfXpjh9SFxVq61V6z31nv3Mvp6UopTpjHdNvqimcWioFHQKrhW5apJxn5UFNSjBRAEixdi3bjotprVAgEPhYGmY",
+      "slot": 447228373
+    },
+    {
+      "block_time": 1789226636,
+      "block_time_utc": "2026-09-12T15:23:56+00:00",
+      "historical_binary_idl_mapping": "UNPROVEN",
+      "instruction": "loader_v3_upgrade",
+      "instruction_path": [
+        3,
+        0
+      ],
+      "manifest_sha256": "3b8cb6d29087101268399db99e5979e640695ba65fdabaa1d5fe2dd2f03e0442",
+      "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "programdata": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+      "raw_sha256": "94e6de2528e12e64c92bd3afe54c57917cc64102073cd22fffc3a4f06e68ac9c",
+      "signature": "3kTQq7ETwHfaq6mfRAYy2NZmiD9Qm7EJ6moPcoU2Wt18tTX9zUFYZ55daC1okHBueQWXqNx9gZxwYGom3N3SQvTD",
+      "slot": 446462733
+    }
+  ],
+  "ci_url": "https://github.com/mowtiion/meme-quant-lab/actions/runs/35778400374"
+}

@@ -110,3 +110,24 @@ niet eraan toegevoegd. Normalisatie kopieert dit bewijs naar `extra.recovery`.
 Event-ID's kunnen daardoor tussen oude logdatasets en herstelde datasets verschillen;
 combineer ze nooit zonder datasetversie en expliciete reconciliatie op transactie/instructie.
 Binnen één replay is er één geordende stroom per transactie, zonder dubbele log/CPI-kopieën.
+
+## Census-audit en programmaversies
+
+`census` inspecteert Pump-instructies onafhankelijk van de reeds genormaliseerde launchlijst.
+Een kandidaat moet precies één CreateEvent in dezelfde aanroep hebben. Accounts, gedeelde
+argumenten, eventvelden en uitvoering worden vergeleken. Onbekende instructies en niet-gematchte
+events blijven issues. Overlappende manifestslots worden geweigerd.
+
+`input_creator` bewaart de aangeleverde creator; `event_creator` bewaart de fee-ontvanger.
+Bij holder rewards wordt de PDA expliciet afgeleid. `regime_observed` bewaart eventflags,
+tokenprogramma, quote_mint en creator_fee_bps. Dit zijn observaties, geen gevalideerd economisch
+model. Ontbrekende staartargumenten blijven in `omitted_arguments`, zonder ingevulde defaults.
+
+Lokale overeenstemming kan PASS zijn terwijl onafhankelijkheid, volledige dagdekking en
+historische programmaversies UNPROVEN blijven. Het totale auditresultaat blijft dan FAIL.
+De eerdere handelsreplay en gates worden niet door deze extra audit overschreven.
+
+`observe-programs` slaat huidige loaderheaders op met requestparameters, raw hashes,
+observed_context_slot en last_modified_slot. `upgrade_evidence` verifieert een geslaagde
+loader-v3 Upgrade tegen de ProgramData-PDA en de uitvoeringsstructuur. Geen van beide functies
+promoveert dit tot een gevalideerde historische binary/IDL-mapping; die vereist afzonderlijk bewijs.

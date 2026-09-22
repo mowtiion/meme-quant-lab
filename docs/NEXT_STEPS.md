@@ -11,8 +11,12 @@ zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EX
 1. CPI-herstel is afgerond voor de gevalideerde varianten; zie `reports/CPI_RECOVERY_REPORT.md`.
    Bewaar het resterende `CPI_EXECUTION_UNPROVEN`-event in quarantaine totdat aanvullend
    uitvoeringsbewijs of gevalideerde historische programmasemantiek beschikbaar is.
-2. Vergelijk alle create-instructies met CreateEvents en een tweede bron. Leg historische
-   IDL/deployment-versies en regimes vast. Onbekende regimes blijven zichtbaar.
+2. De zes creates in 44 blokken zijn intern gereconcilieerd; twee Mayhem-launches en één
+   holder-rewards-launch zijn expliciet vastgelegd. Twee loader-upgrades zijn bevestigd.
+   Verkrijg nu bewijs voor de Pump-binary vóór de upgrade van 15 september (slot 447228373),
+   koppel binaries aan IDL-versies en vergelijk de proefvensters met een toegankelijke
+   onafhankelijke bron. De PublicNode-proef gaf HTTP 403; dat is geen bewijs dat een betaald
+   abonnement nodig is. Zie `reports/CENSUS_REGIME_REPORT.md`.
 3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn
    beïnvloedt reserves/supply, maar telt niet als walletvraag. Reconcile ook fees en niet-SOL-quotes.
 4. Gebruik het vastgelegde pilotplan in `configs/pilot1000.json`: launches van 14 september UTC,

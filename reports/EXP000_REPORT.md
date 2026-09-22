@@ -1,6 +1,16 @@
 # Meme Quant Lab — EXP-000, 22 september 2026
 
-## Actuele aanvulling: CPI-herstel afgerond
+## Actuele aanvulling: census- en regime-audit
+
+100 tests en GitHub Actions slagen. Alle zes launches in de 44 proefblokken sluiten aan
+op hun create-instructies. Twee Mayhem-launches en één holder-rewards-launch zijn vastgelegd.
+Pump-upgrade op 15 september en PumpSwap-upgrade op 12 september zijn in raw blokken bevestigd.
+Onafhankelijke censuscontrole en historische binary/IDL-mapping blijven onbewezen. EXP-000 blijft FAIL.
+
+Zie [het census- en regimerapport](CENSUS_REGIME_REPORT.md) en
+[het controlebewijs](CENSUS_REGIME_VERIFICATION.json).
+
+## Eerdere aanvulling: CPI-herstel afgerond
 
 75 tests en GitHub Actions slagen. `real-pilot-v4` bevat 3.082 events zonder issues.
 `archive-preflight-v3` bevat 168 events, waaronder 165 trades, en één onbevestigd

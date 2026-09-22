@@ -1,6 +1,11 @@
 # Integriteitstests — 22 september 2026
 
-75 tests geslaagd, 0 mislukt, lokaal en op GitHub Actions.
+100 tests geslaagd, 0 mislukt, lokaal en op GitHub Actions.
+
+25 nieuwe controles dekken censusreconciliatie, ontbrekende/dubbele/afwijkende creates,
+EOF-argumenten, tuple-structs, holder-rewards-PDA, overlappende manifests, expliciet gesloten
+onderzoeksgates, loader-metadata en twee echte historische upgrade-instructies.
+Zie `reports/CENSUS_REGIME_VERIFICATION.json`.
 
 21 nieuwe CPI-hersteltests controleren de twee afgebroken transacties, vier volledige
 transacties met gesimuleerde ontbrekende logs, deduplicatie, instructievolgorde,
@@ -21,5 +26,5 @@ In de voorafgaande review zijn drie datasets opnieuw gegenereerd: zes tabellen p
 JSONL/Parquet/DuckDB-aantallen. De databases vereisen geen WAL-bestand.
 Alle 52 raw-objecten en de twee vastgelegde IDL's zijn op hash gecontroleerd.
 
-[CI op de broncode van deze runs](https://github.com/mowtiion/meme-quant-lab/actions/runs/35776709066).
+[CI op de broncode van deze runs](https://github.com/mowtiion/meme-quant-lab/actions/runs/35778400374).
 Dit bewijst softwaregedrag, geen volledige historische dekking of trading-edge.

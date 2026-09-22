@@ -13,8 +13,12 @@ Onderzoek of vroege on-chain signalen toekomstige Solana/Pump.fun-runners kunnen
 - Handelsstromen, buyer/trade/volume-dynamiek en conditionele prijs/curve-afgeleiden.
 - Gescheiden diagnostische outcomes; onuitvoerbare prijzen worden geen winstlabels.
 - Parquet-tabellen, DuckDB-database, reproduceerbare configuratie en runrapporten.
-- 75 tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
+- 100 tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
 - Protocol buy-and-burn-acties apart gereconcilieerd; ze tellen niet als walletkopers of gewone koopdruk.
+
+De census-audit reconcilieert zes launches in 44 blokken, inclusief Mayhem en holder rewards.
+Twee historische upgrades zijn bevestigd. De onafhankelijke census en binary/IDL-koppeling
+blijven open: zie [het census- en regimerapport](reports/CENSUS_REGIME_REPORT.md).
 
 ## Starten — Python 3.12
 
