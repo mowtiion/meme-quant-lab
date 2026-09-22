@@ -75,3 +75,12 @@ Voor later: labelhorizons die een splitgrens overlappen purgen; maximaal zeven d
 respecteren. Features en walletreputatie uitsluitend fitten op eerdere, toen beschikbare data.
 Holdout niet bekijken of aanpassen om een gunstige uitkomst te krijgen. In EXP-000 is nog geen
 train/validation/holdoutselectie gemaakt en geen predictieve hypothese getoetst.
+
+## Review-uitbreiding: protocol buy-and-burn
+
+`events.kind = protocol_buy_burn` bewaart base-burn en quote-input in raw integers,
+met gevalideerde decimals. `wallet` en `side` zijn NULL. `extra.economic_actor = protocol`,
+`extra.companion_event_index` verwijst naar het companion-logevent en `extra.reconciliation`
+legt de gebruikte bewijssoort vast. Raw en decoded logs blijven beschikbaar.
+Dit event telt niet mee in wallet-tradefeatures of trade-mark-labels. Een volledig gereconcilieerde
+reserve/supply-ledger die het prijseffect verwerkt is nog niet beschikbaar.

@@ -1,31 +1,40 @@
 # Eerstvolgende werk — EXP-000 afmaken
 
-1. Leg één pilotperiode vast, met volledige creatie-census en minimaal zeven dagen follow-up.
-   Controleer beschikbaarheid op een kleine export voordat de 1.000 echte launches worden getrokken.
-2. Valideer de actuele parser tegen historische IDL/deployment-versies en named regimevelden.
-   Onbekende regimes blijven apart. Vergelijk create-instructies met CreateEvents en een tweede bron.
-3. Bouw de historische PumpSwap pool/mint/quote-ledger inclusief migratie, poolwijzigingen,
-   virtual quote reserves en niet-SOL-paren. Decoderen alleen is onvoldoende.
-4. Voeg transfers, mint/burn en account-eigenaars toe. Reconcile tokenbalansen en reserves
-   voor geselecteerde transacties en begin/eindpunten; fee/burn-bewegingen zijn geen walletverkopen.
-5. Meet welke features werkelijk reconstructeerbaar zijn. Houd ontbrekende, gecensureerde,
-   gerugde en niet-verhandelbare gevallen in de noemer. Geen vervanging door alleen graduates.
-6. Reconstructeer 1.000 willekeurige echte launches en vijf snapshots per mint; voer boundary-
-   perturbaties (bijvoorbeeld 0/1/2 seconden) en onafhankelijke known-answer checks uit.
-7. Definieer gevalideerde entryreferences/outcomes; houd execution-aannames expliciet apart.
-   Latency is een scenario totdat waargenomen aankomsttijden beschikbaar zijn.
-8. Schrijf een nieuw EXP-000-rapport. De gates worden alleen aangepast op basis van herleidbare
-   tests en data; er bestaat bewust geen `--force-pass`-optie.
+GitHub is gekoppeld; de actuele code, tests en rapporten staan in
+[mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
 
-## Benodigde toegang / besluit
+De drie eerdere onopgeloste AMM-events zijn gereconcilieerde protocol buy-and-burn-acties.
+De oorspronkelijke proef heeft nu nul normalisatiefouten. De nieuwe historische proef heeft
+nog twee PumpSwap-transacties met afgebroken logs. EXP-000 blijft FAIL.
 
-De lokale publieke RPC-proef is gratis uitgevoerd. Nog geen API-account, abonnement,
-databudget of GitHub-remote is voor dit project vastgesteld.
+1. Herstel ontbrekende eventlogs uit de inner CPI-instructies van de twee vastgelegde transacties.
+   Valideer programma-attributie, invocation-scope, eventvolgorde en voorkoming van dubbeltelling
+   tegen volledige transacties. Eventuele onbewijsbare gevallen blijven in quarantaine.
+2. Vergelijk alle create-instructies met CreateEvents en een tweede bron. Leg historische
+   IDL/deployment-versies en regimes vast. Onbekende regimes blijven zichtbaar.
+3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn
+   beïnvloedt reserves/supply, maar telt niet als walletvraag. Reconcile ook fees en niet-SOL-quotes.
+4. Gebruik het vastgelegde pilotplan in `configs/pilot1000.json`: launches van 14 september UTC,
+   follow-up tot 22 september 00:05 UTC. Bevestig eerst volledige velddekking en bereken een
+   begrensd downloadplan met opslag-, request- en runtimebudget.
+5. Trek pas uit een complete, bevroren census 1.000 echte launches met seed 20260922.
+   Houd dode/rug/zero-trade launches in de populatie. Reconstructeer vijf snapshots en outcomes;
+   voer grensperturbaties en onafhankelijke known-answer-controles uit.
+6. Werk het gatebesluit bij. EXP-001 begint alleen als essentiële data-integriteitsgates slagen.
 
-Een bestaand read-only archiefendpoint of geschikte export is voldoende om verder te testen.
-Geef sleutels via een beveiligde environment/secret-instelling, niet via broncode of chat.
-Bij aanschaf eerst een concrete offerte, velddekking en kostenlimiet laten goedkeuren.
-De huidige bevindingen rechtvaardigen nog geen grote datadownload of betaald jaarabonnement.
+## Wat de archiefproef bewijst
 
-Een GitHub-URL kan later aan deze checkout worden gekoppeld, met behoud van lokale commits.
-Geen live wallet/trading-actie is onderdeel van dit vervolg.
+De publieke RPC leverde drie blokken van 14 september zonder API-key of aankoop.
+Dit is geen bewijs voor schaalbare volledige backfill of onbeperkte archiefretentie.
+Een API-abonnement is momenteel niet aangetoond als noodzakelijke oplossing; afgebroken on-chain
+logs vereisen eerst parserherstel. Indien een provider later nodig blijkt: eerst een concrete
+veld-/kostenvergelijking en kostenlimiet, pas daarna eventuele goedkeuring voor uitgaven.
+
+## Uitvoerbare readiness-controle
+
+```bash
+python -m meme_quant.cli preflight --report experiments/exp000/archive-preflight-v2.json
+```
+
+Verwacht: `BLOCKED`, exitcode 2. Dit start geen download en verlaagt geen onderzoekscriteria.
+Raw-data en afgeleide databases blijven buiten GitHub; de code en onderzoeksbesluiten zijn daar herleidbaar.
