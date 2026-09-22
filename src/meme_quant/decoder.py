@@ -61,7 +61,10 @@ class Reader:
         elif isinstance(spec, dict):
             if "defined" in spec:
                 name = spec["defined"]["name"]
-                return {f["name"]:self.read(f["type"]) for f in self.types[name]["fields"]}
+                fields = self.types[name]["fields"]
+                if fields and not all(isinstance(f, dict) and 'name' in f for f in fields):
+                    return [self.read(f) for f in fields]
+                return {f["name"]:self.read(f["type"]) for f in fields}
             if "vec" in spec:
                 count = self.read("u32")
                 if count > 10000:

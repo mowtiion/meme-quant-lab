@@ -1,4 +1,7 @@
-# Direct/runtime dependencies; neither package declares runtime dependencies.
+# Direct and transitive runtime dependencies.
 # Python 3.12; regenerate deliberately and re-run the integrity suite on upgrades.
 pyarrow==25.0.1
 duckdb==1.5.5
+solders==0.29.0
+jsonalias==0.1.1
+typing-extensions==4.16.0

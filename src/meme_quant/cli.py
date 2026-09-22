@@ -28,8 +28,30 @@ def main() -> None:
     preflight = sub.add_parser("preflight",help="Audit a completed run against the frozen 1000-launch pilot")
     preflight.add_argument("--report",type=Path,required=True)
     preflight.add_argument("--plan",type=Path,default=Path("configs/pilot1000.json"))
+    census = sub.add_parser("census",help="Audit create instructions against scoped events; historical gates stay explicit")
+    census.add_argument("--manifest",type=Path,action="append",required=True)
+    census.add_argument("--raw-root",type=Path,default=Path("data/raw"))
+    census.add_argument("--vendor",type=Path,default=Path("vendor"))
+    census.add_argument("--out",type=Path,required=True)
+    observe = sub.add_parser("observe-programs",help="Read current metadata of two programs; four bounded public RPC calls")
+    observe.add_argument("--raw-root",type=Path,default=Path("data/raw"))
+    observe.add_argument("--out",type=Path,required=True)
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO,format="%(levelname)s %(message)s")
+    if args.command in {"census","observe-programs"}:
+        from .census import audit_manifests, save_audit
+        if args.out.exists():
+            parser.error("Output already exists; choose a fresh audit path")
+        if args.command == "census":
+            result = audit_manifests(args.manifest,args.raw_root,args.vendor)
+            save_audit(result,args.out)
+            print(json.dumps({k:result[k] for k in ("status","counts","gates")}))
+            raise SystemExit(2 if result["status"] == "FAIL" else 0)
+        from .regimes import observe_programs
+        result = observe_programs(args.raw_root)
+        save_audit(result,args.out)
+        print(json.dumps({"programs":len(result["programs"]),"issues":result["issues"],"historical_mapping":"UNPROVEN"}))
+        return
     if args.command == "preflight":
         result = pilot_readiness(json.loads(args.report.read_text()),json.loads(args.plan.read_text()))
         print(json.dumps(result,indent=2))

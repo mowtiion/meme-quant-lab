@@ -10,7 +10,7 @@ from pathlib import Path
 from .domain import IntegrityError
 from .storage import immutable_write, json_bytes, store_raw
 
-READ_METHODS = {"getSlot", "getBlocks", "getBlock", "getTransaction", "getSignaturesForAddress", "getBlockTime"}
+READ_METHODS = {"getSlot", "getBlocks", "getBlock", "getTransaction", "getSignaturesForAddress", "getBlockTime", "getAccountInfo"}
 
 
 class RPC:

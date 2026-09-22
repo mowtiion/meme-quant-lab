@@ -7,7 +7,7 @@ name = "meme-quant-lab"
 version = "0.1.0"
 description = "Fail-closed, point-in-time Pump.fun research — EXP-000"
 requires-python = ">=3.12"
-dependencies = ["pyarrow==25.0.1", "duckdb==1.5.5"]
+dependencies = ["pyarrow==25.0.1", "duckdb==1.5.5", "solders==0.29.0"]
 
 [project.scripts]
 meme-quant = "meme_quant.cli:main"
