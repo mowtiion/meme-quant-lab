@@ -122,6 +122,7 @@ def decode_block(block: dict, slot: int, raw_hash: str, decoders: dict[str, IDLD
             issues.append({"slot":slot,"signature":signature,"reason":"MISSING_LOGS"})
             continue
         stack: list[str] = []
+        starts: list[int] = []
         for log_index, log in enumerate(logs):
             invoke = re.fullmatch(r"Program (\w+) invoke \[(\d+)\]", log)
             done = re.match(r"Program (\w+) (success|failed:)", log)
@@ -130,10 +131,14 @@ def decode_block(block: dict, slot: int, raw_hash: str, decoders: dict[str, IDLD
                 if depth != len(stack)+1:
                     issues.append({"slot":slot,"signature":signature,"reason":"LOG_STACK_MISMATCH"})
                 stack = stack[:depth-1]+[program]
+                starts = starts[:depth-1]+[len(decoded)]
             elif done:
                 if not stack or stack[-1] != done[1]:
                     issues.append({"slot":slot,"signature":signature,"reason":"LOG_STACK_MISMATCH"})
                 else:
+                    start = starts.pop()
+                    if done[2] == "failed:":
+                        del decoded[start:]  # A caught CPI failure rolls back its children too.
                     stack.pop()
             elif "Log truncated" in log:
                 issues.append({"slot":slot,"signature":signature,"reason":"TRUNCATED_LOGS"})
@@ -154,13 +159,91 @@ def decode_block(block: dict, slot: int, raw_hash: str, decoders: dict[str, IDLD
     return decoded, issues
 
 
+def boost_identity(block: dict, row: dict, decoded: list[dict], decoder: IDLDecoder):
+    """Certify a single boost action against instruction, companion event and balances.
+
+    Multi-action transactions remain quarantined until instruction-scoped balance
+    replay exists. A sentinel account alone is never evidence of a protocol buy.
+    """
+    p = row["payload"]
+    tx = block["transactions"][row["tx_index"]]
+    meta = tx["meta"]
+    keys = list(tx["transaction"]["message"]["accountKeys"])
+    keys = [k["pubkey"] if isinstance(k, dict) else k for k in keys]
+    loaded = meta.get("loadedAddresses") or {}
+    keys += loaded.get("writable", []) + loaded.get("readonly", [])
+    instructions = list(tx["transaction"]["message"].get("instructions", []))
+    instructions += [ix for g in meta.get("innerInstructions", []) for ix in g["instructions"]]
+    candidates = []
+    for ix in instructions:
+        if keys[ix["programIdIndex"]] != AMM:
+            continue
+        raw = unbase58(ix["data"])
+        spec = decoder.instructions.get(raw[:8])
+        if spec and spec["name"] == "boost_buy_and_burn":
+            a = {a["name"]: keys[ix["accounts"][i]] for i, a in enumerate(spec["accounts"])}
+            if a["pool"] == p["pool"]:
+                candidates.append((a, raw))
+    peers = [r for r in decoded if r["tx_index"] == row["tx_index"]
+             and r["program"] == AMM and r["payload"].get("pool") == p["pool"]]
+    companions = [r for r in peers if r["name"] == "BoostBuyAndBurnEvent"]
+    buys = [r for r in peers if r["name"] in {"BuyEvent", "SellEvent"}]
+    if len(candidates) != 1 or len(companions) != 1 or len(buys) != 1:
+        raise IntegrityError("Boost requires one instruction, one buy and one companion")
+    a, raw = candidates[0]
+    c = companions[0]["payload"]
+    if c.get("_missing_trailing_fields") or p.get("_missing_trailing_fields"):
+        raise IntegrityError("Incomplete boost event")
+    if not (a["boost_vault_authority"] == p["user"]
+            and a["boost_vault"] == p["user_quote_token_account"]
+            and a["base_mint"] == c["mint"] and a["authority"] == c["authority"]
+            and p["timestamp"] == c["timestamp"]
+            and p["base_amount_out"] == c["base_amount_burned"]
+            and p["quote_amount_in"] == c["quote_amount_in_used"]
+            and p["virtual_quote_reserves"] == c["virtual_quote_reserves"]):
+        raise IntegrityError("Boost instruction/event mismatch")
+    if len(raw) != 24 or int.from_bytes(raw[8:16], "little") != c["quote_amount_in_requested"]:
+        raise IntegrityError("Boost instruction amount mismatch")
+    if not (0 < c["quote_amount_in_used"] <= c["quote_amount_in_requested"]
+            and c["base_amount_burned"] >= int.from_bytes(raw[16:24], "little")):
+        raise IntegrityError("Boost limits mismatch")
+    balances = []
+    for field in ("preTokenBalances", "postTokenBalances"):
+        balances.append({keys[b["accountIndex"]]: b for b in meta[field]})
+    expected = [("pool_base_token_account", "base_mint", -c["base_amount_burned"],
+                 p["pool_base_token_reserves"], c["base_reserves_after"]),
+                ("pool_quote_token_account", "quote_mint", c["quote_amount_in_used"],
+                 p["pool_quote_token_reserves"], c["real_quote_reserves_after"]),
+                ("boost_vault", "quote_mint", -c["quote_amount_in_used"],
+                 p["user_quote_token_reserves"], c["boost_vault_remaining"])]
+    for account, mint, delta, before, after in expected:
+        pre, post = (b[a[account]] for b in balances)
+        if pre["mint"] != a[mint] or post["mint"] != a[mint]:
+            raise IntegrityError("Boost balance mint mismatch")
+        if (int(pre["uiTokenAmount"]["amount"]) != before
+                or int(post["uiTokenAmount"]["amount"]) != after or after-before != delta):
+            raise IntegrityError("Boost balance reconciliation failed")
+    burns = []
+    for ix in instructions:
+        if keys[ix["programIdIndex"]] != a["base_token_program"]:
+            continue
+        data = unbase58(ix["data"])
+        if len(data) == 9 and data[0] == 8:  # SPL Token / Token-2022 Burn
+            accounts = [keys[i] for i in ix["accounts"]]
+            if accounts[:3] == [a["pool_base_token_account"], a["base_mint"], a["pool"]]:
+                burns.append(int.from_bytes(data[1:], "little"))
+    if burns != [c["base_amount_burned"]]:
+        raise IntegrityError("Boost burn instruction mismatch")
+    return a["base_mint"], a["quote_mint"], companions[0]["event_index"]
+
+
 def normalize_block(block: dict, decoded: list[dict], amm_decoder: IDLDecoder | None = None) -> tuple[list[Event], list[dict]]:
     """Normalize diagnostic trades using only each transaction's own metadata.
 
     PumpSwap mint identities come from that trade's token accounts, not a future
     pool lookup. Missing accounts/decimals fail closed. This is not reserve replay.
     """
-    output, issues = [], []
+    output, issues, matched_companions = [], [], set()
     kinds = {"CreateEvent":"create", "TradeEvent":"trade", "CompleteEvent":"complete",
              "CompletePumpAmmMigrationEvent":"migration"}
     for row in decoded:
@@ -181,7 +264,16 @@ def normalize_block(block: dict, decoded: list[dict], amm_decoder: IDLDecoder | 
                 if m in decimals and decimals[m] != d:
                     raise IntegrityError("Conflicting token decimals")
                 decimals[m] = d
-            if is_amm_trade:
+            extra = p
+            if is_amm_trade and name == "BuyEvent" and p["user_base_token_account"] == ZERO:
+                if amm_decoder is None:
+                    raise IntegrityError("Boost identity requires pinned AMM instructions")
+                mint, quote_mint, companion = boost_identity(block, row, decoded, amm_decoder)
+                kind, side = "protocol_buy_burn", None
+                base_raw, quote_raw = p["base_amount_out"], p["quote_amount_in"]
+                extra = {**p, "economic_actor": "protocol", "companion_event_index": companion,
+                         "reconciliation": "instruction_event_burn_and_pre_post_balances"}
+            elif is_amm_trade:
                 keys = tx["transaction"]["message"]["accountKeys"]
                 keys = [k["pubkey"] if isinstance(k,dict) else k for k in keys]
                 loaded = meta.get("loadedAddresses") or {}
@@ -231,13 +323,21 @@ def normalize_block(block: dict, decoded: list[dict], amm_decoder: IDLDecoder | 
             common = {k:row[k] for k in ["slot","tx_index","event_index","signature","program",
                                        "event_ms","raw_sha256","decoder_hash"]}
             event = Event(**common, event_id=f"{row['slot']}:{row['signature']}:{row['event_index']}:{row['program']}",
-                          mint=mint, kind=kind, wallet=p.get("user"),
+                          mint=mint, kind=kind, wallet=None if kind=="protocol_buy_burn" else p.get("user"),
                           side=side, base_raw=base_raw, quote_raw=quote_raw,
                           base_decimals=decimals.get(mint), quote_decimals=quote_decimals,
-                          quote_mint=quote_mint, extra=p)
+                          quote_mint=quote_mint, extra=extra)
             event.validate()
             output.append(event)
+            if kind == "protocol_buy_burn":
+                matched_companions.add((row["tx_index"], companion))
         except (KeyError, IndexError, TypeError, ValueError) as exc:
             issues.append({"slot":row["slot"],"signature":row["signature"],
+                           "event_index":row["event_index"],
                            "reason":"NORMALIZATION_ERROR","detail":str(exc)})
+    for row in decoded:
+        if (row["program"] == AMM and row["name"] == "BoostBuyAndBurnEvent"
+                and (row["tx_index"], row["event_index"]) not in matched_companions):
+            issues.append({"slot":row["slot"], "signature":row["signature"],
+                           "event_index":row["event_index"], "reason":"UNMATCHED_BOOST_COMPANION"})
     return output, issues

@@ -39,7 +39,7 @@ class Event:
         return self.slot, self.tx_index, self.event_index
 
     def validate(self) -> None:
-        if self.kind not in {"create", "trade", "complete", "migration", "pool_create", "transfer"}:
+        if self.kind not in {"create", "trade", "complete", "migration", "pool_create", "transfer", "protocol_buy_burn"}:
             raise IntegrityError(f"Unknown event kind: {self.kind}")
         for key in ("event_ms", "slot", "tx_index", "event_index"):
             x = getattr(self, key)
@@ -54,6 +54,10 @@ class Event:
         if self.kind == "trade":
             if self.side not in {"buy", "sell"} or not self.wallet or not self.quote_mint:
                 raise IntegrityError("Missing trade identity/side/quote unit")
+        if self.kind == "protocol_buy_burn":
+            if self.wallet is not None or self.side is not None or not self.quote_mint:
+                raise IntegrityError("Protocol action must not claim a wallet buyer")
+        if self.kind in {"trade", "protocol_buy_burn"}:
             for key in ("base_raw", "quote_raw"):
                 x = getattr(self, key)
                 if type(x) is not int or not 0 < x < 2**64:

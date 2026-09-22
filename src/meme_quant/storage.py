@@ -71,3 +71,5 @@ def export_parquet(directory: Path, tables: dict[str, list[dict]]) -> None:
             target = directory / f"{name}.parquet"
             pq.write_table(table, target, compression="zstd")
             con.from_parquet(str(target)).create(name)
+        # Make the database file self-contained before archiving or read-only use.
+        con.execute("CHECKPOINT")

@@ -6,6 +6,7 @@ from pathlib import Path
 from .fixtures import synthetic_events
 from .pipeline import load_manifest, run
 from .rpc import collect
+from .preflight import pilot_readiness
 
 
 def main() -> None:
@@ -24,8 +25,15 @@ def main() -> None:
     replay.add_argument("--raw-root",type=Path,default=Path("data/raw"))
     replay.add_argument("--vendor",type=Path,default=Path("vendor"))
     replay.add_argument("--out",type=Path,required=True)
+    preflight = sub.add_parser("preflight",help="Audit a completed run against the frozen 1000-launch pilot")
+    preflight.add_argument("--report",type=Path,required=True)
+    preflight.add_argument("--plan",type=Path,default=Path("configs/pilot1000.json"))
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO,format="%(levelname)s %(message)s")
+    if args.command == "preflight":
+        result = pilot_readiness(json.loads(args.report.read_text()),json.loads(args.plan.read_text()))
+        print(json.dumps(result,indent=2))
+        raise SystemExit(2 if result["status"] == "BLOCKED" else 0)
     if args.command == "collect":
         result = collect(args.raw_root,args.start_slot,args.end_slot,args.max_slots)
         print(json.dumps({k:result[k] for k in ["manifest_path","complete","issues"]}))

@@ -1,0 +1,22 @@
+{
+  "plan_id": "MEME-EXP-000-PILOT-1000-v1",
+  "status": "BLOCKED_PRE_FLIGHT",
+  "census_start_utc": "2026-09-14T00:00:00+00:00",
+  "census_end_utc_exclusive": "2026-09-15T00:00:00+00:00",
+  "followup_through_utc": "2026-09-22T00:05:00+00:00",
+  "sample_size": 1000,
+  "seed": 20260922,
+  "sampling": "sha256(seed:mint) from complete frozen creation census; no outcome filter",
+  "preflight_slots": [447000000, 447000001, 447000002],
+  "preflight_max_slots": 3,
+  "paid_budget_eur": 0,
+  "bulk_download_enabled": false,
+  "required_before_bulk": [
+    "Recover and reconcile truncated logs against CPI instruction events",
+    "Reconcile creation instructions with CreateEvents and a second source",
+    "Validate historical IDL deployments and named regimes",
+    "Demonstrate pool/reserve and transfer ledger reconstruction on small sample",
+    "Estimate bounded storage, request count and runtime for census and seven-day follow-up"
+  ],
+  "insufficient_census_policy": "FAIL; never lower the target or substitute synthetic launches"
+}

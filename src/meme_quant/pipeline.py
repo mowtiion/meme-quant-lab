@@ -31,6 +31,8 @@ def sample_launches(launches: list[Event], size: int, seed: int) -> list[Event]:
 
 def load_manifest(path: Path, raw_root: Path, vendor: Path) -> tuple[list[Event], dict, list[dict], list[dict]]:
     manifest = json.loads(path.read_text())
+    if manifest.get("commitment") != "finalized":
+        raise IntegrityError("Replay requires finalized block provenance")
     decoders = [IDLDecoder(vendor/f) for f in ("pump.json","pump_amm.json")]
     by_program = {d.program:d for d in decoders}
     events, decoded, issues, times = [], [], list(manifest.get("issues", [])), []
@@ -110,7 +112,7 @@ def run(events: list[Event], config: dict, info: dict, out: Path,
                                       config["entry_mark_max_age_ms"]))
     synthetic = info.get("synthetic") is True
     gates = {
-        "real_launch_sample_1000": "PASS" if not synthetic and len(sample)>=config["sample_size"] else "FAIL",
+        "real_launch_sample_1000": "PASS" if not synthetic and len(sample)>=max(1000,config["sample_size"]) else "FAIL",
         "raw_block_coverage": "PASS" if info.get("enumeration_complete") and not synthetic else "FAIL",
         "decoding_and_normalization": "PASS" if events and not issues and not synthetic else "FAIL",
         "complete_snapshot_coverage": "PASS" if snaps and all(s.get("coverage_complete") for s in snaps) and not synthetic else "FAIL",
