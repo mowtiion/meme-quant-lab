@@ -19,12 +19,22 @@ class BufferReplay:
         self.buffer,self.program,self.programdata=buffer,program,programdata
         self.data=None;self.covered=None;self.authority=None
         self.initialized=False;self.upgraded=False;self.writes=0;self.overwritten_bytes=0
+        self.incoming_transfers=0;self.incoming_lamports=0
 
     def apply(self, program, accounts, raw):
         if self.buffer not in accounts:return
         if self.upgraded:raise IntegrityError('Buffer reused after target upgrade')
         tag=int.from_bytes(raw[:4],'little') if len(raw)>=4 else -1
         if program==ZERO:
+            # System Transfer credits lamports only; it cannot change buffer data.
+            # Accept the observed, allocated-buffer recipient case, not withdrawals.
+            if tag==2:
+                if (len(raw)!=12 or len(accounts)!=2 or accounts[1]!=self.buffer
+                        or accounts[0]==self.buffer or self.data is None or not self.initialized):
+                    raise IntegrityError('Invalid incoming buffer transfer')
+                self.incoming_transfers+=1
+                self.incoming_lamports+=int.from_bytes(raw[4:12],'little')
+                return
             if tag!=0 or len(raw)!=52 or len(accounts)!=2 or accounts[1]!=self.buffer:
                 raise IntegrityError('Unsupported system operation on buffer')
             if raw[20:52]!=unbase58(LOADER) or self.data is not None:
@@ -149,6 +159,7 @@ def reconstruct(manifest, raw_root, program, programdata, target_signature):
     return binary,{'status':'RECONSTRUCTED_FROM_RPC_HISTORY','program':program,'buffer':manifest['buffer'],
                    'binary_sha256':hashlib.sha256(binary).hexdigest(),'binary_bytes':len(binary),
                    'write_operations':replay.writes,'overwritten_bytes':replay.overwritten_bytes,
+                   'incoming_transfers':replay.incoming_transfers,'incoming_lamports':replay.incoming_lamports,
                    'history_transactions':len(history),'blocks':len(slots),'upgrade':upgrade,
                    'operations':operations,'historical_source_idl_binding':'UNPROVEN',
                    'independent_binary_verification':'UNPROVEN'}

@@ -56,6 +56,22 @@ class UploadReplay(unittest.TestCase):
     def test_account_reuse_rejected(self):
         with self.assertRaises(IntegrityError):self.r.apply(ZERO,['payer','buffer'],self.alloc)
 
+    def test_incoming_lamport_transfer_preserves_program_and_authority(self):
+        self.r.apply(LOADER,['buffer','authority'],self.write(0,self.payload))
+        before=(bytes(self.r.data),bytes(self.r.covered),self.r.authority,self.r.writes)
+        self.r.apply(ZERO,['donor','buffer'],bytes.fromhex('020000000100000000000000'))
+        self.assertEqual(before,(bytes(self.r.data),bytes(self.r.covered),self.r.authority,self.r.writes))
+        self.assertEqual((self.r.incoming_transfers,self.r.incoming_lamports),(1,1))
+        self.upgrade();self.assertEqual(self.r.finish(),self.payload)
+
+    def test_transfer_cannot_mask_withdrawal_bad_encoding_or_missing_allocation(self):
+        raw=bytes.fromhex('020000000100000000000000')
+        for accounts,payload in [(['buffer','donor'],raw),(['buffer','buffer'],raw),
+                                 (['donor','buffer'],raw+b'x'),(['donor','buffer'],raw[:-1])]:
+            with self.assertRaises(IntegrityError):self.r.apply(ZERO,accounts,payload)
+        empty=BufferReplay('buffer','program','programdata')
+        with self.assertRaises(IntegrityError):empty.apply(ZERO,['donor','buffer'],raw)
+
     def test_wrong_upgrade_target_rejected(self):
         self.r.apply(LOADER,['buffer','authority'],self.write(0,self.payload))
         with self.assertRaises(IntegrityError):
