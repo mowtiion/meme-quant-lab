@@ -1,0 +1,42 @@
+[
+  {
+    "attempted_at": "2026-09-22T20:24:50.486560+00:00",
+    "method": "getBlocks",
+    "params": [
+      447000000,
+      447000002,
+      {
+        "commitment": "finalized"
+      }
+    ],
+    "reason": "RPC HTTP 429",
+    "source": "https://solana.api.onfinality.io/public",
+    "status": "FAILED"
+  },
+  {
+    "attempted_at": "2026-09-22T20:24:57.534952+00:00",
+    "method": "getBlocks",
+    "params": [
+      447000000,
+      447000002,
+      {
+        "commitment": "finalized"
+      }
+    ],
+    "reason": "RPC HTTP 403",
+    "source": "https://solana.drpc.org",
+    "status": "FAILED"
+  },
+  {
+    "attempted_at": "2026-09-22T20:27:44.322789+00:00",
+    "method": "getSlot",
+    "params": [
+      {
+        "commitment": "finalized"
+      }
+    ],
+    "reason": "RPC HTTP 429",
+    "source": "https://solana.api.onfinality.io/public",
+    "status": "FAILED"
+  }
+]

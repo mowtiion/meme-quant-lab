@@ -1,0 +1,63 @@
+{
+  "source_commit": "4b2afd7420e86c4d5a6cd2b8b650defcbdea5c05",
+  "code_dirty": false,
+  "tests_passed": 120,
+  "tests_failed": 0,
+  "ci_url": "https://github.com/mowtiion/meme-quant-lab/actions/runs/35825899874",
+  "ci_conclusion": "success",
+  "binary": {
+    "binary_bytes": 1638312,
+    "binary_sha256": "7e260ecaa7aef442073042b513d61f8846ad8c5620022db200a76507e2312067",
+    "blocks": 54,
+    "buffer": "J7raNSKXB14MeCc6RwXQrKbPJXH4CWh9V4NCnw4Kibtk",
+    "code_dirty": false,
+    "git_commit": "4b2afd7420e86c4d5a6cd2b8b650defcbdea5c05",
+    "historical_source_idl_binding": "UNPROVEN",
+    "history_transactions": 1623,
+    "incoming_lamports": 1,
+    "incoming_transfers": 1,
+    "independent_binary_verification": "UNPROVEN",
+    "manifest_sha256": "8832a6b1ee5f4e17a82f8ae61e1571d0bb8ebbccc5e75dcdcc07fa5da2291ddb",
+    "overwritten_bytes": 0,
+    "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+    "status": "RECONSTRUCTED_FROM_RPC_HISTORY",
+    "upgrade": {
+      "instruction_path": [
+        3,
+        0
+      ],
+      "program": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "raw_sha256": "b589b7dca49a6682007f5f9897bc2508169280058feb227626dd0d1cbd39c964",
+      "signature": "SgEwKjomLvZgYWZVHkqLZAzB7LHtyQo7hWu5VgYKoVb82jqtz3fum7sAaCB7yzL2GNks5BwRB5wvpuyy4CKFbQV",
+      "slot": 446462760,
+      "tag": 3,
+      "tx_index": 920
+    },
+    "write_operations": 1619,
+    "full_report_sha256": "7c4358c96d8c34533c75bf68d6702f92e24f4f79cc1e321cd190640ae1e99a6d",
+    "raw_block_bytes": 222218805,
+    "operations": 1624,
+    "upgrade_time_utc": "2026-09-12T15:24:04Z",
+    "experiment_status": "FAIL",
+    "continue_to_exp001": false
+  },
+  "checks": {
+    "all_history_signatures_matched_to_blocks": 1623,
+    "all_buffer_bytes_written": 1638312,
+    "missing_bytes": 0,
+    "overwritten_bytes": 0,
+    "manifest_sha256_verified": "8832a6b1ee5f4e17a82f8ae61e1571d0bb8ebbccc5e75dcdcc07fa5da2291ddb",
+    "static_elf_header": "ELF64 little-endian; DYN; machine 0x107; not executed"
+  },
+  "independent_source_status": "UNPROVEN",
+  "historical_source_idl_binding": "UNPROVEN",
+  "continue_to_exp001": false,
+  "evidence_archive": {
+    "bytes": 43286892,
+    "sha256": "4faf8efbe3825dde677c1a4579701eda300f02fd1230c867cf01bc1d3186a01c",
+    "raw_objects": 59,
+    "entries": 69,
+    "zip_integrity": "PASS",
+    "filename": "meme-quant-historical-binary-evidence.zip"
+  }
+}

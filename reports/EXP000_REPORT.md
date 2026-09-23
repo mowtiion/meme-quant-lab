@@ -1,6 +1,17 @@
-# Meme Quant Lab — EXP-000, 22 september 2026
+# Meme Quant Lab — EXP-000, 23 september 2026
 
-## Actuele aanvulling: census- en regime-audit
+## Actuele aanvulling: historische Pump-binary hersteld
+
+120 tests en GitHub Actions slagen. De bufferhistorie van 1.623 transacties in 54 blokken
+reconstrueert alle 1.638.312 bytes van de Pump-upload van 12 september. De succesvolle
+upgrade-instructie is bevestigd. De gepubliceerde IDL van 12 september is gelijk aan onze
+vendor-IDL, maar binary/source/IDL-koppeling en onafhankelijke broncontrole blijven onbewezen.
+EXP-000 blijft FAIL; de pilot met 1.000 echte launches is nog niet uitgevoerd.
+
+Zie [het historische binaryrapport](HISTORICAL_BINARY_REPORT.md) en
+[het controlebewijs](HISTORICAL_BINARY_VERIFICATION.json).
+
+## Eerdere aanvulling: census- en regime-audit
 
 100 tests en GitHub Actions slagen. Alle zes launches in de 44 proefblokken sluiten aan
 op hun create-instructies. Twee Mayhem-launches en één holder-rewards-launch zijn vastgelegd.

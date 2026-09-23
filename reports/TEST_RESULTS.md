@@ -1,8 +1,15 @@
-# Integriteitstests — 22 september 2026
+# Integriteitstests — 23 september 2026
 
-100 tests geslaagd, 0 mislukt, lokaal en op GitHub Actions.
+120 tests geslaagd, 0 mislukt, lokaal en op GitHub Actions.
 
-25 nieuwe controles dekken censusreconciliatie, ontbrekende/dubbele/afwijkende creates,
+20 aanvullende controles dekken bytecoverage, overschrijvingen, autoriteit, account-hergebruik,
+onvolledige bufferhistorie, ongeldige hashes, stortingen zonder datawijziging en afgebroken
+of langzaam binnenkomende HTTP-responses. De echte reconstructie matcht alle 1.623
+historietransacties en alle 1.638.312 programmabytes.
+Zie `reports/HISTORICAL_BINARY_VERIFICATION.json` en
+[de CI-run](https://github.com/mowtiion/meme-quant-lab/actions/runs/35825899874).
+
+25 eerdere controles dekken censusreconciliatie, ontbrekende/dubbele/afwijkende creates,
 EOF-argumenten, tuple-structs, holder-rewards-PDA, overlappende manifests, expliciet gesloten
 onderzoeksgates, loader-metadata en twee echte historische upgrade-instructies.
 Zie `reports/CENSUS_REGIME_VERIFICATION.json`.
