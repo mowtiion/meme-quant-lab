@@ -82,5 +82,19 @@ vooraf lokaal op alle veldgroep-hashes gecontroleerd. Een mock-run van de volled
 voltooide 42 requests, 41 matches en zes archieven onder de uploadlimiet; opzettelijke
 verandering van één balansveld werd geweigerd. Live Helius fase B moet nog worden uitgevoerd.
 
+### GitHub Actions: zonder lokale PowerShell
+
+De handmatige workflow `.github/workflows/helius-phase-b.yml` kan dezelfde begrensde proef
+op GitHub draaien. De eigenaar stelt **eenmalig** onder `Settings → Secrets and variables →
+Actions → New repository secret` de naam `HELIUS_API_KEY` in met de bestaande Helius-sleutel.
+Dit is een repository-secret, geen repository-variable; zet de sleutel nooit in een issue,
+commit, workflow-invoer of chat. De workflow verschijnt na opname in `main` onder `Actions →
+Helius 41-block verification → Run workflow`. De proef start alleen na die handmatige klik,
+heeft uitsluitend leesrechten op de repository, en stuurt maximaal 42 verzoeken naar Helius.
+De uitkomst en originele responses zijn zeven dagen als workflow-artifact beschikbaar en
+kunnen daarna met `scripts/verify_second_source_archives.py` onafhankelijk worden herberekend.
+Een groen resultaat bevestigt uitsluitend overeenkomst voor deze 41 slots; upstream-
+onafhankelijkheid en de resterende EXP-000 voorwaarden blijven open.
+
 Geen proef hierboven geeft automatisch EXP-001 vrij. De 1.000-launchpilot start pas na
 voldoende historische programmakoppeling, volledige velddekking en het resterende integriteitswerk.
