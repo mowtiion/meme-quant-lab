@@ -1,50 +1,13 @@
 [
   {
-    "account": "SysvarRent111111111111111111111111111111111",
-    "slot": 449381999
+    "account": "SysvarRent111111111111111111111111111111111"
   },
   {
     "account": "SysvarRent111111111111111111111111111111111",
-    "slot": 449382040
-  },
-  {
-    "account": "SysvarRent111111111111111111111111111111111",
-    "slot": 999999999
-  },
-  {
-    "account": "CuTceoszgaZ6nVsavXw6i25u4WFpTw9DF5YtAh7WJ62E",
-    "slot": 449381999
-  },
-  {
-    "account": "JBGWzrCcCg5FQN5FmMqHYkBQ5uQtZE52wxZs6WHciE5H",
     "slot": 449381999
   },
   {
     "account": "DT2krA8vSP96D68nH86eAztZHVM18YB5i4gDXjLBDXm7",
-    "slot": 449381999
-  },
-  {
-    "account": "2bnZS2u5TPtP1RJ8EJPENUXVEnfTW4fBgTfDNPnZ3q3t",
-    "slot": 449381999
-  },
-  {
-    "account": "DQpBtkZAzuf687hirxKRES1j3xYyip3uKAAS91BPh2Uk",
-    "slot": 449381999
-  },
-  {
-    "account": "4LqUj5tAyVfFuCLq7WgEXZNKpK8xTuyq487zVLDGjLv5",
-    "slot": 449381999
-  },
-  {
-    "account": "vUMbtk9Xjqi7FZjL8iKZErsf4pLsAUi82Yy1SRX3UxR",
-    "slot": 449381999
-  },
-  {
-    "account": "Hy7cyEEq5hNok6aj8wCkR9QLZUihf1zuADYJuxDjV4zo",
-    "slot": 449381999
-  },
-  {
-    "account": "EW9diL91VgHY5i9qYScz53W3PihQPSnPoMtAKCo1Bs7J",
     "slot": 449381999
   }
 ]

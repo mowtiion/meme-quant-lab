@@ -24,11 +24,16 @@ def main():
         if time.monotonic() >= deadline:
             break
         payload = {'jsonrpc':'2.0','id':number,'method':'getAccountInfo',
-                   'params':[spec['account'],{'encoding':'base64','commitment':'finalized','slot':spec['slot']}]}
+                   'params':[spec['account'],{'encoding':'base64','commitment':'finalized',**({'slot':spec['slot']} if 'slot' in spec else {})}]}
         req = urllib.request.Request(endpoint, data=json.dumps(payload).encode(), headers={'Content-Type':'application/json'})
         row = dict(spec)
         try:
-            with urllib.request.urlopen(req, timeout=min(25,deadline-time.monotonic())) as response:
+            try:
+                response = urllib.request.urlopen(req, timeout=min(25,deadline-time.monotonic()))
+            except urllib.error.HTTPError as exc:
+                row['http_status'] = exc.code
+                response = exc
+            with response:
                 raw = response.read(remaining+1)
             if len(raw)>remaining: raise ValueError('Response byte cap exceeded')
             if key.encode() in raw: raise ValueError('Credential in response')
