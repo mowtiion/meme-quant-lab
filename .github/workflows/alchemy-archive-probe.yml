@@ -1,0 +1,41 @@
+name: Alchemy two-block archive eligibility
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: alchemy-archive-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check secret
+        env:
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+        run: |
+          if [ -z "$ALCHEMY_API_KEY" ]; then
+            echo 'Configure repository secret ALCHEMY_API_KEY before running.'
+            exit 1
+          fi
+      - name: Test two archived blocks
+        env:
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+        run: python scripts/probe_alchemy_archives.py
+      - name: Preserve report and raw evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alchemy-archive-probe-evidence
+          path: data/secondary/alchemy-probe-*/evidence.zip
+          if-no-files-found: ignore
+          retention-days: 7
