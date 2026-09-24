@@ -139,7 +139,9 @@ def main():
     reference = json.loads(reference_path.read_text(encoding='utf-8'))
     if sorted(reference['slots']) != [str(slot) for slot in slot_numbers]:
         raise RuntimeError('Reference slot list changed')
-    key = getpass.getpass('Helius meme-quant-lab API-key (blijft lokaal): ').strip()
+    # GitHub Actions supplies this as a repository secret; interactive runs still prompt.
+    key = (os.environ.get('HELIUS_API_KEY') or
+           getpass.getpass('Helius meme-quant-lab API-key (blijft lokaal): ')).strip()
     if not key or len(key) > 256 or any(c.isspace() for c in key):
         print('Ongeldige sleutel; geen verzoek verzonden.'); return 2
     endpoint = ENDPOINT + urllib.parse.quote(key, safe='')

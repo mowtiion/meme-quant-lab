@@ -25,7 +25,8 @@ Drie ruwe Helius-blokken zijn op 27 veldgroepen opnieuw tegen de primaire archie
 herberekend: volledige overeenkomst. Zie [de tweede-broncontrole](reports/SECOND_SOURCE_PHASE_A_REPORT.md).
 Een volledige historische census en upstream-onafhankelijkheid blijven onbewezen.
 Een begrensde 41-blokkencontrole staat klaar voor lokale uitvoering met
-`py scripts/compare_second_source.py --phase-b`; zie `docs/SECOND_SOURCE_CHECK.md`.
+`py scripts/compare_second_source.py --phase-b` of de handmatige GitHub Actions-workflow;
+zie `docs/SECOND_SOURCE_CHECK.md`.
 
 ## Starten — Python 3.12
 

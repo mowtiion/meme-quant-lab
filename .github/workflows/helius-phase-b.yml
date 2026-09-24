@@ -1,0 +1,43 @@
+name: Helius 41-block verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: helius-phase-b
+  cancel-in-progress: false
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify secret is configured
+        env:
+          HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+        run: |
+          if [ -z "$HELIUS_API_KEY" ]; then
+            echo 'Configure repository secret HELIUS_API_KEY before running.'
+            exit 1
+          fi
+      - name: Compare 41 historical blocks
+        env:
+          HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+        run: python scripts/compare_second_source.py --phase-b
+      - name: Upload report and original block evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: helius-phase-b-evidence
+          path: |
+            data/secondary/helius41-*/comparison.json
+            data/secondary/helius41-*/evidence-*.zip
+          if-no-files-found: ignore
+          retention-days: 7
