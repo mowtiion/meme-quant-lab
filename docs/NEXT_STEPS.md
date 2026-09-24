@@ -1,5 +1,10 @@
 # Eerstvolgende werk — EXP-000 afmaken
 
+**Update 24 september:** de 41-blokkencontrole is geslaagd met Alchemy en offline herberekend.
+43.417 transacties en 3.082 genormaliseerde events komen overeen; zie
+[het resultaat](../reports/ALCHEMY_PHASE_B_REPORT.md). De eerstvolgende uitvoerbare stap
+is punt 3: een begrensde offline ledger op deze bewezen steekproef. Herhaal de provider-setup niet.
+
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
 
@@ -17,9 +22,9 @@ zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EX
    (54 blokken, 1.638.312 bytes). Koppel deze binary nog aan verifieerbare broncode/IDL en
    bevestig het geldigheidsinterval. PublicNode/dRPC gaven HTTP 403, OnFinality HTTP 429.
    Drie ruwe Helius-blokken zijn nu onafhankelijk tegen de primaire veldgroep-hashes
-   herberekend. Leg de upstream-herkomst vast en voer vervolgens de begrensde 41-slotproef
-   uit (42 requests, 192 MiB, 600 seconden). Het begrensde script en de controle op de zes
-   resultaatarchieven zijn voorbereid en met de bevroren 41-blokkenreferentie doorgelopen.
+   herberekend. De begrensde 41-slotproef is inmiddels met Alchemy geslaagd (42 requests, 140.090.905 bytes).
+   De zes bewijsdelen zijn offline opnieuw gehasht; alle events zijn opnieuw vergeleken.
+   Leg nog de upstream-herkomst vast; aparte leveranciers bewijzen geen onafhankelijke upstream.
    Een betaald abonnement is niet noodzakelijk gebleken. Zie `docs/SECOND_SOURCE_CHECK.md`.
    Zie `reports/HISTORICAL_BINARY_REPORT.md`.
 3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn

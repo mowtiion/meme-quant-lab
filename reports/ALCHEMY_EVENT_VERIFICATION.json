@@ -1,0 +1,635 @@
+{
+  "status": "MATCH_FOR_41_BLOCKS",
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "decoder_hashes": {
+    "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+    "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1"
+  },
+  "slots": {
+    "449382000": {
+      "events": 43,
+      "event_names": {
+        "SellEvent": 17,
+        "BuyEvent": 20,
+        "TradeEvent": 5,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "ec194ba0138bc466df5c6bc04ad00d770246008be994867a1eb7ed583f47c5d3",
+      "issues": [],
+      "normalized_events": 42,
+      "normalized_sha256": "b809a8d8402798df91253e6fb795f9d3547e257c366b0a442e06f7e3076d19d8",
+      "normalization_issues": []
+    },
+    "449382001": {
+      "events": 30,
+      "event_names": {
+        "BuyEvent": 9,
+        "SellEvent": 11,
+        "TradeEvent": 10
+      },
+      "event_sha256": "69dc89370273d37f60b0c8a3e82d40514dede33bb2b6f08f48b4231c0125e29c",
+      "issues": [],
+      "normalized_events": 30,
+      "normalized_sha256": "a5a9f8c5e04956468ca4e69f1d949c7d444b30f14f6868d30e86c0dab45c0cc9",
+      "normalization_issues": []
+    },
+    "449382002": {
+      "events": 34,
+      "event_names": {
+        "TradeEvent": 15,
+        "SellEvent": 7,
+        "BuyEvent": 12
+      },
+      "event_sha256": "69af7f3f3bcaae8cffcf53e0634f982024ea7934dcc2ce922df6196d429967c8",
+      "issues": [],
+      "normalized_events": 34,
+      "normalized_sha256": "4f959679f0dccf55fc60224e6642010be14b6d6a39c86b06bbe34dbf5d56a015",
+      "normalization_issues": []
+    },
+    "449382003": {
+      "events": 47,
+      "event_names": {
+        "TradeEvent": 13,
+        "SellEvent": 14,
+        "DistributeFeeToHoldersEvent": 1,
+        "BuyEvent": 18,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "17c524df44062c4aa34446d4021b8d3d9ae2c578dc9537e4b2d537ae0b46873b",
+      "issues": [],
+      "normalized_events": 45,
+      "normalized_sha256": "113cc6aac5868d41fee47c0403d5a7195c0870165993a9d104840fc03a1ce2c3",
+      "normalization_issues": []
+    },
+    "449382004": {
+      "events": 223,
+      "event_names": {
+        "TradeEvent": 12,
+        "SellEvent": 118,
+        "BuyEvent": 93
+      },
+      "event_sha256": "a4dfdc91660a6dd0c603b3c8f3bc6e552b60e36dde1b0deed4b8804fe4affe52",
+      "issues": [],
+      "normalized_events": 223,
+      "normalized_sha256": "380c9ebba2f1a355b5cdf188ae74f6d55dd85a3f70d06d22980dda5248fa3099",
+      "normalization_issues": []
+    },
+    "449382005": {
+      "events": 84,
+      "event_names": {
+        "SellEvent": 47,
+        "TradeEvent": 8,
+        "BuyEvent": 28,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "f260ab4dc03626a301c56fa29828ad0e1173bc73a9c37e666bed705ae1be533e",
+      "issues": [],
+      "normalized_events": 83,
+      "normalized_sha256": "c7f14a5a45c2d9f9897c199638adcf78fbd3ea81f7ae8358c3c6d0c9b398d44d",
+      "normalization_issues": []
+    },
+    "449382006": {
+      "events": 69,
+      "event_names": {
+        "BuyEvent": 26,
+        "SellEvent": 32,
+        "TradeEvent": 9,
+        "CloseUserVolumeAccumulatorEvent": 2
+      },
+      "event_sha256": "a23d981bdd4382047260d7bb8b7fd4dbf4971c72976ea338fceaa4592fe1e4db",
+      "issues": [],
+      "normalized_events": 67,
+      "normalized_sha256": "2b92516b5068a69bfc591ad4eb1765f4101c7bba70b84cb7a8d6aef018e641ec",
+      "normalization_issues": []
+    },
+    "449382007": {
+      "events": 78,
+      "event_names": {
+        "SellEvent": 40,
+        "TradeEvent": 8,
+        "BuyEvent": 30
+      },
+      "event_sha256": "f43f809c290ab20759f7a900ebbd345e279b7c84bc47f6e5ba4afe22fb71c379",
+      "issues": [],
+      "normalized_events": 78,
+      "normalized_sha256": "61d8630e05bf02205871f21d4f679f1d0db5147b4b2b084eb83d94c9be1017a6",
+      "normalization_issues": []
+    },
+    "449382008": {
+      "events": 119,
+      "event_names": {
+        "BuyEvent": 49,
+        "TradeEvent": 11,
+        "DistributeFeeToHoldersEvent": 2,
+        "SellEvent": 55,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "BoostBuyAndBurnEvent": 1
+      },
+      "event_sha256": "492df917726920bb9d5c2c5b1e7d60092b85d09a7f26934e9476a7a7a746d080",
+      "issues": [],
+      "normalized_events": 115,
+      "normalized_sha256": "b7b4dba223301f2620e64bf6176e85449250e1e5db8c266c10dd57a283af8df6",
+      "normalization_issues": []
+    },
+    "449382009": {
+      "events": 67,
+      "event_names": {
+        "BuyEvent": 21,
+        "SellEvent": 33,
+        "DistributeFeeToHoldersEvent": 3,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "TradeEvent": 9
+      },
+      "event_sha256": "cd00a6465a9ca0072fcd7b1b07b55d158591cce0611837c6bf784af86fb9c0be",
+      "issues": [],
+      "normalized_events": 63,
+      "normalized_sha256": "407a1bf620a900741984e793bde7ff291e9a4adf54e6e224a2145307771161f3",
+      "normalization_issues": []
+    },
+    "449382010": {
+      "events": 92,
+      "event_names": {
+        "DistributeFeeToHoldersEvent": 22,
+        "SellEvent": 33,
+        "BuyEvent": 25,
+        "TradeEvent": 8,
+        "CloseUserVolumeAccumulatorEvent": 4
+      },
+      "event_sha256": "836bf99a42b45daab7c673345da3aace03a1eb6b1789cd8445e38d1472b41daf",
+      "issues": [],
+      "normalized_events": 66,
+      "normalized_sha256": "603ca3014f601e7ddd08afe3e5a95bf5bdccc573bb9c19c6d147b36bd253ca42",
+      "normalization_issues": []
+    },
+    "449382011": {
+      "events": 119,
+      "event_names": {
+        "DistributeFeeToHoldersEvent": 23,
+        "SellEvent": 42,
+        "BuyEvent": 39,
+        "TradeEvent": 10,
+        "CloseUserVolumeAccumulatorEvent": 3,
+        "ExtendAccountEvent": 1,
+        "InitUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "57ab35760bdc76f66ff4eb15436a4a91732cb8bc5adb633cb993bef7f72681e7",
+      "issues": [],
+      "normalized_events": 91,
+      "normalized_sha256": "944f45b2e65edc941955b21e543af580a0320e65a4d26dc10381027aae1ecff3",
+      "normalization_issues": []
+    },
+    "449382012": {
+      "events": 95,
+      "event_names": {
+        "SellEvent": 50,
+        "BuyEvent": 36,
+        "CloseUserVolumeAccumulatorEvent": 3,
+        "TradeEvent": 6
+      },
+      "event_sha256": "7464e775090f41c17201d3d929e0582b2827740971edb4dbde5703e658d6be0b",
+      "issues": [],
+      "normalized_events": 92,
+      "normalized_sha256": "6e30f09adfb54b9ddde3a81ef6474eac2e7794585c17ea80caba25a703bccbc8",
+      "normalization_issues": []
+    },
+    "449382013": {
+      "events": 76,
+      "event_names": {
+        "SellEvent": 38,
+        "BuyEvent": 28,
+        "TradeEvent": 10
+      },
+      "event_sha256": "b1554fed30462ad70afb4774d6578ac73aea18bbde193e7526b840d8794f28b5",
+      "issues": [],
+      "normalized_events": 76,
+      "normalized_sha256": "5c962ffae3c43f97480b8559768075918b2fe2e8330e926231064f52c3fe5859",
+      "normalization_issues": []
+    },
+    "449382014": {
+      "events": 84,
+      "event_names": {
+        "SellEvent": 40,
+        "BuyEvent": 35,
+        "TradeEvent": 8,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "8fbc0c5829abf06be724fb108e87ea7e8979f3c53f1b52105535ffc3236da710",
+      "issues": [],
+      "normalized_events": 83,
+      "normalized_sha256": "8e5e0db1e51c34e4f635c252a58cc6200f176367826cdb82cd4c516f0c220c91",
+      "normalization_issues": []
+    },
+    "449382015": {
+      "events": 51,
+      "event_names": {
+        "SellEvent": 21,
+        "BuyEvent": 22,
+        "TradeEvent": 7,
+        "CollectCoinCreatorFeeEvent": 1
+      },
+      "event_sha256": "6e76c8f3380face9461d337f4ff6f52377587ea3322400ffc65178e387e79776",
+      "issues": [],
+      "normalized_events": 50,
+      "normalized_sha256": "a8628b53e2eb38932f87c6f58cc93505840b5c7461347d1df6c068bd323d5d7d",
+      "normalization_issues": []
+    },
+    "449382016": {
+      "events": 99,
+      "event_names": {
+        "BuyEvent": 27,
+        "DistributeFeeToHoldersEvent": 4,
+        "TradeEvent": 34,
+        "CloseUserVolumeAccumulatorEvent": 5,
+        "SellEvent": 29
+      },
+      "event_sha256": "772d8169917a0884726d89328a04d0ec70a99069908714d9cc4fc5d64e248e18",
+      "issues": [],
+      "normalized_events": 90,
+      "normalized_sha256": "03e72e8fffb1077e9a100cd484a7986cffad00454f85ef77a493e6907f96d3c7",
+      "normalization_issues": []
+    },
+    "449382017": {
+      "events": 138,
+      "event_names": {
+        "SellEvent": 51,
+        "TradeEvent": 8,
+        "BuyEvent": 41,
+        "CloseUserVolumeAccumulatorEvent": 21,
+        "DistributeFeeToHoldersEvent": 17
+      },
+      "event_sha256": "38bcc055c3414c69c07e4937e8352c6741114c26cbd903db95f41927f24bf608",
+      "issues": [],
+      "normalized_events": 100,
+      "normalized_sha256": "51a91646ccc34b10d0d2d738a6219665b2af867fefdf2973e87e79a54e6631ee",
+      "normalization_issues": []
+    },
+    "449382018": {
+      "events": 49,
+      "event_names": {
+        "BuyEvent": 16,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "TradeEvent": 15,
+        "SellEvent": 17
+      },
+      "event_sha256": "e3cb5df76a817745402cbe0f4ec36666500b24181ffe3f1e6ccf5e2a3a04f6b1",
+      "issues": [],
+      "normalized_events": 48,
+      "normalized_sha256": "d0965b45b179f4c0c2512d7d4f91bdea19719c42112ffa1b31fb57ecc568d84a",
+      "normalization_issues": []
+    },
+    "449382019": {
+      "events": 124,
+      "event_names": {
+        "SellEvent": 62,
+        "BuyEvent": 54,
+        "TradeEvent": 6,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "DistributeFeeToHoldersEvent": 1
+      },
+      "event_sha256": "50afd2038b26b528ef5af540e4cd1ae5dc1513e31b9c55c247de93434aacc568",
+      "issues": [],
+      "normalized_events": 122,
+      "normalized_sha256": "27da3c1a7b33d02bc9b0eb52c8b0e46114ed5ba6f265bc09f84e5919b1ba4a4b",
+      "normalization_issues": []
+    },
+    "449382020": {
+      "events": 96,
+      "event_names": {
+        "TradeEvent": 14,
+        "SellEvent": 45,
+        "BuyEvent": 32,
+        "CreateEvent": 1,
+        "CompleteEvent": 1,
+        "CreatePoolEvent": 1,
+        "InitBoostEvent": 1,
+        "CompletePumpAmmMigrationEvent": 1
+      },
+      "event_sha256": "93220f0a183cd71a11a0aca098dc16bc327b1f60ec50c76745480b12733e8bb2",
+      "issues": [],
+      "normalized_events": 94,
+      "normalized_sha256": "abf502f9c5dc80f74aa159b9ab06d3e89817c163bd99b19a531a5470cc21160d",
+      "normalization_issues": []
+    },
+    "449382021": {
+      "events": 50,
+      "event_names": {
+        "SellEvent": 22,
+        "BuyEvent": 22,
+        "CloseUserVolumeAccumulatorEvent": 2,
+        "TradeEvent": 3,
+        "BoostBuyAndBurnEvent": 1
+      },
+      "event_sha256": "76438274606eb28426545dc1c0c637b9e179fd5ac5b3fa54d959a7eaa980cf76",
+      "issues": [],
+      "normalized_events": 47,
+      "normalized_sha256": "af8df4ec2508dab97673bfb55eb6305c51c7ba9be52a1ab25bec86d920e4c936",
+      "normalization_issues": []
+    },
+    "449382022": {
+      "events": 92,
+      "event_names": {
+        "BuyEvent": 34,
+        "TradeEvent": 8,
+        "SellEvent": 46,
+        "CloseUserVolumeAccumulatorEvent": 3,
+        "CollectCreatorFeeEvent": 1
+      },
+      "event_sha256": "0af1645ad9b8a2fe272b91678896fb729ed8cfa3deba447886bd7c0d645a2b0b",
+      "issues": [],
+      "normalized_events": 88,
+      "normalized_sha256": "d3ffcf0fae1e670f6ff7fa9df5ad2346d0d9ad726b214c718ba2dbc1d16d55b4",
+      "normalization_issues": []
+    },
+    "449382023": {
+      "events": 87,
+      "event_names": {
+        "SellEvent": 46,
+        "BuyEvent": 38,
+        "TradeEvent": 3
+      },
+      "event_sha256": "50ed8d03859b4336bb688fdd8e2f998643bf2ecd35a390617a07eee95732d326",
+      "issues": [],
+      "normalized_events": 87,
+      "normalized_sha256": "865509411c802e45e598b5f74f71923782d4b3835f2457ace4f2000b26c0901c",
+      "normalization_issues": []
+    },
+    "449382024": {
+      "events": 83,
+      "event_names": {
+        "SellEvent": 40,
+        "BuyEvent": 23,
+        "TradeEvent": 10,
+        "CloseUserVolumeAccumulatorEvent": 10
+      },
+      "event_sha256": "c59a24560af715adcbe26ffa93ce7ec1fb753b212366462c5ff5a67a4b99c2bf",
+      "issues": [],
+      "normalized_events": 73,
+      "normalized_sha256": "a0fc2476b31dba96900ff4a676ad93f8f4ea7a85dc23e2c9ad77b874ccb1c523",
+      "normalization_issues": []
+    },
+    "449382025": {
+      "events": 80,
+      "event_names": {
+        "BuyEvent": 37,
+        "SellEvent": 35,
+        "TradeEvent": 7,
+        "CollectCreatorFeeEvent": 1
+      },
+      "event_sha256": "9bd157261de6737f4df55d90233f0e9a59f7e06069eee63b16b8c1b7248aa462",
+      "issues": [],
+      "normalized_events": 79,
+      "normalized_sha256": "7f7763870e34b3e7db62ca8adbaaef050d317cd7fd0f272c9b8bc0cf55717fde",
+      "normalization_issues": []
+    },
+    "449382026": {
+      "events": 78,
+      "event_names": {
+        "BuyEvent": 35,
+        "TradeEvent": 7,
+        "CloseUserVolumeAccumulatorEvent": 2,
+        "SellEvent": 34
+      },
+      "event_sha256": "4354db91d8976e55086e88cd8716f58baaa0c0817f358dae18f0a1bca90b5b53",
+      "issues": [],
+      "normalized_events": 76,
+      "normalized_sha256": "b0fd67ff5c36cb61b9f34496b17a7272246235349e35dd623fbe3e14c44bd035",
+      "normalization_issues": []
+    },
+    "449382027": {
+      "events": 73,
+      "event_names": {
+        "BuyEvent": 25,
+        "TradeEvent": 7,
+        "SellEvent": 40,
+        "BoostBuyAndBurnEvent": 1
+      },
+      "event_sha256": "a2188e46a4dcec550f771b72a758afa81890f10398f96dbbbeecbf741535414d",
+      "issues": [],
+      "normalized_events": 72,
+      "normalized_sha256": "d1f4809cc71062c2e1e3cbf13758aee5647e17d98d3d6c203be6d720da4b8d7e",
+      "normalization_issues": []
+    },
+    "449382028": {
+      "events": 16,
+      "event_names": {
+        "CreateEvent": 1,
+        "TradeEvent": 9,
+        "BuyEvent": 2,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "SellEvent": 3
+      },
+      "event_sha256": "441350e2834fb5ceb95b25877fa9e05aaf813854008de5e4a3373aa0a861c66a",
+      "issues": [],
+      "normalized_events": 15,
+      "normalized_sha256": "b45ccb7e336f50426c385b7ae3439b0cc9b5ff0ac7002f12081b6886fdc0c45f",
+      "normalization_issues": []
+    },
+    "449382029": {
+      "events": 31,
+      "event_names": {
+        "BuyEvent": 9,
+        "SellEvent": 14,
+        "TradeEvent": 8
+      },
+      "event_sha256": "f0ecec783c9d4bbeefedbc8d0ba1253457eeceea66349a311a967bc840135272",
+      "issues": [],
+      "normalized_events": 31,
+      "normalized_sha256": "ffafd9dfcf5f36acc7d568657bb3cc146b16bf875572dc5d5dd010228ec36732",
+      "normalization_issues": []
+    },
+    "449382030": {
+      "events": 47,
+      "event_names": {
+        "TradeEvent": 14,
+        "BuyEvent": 14,
+        "SellEvent": 15,
+        "CreateEvent": 1,
+        "DistributeCreatorFeesEvent": 1,
+        "ExtendAccountEvent": 1,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "87dd1564237950279dd0612ed9bd23c770f72000471db5fed32106dd56313a37",
+      "issues": [],
+      "normalized_events": 44,
+      "normalized_sha256": "e74e476a45d72e0d9db61ae878a8dc5bd1c49ea3f63f82b13f85ce6124a280d9",
+      "normalization_issues": []
+    },
+    "449382031": {
+      "events": 44,
+      "event_names": {
+        "BuyEvent": 26,
+        "SellEvent": 10,
+        "TradeEvent": 7,
+        "CreateEvent": 1
+      },
+      "event_sha256": "28238d40c7e4208a538a166e0c032750fafa532f7266c75dc08be65d0a8c7069",
+      "issues": [],
+      "normalized_events": 44,
+      "normalized_sha256": "c0f8dd8c0aeb6f82138ce51da1b6abaca8dd5275fc9d49490ce493976ef209cb",
+      "normalization_issues": []
+    },
+    "449382032": {
+      "events": 37,
+      "event_names": {
+        "TradeEvent": 18,
+        "SellEvent": 11,
+        "BuyEvent": 8
+      },
+      "event_sha256": "d1a7d476e53268fc308ecc46ac49ca0496a75e92ba019cb03502f26e357c7217",
+      "issues": [],
+      "normalized_events": 37,
+      "normalized_sha256": "81c4664a8eb0b08ddd2902f9f58f2b38e3ca4a1fa45f5416658009da462027a6",
+      "normalization_issues": []
+    },
+    "449382033": {
+      "events": 66,
+      "event_names": {
+        "SellEvent": 15,
+        "BuyEvent": 26,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "TradeEvent": 24
+      },
+      "event_sha256": "4ea369ba614552236ea97178d334d1767876b1eee37fe542559a740c80c32b49",
+      "issues": [],
+      "normalized_events": 65,
+      "normalized_sha256": "f5bc78eb5e21985367fdc75ae328db1cfbf74f0509531cbb336e9466ebc182fc",
+      "normalization_issues": []
+    },
+    "449382034": {
+      "events": 38,
+      "event_names": {
+        "BuyEvent": 13,
+        "TradeEvent": 7,
+        "InitUserVolumeAccumulatorEvent": 1,
+        "ClaimCashbackEvent": 1,
+        "SellEvent": 10,
+        "CloseUserVolumeAccumulatorEvent": 6
+      },
+      "event_sha256": "cc115dd5fad2967e1847183573b9749c4156d13875c4b4719b6aa6aa9e10c9c5",
+      "issues": [],
+      "normalized_events": 30,
+      "normalized_sha256": "54a1a992fdad80dc42285dcebad5abfe6befad4d7ccb68193505acebdee29e10",
+      "normalization_issues": []
+    },
+    "449382035": {
+      "events": 34,
+      "event_names": {
+        "SellEvent": 10,
+        "BuyEvent": 14,
+        "TradeEvent": 7,
+        "CloseUserVolumeAccumulatorEvent": 3
+      },
+      "event_sha256": "37b44a48d452b19b16084f529f81da3dc6c47966254b2afb2a40317abd6f49bc",
+      "issues": [],
+      "normalized_events": 31,
+      "normalized_sha256": "2565de202909fb368ddc22d9da8732eab67dc1ed3f27c90236f7587d0bdbda4f",
+      "normalization_issues": []
+    },
+    "449382036": {
+      "events": 317,
+      "event_names": {
+        "TradeEvent": 18,
+        "BuyEvent": 116,
+        "SellEvent": 178,
+        "CloseUserVolumeAccumulatorEvent": 4,
+        "ExtendAccountEvent": 1
+      },
+      "event_sha256": "790ae9c62884d37727366efef7edd6db293b14a3b0fa2a435c8cf8f08f7a91c1",
+      "issues": [],
+      "normalized_events": 312,
+      "normalized_sha256": "3b52308e0e0efd708fde518aa17bf647a584d45aa48ffe99313d057525cf1b0b",
+      "normalization_issues": []
+    },
+    "449382037": {
+      "events": 73,
+      "event_names": {
+        "TradeEvent": 5,
+        "BuyEvent": 32,
+        "SellEvent": 35,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "35db074eba4205dd4a1cf25e55949376f393fd6e2daa25742b49a508839a72d7",
+      "issues": [],
+      "normalized_events": 72,
+      "normalized_sha256": "7429e66ee54fbe2c9290c855507135b953d42d84d1f889ab2c15d9d1b9857164",
+      "normalization_issues": []
+    },
+    "449382038": {
+      "events": 74,
+      "event_names": {
+        "BuyEvent": 20,
+        "SellEvent": 45,
+        "TradeEvent": 8,
+        "CloseUserVolumeAccumulatorEvent": 1
+      },
+      "event_sha256": "41568cbb5d318f5de6a13896db2bef622a11b2dfcc12375ed1333a4c793077fc",
+      "issues": [],
+      "normalized_events": 73,
+      "normalized_sha256": "aa847d60db0c75fb191fc9c4d7dc1b96793fafc2f38e5a0960b76f4d3932cbf7",
+      "normalization_issues": []
+    },
+    "449382039": {
+      "events": 84,
+      "event_names": {
+        "TradeEvent": 5,
+        "SellEvent": 46,
+        "BuyEvent": 28,
+        "CloseUserVolumeAccumulatorEvent": 5
+      },
+      "event_sha256": "5402879ca8f36e74867741e728a0279e42a4cb87c437877b07bfbbdb1ff09ad2",
+      "issues": [],
+      "normalized_events": 79,
+      "normalized_sha256": "5d9d80b55932a048b348c2a83217e5287aebed004814be2b42b4d70f63b1becf",
+      "normalization_issues": []
+    },
+    "449382040": {
+      "events": 37,
+      "event_names": {
+        "BuyEvent": 14,
+        "TradeEvent": 8,
+        "SellEvent": 12,
+        "CloseUserVolumeAccumulatorEvent": 1,
+        "CreateEvent": 1,
+        "ExtendAccountEvent": 1
+      },
+      "event_sha256": "4d35d7641301c42f41c433e777e994e085bbf430610293b3b9294c3f5368b549",
+      "issues": [],
+      "normalized_events": 35,
+      "normalized_sha256": "b533993b080e7be61dde6b7354bd7be2c93a7c4212a71cbaa595b29bb00c317e",
+      "normalization_issues": []
+    }
+  },
+  "network_requests": 0,
+  "independent_decoder": false,
+  "scope": "Same pinned decoder on two separately retrieved block datasets; not a full historical census",
+  "events": 3258,
+  "event_names": {
+    "SellEvent": 1469,
+    "BuyEvent": 1197,
+    "TradeEvent": 409,
+    "CloseUserVolumeAccumulatorEvent": 87,
+    "DistributeFeeToHoldersEvent": 73,
+    "BoostBuyAndBurnEvent": 3,
+    "ExtendAccountEvent": 4,
+    "InitUserVolumeAccumulatorEvent": 2,
+    "CollectCoinCreatorFeeEvent": 1,
+    "CreateEvent": 5,
+    "CompleteEvent": 1,
+    "CreatePoolEvent": 1,
+    "InitBoostEvent": 1,
+    "CompletePumpAmmMigrationEvent": 1,
+    "CollectCreatorFeeEvent": 2,
+    "DistributeCreatorFeesEvent": 1,
+    "ClaimCashbackEvent": 1
+  },
+  "issues": 0,
+  "normalized_events": 3082,
+  "normalized_kinds": {
+    "trade": 3072,
+    "protocol_buy_burn": 3,
+    "create": 5,
+    "complete": 1,
+    "migration": 1
+  },
+  "normalization_issues": 0
+}

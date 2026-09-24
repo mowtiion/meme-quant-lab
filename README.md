@@ -24,9 +24,11 @@ Zie [het historische binaryrapport](reports/HISTORICAL_BINARY_REPORT.md) en
 Drie ruwe Helius-blokken zijn op 27 veldgroepen opnieuw tegen de primaire archiefdata
 herberekend: volledige overeenkomst. Zie [de tweede-broncontrole](reports/SECOND_SOURCE_PHASE_A_REPORT.md).
 Een volledige historische census en upstream-onafhankelijkheid blijven onbewezen.
-Een begrensde 41-blokkencontrole staat klaar voor lokale uitvoering met
-`py scripts/compare_second_source.py --phase-b` of de handmatige GitHub Actions-workflow;
-zie `docs/SECOND_SOURCE_CHECK.md`.
+De 41-blokkencontrole is nu met Alchemy uitgevoerd en offline herberekend:
+41/41 blokken, 43.417 transacties en 3.082 gelijke genormaliseerde events, zonder decodeer-
+of normalisatiefouten. Numerieke UI-afronding wordt expliciet gecontroleerd; exacte bedragen
+en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE_B_REPORT.md)
+en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 
 ## Starten — Python 3.12
 
