@@ -104,5 +104,10 @@ verbruikte compute units en alleen wanneer alle andere veldgroepen exact overeen
 De originele antwoorden blijven onveranderd bewaard en de normalisaties verschijnen per
 transactie in het rapport. Zie `reports/SECOND_SOURCE_PHASE_B_FIRST_RUN.md`.
 
+Een tweede run bereikte slot 449382002 en vond vijf afgekorte Helius-logreeksen.
+Dit is een inhoudelijke lacune; de 41-blokkenproef is gestopt en blijft MISMATCH.
+Zie `reports/SECOND_SOURCE_PHASE_B_SECOND_RUN.md`. Herhaal de workflow niet met
+dezelfde instellingen zonder een oplossing voor deze ontbrekende logs.
+
 Geen proef hierboven geeft automatisch EXP-001 vrij. De 1.000-launchpilot start pas na
 voldoende historische programmakoppeling, volledige velddekking en het resterende integriteitswerk.
