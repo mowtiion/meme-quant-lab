@@ -53,16 +53,54 @@ def groups(block):
     }
 
 
+def normalize_preexecution_empty(block):
+    """Align empty arrays with the reference's null only for pre-execution failures.
+
+    Both original provider responses remain unchanged in the evidence archives.
+    A missing log on an executed transaction is never normalized away.
+    """
+    changes = []
+    transactions = list(block['transactions'])
+    for index, tx in enumerate(transactions):
+        meta = tx['meta']
+        if (meta['err'] != 'MaxLoadedAccountsDataSizeExceeded' or
+                meta['computeUnitsConsumed'] != 0):
+            continue
+        fields = [field for field in ('innerInstructions', 'logMessages')
+                  if meta[field] == []]
+        if fields:
+            changed = dict(tx)
+            changed['meta'] = dict(meta)
+            for field in fields:
+                changed['meta'][field] = None
+            transactions[index] = changed
+            changes.append({'index': index, 'signature': tx['transaction']['signatures'][0],
+                            'fields': fields})
+    normalized = dict(block)
+    normalized['transactions'] = transactions
+    return normalized, changes
+
+
 def compare(block, expected):
     try:
         count = len(block['transactions'])
         observed = {name: digest(value) for name, value in groups(block).items()}
+        matches = {name: value == expected['group_sha256'][name]
+                   for name, value in observed.items()}
+        changes = []
+        if not all(matches.values()):
+            normalized, candidates = normalize_preexecution_empty(block)
+            if candidates:
+                normalized_hashes = {name: digest(value) for name, value in groups(normalized).items()}
+                normalized_matches = {name: value == expected['group_sha256'][name]
+                                      for name, value in normalized_hashes.items()}
+                if all(normalized_matches.values()):
+                    matches, changes = normalized_matches, candidates
     except (KeyError, TypeError, ValueError):
         return {'status': 'MISSING_FIELDS', 'transactions': None, 'groups': {}}
-    matches = {name: value == expected['group_sha256'][name]
-               for name, value in observed.items()}
     return {'status': 'MATCH' if count == expected['transactions'] and all(matches.values())
-            else 'MISMATCH', 'transactions': count, 'groups': matches}
+            else 'MISMATCH', 'transactions': count, 'groups': matches,
+            'normalized_preexecution_fields': changes}
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
