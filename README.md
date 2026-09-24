@@ -18,7 +18,7 @@ Onderzoek of vroege on-chain signalen toekomstige Solana/Pump.fun-runners kunnen
 
 De census-audit reconcilieert zes launches in 44 blokken, inclusief Mayhem en holder rewards.
 De oude Pump-upload van 12 september is volledig gereconstrueerd: 1.638.312 bytes uit
-1.619 schrijfacties. De onafhankelijke census en binary/IDL-koppeling blijven open.
+1.619 schrijfacties. De drie historische Pump/PumpSwap-binaries zijn nu per slot aan de IDL gekoppeld voor dispatch en geselecteerde config/event-controles. Alle 2.873 replayresultaten blijven exact gelijk; 250 tests slagen. Historische configuratiewaarden en volledige broncode/semantiekvalidatie blijven open. Zie [het nieuwe checkpoint](reports/HISTORICAL_PROGRAM_BINDING.md).
 Zie [het historische binaryrapport](reports/HISTORICAL_BINARY_REPORT.md) en
 [het census- en regimerapport](reports/CENSUS_REGIME_REPORT.md).
 Drie ruwe Helius-blokken zijn op 27 veldgroepen opnieuw tegen de primaire archiefdata

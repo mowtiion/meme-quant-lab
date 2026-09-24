@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "evidence": "reports/HISTORICAL_PROGRAM_BINDING.json",
+  "upgrade_slots_excluded": true,
+  "regimes": [
+    {
+      "id": "pump_old",
+      "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "first_slot": 446462761,
+      "last_slot": 447228372,
+      "deployment_slot": 446462760,
+      "binary_sha256": "7e260ecaa7aef442073042b513d61f8846ad8c5620022db200a76507e2312067",
+      "binary_bytes": 1638312,
+      "binary_fixture": "tests/fixtures/historical_programs/pump_old.so.gz",
+      "idl_sha256": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+      "idl_file": "pump.json",
+      "validated_scope": [
+        "instruction_dispatch_and_argument_deserialization",
+        "selected_global_config_writes",
+        "selected_admin_event_layout"
+      ],
+      "full_historical_config_verified": false,
+      "verified_source_build": false
+    },
+    {
+      "id": "pump_sample",
+      "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "first_slot": 447228374,
+      "last_slot": 449734334,
+      "deployment_slot": 447228373,
+      "binary_sha256": "10ba4b665225573057d59b5b7b8cf2585a5721177a4a0f392f48397f53b59581",
+      "binary_bytes": 1642768,
+      "binary_fixture": "tests/fixtures/historical_programs/pump_sample.so.gz",
+      "idl_sha256": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+      "idl_file": "pump.json",
+      "validated_scope": [
+        "instruction_dispatch_and_argument_deserialization",
+        "selected_global_config_writes",
+        "selected_admin_event_layout"
+      ],
+      "full_historical_config_verified": false,
+      "verified_source_build": false
+    },
+    {
+      "id": "amm",
+      "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+      "first_slot": 446462734,
+      "last_slot": 450120404,
+      "deployment_slot": 446462733,
+      "binary_sha256": "feb2ec72199f35999bbfd26ada811a37d297464ab265c78593b2d4717d7d42b5",
+      "binary_bytes": 10485715,
+      "binary_fixture": "tests/fixtures/historical_programs/amm.so.gz",
+      "idl_sha256": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1",
+      "idl_file": "pump_amm.json",
+      "validated_scope": [
+        "instruction_dispatch_and_argument_deserialization",
+        "selected_global_config_writes",
+        "selected_admin_event_layout"
+      ],
+      "full_historical_config_verified": false,
+      "verified_source_build": false
+    }
+  ]
+}

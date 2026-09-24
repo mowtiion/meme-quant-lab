@@ -1,0 +1,102 @@
+{
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "historical_program_binding": {
+    "registry_sha256": "cd5cdc635302ed79df0f8ed4442a248790db76edb55dc011f6bac6fc1bca4adf",
+    "transactions": 2873,
+    "bindings": [
+      {
+        "id": "amm",
+        "program": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+        "deployment_slot": 446462733,
+        "binary_sha256": "feb2ec72199f35999bbfd26ada811a37d297464ab265c78593b2d4717d7d42b5",
+        "idl_sha256": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1",
+        "validated_scope": [
+          "instruction_dispatch_and_argument_deserialization",
+          "selected_global_config_writes",
+          "selected_admin_event_layout"
+        ],
+        "full_historical_config_verified": false,
+        "verified_source_build": false
+      },
+      {
+        "id": "pump_sample",
+        "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+        "deployment_slot": 447228373,
+        "binary_sha256": "10ba4b665225573057d59b5b7b8cf2585a5721177a4a0f392f48397f53b59581",
+        "idl_sha256": "ffe966c42f1af41652ee753fe2f1e3f7cd4077d7e6f49faf3138959c8b56064b",
+        "validated_scope": [
+          "instruction_dispatch_and_argument_deserialization",
+          "selected_global_config_writes",
+          "selected_admin_event_layout"
+        ],
+        "full_historical_config_verified": false,
+        "verified_source_build": false
+      }
+    ],
+    "historical_config_verified": false,
+    "full_program_semantics_verified": false
+  },
+  "status": "SAMPLE_ACCOUNT_MOVEMENTS_RECONCILED_RESEARCH_BLOCKED",
+  "network_requests": 0,
+  "failed_target_transactions_excluded": 1085,
+  "counts": {
+    "RECONCILED": 2810,
+    "NO_TOKEN_ACCOUNT_ACTIVITY": 63
+  },
+  "details_sha256": "7d4682c6ea9e4594c1c30c498c811f9f47e46808a8906be650fde5ff60aacbcc",
+  "transaction_reasons": {},
+  "account_counts": {
+    "RECONCILED": 20102
+  },
+  "account_reasons": {},
+  "flow_counts": {
+    "transfer": 13233,
+    "burn": 5,
+    "mint": 8,
+    "unwrap": 1
+  },
+  "unknown_instructions": {},
+  "fee_counts": {
+    "CORE_FEES_RECONCILED": 2663,
+    "PROTOCOL_BURN_RECONCILED": 3
+  },
+  "fee_reasons": {},
+  "lamport_counts": {
+    "LAMPORTS_RECONCILED": 2873
+  },
+  "lamport_reasons": {},
+  "legacy_rent_independent_native_boundary_counts": {
+    "MATCH": 6098,
+    "STORED_RESERVE_REQUIRED": 20
+  },
+  "direct_movement_counts_in_sol_passes": {
+    "flash_referral": 70,
+    "flash_fee_remainder": 67,
+    "close_volume_account": 87,
+    "pump_sell_user": 182,
+    "pump_sell_protocol": 182,
+    "pump_sell_creator_or_reward": 182,
+    "pump_sell_buyback": 182,
+    "router_balance_replenishment": 15,
+    "migration_expense_budget": 1,
+    "migration_quote_funding": 1,
+    "unwrap_lamports": 1,
+    "claim_cashback": 1
+  },
+  "fee_variant_counts": {
+    "cashback": 2,
+    "holder_rewards": 30,
+    "multi_event_transactions": 256
+  },
+  "token_lifetimes": 20140,
+  "native_operations_verified": 4357,
+  "surviving_native_boundary_counts": {
+    "RECONCILED": 6118
+  },
+  "sample_token_account_ledger_complete": true,
+  "sample_lamport_ledger_complete": true,
+  "pilot_ready": false,
+  "full_mint_supply_history_verified": false,
+  "sync_native_runtime_reserve_verified": true,
+  "historical_global_config_verified": false
+}

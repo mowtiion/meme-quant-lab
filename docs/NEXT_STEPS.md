@@ -7,7 +7,11 @@ De 36 herinitialisaties, 20 resterende WSOL-eindgrenzen en unwrap zijn afgehande
 Alle eerdere SOL-resultaten, 2.663 gewone AMM-feecontroles en 3 protocol burns blijven identiek.
 Begin niet opnieuw met routerdiagnose, WSOL-reserves, provider-setup of benchmarks.
 
-Eerstvolgend inhoudelijk werk: historische **Pump/PumpSwap binary/config/IDL-koppeling**,
+**Nieuw checkpoint:** [drie historische binaries en begrensde IDL-interfacekoppeling zijn vastgelegd](../reports/HISTORICAL_PROGRAM_BINDING.md).
+126 instructies en 3.135 echte payloads slagen in de VM; 250 tests slagen. Alle economische resultaten zijn identiek.
+Herhaal geen bufferdownloads of dispatchdiagnose. De ontbrekende Pump-binary en het ruwe bewijs zijn duurzaam bewaard.
+
+Eerstvolgend inhoudelijk werk: historische **configuratiebytes en mutatiegeschiedenis**,
 resterend administratief uitvoeringsbewijs, complete census en upstream-herkomst.
 De 1.000-launchpilot blijft geblokkeerd tot die onderzoeksgates slagen.
 Zie `reports/TOKEN_LIFECYCLE_VERIFICATION.json` en `reports/TOKEN_NATIVE_RULES.json`.

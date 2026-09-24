@@ -1,3 +1,15 @@
+# Nieuwste checkpoint: historische programma-/IDL-intervallen
+
+24 september 2026: `reports/HISTORICAL_PROGRAM_BINDING.md` is nu leidend.
+Drie binaries vastgelegd; ontbrekende Pump-upload volledig gereconstrueerd. 126 VM-dispatchchecks, 3.135 echte payloads, negen configmutaties en 250 tests slagen.
+Alle 2.873 SOL- en 20.102 tokencontroles blijven exact identiek (detailsdigest `7d4682c6ea9e4594c1c30c498c811f9f47e46808a8906be650fde5ff60aacbcc`).
+Productie-audit verwerpt ongedekte slots en gewijzigde IDL-hashes. Historische config niet bewezen; admin-quarantaine behouden.
+Volgende input: vier configaccounts vóór de historische vensters plus geverifieerde wijzigingen; zie adressen/bewijsgrenzen in het nieuwe rapport.
+Raw checkpoint: `libfile_eb9e1a45b4a08191ac82221e9ee68592`, SHA `c44a0af4ef790ffd552d5f72b756a509a1f94201cecf1095868a35dc4065c963`.
+Geen provider-login, nieuwe benchmarks of herhaling van opgeloste SOL/WSOL-diagnose nodig.
+
+---
+
 # Resume checkpoint — 2026-09-24
 
 ## Start here after a reset

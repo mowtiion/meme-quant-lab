@@ -12,12 +12,15 @@ from meme_quant.decoder import PUMP, AMM, IDLDecoder, decode_block
 from meme_quant.reserve_ledger import account_keys
 from meme_quant.economic import audit_transaction
 from meme_quant.token_ledger import ordered_instructions
+from meme_quant.program_binding import ProgramRegistry
 
 
 def audit(path):
     verified = verify(path)
     details = []; failed = 0
     decoders = {d.program:d for d in (IDLDecoder(Path('vendor/pump.json')), IDLDecoder(Path('vendor/pump_amm.json')))}
+    registry = ProgramRegistry(Path('vendor/program_registry.json'))
+    bindings = {}; bound_transactions = 0
     with zipfile.ZipFile(path) as outer:
         for entry in outer.namelist():
             if not entry.endswith('.zip'):
@@ -42,12 +45,20 @@ def audit(path):
                         if tx['meta']['err'] is not None:
                             failed += 1
                             continue
+                        programs = {keys[ix['programIdIndex']] for _, _, ix in ordered_instructions(tx)} & set(decoders)
+                        for program in sorted(programs):
+                            binding = registry.bind(decoders[program],slot)
+                            bindings[binding['id']] = binding
+                        bound_transactions += 1
                         result = audit_transaction(tx, by_transaction[index], decoders)
                         details.append({'slot': slot, 'tx_index': index,
                                         'signature': tx['transaction']['signatures'][0], **result})
     token_complete = all(r['status'] in ('RECONCILED','NO_TOKEN_ACCOUNT_ACTIVITY') for r in details)
     cash_complete = all(r['lamport_check']['status']=='LAMPORTS_RECONCILED' for r in details)
     return {'artifact_sha256': verified['artifact_sha256'],
+            'historical_program_binding': {'registry_sha256':registry.sha256,
+                'transactions':bound_transactions,'bindings':list(bindings.values()),
+                'historical_config_verified':False,'full_program_semantics_verified':False},
             'status': 'SAMPLE_ACCOUNT_MOVEMENTS_RECONCILED_RESEARCH_BLOCKED' if token_complete and cash_complete else 'ECONOMIC_CHECKPOINT_BLOCKED',
             'network_requests': 0, 'failed_target_transactions_excluded': failed, 'details': details,
             'counts': dict(Counter(r['status'] for r in details)), 'details_sha256': digest(details),

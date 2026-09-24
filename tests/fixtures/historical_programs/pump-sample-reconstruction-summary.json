@@ -1,0 +1,29 @@
+{
+  "status": "RECONSTRUCTED_FROM_RPC_HISTORY",
+  "program": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+  "buffer": "EPv4PGA1mTBu3oL8UGrpM6a4muN3LseCPKjiXs9mkJw4",
+  "binary_sha256": "10ba4b665225573057d59b5b7b8cf2585a5721177a4a0f392f48397f53b59581",
+  "binary_bytes": 1642768,
+  "write_operations": 1624,
+  "overwritten_bytes": 0,
+  "incoming_transfers": 1,
+  "incoming_lamports": 1,
+  "history_transactions": 1628,
+  "blocks": 56,
+  "upgrade": {
+    "slot": 447228373,
+    "tx_index": 226,
+    "signature": "5mfXpjh9SFxVq61V6z31nv3Mvp6UopTpjHdNvqimcWioFHQKrhW5apJxn5UFNSjBRAEixdi3bjotprVAgEPhYGmY",
+    "instruction_path": [
+      3,
+      0
+    ],
+    "program": "BPFLoaderUpgradeab1e11111111111111111111111",
+    "tag": 3,
+    "raw_sha256": "f97361bb97c51a284eee8ddeabb133e5260e8b491f39b1de360415872347c14c"
+  },
+  "historical_source_idl_binding": "UNPROVEN",
+  "independent_binary_verification": "UNPROVEN",
+  "manifest_sha256": "631af6ba3e7cae9016086009ab6b328e254b8dd56172665de155cb0a83f29715",
+  "raw_block_bytes": 200485456
+}
