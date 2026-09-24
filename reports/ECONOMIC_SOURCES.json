@@ -1,0 +1,28 @@
+{
+  "retrieved_at": "2026-09-24",
+  "historical_deployed_binary_mapping_proven": false,
+  "sources": [
+    {
+      "repository": "pump-fun/pump-public-docs",
+      "commit": "81091419e4457566469d4e2a27f64ed84d42419c",
+      "paths": ["docs/BREAKING_FEE_RECIPIENT.md", "docs/FEE_RECIPIENTS.md", "docs/HOLDER_REWARDS_README.md", "docs/PUMP_CASHBACK_README.md", "docs/instructions/SELL.md"],
+      "use": "Legacy/v2 account mapping, documented buyback recipient snapshot, cashback destinations, holder-reward aliases. Current documentation membership is not historical Global account-state proof."
+    },
+    {
+      "repository": "solana-program/token-2022",
+      "commit": "8867f751c0f69367ba03af4f85510b5611989491",
+      "paths": ["program/src/processor.rs", "program/src/extension/token_metadata/processor.rs"],
+      "use": "UnwrapLamports amount(None)=current token amount; metadata initialization/authority changes do not transfer lamports. The real unwrap fixture invokes the classic token address: matching observed behavior is not proof of that historical binary."
+    },
+    {
+      "repository": "solana-program/token-metadata",
+      "commit": "7176d78e9c6570ac2bd07af4c9625446f5ff574f",
+      "paths": ["interface/src/instruction.rs"],
+      "use": "Hash-derived eight-byte metadata discriminators and Borsh initialization/authority layouts."
+    }
+  ],
+  "interface_references": [
+    "https://docs.rs/spl-token-2022-interface/latest/src/spl_token_2022_interface/extension/transfer_fee/instruction.rs.html",
+    "https://docs.rs/spl-token-2022-interface/latest/src/spl_token_2022_interface/extension/metadata_pointer/instruction.rs.html"
+  ]
+}

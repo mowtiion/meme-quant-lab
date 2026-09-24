@@ -34,7 +34,9 @@ class FeeAudit(unittest.TestCase):
         r=self.result()
         self.assertEqual(r['status'],'CORE_FEES_RECONCILED')
         self.assertEqual((r['protocol_net'],r['creator_fee'],r['buyback_amount']),(26,804,25))
-        self.assertFalse(r['buyback_recipient_identity_verified'])
+        self.assertTrue(r['buyback_recipient_identity_verified'])
+        self.assertTrue(r['buyback_recipient_documented'])
+        self.assertFalse(r['historical_global_config_verified'])
 
     def test_one_unit_fee_change_fails(self):
         ix=self.transfer(804); raw=unbase58(ix['data'])
@@ -53,7 +55,7 @@ class FeeAudit(unittest.TestCase):
 
     def test_missing_depth_does_not_guess_attribution(self):
         del self.transfer(804)['stackHeight']
-        self.assertEqual(self.result()['reason'],'MISSING_CPI_DEPTH')
+        self.assertEqual(self.result()['status'],'UNRESOLVED')
 
     def test_buyback_residual_amount_checked(self):
         ix=self.transfer(25);raw=unbase58(ix['data'])
@@ -65,4 +67,4 @@ class FeeAudit(unittest.TestCase):
         self.assertEqual(self.result()['reason'],'MULTI_EVENT_FEE_ATTRIBUTION')
         self.rows.pop()
         next(r for r in self.rows if r['name']=='SellEvent')['payload']['holder_rewards']=10
-        self.assertEqual(self.result()['reason'],'FEE_VARIANT_REQUIRES_SEPARATE_MAPPING')
+        self.assertEqual(self.result()['reason'],'EVENT_LOG_PAYLOAD_DIFFERS')

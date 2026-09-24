@@ -7,6 +7,7 @@ import re
 from .decoder import unbase58
 from .reserve_ledger import account_keys
 from .token_ledger import PROGRAMS, NATIVE, ordered_instructions, NO_AMOUNT_CHANGE
+from .token_extensions import effect_data
 
 SYSTEM = '11111111111111111111111111111111'
 
@@ -64,7 +65,7 @@ def system_movement(data, accounts):
     raise ValueError('UNSUPPORTED_SYSTEM_INSTRUCTION_'+str(tag))
 
 
-def reconcile_lamports(tx):
+def reconcile_lamports(tx, rows=None, decoders=None):
     result = {'status':'UNRESOLVED','movements':[], 'lifecycles':[], 'mismatches':[],
               'native_accounts':[], 'rent_assumed':False, 'sync_token_amounts_independently_verified':False}
     try:
@@ -83,7 +84,10 @@ def reconcile_lamports(tx):
         live=list(pre); fee=u64(meta['fee'])
         live[0]=u64(live[0]-fee)
         result['fee']=fee
-        identities={}; active=set(); generations={}; native=set()
+        from .direct_lamports import program_movements
+        schedule=program_movements(tx,rows,decoders) if rows is not None else {}
+        key_index={k:i for i,k in enumerate(keys)}
+        identities={}; active=set(); generations={}; native=set(); native_units={}
         def index(i):
             if type(i) is not int or not 0<=i<len(keys):
                 raise ValueError('INVALID_ACCOUNT_INDEX')
@@ -95,6 +99,8 @@ def reconcile_lamports(tx):
             identities[i]=(row['mint'],row['programId']); active.add(i)
             if row['mint']==NATIVE:
                 native.add(i)
+                amount=row.get('uiTokenAmount',{}).get('amount')
+                native_units[i]=u64(int(amount)) if isinstance(amount,str) and amount.isascii() and amount.isdigit() else None
         def move(kind,source,destination,amount,position):
             amount=u64(amount)
             if source!=destination:
@@ -107,7 +113,14 @@ def reconcile_lamports(tx):
                 live[destination]=u64(live[destination]+amount)
             result['movements'].append({'kind':kind,'source':keys[source],'destination':keys[destination],
                                         'lamports':amount,'position':position})
-        for top,inner,ix in ordered_instructions(tx):
+        def direct_at(position):
+            for op in schedule.get(position,[]):
+                source=key_index[op['source']]; destination=key_index[op['destination']]
+                amount=live[source] if op['amount'] is None else op['amount']
+                move(op['kind'],source,destination,amount,{'after_instruction_subtree':position,'event_index':op['event_index']})
+        ordered=list(ordered_instructions(tx))
+        for position,(top,inner,ix) in enumerate(ordered):
+            direct_at(position)
             program=keys[index(ix['programIdIndex'])]
             accounts=[index(i) for i in ix['accounts']]
             pos=[top,inner]
@@ -122,6 +135,9 @@ def reconcile_lamports(tx):
                         raise ValueError('CREATE_NONZERO_ACCOUNT')
                     move(kind,source,destination,amount,pos)
                 continue
+            data=effect_data(program,data,accounts)
+            if data is None:
+                continue
             if not data:
                 raise ValueError('EMPTY_TOKEN_INSTRUCTION')
             tag=data[0]
@@ -135,6 +151,7 @@ def reconcile_lamports(tx):
                 generations[account]=generations.get(account,0)+1
                 if mint==NATIVE:
                     native.add(account)
+                    native_units[account]=None  # Stored initialization reserve is absent.
                 result['lifecycles'].append({'kind':'initialize','account':keys[account], 'mint':mint,
                     'generation':generations[account],'lamports':live[account],'position':pos})
             elif tag in (3,12):
@@ -151,7 +168,12 @@ def reconcile_lamports(tx):
                         raise ValueError('INACTIVE_OR_CONFLICTING_TOKEN_ACCOUNT')
                 if mint==NATIVE:
                     native.update((source,destination))
-                    move('native_token_transfer',source,destination,int.from_bytes(data[1:9],'little'),pos)
+                    amount=int.from_bytes(data[1:9],'little')
+                    move('native_token_transfer',source,destination,amount,pos)
+                    if source!=destination:
+                        for account,delta in ((source,-amount),(destination,amount)):
+                            if native_units.get(account) is not None:
+                                native_units[account]=u64(native_units[account]+delta)
             elif tag==9:
                 if len(data)!=1 or len(accounts)<3 or accounts[0]==accounts[1]:
                     raise ValueError('MALFORMED_CLOSE')
@@ -164,12 +186,26 @@ def reconcile_lamports(tx):
                     'mint':identities[account][0],'generation':generations.get(account,0),
                     'lamports_returned':amount,'position':pos})
                 active.remove(account); del identities[account]
+                native_units.pop(account,None)
             elif tag==17:
                 if len(data)!=1 or len(accounts)<1 or identities.get(accounts[0])!=(NATIVE,program) or accounts[0] not in active:
                     raise ValueError('INVALID_SYNC_NATIVE')
                 native.add(accounts[0])
+                native_units[accounts[0]]=None  # Sync requires the stored reserve, not an assumed rent.
                 result['lifecycles'].append({'kind':'sync_native','account':keys[accounts[0]],
                     'generation':generations.get(accounts[0],0),'lamports':live[accounts[0]],'position':pos})
+            elif tag==45:
+                if len(accounts)<3 or len(data) not in (2,10) or data[1] not in (0,1) or len(data)!=(2 if data[1]==0 else 10):
+                    raise ValueError('MALFORMED_UNWRAP_LAMPORTS')
+                source,destination=accounts[:2]
+                if source not in active or identities.get(source)!=(NATIVE,program) or source==destination:
+                    raise ValueError('INVALID_UNWRAP_SOURCE')
+                amount=native_units.get(source) if data[1]==0 else int.from_bytes(data[2:10],'little')
+                if amount is None:
+                    raise ValueError('UNWRAP_AMOUNT_REQUIRES_STORED_RESERVE')
+                move('unwrap_lamports',source,destination,amount,pos)
+                if native_units.get(source) is not None:
+                    native_units[source]=u64(native_units[source]-amount)
             elif tag in (7,8,14,15):
                 if len(data)!=(10 if tag in (14,15) else 9) or len(accounts)<3:
                     raise ValueError('MALFORMED_MINT_BURN')
@@ -178,6 +214,18 @@ def reconcile_lamports(tx):
                     raise ValueError('NATIVE_MINT_BURN_INVALID')
             elif tag not in NO_AMOUNT_CHANGE:
                 raise ValueError('UNSUPPORTED_TOKEN_INSTRUCTION_'+str(tag))
+        direct_at(len(ordered))
+        post_units={r['accountIndex']:r for r in meta.get('postTokenBalances',[])}
+        result['native_token_boundaries']=[]
+        for account in sorted(native & active):
+            row=post_units.get(account,{})
+            amount=row.get('uiTokenAmount',{}).get('amount')
+            known=native_units.get(account)
+            status='STORED_RESERVE_REQUIRED'
+            if known is not None and isinstance(amount,str) and amount.isascii() and amount.isdigit():
+                status='MATCH' if known==int(amount) and row.get('mint')==NATIVE and row.get('programId')==identities[account][1] else 'DIFFERS'
+            result['native_token_boundaries'].append({'account':keys[account],'status':status,'predicted':known,'observed':amount})
+            if status=='DIFFERS':raise ValueError('NATIVE_TOKEN_BOUNDARY_DIFFERS')
         result['native_accounts']=[keys[i] for i in sorted(native)]
         result['reused_accounts']=[keys[i] for i,count in generations.items() if count>1]
         result['mismatches']=[{'account':keys[i],'predicted':live[i],'observed':post[i],

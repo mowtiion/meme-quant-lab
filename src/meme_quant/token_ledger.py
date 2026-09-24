@@ -7,6 +7,7 @@ import re
 from collections import defaultdict
 from .decoder import unbase58
 from .reserve_ledger import account_keys
+from .token_extensions import effect_data
 
 TOKEN = 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'
 TOKEN_2022 = 'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb'
@@ -30,7 +31,7 @@ def ordered_instructions(tx):
             yield index, inner_index, inner
 
 
-def token_flows(tx):
+def token_flows(tx, allow_reinitialization=False):
     """Decode all token calls once. Return gross instructions even with coverage gaps."""
     meta = tx['meta']
     if meta['err'] is not None:
@@ -76,15 +77,18 @@ def token_flows(tx):
         if program not in PROGRAMS:
             continue
         data = unbase58(ix['data'])
+        accounts = [keys[i] for i in ix['accounts']]
+        data = effect_data(program, data, accounts)
+        if data is None:
+            continue
         if not data:
             raise ValueError('EMPTY_TOKEN_INSTRUCTION')
-        accounts = [keys[i] for i in ix['accounts']]
         tag = data[0]
         calls.append((program, tag, accounts, data, top_index, inner_index))
         if tag in (1, 16, 18):
             if len(data) != (1 if tag == 1 else 33) or len(accounts) < 2:
                 raise ValueError('MALFORMED_INITIALIZATION')
-            if accounts[0] in initialized:
+            if accounts[0] in initialized and not allow_reinitialization:
                 raise ValueError('ACCOUNT_REINITIALIZATION')
             identify(accounts[0], accounts[1], program)
             initialized[accounts[0]] = accounts[1]

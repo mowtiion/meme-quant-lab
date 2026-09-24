@@ -6,11 +6,12 @@
 is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
 (2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
 De eerste [token- en fee-audit](../reports/TOKEN_LEDGER_REPORT.md) is ook uitgevoerd.
-De [lamport/SOL-audit](../reports/LAMPORT_LEDGER_REPORT.md) verklaart nu alle eindsaldi
-voor 2.607 van 2.873 transacties, inclusief 32 gevallen van accounthergebruik.
-Eerstvolgend: directe programmabewegingen achter 234 saldo-afwijkingen en 23 tussentijdse
-financieringsgaten, 9 niet-ondersteunde tokeninstructies, en afzonderlijk de historische
-reserve voor SyncNative-tokenbedragen. Daarna resterende fee-varianten en continuïteit.
+Het [economische controlepunt](../reports/ECONOMIC_CHECKPOINT.md) sluit nu alle 2.663 gewone
+AMM-feecontroles en 2.786 van 2.873 SOL-transacties. De 87 resterende SOL-cases staan volledig
+geïndexeerd in het verificatierapport. Eerstvolgend: fee-sharing verkoopvarianten, migratiefinanciering,
+directe programmabewegingen en historische reservegegevens voor nieuwe/gesynchroniseerde
+wrapped-SOL-accounts. Daarna tokencontinuïteit, historische binary/IDL-koppeling en census.
+De 1.000-launchpilot blijft geblokkeerd tot die gates slagen.
 Herhaal de provider-setup niet.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
