@@ -1,0 +1,36 @@
+name: Alchemy 41-block comparison
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['configs/alchemy_phase_b_request.json']
+permissions:
+  contents: read
+concurrency:
+  group: alchemy-phase-b
+  cancel-in-progress: false
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline comparison regression tests
+        run: python -m unittest discover -s tests -p 'test_*source*.py'
+      - name: Compare frozen 41 slots (42 requests maximum, no retries)
+        env:
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+        run: python scripts/compare_alchemy_phase_b.py
+      - name: Preserve evidence and checkpoint even after failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alchemy-phase-b-evidence
+          path: |
+            data/secondary/alchemy41-*/evidence-*.zip
+            data/secondary/alchemy41-*/comparison.json
+          retention-days: 30
+          if-no-files-found: warn
