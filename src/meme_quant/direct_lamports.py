@@ -7,7 +7,8 @@ from .token_ledger import TOKEN
 
 def program_movements(tx, rows, decoders):
     scope = EventScope(tx)
-    schedule = {}; seen = set()
+    from .router_movements import program_movements as router_movements
+    schedule = router_movements(scope, rows); seen = set()
     def add(end, kind, source, destination, amount, event):
         if amount is not None and (type(amount) is not int or not 0 <= amount < 2**64):
             raise ValueError('INVALID_DIRECT_AMOUNT')

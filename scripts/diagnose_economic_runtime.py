@@ -203,7 +203,7 @@ def diagnose(path, expected):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('artifact', type=Path)
-    parser.add_argument('--checkpoint', type=Path, default=Path('reports/ECONOMIC_CONTINUITY_VERIFICATION.json'))
+    parser.add_argument('--checkpoint', type=Path, default=Path('reports/ROUTER_MOVEMENT_VERIFICATION.json'))
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     report = diagnose(args.artifact, json.loads(args.checkpoint.read_text()))

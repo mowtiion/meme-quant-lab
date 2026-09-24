@@ -1,27 +1,16 @@
 # Eerstvolgende werk — EXP-000 afmaken
 
-**Update 24 september:** de 41-blokkencontrole is geslaagd met Alchemy en offline herberekend.
-43.417 transacties en 3.082 genormaliseerde events komen overeen; zie
-[het resultaat](../reports/ALCHEMY_PHASE_B_REPORT.md). De eerstvolgende uitvoerbare stap
-is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
-(2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
-De eerste [token- en fee-audit](../reports/TOKEN_LEDGER_REPORT.md) is ook uitgevoerd.
-Het [nieuwste controlepunt](../reports/CONTINUITY_CHECKPOINT.md) sluit alle 2.663 gewone
-AMM-feecontroles en 2.791 van 2.873 SOL-transacties. Ook de tokencontinuïteit door alle 43.417
-transacties is gecontroleerd: 44.046 aansluitende accountwaarnemingen, nul verschillen.
-De extra verkoopaccounts en migratiefinanciering zijn afgehandeld. Eerstvolgend: de 82 exact
-geïndexeerde SOL-residuals en historische tokenstaat voor nieuwe/gesynchroniseerde wrapped-SOL-
-accounts. Daarna intra-transactielevenscycli, historische binary/config/IDL-koppeling en census.
-De 1.000-launchpilot blijft geblokkeerd tot die gates slagen.
-Herhaal de provider-setup niet.
+**Update 24 september:** [alle 82 resterende SOL-gevallen zijn opgelost](../reports/ROUTER_MOVEMENTS_RESOLVED.md).
+Alle **2.873** succesvolle doeltransacties sluiten exact aan. De twee routerregels zijn
+uit de historisch geldige binaries gereconstrueerd; machinecode-, regressie- en volledige
+replaycontroles slagen. De oorspronkelijke 2.791 correcte gevallen zijn exact ongewijzigd.
+Geen aanvullende provider-setup of hernieuwde diagnose van deze 82 gevallen nodig.
 
-**Nieuwste diagnose:** zie [runtime en resterende bewegingen](../reports/RUNTIME_AND_RESIDUAL_REPORT.md).
-De 82 SOL-gevallen vallen in twee programmagroepen: FLASHX8 (67) en 3s1rA (15).
-Werk gericht aan geverifieerde instructie-/historische-state-mapping voor die groepen.
-De tweede groep is geen eenvoudige fee-refund: 5 van de 15 bedragen verschillen van meta.fee.
-De replay per blok behoudt exact alle audituitkomsten en vermijdt de grote gemeten GC-pauze.
-Gebruik `scripts/replay_economic_stream.py` voor herhaling van de begrensde offline proef;
-alleen de replay houdt maximaal één gedecodeerd blok vast. Dit start geen live feed.
+Eerstvolgend inhoudelijk werk: de afzonderlijke historische tokenstaat voor nieuw/geherinitialiseerd
+wrapped SOL, de resterende tokenlevenscycli, Pump binary/config/IDL-koppeling en complete census.
+Alle 2.663 gewone AMM-feecontroles en de tokencontinuïteit door 43.417 transacties zijn al gecontroleerd.
+De 1.000-launchpilot blijft geblokkeerd tot de overblijvende onderzoeksgates slagen.
+Zie `reports/ROUTER_MOVEMENT_VERIFICATION.json` voor exacte uitkomsten en opgeloste transacties.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).

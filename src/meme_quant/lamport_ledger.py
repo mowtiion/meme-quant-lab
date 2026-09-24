@@ -116,7 +116,14 @@ def reconcile_lamports(tx, rows=None, decoders=None):
         def direct_at(position):
             for op in schedule.get(position,[]):
                 source=key_index[op['source']]; destination=key_index[op['destination']]
-                amount=live[source] if op['amount'] is None else op['amount']
+                if 'target_lamports' in op:
+                    amount=max(0,u64(op['target_lamports'])-live[destination])
+                    # The deployed replenishment path returns success without moving
+                    # anything if its source cannot cover the complete shortfall.
+                    if live[source]<amount and op.get('insufficient_source')=='skip':
+                        continue
+                else:
+                    amount=live[source] if op['amount'] is None else op['amount']
                 move(op['kind'],source,destination,amount,{'after_instruction_subtree':position,'event_index':op['event_index']})
         ordered=list(ordered_instructions(tx))
         for position,(top,inner,ix) in enumerate(ordered):

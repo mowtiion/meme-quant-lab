@@ -31,15 +31,13 @@ en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE
 en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
 met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
-Het [nieuwste controlepunt](reports/CONTINUITY_CHECKPOINT.md) reconcilieert **2.791 van
-2.873 SOL-transacties** en alle **2.663 gewone AMM-feecontroles**. De continuïteitscontrole
-bestrijkt alle **43.417 transacties** en vindt **44.046 aansluitende tokenaccountwaarnemingen**
-zonder verschillen. Nog 82 SOL-transacties en historische tokenstaat blijven open; de pilot
-is geblokkeerd. Eerdere rapporten blijven beschikbaar als historische controlepunten.
-De [runtime- en foutdiagnose](reports/RUNTIME_AND_RESIDUAL_REPORT.md) groepeert de 82 resterende
-gevallen bij twee programma’s (67 + 15). Verwerking per blok geeft dezelfde economische uitkomst;
-de grootste gemeten transactievertraging daalde van 182 naar 3,49 ms in deze offline proef.
-Netwerkvertraging en een live feed zijn nog niet gemeten.
+Het [nieuwste resultaat](reports/ROUTER_MOVEMENTS_RESOLVED.md) reconcilieert **alle 2.873 SOL-transacties**:
+**82 resterende gevallen opgelost, nul verschillen**. De ontbrekende routerverdelingen en
+saldoaanvullingen zijn uit de historisch geldige programmabinaries gereconstrueerd en getest.
+De eerdere 2.791 correcte gevallen en alle 2.663 gewone AMM-feecontroles blijven ongewijzigd.
+De continuïteitscontrole bestrijkt alle 43.417 transacties: 44.046 aansluitende tokenwaarnemingen,
+zonder verschillen. De bredere pilot wacht nog op de afzonderlijke tokenstaat-, binary/config-
+en censusgates. De eerdere runtime- en foutdiagnose blijft als historisch controlepunt beschikbaar.
 
 ## Starten — Python 3.12
 
