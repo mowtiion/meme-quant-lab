@@ -96,5 +96,13 @@ kunnen daarna met `scripts/verify_second_source_archives.py` onafhankelijk worde
 Een groen resultaat bevestigt uitsluitend overeenkomst voor deze 41 slots; upstream-
 onafhankelijkheid en de resterende EXP-000 voorwaarden blijven open.
 
+De eerste Actions-run stopte na blok 449382000: vier vóór uitvoering afgewezen transacties
+gaven bij Helius lege lijsten voor logs en inner instructions, terwijl de primaire bron
+`null` teruggaf. Alle overige velden in dit blok kwamen overeen. De vergelijking accepteert
+deze twee representaties voortaan alleen bij `MaxLoadedAccountsDataSizeExceeded` met nul
+verbruikte compute units en alleen wanneer alle andere veldgroepen exact overeenkomen.
+De originele antwoorden blijven onveranderd bewaard en de normalisaties verschijnen per
+transactie in het rapport. Zie `reports/SECOND_SOURCE_PHASE_B_FIRST_RUN.md`.
+
 Geen proef hierboven geeft automatisch EXP-001 vrij. De 1.000-launchpilot start pas na
 voldoende historische programmakoppeling, volledige velddekking en het resterende integriteitswerk.
