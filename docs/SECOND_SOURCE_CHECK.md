@@ -6,13 +6,14 @@ Leg daarom provider en bekende upstream/herkomst vast; markeer onbekende onafhan
 
 ## Benodigde toegang
 
-Een gratis, geauthenticeerd read-only Solana-mainnet-endpoint is een mogelijke volgende stap.
+Het Helius Free-account van de gebruiker heeft in de dashboard Playground de drie historische
+slots getoond. De Playground biedt `getBlock` niet aan. Die slotlijst bewijst alleen
+beschikbaarheid, geen inhoudsovereenkomst. Gebruik daarom de lokale, read-only controle hieronder.
 Helius heeft op de geraadpleegde [prijskaart](https://www.helius.dev/pricing) een Free-plan;
-bruikbaarheid voor deze historische blokken moet nog worden getest. Er is geen account
-aangemaakt, sleutel gebruikt of abonnement gekocht.
+bruikbaarheid voor de volledige historische blokinhoud moet nog worden getest.
 
-Bewaar een eventuele API-key in een private omgevingsvariabele `SOLANA_RPC_URL`. Zet de key
-niet in chat, GitHub, rapporten of een gedeeld bestand. `.env` wordt niet automatisch geladen.
+De lokale controle vraagt de API-key verborgen op de eigen computer en slaat hem niet op.
+Zet de key niet in chat, GitHub, rapporten of een gedeeld bestand.
 Bevestig vooraf dat het gekozen endpoint binnen het gratis quotum valt; stop bij een betaalvereiste.
 
 ## Fase A — drie bestaande archiefblokken
@@ -31,6 +32,19 @@ Bevestig vooraf dat het gekozen endpoint binnen het gratis quotum valt; stop bij
 
 Referentie: raw manifest `2b1a82e1062f068ff884a34b34ca1c7c94400fa99bba4fa7fffafca9f7695683`.
 Het archief van de vorige census-audit bevat die referentiedata.
+De bevroren semantische SHA-256-controles uit precies die drie raw blokken staan in
+`configs/second_source_reference.json`. De scriptuitvoering vereist de raw referentiebestanden
+niet op de eigen computer. Start vanuit de bijgewerkte repository op de eigen Windows-computer:
+
+```powershell
+py scripts/compare_second_source.py
+```
+
+Typ de `meme-quant-lab` API-key wanneer daarom wordt gevraagd; de invoer blijft onzichtbaar.
+Het programma voert maximaal vier verzoeken uit en schrijft alleen de response-data en het
+geredigeerde `comparison.json` onder een nieuwe `data/secondary/helius-...` map. Deel alleen
+`comparison.json` als resultaat. Een `MATCH` bevestigt veld-voor-veld gelijkheid van deze drie
+blokken tussen twee endpoints; het legt de upstream-onafhankelijkheid nog niet vast.
 
 ## Fase B — alleen na een geslaagde fase A
 

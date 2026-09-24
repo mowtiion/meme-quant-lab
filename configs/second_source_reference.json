@@ -1,0 +1,52 @@
+{
+  "source": "https://api.mainnet-beta.solana.com",
+  "manifest_sha256": "2b1a82e1062f068ff884a34b34ca1c7c94400fa99bba4fa7fffafca9f7695683",
+  "commitment": "finalized",
+  "slots": {
+    "447000000": {
+      "raw_sha256": "2da6f51a8ecf9c66db29e7d0a3a6279a6bc542d1f026a87b9ce1f2dad82a129f",
+      "transactions": 1256,
+      "group_sha256": {
+        "header": "6ed9bbe2c8a7690b2d591f6217b5a6ecb528870d96bd0b72a9447d9bec519087",
+        "signatures_and_versions": "e9a76b8b60c0d2ca34205e964493c38f22997315ea5ea960790ed7cd0583207d",
+        "messages": "6255cc1b0516aa0ba25cbb03543661f26e7827619baf9483d782ea438ffbd53f",
+        "execution": "a15ee6ff2079507bac199571d0317896e20b10cf55c17553dc3a516f3f1c68ef",
+        "inner_instructions": "96902fb3cae270bf5d6a982f519755416e3e5b74028ea7982bc8ee8baff2c0d0",
+        "logs": "4c389fb48a77dd1cc6307e3f592cef738d0bd7d1d31a07764e5981cec1a2522a",
+        "loaded_addresses": "bb16b60e590ccbc0286165cdc71a1c46fe02fb1a6bb5caba49e9cea380282574",
+        "balances": "bde6481a2acf88334a545821f1677db2bea0987c7d3ee38e3124c731f3e94f2b",
+        "all_result": "a5236742d9b65c886167d645a01c7515646b4c169ba4ff17ae50b50908d7903f"
+      }
+    },
+    "447000001": {
+      "raw_sha256": "57286cba654248cb54dc4eb93b68d1d8c655fdd37cc2e315c57c9558a8f48ab6",
+      "transactions": 1216,
+      "group_sha256": {
+        "header": "8036f8c4b2bf633908ffba4740a7242752f4f3a53ad16915ebbc88a5bc92d430",
+        "signatures_and_versions": "c13956f151c51796f749e732eee6b79e8064457c76c9b89ca0dfaa4bd453f159",
+        "messages": "58d0565650e22e82afa97fc780c30fedbae0f7207df5acb03b4ee367dbc22820",
+        "execution": "75cb92c672e5d2b0a015dffc0553f4c665d0ff029c2471a33cea499e1232970b",
+        "inner_instructions": "aa03668ea1bb35c3822b102e04a5cb3f1f5f82a478026fd993d081c54da7260d",
+        "logs": "86ec6fa1ba259890b18ea12aba37b8b8a0c099eed9557dd77f5752dea0798fa5",
+        "loaded_addresses": "cfa3b7cec87616854a66050ecd7231743a65d5a97ebd7db190dd9693047eea23",
+        "balances": "37753cbf52c098a64f66a939202ea235ad6d6fb82aafe4a7f53efcfef1720633",
+        "all_result": "ee9ae6f52f8861e00119ecd401643362d5fc36667cfaf97a46736eaab0981ad5"
+      }
+    },
+    "447000002": {
+      "raw_sha256": "35dfecdb5794c8868b0a13863a79b188dcc344cbd66d8bfdae9bd35c3d626020",
+      "transactions": 1369,
+      "group_sha256": {
+        "header": "89a0b09b7fb7e81c75651ce4e4f6eb911b379e1fd929d8251eb7e3cd8ad1feae",
+        "signatures_and_versions": "199544564804751f1746e4a3be86fc227332ddfa6eaccc421ca455af046afc5e",
+        "messages": "5d0eb3277feb3d953c684f71d7c410399bd920f04aa49c347616f1f60feadac4",
+        "execution": "df7096eb98a07a00685a63699dd9465e95ea6b52499c37d4eda09d43f954c4d3",
+        "inner_instructions": "979a70ee8ecf00a757a5ee8d4ed098557c6566b2a438922339240b6a877671e6",
+        "logs": "88acd81f3da8e9248e75c91a740fed0693e45cf44d45c010e9ccf60f6d2ba116",
+        "loaded_addresses": "37d75c97c77d2082200327a2d5431dd9867d24930966ff8c749ccc2854097c7f",
+        "balances": "39e187d58c879d47232ccecf1bba812c134f8f5973213a41f3bf1793d59b3220",
+        "all_result": "bd48ce256857a9d54ccac506009e8d477a563ed3d46330f2a90d1fa01ff3b32b"
+      }
+    }
+  }
+}
