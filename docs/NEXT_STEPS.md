@@ -1,16 +1,16 @@
 # Eerstvolgende werk — EXP-000 afmaken
 
-**Update 24 september:** [alle 82 resterende SOL-gevallen zijn opgelost](../reports/ROUTER_MOVEMENTS_RESOLVED.md).
-Alle **2.873** succesvolle doeltransacties sluiten exact aan. De twee routerregels zijn
-uit de historisch geldige binaries gereconstrueerd; machinecode-, regressie- en volledige
-replaycontroles slagen. De oorspronkelijke 2.791 correcte gevallen zijn exact ongewijzigd.
-Geen aanvullende provider-setup of hernieuwde diagnose van deze 82 gevallen nodig.
+**Update 24 september:** [SOL én tokenlevenscycli in de steekproef zijn opgelost](../reports/TOKEN_LIFECYCLES_RESOLVED.md).
+Alle **2.873 SOL-transacties** en **20.102 tokenaccount-controles** sluiten exact aan.
+De 36 herinitialisaties, 20 resterende WSOL-eindgrenzen en unwrap zijn afgehandeld;
+63 transacties hebben geen tokenaccount-activiteit. **239 tests slagen**.
+Alle eerdere SOL-resultaten, 2.663 gewone AMM-feecontroles en 3 protocol burns blijven identiek.
+Begin niet opnieuw met routerdiagnose, WSOL-reserves, provider-setup of benchmarks.
 
-Eerstvolgend inhoudelijk werk: de afzonderlijke historische tokenstaat voor nieuw/geherinitialiseerd
-wrapped SOL, de resterende tokenlevenscycli, Pump binary/config/IDL-koppeling en complete census.
-Alle 2.663 gewone AMM-feecontroles en de tokencontinuïteit door 43.417 transacties zijn al gecontroleerd.
-De 1.000-launchpilot blijft geblokkeerd tot de overblijvende onderzoeksgates slagen.
-Zie `reports/ROUTER_MOVEMENT_VERIFICATION.json` voor exacte uitkomsten en opgeloste transacties.
+Eerstvolgend inhoudelijk werk: historische **Pump/PumpSwap binary/config/IDL-koppeling**,
+resterend administratief uitvoeringsbewijs, complete census en upstream-herkomst.
+De 1.000-launchpilot blijft geblokkeerd tot die onderzoeksgates slagen.
+Zie `reports/TOKEN_LIFECYCLE_VERIFICATION.json` en `reports/TOKEN_NATIVE_RULES.json`.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
@@ -34,8 +34,9 @@ zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EX
    Leg nog de upstream-herkomst vast; aparte leveranciers bewijzen geen onafhankelijke upstream.
    Een betaald abonnement is niet noodzakelijk gebleken. Zie `docs/SECOND_SOURCE_CHECK.md`.
    Zie `reports/HISTORICAL_BINARY_REPORT.md`.
-3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn
-   beïnvloedt reserves/supply, maar telt niet als walletvraag. Reconcile ook fees en niet-SOL-quotes.
+3. De account-, reserve-, transfer/mint/burn- en native-ledgers voor de 41-bloksteekproef zijn gevalideerd.
+   Breid de bewezen regels pas na historische programma/config-validatie uit naar de census.
+   De sample bewijst geen volledige historische mintsupply; protocol burns blijven apart van walletvraag.
 4. Gebruik het vastgelegde pilotplan in `configs/pilot1000.json`: launches van 14 september UTC,
    follow-up tot 22 september 00:05 UTC. Bevestig eerst volledige velddekking en bereken een
    begrensd downloadplan met opslag-, request- en runtimebudget.

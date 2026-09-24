@@ -1,7 +1,8 @@
-"""Conservative SPL token account-flow reconciliation from successful raw transactions.
+"""Gross SPL flows for fee attribution and the legacy amount-only audit.
 
-Supports ordinary transfer/mint/burn variants. WSOL wrapping/closing and unknown
-extensions stay explicit gaps; no missing account state is silently made zero.
+The production economic audit uses token_lifecycles for generation-aware native
+amounts. The older standalone reconcile_token_accounts remains conservative when
+no independently reconciled SOL trace or historical rule context is supplied.
 """
 import re
 from collections import defaultdict

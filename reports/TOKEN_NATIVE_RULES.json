@@ -1,0 +1,186 @@
+{
+  "sample_slots": [
+    449382000,
+    449382040
+  ],
+  "retrieved_at": "2026-09-24",
+  "program": {
+    "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "program_account": {
+      "data": [
+        "AgAAACfxkLHTr5i4znFMROjK3/n4/EXLjl+sQgLv+BENl903",
+        "base64"
+      ],
+      "executable": true,
+      "lamports": 200653906,
+      "owner": "BPFLoaderUpgradeab1e11111111111111111111111",
+      "rentEpoch": 18446744073709551615,
+      "space": 36
+    },
+    "programdata_address": "3gvYRKWyXRR9xKWe1ZjPhLY5ZJRN7KDB4rFZFGoJfFk2",
+    "programdata_header_hex": "0300000080a2001900000000000000000000000000000000000000000000000000000000000000000000000000",
+    "last_deployment": 419472000,
+    "observed_context": {
+      "apiVersion": "4.3.0",
+      "slot": 450112375
+    },
+    "binary_sha256": "8190d3f7ceb6cb7a7a8d8924bff89f9f611e15ce1f806f2b6237f3311a98f697",
+    "binary_bytes": 108600,
+    "fixture": "tests/fixtures/classic_token_program.so.gz",
+    "slices": {
+      "rent_multiply": {
+        "start": 5488,
+        "end": 5536,
+        "hex": "79a6f0ff0000000079a2e8ff000000007987500000000000bf7100000000000007010000800000002f21000000000000",
+        "sha256": "1f580a6959a0d19e01d0e285d0a8b496f36e8dec6201d0fe0cecd5275034ba01"
+      },
+      "sync_native": {
+        "start": 15448,
+        "end": 15568,
+        "hex": "5507510da50000007182c4000000000025024f0d020000001502660e000000007182c5000000000055025e0d010000007982480000000000ad125e0d000000007b9a78f700000000bf8300000000000007030000580000007b3a98f7000000007b18c900000000001f120000000000007b28980000000000",
+        "sha256": "bd111875c6ac6a4f8c8145273e72f6060a3c7da762270317c49f44494a8b875d"
+      },
+      "initialize_native": {
+        "start": 74872,
+        "end": 74904,
+        "hex": "7b28c900000000001f210000000000007b189800000000007208c50001000000",
+        "sha256": "07c789c63303ec6fab156d543180b567b21ee5aeffdb40e36250fd0a63e5515f"
+      },
+      "unwrap_remaining": {
+        "start": 73464,
+        "end": 73488,
+        "hex": "1f740000000000007b4a98fe00000000bf74000000000000",
+        "sha256": "106fa6f94b6c6aeea1b756118ac2b6b1c6bbaeb6f1e3764f541c8e6f451cedb4"
+      }
+    }
+  },
+  "rent_sysvar": {
+    "address": "SysvarRent111111111111111111111111111111111",
+    "context": {
+      "apiVersion": "4.3.0",
+      "slot": 450112286
+    },
+    "account": {
+      "data": [
+        "2BMAAAAAAAAAAAAAAADwPzI=",
+        "base64"
+      ],
+      "executable": false,
+      "lamports": 1009200,
+      "owner": "Sysvar1111111111111111111111111111111111111",
+      "rentEpoch": 18446744073709551615,
+      "space": 17
+    }
+  },
+  "rent_features": {
+    "keys": {
+      "deprecate_rent_exemption_threshold": "rent6iVy6PDoViPBeJ6k5EJQrkj62h7DPyLbWGHwjrC",
+      "set_lamports_per_byte_to_6333": "4a6f7o7iTcA8hRDCrPLkSatnt5Ykxiu36wo5p1Tt12wC",
+      "set_lamports_per_byte_to_5080": "61BtM7BkDEE8Yq5fskEVAQT9mYA8qCejJWoLe5apqg81",
+      "set_lamports_per_byte_to_2575": "rntCigrTppP5JdZz7K8TyN9sMzLdAcXp8SejYpVpX6D",
+      "set_lamports_per_byte_to_1322": "rntD7invRBswCAdKtRsh1G4psKjrPdS3BKqtnA78C7N",
+      "set_lamports_per_byte_to_696": "rntTjNZ9boq8owDxjGVFHPfWNQPDaKiM5JcjxmDGg47",
+      "set_lamports_per_byte_to_6960": "rnt8ZQpz2HYhX3DkYBDGjJS1a36mYq69oXka7JrhEdi"
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "result": {
+        "context": {
+          "apiVersion": "4.3.0",
+          "slot": 450113356
+        },
+        "value": [
+          {
+            "data": [
+              "AYAQSBgAAAAA",
+              "base64"
+            ],
+            "executable": false,
+            "lamports": 953520,
+            "owner": "Feature111111111111111111111111111111111111",
+            "rentEpoch": 18446744073709551615,
+            "space": 9
+          },
+          {
+            "data": [
+              "AQBeeBoAAAAA",
+              "base64"
+            ],
+            "executable": false,
+            "lamports": 953520,
+            "owner": "Feature111111111111111111111111111111111111",
+            "rentEpoch": 18446744073709551615,
+            "space": 9
+          },
+          {
+            "data": [
+              "AYBTmRoAAAAA",
+              "base64"
+            ],
+            "executable": false,
+            "lamports": 867621,
+            "owner": "Feature111111111111111111111111111111111111",
+            "rentEpoch": 18446744073709551615,
+            "space": 9
+          },
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "id": 3
+    }
+  },
+  "derived_rule": {
+    "lamports_per_byte": 5080,
+    "exemption_threshold": 1,
+    "account_storage_overhead": 128,
+    "classic_token_account_bytes": 165,
+    "reserve": 1488440,
+    "sync_native": "overwrite reserve with runtime rent minimum, amount with live lamports minus that minimum"
+  },
+  "scope": "Sample-scoped native amount replay. Source describes the rules; frozen deployed instruction slices independently test the relevant arithmetic and writes. This is not a whole-program reproducible-build claim.",
+  "sources": [
+    {
+      "repository": "solana-program/token",
+      "commit": "8185db13640f0df038266c7cf4306c212d81380a",
+      "path": "pinocchio/program/src/processor/sync_native.rs",
+      "sha256": "a35441c5cb6c97eae2d55205a2740e3c2cf40c8aa4703d097f26394501b18e1d"
+    },
+    {
+      "repository": "solana-program/token",
+      "commit": "8185db13640f0df038266c7cf4306c212d81380a",
+      "path": "pinocchio/program/src/processor/shared/initialize_account.rs",
+      "sha256": "46a55ccbd0bb6f1c7f0ba9aa354651973f687d52f38e7f693b2555892ea007f4"
+    },
+    {
+      "repository": "solana-program/token",
+      "commit": "8185db13640f0df038266c7cf4306c212d81380a",
+      "path": "pinocchio/program/src/processor/unwrap_lamports.rs",
+      "sha256": "66466dea665b7936e4d7f088a1aa07e3cb598ccfdec701319c92b13f15c657e9"
+    },
+    {
+      "repository": "anza-xyz/agave",
+      "commit": "94593f20a70e4b639d5e499235d77ee38ed2a9b9",
+      "path": "runtime/src/bank.rs",
+      "sha256": "8fd8df86cfc69de408fca8a93ecb0ecf9babf1533de6e4251dcbe1b5aaf2e90b"
+    },
+    {
+      "repository": "anza-xyz/agave",
+      "commit": "94593f20a70e4b639d5e499235d77ee38ed2a9b9",
+      "path": "feature-set/src/lib.rs",
+      "sha256": "91956131b8bd24c0e230df0b926f5bd59514ac4ed0589516885a3af3f6f9cff7"
+    }
+  ],
+  "archive_probe": {
+    "run_id": 36043100882,
+    "artifact_id": 10826973301,
+    "artifact_sha256": "36e7aa5728c78f8ea3ded5045740c508d3edd273484b4fcb4c2ef5dc209aa3b2",
+    "historical_error_code": -32600,
+    "historical_error": "The historical slot params for this method are not available on the Free tier - upgrade to Pay As You Go, or Enterprise for access.",
+    "ordinary_read_successful": true,
+    "native_replay_blocked": false,
+    "alternative": "Feature activation slots plus deployed classic token arithmetic; no historical account reserve is consumed by this SyncNative binary."
+  }
+}

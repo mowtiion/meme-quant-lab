@@ -1,8 +1,5 @@
 name: Bounded historical token-state probe
 on:
-  push:
-    branches: [codex/token-lifecycles]
-    paths: [scripts/probe_token_state.py, configs/token_state_requests.json, .github/workflows/token-state-probe.yml]
   workflow_dispatch:
 permissions:
   contents: read

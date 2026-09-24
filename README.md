@@ -31,13 +31,13 @@ en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE
 en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
 met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
-Het [nieuwste resultaat](reports/ROUTER_MOVEMENTS_RESOLVED.md) reconcilieert **alle 2.873 SOL-transacties**:
-**82 resterende gevallen opgelost, nul verschillen**. De ontbrekende routerverdelingen en
-saldoaanvullingen zijn uit de historisch geldige programmabinaries gereconstrueerd en getest.
-De eerdere 2.791 correcte gevallen en alle 2.663 gewone AMM-feecontroles blijven ongewijzigd.
+Het [nieuwste resultaat](reports/TOKEN_LIFECYCLES_RESOLVED.md) reconcilieert **alle 2.873 SOL-transacties**
+en **alle 20.102 tokenaccount-controles**. De 36 herinitialisaties, WSOL-levenscycli en unwrap
+zijn opgelost met de historisch geldige native-regels. Alle eerdere SOL- en fee-resultaten
+blijven exact ongewijzigd; **239 tests slagen**. 63 transacties hebben geen tokenaccount-activiteit.
 De continuïteitscontrole bestrijkt alle 43.417 transacties: 44.046 aansluitende tokenwaarnemingen,
-zonder verschillen. De bredere pilot wacht nog op de afzonderlijke tokenstaat-, binary/config-
-en censusgates. De eerdere runtime- en foutdiagnose blijft als historisch controlepunt beschikbaar.
+zonder verschillen. De bredere pilot wacht op Pump/PumpSwap binary/config/IDL-koppeling,
+complete census en upstream-herkomst. Zie [het controlebewijs](reports/TOKEN_LIFECYCLE_VERIFICATION.json).
 
 ## Starten — Python 3.12
 

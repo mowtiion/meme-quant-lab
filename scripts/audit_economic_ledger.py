@@ -45,7 +45,10 @@ def audit(path):
                         result = audit_transaction(tx, by_transaction[index], decoders)
                         details.append({'slot': slot, 'tx_index': index,
                                         'signature': tx['transaction']['signatures'][0], **result})
-    return {'artifact_sha256': verified['artifact_sha256'], 'status': 'ECONOMIC_CHECKPOINT_BLOCKED',
+    token_complete = all(r['status'] in ('RECONCILED','NO_TOKEN_ACCOUNT_ACTIVITY') for r in details)
+    cash_complete = all(r['lamport_check']['status']=='LAMPORTS_RECONCILED' for r in details)
+    return {'artifact_sha256': verified['artifact_sha256'],
+            'status': 'SAMPLE_ACCOUNT_MOVEMENTS_RECONCILED_RESEARCH_BLOCKED' if token_complete and cash_complete else 'ECONOMIC_CHECKPOINT_BLOCKED',
             'network_requests': 0, 'failed_target_transactions_excluded': failed, 'details': details,
             'counts': dict(Counter(r['status'] for r in details)), 'details_sha256': digest(details),
             'transaction_reasons': dict(Counter(r['reason'] for r in details if 'reason' in r)),
@@ -57,7 +60,7 @@ def audit(path):
             'fee_reasons': dict(Counter(f['reason'] for r in details for f in r['fee_checks'] if 'reason' in f)),
             'lamport_counts':dict(Counter(r['lamport_check']['status'] for r in details)),
             'lamport_reasons':dict(Counter(r['lamport_check']['reason'] for r in details if 'reason' in r['lamport_check'])),
-            'native_boundary_counts_in_sol_passes':dict(Counter(a['status'] for r in details
+            'legacy_rent_independent_native_boundary_counts':dict(Counter(a['status'] for r in details
                 if r['lamport_check']['status']=='LAMPORTS_RECONCILED'
                 for a in r['lamport_check'].get('native_token_boundaries',[]))),
             'direct_movement_counts_in_sol_passes':dict(Counter(m['kind'] for r in details
@@ -66,8 +69,16 @@ def audit(path):
             'fee_variant_counts':{'cashback':sum(bool(f.get('cashback')) for r in details for f in r['fee_checks'] if f['status']=='CORE_FEES_RECONCILED'),
                 'holder_rewards':sum(bool(f.get('holder_rewards')) for r in details for f in r['fee_checks'] if f['status']=='CORE_FEES_RECONCILED'),
                 'multi_event_transactions':sum(len(r['fee_checks'])>1 and all(f['status']=='CORE_FEES_RECONCILED' for f in r['fee_checks']) for r in details)},
-            'pilot_ready':False,'full_supply_or_lamport_ledger':False,
-            'sync_native_stored_reserve_verified':False,'historical_global_config_verified':False}
+            'token_lifetimes':sum(len(r.get('lifetimes',[])) for r in details),
+            'native_operations_verified':sum(r.get('native_operations_verified',0) for r in details),
+            'surviving_native_boundary_counts':dict(Counter(a['status'] for r in details for a in r['accounts']
+                if a['mint']=='So11111111111111111111111111111111111111112' and
+                any(l['account']==a['account'] and 'end' not in l for l in r.get('lifetimes',[])))),
+            'sample_token_account_ledger_complete':token_complete,
+            'sample_lamport_ledger_complete':cash_complete,
+            'pilot_ready':False,'full_mint_supply_history_verified':False,
+            'sync_native_runtime_reserve_verified':token_complete and cash_complete,
+            'historical_global_config_verified':False}
 
 
 def summary(result):
@@ -85,6 +96,10 @@ def summary(result):
             out['lamport_unresolved'].append({'slot':r['slot'],'tx_index':r['tx_index'],'signature':r['signature'],
                 'status':l['status'],'reason':l.get('reason'),'mismatches':l['mismatches'],
                 'blocked_movement':l.get('blocked_movement')})
+    out['token_unresolved']=[{'slot':r['slot'],'tx_index':r['tx_index'],'signature':r['signature'],
+        'status':r['status'],'reason':r.get('reason'),
+        'accounts':[a for a in r['accounts'] if a['status']!='RECONCILED']}
+        for r in result['details'] if r['status'] not in ('RECONCILED','NO_TOKEN_ACCOUNT_ACTIVITY')]
     out['fee_unresolved']=[{'slot':r['slot'],'tx_index':r['tx_index'],**f} for r in result['details']
         for f in r['fee_checks'] if f['status']=='UNRESOLVED']
     return out

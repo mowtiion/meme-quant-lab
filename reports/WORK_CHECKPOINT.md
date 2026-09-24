@@ -2,12 +2,21 @@
 
 ## Start here after a reset
 
-Latest: `reports/ROUTER_MOVEMENTS_RESOLVED.md` and `ROUTER_MOVEMENT_VERIFICATION.json`.
-ALL 2,873 target SOL transactions reconcile. The 67 FLASH and 15 3s1rA cases are SOLVED.
-Do not reopen their diagnosis. Full binaries and machine-code tests are frozen under tests/fixtures.
-Previous 2,791 correct transaction results and every token/AMM-fee result are unchanged.
-Details digest: 1cfead15257c6b61119ede122c057aad7024cfb3c16533fdf4d750328f16446d.
-Separate token-state, Pump binary/config and census gates remain open; the research pilot is not cleared.
+Latest: `reports/TOKEN_LIFECYCLES_RESOLVED.md`, `TOKEN_LIFECYCLE_VERIFICATION.json`,
+and `TOKEN_NATIVE_RULES.json`. ALL 2,873 SOL transactions and 20,102 token observations
+reconcile; 2,810 transactions with token accounts, 63 explicitly no token-account activity.
+36 reinitialization holds, all WSOL lifetimes and the unwrap instruction are resolved.
+239 tests pass. All 2,873 SOL objects and fee-result lists remain byte-for-byte unchanged.
+17,240 previously correct token observations retain their amounts and instruction deltas.
+Details digest: 7d4682c6ea9e4594c1c30c498c811f9f47e46808a8906be650fde5ff60aacbcc.
+Do not reopen router/native diagnosis. Classic SyncNative recomputes runtime rent;
+feature activation evidence proves 5080/byte, threshold 1, reserve 1,488,440 for this sample.
+Alchemy historical account-state access is paid-tier-only (-32600); no upgrade was needed
+for this milestone. Current native rules reject slots outside the verified sample.
+Next: Pump/PumpSwap historical binary/config/IDL, remaining administrative execution proof,
+complete census and upstream provenance. The research pilot remains blocked.
+
+The sections below retain historical milestones; their old unresolved counts are superseded.
 
 The Alchemy access/second-source problem is **resolved for the frozen 41-block sample**.
 Read `reports/ALCHEMY_PHASE_B_REPORT.md` and its two verification JSON files first.
@@ -81,17 +90,11 @@ in SOL-passed transactions match; 20 require stored reserve evidence.
 14 new tests; 208 pass locally. Zero new blockchain requests.
 
 ## Resume action
-Start from the 82 indexed residual cases in `ECONOMIC_CONTINUITY_VERIFICATION.json`.
-Model direct program mutations from validated semantics and attributable evidence; never fit
-transfers to a desired residual. Obtain historical stored-native-reserve/account-state evidence
-and finish token lifetimes. The old aggregate token gate still holds 36 reused transactions.
-The migration model matches event amounts, child instructions and all end balances; exact
-intra-instruction historical execution state and binary mapping remain distinct open gates.
-Then historical binary/config/IDL mapping, census completeness and provider upstream independence.
-The 1,000-launch pilot remains BLOCKED. No bulk collection, paid plan or trading was enabled.
-Reproduction: `audit_economic_ledger.py` and `audit_token_continuity.py`, existing artifact,
-PYTHONPATH=src with pinned dependencies. Do not repeat provider setup, ordinary fee attribution
-or the completed boundary continuity audit after a context reset.
+Start with the historical Pump/PumpSwap binary/config/IDL gate in `docs/NEXT_STEPS.md`.
+The 82 SOL router residuals and the subsequent token-lifecycle gate are complete.
+Do not interpret legacy reports or the preserved rent-independent SOL subcheck as new failures.
+Use `audit_economic_ledger.py` for the current combined checker and the existing archive.
+No bulk collection, paid plan or trading was enabled. The 1,000-launch pilot remains BLOCKED.
 
 ## Execution route and limits
 GitHub is the durable source of code and reports. The initial scratch checkout may be older

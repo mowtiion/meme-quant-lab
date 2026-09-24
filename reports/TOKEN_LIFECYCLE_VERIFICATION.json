@@ -1,0 +1,880 @@
+{
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "status": "SAMPLE_ACCOUNT_MOVEMENTS_RECONCILED_RESEARCH_BLOCKED",
+  "network_requests": 0,
+  "failed_target_transactions_excluded": 1085,
+  "counts": {
+    "RECONCILED": 2810,
+    "NO_TOKEN_ACCOUNT_ACTIVITY": 63
+  },
+  "details_sha256": "7d4682c6ea9e4594c1c30c498c811f9f47e46808a8906be650fde5ff60aacbcc",
+  "transaction_reasons": {},
+  "account_counts": {
+    "RECONCILED": 20102
+  },
+  "account_reasons": {},
+  "flow_counts": {
+    "transfer": 13233,
+    "burn": 5,
+    "mint": 8,
+    "unwrap": 1
+  },
+  "unknown_instructions": {},
+  "fee_counts": {
+    "CORE_FEES_RECONCILED": 2663,
+    "PROTOCOL_BURN_RECONCILED": 3
+  },
+  "fee_reasons": {},
+  "lamport_counts": {
+    "LAMPORTS_RECONCILED": 2873
+  },
+  "lamport_reasons": {},
+  "legacy_rent_independent_native_boundary_counts": {
+    "MATCH": 6098,
+    "STORED_RESERVE_REQUIRED": 20
+  },
+  "direct_movement_counts_in_sol_passes": {
+    "flash_referral": 70,
+    "flash_fee_remainder": 67,
+    "close_volume_account": 87,
+    "pump_sell_user": 182,
+    "pump_sell_protocol": 182,
+    "pump_sell_creator_or_reward": 182,
+    "pump_sell_buyback": 182,
+    "router_balance_replenishment": 15,
+    "migration_expense_budget": 1,
+    "migration_quote_funding": 1,
+    "unwrap_lamports": 1,
+    "claim_cashback": 1
+  },
+  "fee_variant_counts": {
+    "cashback": 2,
+    "holder_rewards": 30,
+    "multi_event_transactions": 256
+  },
+  "token_lifetimes": 20140,
+  "native_operations_verified": 4357,
+  "surviving_native_boundary_counts": {
+    "RECONCILED": 6118
+  },
+  "sample_token_account_ledger_complete": true,
+  "sample_lamport_ledger_complete": true,
+  "pilot_ready": false,
+  "full_mint_supply_history_verified": false,
+  "sync_native_runtime_reserve_verified": true,
+  "historical_global_config_verified": false,
+  "slots": {
+    "449382000": {
+      "transactions": 39,
+      "sha256": "75b58b4bb0c8460cb1e301648b934f13128e985633bb319b6d89972ac9574872",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 39
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 37
+      }
+    },
+    "449382001": {
+      "transactions": 31,
+      "sha256": "d4687e7a15003a3a215d30c2b040703cf532e7b7c4fb474a6f37d288a04827af",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 20
+      }
+    },
+    "449382002": {
+      "transactions": 32,
+      "sha256": "06f01e65559f86e16827ec52d310f6c5ad126e427bc86bab9be85742f310e607",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 32
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 19
+      }
+    },
+    "449382003": {
+      "transactions": 44,
+      "sha256": "332b7891c0ae21aeb75cdbd9083d6743e398858d108a499ba98821847f2c7ec8",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 44
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 32
+      }
+    },
+    "449382004": {
+      "transactions": 194,
+      "sha256": "a3d1fd9b7d7d8ba0304a65e89fe65d664759b240673f4648ecdee9bef93b1ac7",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 194
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 211
+      }
+    },
+    "449382005": {
+      "transactions": 76,
+      "sha256": "78c534b5b230af1c2aecb66ef8c430874e66cffc5433359a98924ec8828de9c0",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 76
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 75
+      }
+    },
+    "449382006": {
+      "transactions": 62,
+      "sha256": "350e2bf81b344f914678f326b2c4444d12ef31650992b991d9878a718b71ebed",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 62
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 58
+      }
+    },
+    "449382007": {
+      "transactions": 71,
+      "sha256": "be82cfc20f5a13adcc1c1331d91c700d5fd8f56773b2afc55b224ef2e6593415",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 70
+      }
+    },
+    "449382008": {
+      "transactions": 109,
+      "sha256": "adcf060f28a84bf1a5165c752ccd55ef873dcee0e6d5215e4dc620a78d99a7ff",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 109
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 103,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382009": {
+      "transactions": 64,
+      "sha256": "5c779ca52f73995cdb9c55c7b52f83088d41580475fa93386fa68cd8fdca7116",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 64
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 54
+      }
+    },
+    "449382010": {
+      "transactions": 85,
+      "sha256": "b2ea18915dd70face631422b5474393f266c4d282aa46112e7c82383621bc8c9",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 85
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 58
+      }
+    },
+    "449382011": {
+      "transactions": 104,
+      "sha256": "8d296fe66befcdf0c0fb3c0d38b1e825741738a013b4fe73798af0be7b02827f",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 104
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 81
+      }
+    },
+    "449382012": {
+      "transactions": 83,
+      "sha256": "bd285d365f4963a7a0c16fd77f5aec18014e552d2476030d5dd97a0c4c19827b",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 83
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 86
+      }
+    },
+    "449382013": {
+      "transactions": 71,
+      "sha256": "dda48ad66fb54c933a0e5cf3d4cecb26161005125a62884625779dd043639fae",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 66
+      }
+    },
+    "449382014": {
+      "transactions": 77,
+      "sha256": "6062b460bbd43cb4d646913774860fb39d59c4eee4c92e8daa6d40793fcdc362",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 77
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 75
+      }
+    },
+    "449382015": {
+      "transactions": 47,
+      "sha256": "bb531a7d04bce9b64a466e08c1a8014ea18e6e2158d273213d7dcd6efa80c67f",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 47
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 43
+      }
+    },
+    "449382016": {
+      "transactions": 69,
+      "sha256": "0d623d895f97f441f74936bab59f1a9193c3478479e3c2b371dd8a7f4ec87e4c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 69
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 56
+      }
+    },
+    "449382017": {
+      "transactions": 111,
+      "sha256": "343fd1c5847b3365673c0512dce03b045123c224c6904c3e76e2de7a7e32dfb0",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 111
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 92
+      }
+    },
+    "449382018": {
+      "transactions": 48,
+      "sha256": "fe81408e1ffac8d7f0d08dd9769b3679a88ffe3fa6721d42c7bc74817fa1abbd",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 48
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 33
+      }
+    },
+    "449382019": {
+      "transactions": 94,
+      "sha256": "6ddd7e3eeb68680a9b5226838cb2b370b5477b0229a75df16bc15c28543ee3b4",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 94
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 116
+      }
+    },
+    "449382020": {
+      "transactions": 83,
+      "sha256": "9471d121e2fcbb8240821d0eea5e07a33e6d178b0811e870a26361f6bed56ce9",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 83
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 77
+      }
+    },
+    "449382021": {
+      "transactions": 41,
+      "sha256": "bdf212a3fd1eb429de974660e7f9f32d898ffb022c161f39418bf8a1cfa160bf",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 41
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 43,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382022": {
+      "transactions": 84,
+      "sha256": "4345d5521baed48eccd1bb73b8400cc34b323c8832b30c1608dbc8bdd34c52a1",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 84
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 80
+      }
+    },
+    "449382023": {
+      "transactions": 80,
+      "sha256": "d87da4bc86739cae2bde4e96c215a54d75e46f252d7954d0716ea96c26b046e1",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 80
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 84
+      }
+    },
+    "449382024": {
+      "transactions": 66,
+      "sha256": "94ee39dcc1e28105ca8cc7ee400afaa093b9929d8271284340e761454002d75d",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 66
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 63
+      }
+    },
+    "449382025": {
+      "transactions": 76,
+      "sha256": "591c88085c7d0e94f879e6abbd22013518b306c5d3a1c924b4a7567a073a3801",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 76
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 72
+      }
+    },
+    "449382026": {
+      "transactions": 70,
+      "sha256": "7ecde3de342575f212b96bb5af76698ecd9f0555e1d63e645972e68b56190eb5",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 70
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 69
+      }
+    },
+    "449382027": {
+      "transactions": 65,
+      "sha256": "02d44f8dc51a1bfdf9dbd84c397bac48d6ee4c0c50036a8c3850fd27e740fa45",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 65
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 64,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382028": {
+      "transactions": 14,
+      "sha256": "1dc9b3c46309d8b19dc0ab9c0bc69bcbfd86a36447bfdda83ffd1a6fd5bcfa80",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 14
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 5
+      }
+    },
+    "449382029": {
+      "transactions": 28,
+      "sha256": "e325aca28a0904d827f44fe50491d0f20c748a50a118e57e8248ce2d35146142",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 28
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 23
+      }
+    },
+    "449382030": {
+      "transactions": 42,
+      "sha256": "bec2980a0a189830188a8e1ee49279c4522570499cb29919889f929616f17c5a",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 42
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 29
+      }
+    },
+    "449382031": {
+      "transactions": 41,
+      "sha256": "c09ad8d88821b60383ae8987fcedc87d37c465364395e04a07bc751bb109a856",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 41
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 36
+      }
+    },
+    "449382032": {
+      "transactions": 36,
+      "sha256": "fc12fcf1680a4ce3e755007fa8611c8f48e058becf489420b5f80e30a6048780",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 36
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 19
+      }
+    },
+    "449382033": {
+      "transactions": 54,
+      "sha256": "660bb322ea09c8aee66ef8117bb40d22e0c09314a36088a4e0e90c122e4ea5e2",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 54
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 41
+      }
+    },
+    "449382034": {
+      "transactions": 31,
+      "sha256": "fef27264fa223ee2079c7e65f93ebb410f6faa4422dd32d747ee2466d6c48bc5",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 23
+      }
+    },
+    "449382035": {
+      "transactions": 31,
+      "sha256": "258671c90582ba88ad6f7bcb775e9a66156051dd02363a7d605216e5c480fdf1",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 24
+      }
+    },
+    "449382036": {
+      "transactions": 274,
+      "sha256": "fde33fc4d4165085bb0fec3f914cbda1d200f56c1625c30df6abfe590ed5ffc2",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 274
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 294
+      }
+    },
+    "449382037": {
+      "transactions": 67,
+      "sha256": "758a82d5acd80413c93bbb23f30596b9bf209f72057dfb035736e4c1ed87b759",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 67
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 67
+      }
+    },
+    "449382038": {
+      "transactions": 71,
+      "sha256": "065bb93ffe39997c43a39600893bc6befa33e3976def26cccfa800ac9a2e1a7b",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 65
+      }
+    },
+    "449382039": {
+      "transactions": 75,
+      "sha256": "d3e44b977666502b8e20c542ec88fb0e816cb64c2976c81759446e03f6edb36c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 75
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 74
+      }
+    },
+    "449382040": {
+      "transactions": 33,
+      "sha256": "2c28ca306c47ab93496885160804eeb9a393449a9b5a2f9c16b9b7314aa9db69",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 33
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 26
+      }
+    }
+  },
+  "lamport_unresolved": [],
+  "token_unresolved": [],
+  "fee_unresolved": [],
+  "preservation": {
+    "baseline_commit": "45de0026bfc8d54a2972ef3387351e2faaf0fe7b",
+    "baseline_details_sha256": "1cfead15257c6b61119ede122c057aad7024cfb3c16533fdf4d750328f16446d",
+    "identical_lamport_results": 2873,
+    "identical_fee_result_lists": 2873,
+    "previous_reconciled_token_accounts_unchanged": 17240
+  },
+  "formerly_reinitialized_transactions": [
+    {
+      "slot": 449382000,
+      "tx_index": 95,
+      "signature": "pMAmKTkh88DqiLXZKJSbjX987rXo7sLhMQq1zgbciHyZHUdJtQs11CVmYEZfaj6GNrq8xAcbkq9EvgwQWtJZFsF",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 689,
+      "signature": "24kRwagq1a1AoWdj3HJy1Wh6ysFguceYWbgVp8CsXpa8SLBhtyitexJSHk44RrKie7i4mWWngXFmcdnqTPH2b3XU",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382003,
+      "tx_index": 219,
+      "signature": "5xELyYZrKdUFD4azBNf5motYsg11rTZG5w3GHLBiMUDaRNQarRpenFD67fGb8mCknPoZKx3qULZMuiak5tLcocYP",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382004,
+      "tx_index": 520,
+      "signature": "5MnJJw1Bu2aKbnSHTvuAKh5M52iC8kmeCKV9KFoDnAE14xsy6x4SdWWUksnyosCeApu7TbhUmGVn9RS5L5hsxTr7",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382005,
+      "tx_index": 157,
+      "signature": "5Sr8k32aLGnS4eKA3bDZH5XUYoaYqC84cTUh6rEmrhnKikWcuzx6o345bHK1RVywZmDGLTjc5uFWZUd9zXL33JwK",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382005,
+      "tx_index": 247,
+      "signature": "3M86Mx9i7a7dPM3G3cwNdkf1zsuj3QnVR4fpW1zJGXJ55VpRqiMMDVP6i3kp3LiuiJ4jFDUL6ntQgNgvv78VPEjW",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 113,
+      "signature": "JrXfMmSDKL8qjFgGBiMmVCvJieMgHwf5o6qGQ6MhmuK4Z5guB5nYjsDqvViACGNaheFJmGNQAvnXczcwqfvgF4w",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 244,
+      "signature": "9wH4JkeYCshLSCFRU5y853NaUhRTJzbmUzAP8Wzzu1ZXUU7FVHbiCT5A1vZFAQbcY8UJDM5wpVycpBXm8aKWs5G",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382008,
+      "tx_index": 285,
+      "signature": "3Ry7w16ATgiprWDbYJDmXtEYjgiao8344mqvdQgPC6RH4zw3boQakjNXHVtwB3RPT6DSMnrpxzMM7TkVZVZyY2aG",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382008,
+      "tx_index": 294,
+      "signature": "yC1usL5y8NqWtEH2YwMdpXz7LGjVCNwbygYrMv1hpc1rhHvfasTkFPA17k4YQsRfirkvnAWxmfAZdyVautXNLuA",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382010,
+      "tx_index": 787,
+      "signature": "H7pBrskHmY1bvWS4b4SRDYHSnN5zzNMnnJWYzsnHB6eNZyyUGxCFg5jEybGj3FA1bge2Nnjb3DPtxirafy75Twk",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 32,
+      "signature": "4Hsy2VocrbAwVfNobwjyTFVjvZwyyUtp1U86QsXMitgZ9X5MHRwuSUXCQrW5DkiuWQ5Bmfdnmyx8tRw3hy6RxVyx",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 313,
+      "signature": "3K9gBUgrpmyNeS4GuD6UGYWuukZYDZ5BHMeVbGVZ73emefu8dKbFtHL1EhySq52CfyFje9SJbkPJKxsdaPnQDSJx",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382013,
+      "tx_index": 13,
+      "signature": "2epTiXsZcQNZ3LPsq6XvpyRz3UvQ2S7N3N4rYYJW47mgM5TnQymykh4qstTwiYWDPcxYXubiBoiNHtC55EUR2LC",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382013,
+      "tx_index": 69,
+      "signature": "4WcLjYpMWgdVGnaq4hpXUV9bgCxEXQ8jWHMKU87v7Yk58W92n3pdQxTVhDUrozyJ7K4Ex84MjFQqtZ5JJif5jiE1",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382014,
+      "tx_index": 879,
+      "signature": "3RBy87Fbyuhj663vTwc9ou2KjXeDqXJaXbfRmdD4YD8PJSpU1GwFUT9urPgTRfb9jD2xS96ku3bvhmC8jqc77kDE",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 517,
+      "signature": "5Td4zygMCg3DWjndQ8ffyamjM6TA3Docp8h8qgeJ6u1wfrgrdpTdzAHBxDeYNTqduX1fTdSy6RdDDFvezsRPDQ3M",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382019,
+      "tx_index": 312,
+      "signature": "3NYfSE55PTZUAkAx2ZdALKq97U6v2CEQeViX4C9W9uDvJbBXMXYDfMPNsMp1W7Eg79YNTy8kSzhRoPRxZv2WmWsL",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382021,
+      "tx_index": 185,
+      "signature": "65oJvnPd6qbeT4tPyBFqH3xrM6qH53Gd2GWcazUF7egTeJHR5Y9ii5r2GCxDpZ5fAvRw7EcbjPYHRJWzzKjNtYrH",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382022,
+      "tx_index": 15,
+      "signature": "42DnpNex6K5dQHEdUapr1JwDoivMmJrZT8UpajkDLmQ6AWVGZjcoHjoQQYH47v4LeEaHHfvvdoXiWBEQSEfMbDFY",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382023,
+      "tx_index": 826,
+      "signature": "4atLNNf8C7i7Pr8ursYJV1K8uWEyVwdoLcJZGfmTAoSHG4YWoCGukPaDh6aXgA2p1RohAa2GdgYGCYP4LkLFSXgG",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382025,
+      "tx_index": 328,
+      "signature": "53pJ6KtiZeFSBBLBxFBkifJDTJQsPZdZDHX3X1uadgrRHAPegDNEEMh5PhCendaqVFG1zqYoFDtpkVro6CDMGZYh",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382027,
+      "tx_index": 644,
+      "signature": "4L1HA2FQNZuUPxGSG9fZoBcaonZ5sYm5coi7tFQqsK5M4Mi9RH88bho3vg9ouDrm2m73sEumv8amhyJ7X3Tm7YKh",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382029,
+      "tx_index": 777,
+      "signature": "4jNyeKRf3YM1TKTi8G36MNASrThM8ENgXQAavoXhRBEhUTFtbTYZNqqx9g43fTU3XhyeaeGw7qxo2YU4Co4evi93",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 546,
+      "signature": "3ysgfowQAhmEEdrtfvgN1QFQ4hCKqo7C9y9Ni3vCZkNn2gNFbAKWnDSyZo4kw3hLJVWY3CyViuHmxjHFURfJDdWy",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 147,
+      "signature": "2hZwiGihpV5ZDgwevcMSMHFEzeY92Bd5cEvtCDYEXCqySaQwAK69PRGxrSbqEaQRtUmngD7YzhqGKiXexaLktphU",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382034,
+      "tx_index": 227,
+      "signature": "5TaJp7hskWgd6XEiPLsaYnaqAr215mTqHQzPELqJEBycpagQYgzgro2PjCVfUzf9Vu7mHukXyFV29HoDsGnqztPU",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 115,
+      "signature": "3KyRebQQBjA5iMC33mWTS6WWGnnQhsE97LUecFyGT5uutZ3w5ZZwvvPyiw3omGg3AnSeqUTDtZ873PnVLTYvfNeK",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1194,
+      "signature": "2VKsQSWaAqLxYwD2FpRZ8Cv9qXUeS1rcfEMp8NCHZGYf9gUDFLpV3T4UarL9H9iLrjMsUdVYrh68aPmmXaWmdjno",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1232,
+      "signature": "5df5yc19W5eKfdxxvVpsrJBWDnapwhzgRBgLPfdE7KkgDZ479SCwNSTHTSJP3J89nnwVQiHi5evNsVtM966yjwEK",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1596,
+      "signature": "4ssDPpGQPH1zP8Bt1KQEwBLLK9Q5GPctm8zxXMTh7piX2RizBkv2Ce2jB3Zy4JY2fbus9x69TMsLamXXturT7bVt",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1606,
+      "signature": "9dsqf88wQ1C4NZunX9trkmmapibB2vdgueGBc5bd8d6zVwDMGpZRbpPH2dwLVvC9Paxq9PeAHE32FqL1wgpfouB",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1640,
+      "signature": "5S5QJRLaWtQEsfu21yJtT8HDVLMp1VHErDtXunrRRpSU5HVJzFAdoNCmmbbXSKfZSNd3CqRDJGiJVrfsgfZSDCJp",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382038,
+      "tx_index": 422,
+      "signature": "5xYS8HSjfwamcAgKaY46ETMSobsEFUvtyMnmntkmnXtFTEGtG13ur6je4TQUEd58s3DvjRyNDTUqcvBEcb73PALd",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382038,
+      "tx_index": 880,
+      "signature": "8hA4CrDV6Cyade7AmjaE3Mw6APQ6dU3WM5iEKrJYA25vzZkGLtPqVRA8xPxupbZgNnrpthoDaVNe3XfFoPtsiTf",
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382039,
+      "tx_index": 91,
+      "signature": "2EKV7wjc5D3ef6PanLsWm7n5BfLtcPXn8xFtEVVZdRgDpdExpv23rLDw11JAB6B5uGWBev8h2259tr3cXggemV8v",
+      "status": "RECONCILED"
+    }
+  ],
+  "formerly_unknown_native_boundaries": [
+    {
+      "slot": 449382008,
+      "tx_index": 853,
+      "signature": "4zTcZj7FQneowygdmUTtVbtVT44GoeFk1jXHT98GrS5NoK8DArKsshN7wYMCkBySvwsCGshnHsPeRBKmdUgGDq6x",
+      "account": "BfzVBrrMQyiKoXGd1K53f3iB9v5TLsza8YapopGCaPEL",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382009,
+      "tx_index": 911,
+      "signature": "hgzzQEtpDfs8VYdAr7avfXjqz52sZLBvw85EHjGQiDDGDurh19drjvxndmgPocWGvu5h4R63GiyDdMsuMRbmRMU",
+      "account": "85FLHkVy4MBkXBTkJMrzZ6ydgiewh7auabhArJJbmQ53",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 919,
+      "signature": "2iEcnW4wmMzN9WQBERyJZmBEad6ciDXX4Rk5XJGmXvn6zU2EKB9UJr8dRb8JJfMTWT8LptUCaqZgR8wiaZZfocYA",
+      "account": "JBGWzrCcCg5FQN5FmMqHYkBQ5uQtZE52wxZs6WHciE5H",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382014,
+      "tx_index": 773,
+      "signature": "3Yn6jBr291jxe6SCaNYjvLFk9UJdHFxnPiVFnFN8a7gTBoxshZ9nmgNtduRxYDwJGPBaD2ZeH47pfkHd2YmtauMU",
+      "account": "DT2krA8vSP96D68nH86eAztZHVM18YB5i4gDXjLBDXm7",
+      "predicted": 4913664292,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382015,
+      "tx_index": 57,
+      "signature": "47oVj97i6RZScjst4yDVMSRArh5PEwnrUoZLvPy99zeFwKRDkc4btayMMHdA3pc1SzB5JG3ZsUjnktYeRre2CA3m",
+      "account": "2bnZS2u5TPtP1RJ8EJPENUXVEnfTW4fBgTfDNPnZ3q3t",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382015,
+      "tx_index": 701,
+      "signature": "52PDwMv1cwht79GK6yZTpBTX3cjxYZGDqf6BJKN8mYN1zGMaKp19ftQUJ7EBEhyca2pYTzKKusqZL95p7n27dBWs",
+      "account": "9nQdxZTj2GnXYVa4tSSs2sVFaAsYrwGYr9yLMe2qYN3Z",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 536,
+      "signature": "5AXMLptUWpz3PJ8j8MkHi69TpL7nBB4dQ4oSJ6fDneGWrMuqBXiTWLgGjxMA8Yy5pRBMM97MdUxd8FboEKd7QYn5",
+      "account": "vUMbtk9Xjqi7FZjL8iKZErsf4pLsAUi82Yy1SRX3UxR",
+      "predicted": 20608000,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 750,
+      "signature": "3p5zzhadN2nN7827gmjp8aUG72FhDLWzHQsioXycjE67htJTuQRUNHVa2YFR6zwugsGL5wTSr2qNTUpFi9SwSEfs",
+      "account": "4nj7Kj7g7KUL4MZEG4sKuGmoJAYxoBmN88NnD8wiy5u1",
+      "predicted": 67405853768,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 750,
+      "signature": "3p5zzhadN2nN7827gmjp8aUG72FhDLWzHQsioXycjE67htJTuQRUNHVa2YFR6zwugsGL5wTSr2qNTUpFi9SwSEfs",
+      "account": "5CjTwom7GusPr81JMyZxH2YAqhmKWL9PrZmFtVJSvcVa",
+      "predicted": 17584505288,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 751,
+      "signature": "5653zQHKUoNitBdoe23ifqG4s5iSDVzGT3YEz9Jq9fgq3CWfnw9cjt7aZvaRgf8Q2fTVhNJuht6KnNroWptf18RQ",
+      "account": "9L1kQKt5eS1UkkzuvWiNf4Z93Ux85jRkXFXN48kf3R89",
+      "predicted": 1364128971,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382021,
+      "tx_index": 754,
+      "signature": "2FfDXpMe3hEcSFMx97b6WW4PFsVBZD6GiqYeBQbA1YM7z6vsJaoDpTG2Z6HzxXRP2Yx3YpVLqUYdXysM7vWX27pi",
+      "account": "Hy7cyEEq5hNok6aj8wCkR9QLZUihf1zuADYJuxDjV4zo",
+      "predicted": 317371095,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382026,
+      "tx_index": 633,
+      "signature": "2nQieSbExqbWP97Qt9yd75uyNenqFiCNmP43ATthV3Stb7sHt68Em1ooD533138Z2gHrFAKoQWay4cafptoDtSpd",
+      "account": "897s7o1WJYFXKa5kAQdZ6QwjLFxPgiaacRCcqw6gwDnq",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382029,
+      "tx_index": 746,
+      "signature": "WNbESJsGr6ANRASHvZXo7yNrWtB7nkfVKzCKS8NxrXCtLQHhGXnrRtVWFEQgvNqF8ofSNpLJ2bK8XHq35N3SJBt",
+      "account": "4PJkJTQNdb7G7BtJiYgqQRwqyaz59d1SwRu283cadgph",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382029,
+      "tx_index": 970,
+      "signature": "52knYVc2ifniw1GJgppmJfotSjSSE24fyVRj4vMJci1mtEZe312xEuyZagRKX2x9m5SwFge6nsKiGhTt2nZGwows",
+      "account": "EW9diL91VgHY5i9qYScz53W3PihQPSnPoMtAKCo1Bs7J",
+      "predicted": 4241280295,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 239,
+      "signature": "4P9XtLryKMUYbp4Hy5xpgMhBTb32FWc6XivqDShAv14xySQFjJFXuQGbeZ4U2tXqJPmsNmdTDAjRe758unPRvhaZ",
+      "account": "G7A8c5SK7t2zhR6v9PgCcQ2skGYRGpCVSGBNrNYYgK5f",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 527,
+      "signature": "2snVeUj8dBytvyEhm3U5oUjnQz5RNjbd2SpWswh3xqKcV3FAAemg2d4KifiEb3PF1e8EWZi1eR1xqLV2eEadH9He",
+      "account": "CFBj4uDSDPhcp7gRXfQHL9Z1mkqyZX6pyXwnnoSnsUvW",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 508,
+      "signature": "56W7B2F4tjJWv638tHz92SriAxbixEB5uu2PF5jfDNbBzjsWD4zfLD9NpM9gtossemXtY3LWWqnkQVM38RM4mFqg",
+      "account": "FjVhEMcLAjw2CUL6bRis7fdU5twP8eVVdpHFB7ki7sHs",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 145,
+      "signature": "4xPK4DLbJaMNqBjad92AD1uqnh5CZGQXsUYeJJcnHsd5VKxdekbSqFbbya1eLwS8Fywjs2KWsvG66NKnbnUN4LVX",
+      "account": "JBGWzrCcCg5FQN5FmMqHYkBQ5uQtZE52wxZs6WHciE5H",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382037,
+      "tx_index": 158,
+      "signature": "2ML1uipKGaYPjej7WE1Yf3P45wQEYCsApLX5Z8TVL6GJvbbCZgTGWTehMmRBu7wg3CK3t2h3i7Fdr3AvKPdrEHay",
+      "account": "3Rsgay2o5wSoDYGKq3JJYLeqUwk6TSJe4rf8t8UQtgRk",
+      "predicted": 0,
+      "status": "RECONCILED"
+    },
+    {
+      "slot": 449382038,
+      "tx_index": 753,
+      "signature": "3ySgxT5gtFnWdLpdns9ugXFSWR7Ro7TLggvGcpxw2a6vHsBWjFbcDwbEsuLqNZqpbtQt83v3eYC36DiXYW1Cs7Dq",
+      "account": "HqdoJn21K1FgC2CvHkkQpTkkQRxmTPYsk66PQaThyogc",
+      "predicted": 0,
+      "status": "RECONCILED"
+    }
+  ],
+  "native_lifetimes": {
+    "initialized": 2605,
+    "sync_calls": 1752,
+    "closed": 2606
+  },
+  "tests": {
+    "local_passed": 239,
+    "new_regressions": 17
+  }
+}
