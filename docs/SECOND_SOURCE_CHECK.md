@@ -1,3 +1,7 @@
+> **Actuele status (24 september 2026):** Alchemy phase B is geslaagd voor alle 41 blokken.
+> Zie [het resultaat en de offline verificatie](../reports/ALCHEMY_PHASE_B_REPORT.md).
+> Onderstaande Helius-instructies zijn historie; een nieuwe setup of herhaling is niet nodig.
+
 # Tweede databron: begrensde toelatingsproef
 
 Doel: dezelfde historische ketendata via een afzonderlijke provider controleren voordat
