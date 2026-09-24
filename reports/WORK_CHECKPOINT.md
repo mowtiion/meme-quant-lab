@@ -2,12 +2,12 @@
 
 ## Start here after a reset
 
-Latest: read `reports/RUNTIME_AND_RESIDUAL_REPORT.md`, then `ECONOMIC_STREAM_REPLAY.json`.
-The two residual groups are 67 FLASHX8 and 15 3s1rA transactions; none were silently promoted.
-Block-at-a-time replay gives the exact prior details hash with a 3.49 ms largest measured
-per-target observation versus 182.04 ms in cached replay. Offline only; live ingress unbuilt.
-214 local tests pass. Shared transaction checks and incremental result hashing are implemented.
-Do not repeat broad provider or parser diagnosis; use the exact indexed residual instructions.
+Latest: `reports/ROUTER_MOVEMENTS_RESOLVED.md` and `ROUTER_MOVEMENT_VERIFICATION.json`.
+ALL 2,873 target SOL transactions reconcile. The 67 FLASH and 15 3s1rA cases are SOLVED.
+Do not reopen their diagnosis. Full binaries and machine-code tests are frozen under tests/fixtures.
+Previous 2,791 correct transaction results and every token/AMM-fee result are unchanged.
+Details digest: 1cfead15257c6b61119ede122c057aad7024cfb3c16533fdf4d750328f16446d.
+Separate token-state, Pump binary/config and census gates remain open; the research pilot is not cleared.
 
 The Alchemy access/second-source problem is **resolved for the frozen 41-block sample**.
 Read `reports/ALCHEMY_PHASE_B_REPORT.md` and its two verification JSON files first.

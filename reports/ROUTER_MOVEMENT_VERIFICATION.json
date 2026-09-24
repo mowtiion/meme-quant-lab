@@ -1,0 +1,2750 @@
+{
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "status": "ECONOMIC_CHECKPOINT_BLOCKED",
+  "network_requests": 0,
+  "failed_target_transactions_excluded": 1085,
+  "counts": {
+    "PARTIAL": 2354,
+    "UNRESOLVED": 36,
+    "RECONCILED": 483
+  },
+  "details_sha256": "1cfead15257c6b61119ede122c057aad7024cfb3c16533fdf4d750328f16446d",
+  "transaction_reasons": {
+    "ACCOUNT_REINITIALIZATION": 36
+  },
+  "account_counts": {
+    "RECONCILED": 17240,
+    "UNRESOLVED": 2531
+  },
+  "account_reasons": {
+    "WSOL_LIFECYCLE_REQUIRES_LAMPORT_LEDGER": 2524,
+    "UNSUPPORTED_TOKEN_EXTENSION": 7
+  },
+  "flow_counts": {
+    "transfer": 12966,
+    "burn": 5,
+    "mint": 8
+  },
+  "unknown_instructions": {
+    "45": 1
+  },
+  "fee_counts": {
+    "CORE_FEES_RECONCILED": 2663,
+    "PROTOCOL_BURN_RECONCILED": 3
+  },
+  "fee_reasons": {},
+  "lamport_counts": {
+    "LAMPORTS_RECONCILED": 2873
+  },
+  "lamport_reasons": {},
+  "native_boundary_counts_in_sol_passes": {
+    "MATCH": 6098,
+    "STORED_RESERVE_REQUIRED": 20
+  },
+  "direct_movement_counts_in_sol_passes": {
+    "flash_referral": 70,
+    "flash_fee_remainder": 67,
+    "close_volume_account": 87,
+    "pump_sell_user": 182,
+    "pump_sell_protocol": 182,
+    "pump_sell_creator_or_reward": 182,
+    "pump_sell_buyback": 182,
+    "router_balance_replenishment": 15,
+    "migration_expense_budget": 1,
+    "migration_quote_funding": 1,
+    "unwrap_lamports": 1,
+    "claim_cashback": 1
+  },
+  "fee_variant_counts": {
+    "cashback": 2,
+    "holder_rewards": 30,
+    "multi_event_transactions": 256
+  },
+  "pilot_ready": false,
+  "full_supply_or_lamport_ledger": false,
+  "sync_native_stored_reserve_verified": false,
+  "historical_global_config_verified": false,
+  "slots": {
+    "449382000": {
+      "transactions": 39,
+      "sha256": "eb6b93c703d327bc1520ef9b67e9e17b605d1f8f4a695019ee8f7d35a7e7c3ae",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 39
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 37
+      }
+    },
+    "449382001": {
+      "transactions": 31,
+      "sha256": "3cd7cb878ee05144b87f8dadc31623519c2ecaccc39a89a8b35b2ed62f37c972",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 20
+      }
+    },
+    "449382002": {
+      "transactions": 32,
+      "sha256": "32325e59d4f9b0a5037ec390888bc08725c9784c1116c1696f8a0dfb3c48877d",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 32
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 19
+      }
+    },
+    "449382003": {
+      "transactions": 44,
+      "sha256": "38af667e6d08ca2859e8a4481650e2b2a162258acbc0c6d289bc1de47ae3dcee",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 44
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 32
+      }
+    },
+    "449382004": {
+      "transactions": 194,
+      "sha256": "7b4a564d3c70724c9b169e88e86aeaf612daa39d8abe1727d7b8587d4bcc67f4",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 194
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 211
+      }
+    },
+    "449382005": {
+      "transactions": 76,
+      "sha256": "b90d536db050209b2bae54c0f3751814632678a06cfbe9c9cd192e852e99123f",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 76
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 75
+      }
+    },
+    "449382006": {
+      "transactions": 62,
+      "sha256": "4c021de1508637a1abd1da1f296b01e7719b88e1aafe97f0e9a882bec10dc73a",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 62
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 58
+      }
+    },
+    "449382007": {
+      "transactions": 71,
+      "sha256": "fa33d70f9674373951ebf1a98e47d0e4ee746de343910640de90866969ea7db4",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 70
+      }
+    },
+    "449382008": {
+      "transactions": 109,
+      "sha256": "9a85e6c1be0404de51e3f3e929fcdfdf5b1e8c04d9612705a93f1d76e9a37040",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 109
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 103,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382009": {
+      "transactions": 64,
+      "sha256": "499442569611959bc62843364d151a8f4430cd1396e15cdeaf22d63d86b999e4",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 64
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 54
+      }
+    },
+    "449382010": {
+      "transactions": 85,
+      "sha256": "4273cb204dcca470060ddcf657e22f0dbf1b5fe883d7c8f6e40c06e33d4afc1c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 85
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 58
+      }
+    },
+    "449382011": {
+      "transactions": 104,
+      "sha256": "31f797ad5ebaa67de5a413827874ea2cff6ddaa1eefda8e69e1a23181a143283",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 104
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 81
+      }
+    },
+    "449382012": {
+      "transactions": 83,
+      "sha256": "6f2dc9bcc8749d73c7846995ae772f16e71e561765ed24f9336a76e1ef981a41",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 83
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 86
+      }
+    },
+    "449382013": {
+      "transactions": 71,
+      "sha256": "5cf71d778819fa0526d5e9b5b26cfd90cf2533783fc786820b3ac4ad6df9796e",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 66
+      }
+    },
+    "449382014": {
+      "transactions": 77,
+      "sha256": "d883b4bad50e5dfd3c8102d24bede1c09b5e54d34d5ef95f3933161d9f0052d6",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 77
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 75
+      }
+    },
+    "449382015": {
+      "transactions": 47,
+      "sha256": "85ae37ec6a457bbdfd9bdf2d475a7d5c53c051613741731e3d71de0848e7c8bc",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 47
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 43
+      }
+    },
+    "449382016": {
+      "transactions": 69,
+      "sha256": "1ee1820ce3a979a00d66c9a654aafa5346f4982631d6f28957a741cde008b484",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 69
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 56
+      }
+    },
+    "449382017": {
+      "transactions": 111,
+      "sha256": "c6669d2306f0c22734ad841602de8d6426768243078d4495fa6deabddbdcccfd",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 111
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 92
+      }
+    },
+    "449382018": {
+      "transactions": 48,
+      "sha256": "698c33d357b103d47a22cf93056ae8ac87ce92fea192ef81b4a24a39477f27e5",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 48
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 33
+      }
+    },
+    "449382019": {
+      "transactions": 94,
+      "sha256": "cec38c9db7acf1d7bc2b0bb151559762b56b37cf44ea0c06d8f2be380657c4d1",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 94
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 116
+      }
+    },
+    "449382020": {
+      "transactions": 83,
+      "sha256": "a367ea79120a27371abeca7d0ef928d71d44e6a1b7bd47e9ff814a4afaff801f",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 83
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 77
+      }
+    },
+    "449382021": {
+      "transactions": 41,
+      "sha256": "7599c659aefb2de01b68fdf865d230a21a56cea954cbcf54d4b7b37b76d91c3c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 41
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 43,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382022": {
+      "transactions": 84,
+      "sha256": "bbda1f52e7fb4ae4ea018c7de9144a83c17b263c248ae54d8aa777f1d8c6ebc7",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 84
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 80
+      }
+    },
+    "449382023": {
+      "transactions": 80,
+      "sha256": "b01a71788487ec865472bcfc989f77d3148475dbb3b5ef90417499dc02b7e8f1",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 80
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 84
+      }
+    },
+    "449382024": {
+      "transactions": 66,
+      "sha256": "538815863b1272ceffe4b29c097a563b048e7cd12c73b1d3b3665f4af9e8f0bd",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 66
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 63
+      }
+    },
+    "449382025": {
+      "transactions": 76,
+      "sha256": "75efcb09db2b3f94efdbf109b394c050487517d7728c591292af634ad604e2f2",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 76
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 72
+      }
+    },
+    "449382026": {
+      "transactions": 70,
+      "sha256": "70b08c335a8920eb159e57181a24854996d8600fe5962aa8afa9a09ae853fb82",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 70
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 69
+      }
+    },
+    "449382027": {
+      "transactions": 65,
+      "sha256": "56f6df9402cc94e0712f5600b49b4712e7461847d224e7c8a7fdeccd4c8c90a3",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 65
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 64,
+        "PROTOCOL_BURN_RECONCILED": 1
+      }
+    },
+    "449382028": {
+      "transactions": 14,
+      "sha256": "86b69a88d1ced9e73737a71f4367e07b6f29b75276755b99dd491db8b719ab22",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 14
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 5
+      }
+    },
+    "449382029": {
+      "transactions": 28,
+      "sha256": "fd544c4d332ed7edfe394fb1a7d469310d014813e00253a48d52fc46d139641c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 28
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 23
+      }
+    },
+    "449382030": {
+      "transactions": 42,
+      "sha256": "befa2f779553afde64f73211c76d51d16cde996a49a5d91720840856ac4f619c",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 42
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 29
+      }
+    },
+    "449382031": {
+      "transactions": 41,
+      "sha256": "720212aa73bac44dc0a38d161eaebba4b0a1c278f6d0b97c030ea6295e98f446",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 41
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 36
+      }
+    },
+    "449382032": {
+      "transactions": 36,
+      "sha256": "c16bc7e2df02b2cbfb127b3e2f8f5fe3e5f5460896e517f101832b8cefcaa518",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 36
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 19
+      }
+    },
+    "449382033": {
+      "transactions": 54,
+      "sha256": "2580fdb260632fa0b33373793ba7cc85cb45202052863134a1a03f4259ad222e",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 54
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 41
+      }
+    },
+    "449382034": {
+      "transactions": 31,
+      "sha256": "82cb4505a2bbded1f0191012cf1977d8af86683d3c09644ba446f7b63fa790f5",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 23
+      }
+    },
+    "449382035": {
+      "transactions": 31,
+      "sha256": "7ef4d3832b0abb0ebb7e9176031ba393cdf72223dd616e9e60b2d4289544abbc",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 31
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 24
+      }
+    },
+    "449382036": {
+      "transactions": 274,
+      "sha256": "f53f55ade82c26c7524da1d16b99b1ce9b57815d2de15f8910bd0891a5f74f12",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 274
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 294
+      }
+    },
+    "449382037": {
+      "transactions": 67,
+      "sha256": "8999060d509b1e0e2e2dc247417961a28f7cd7a00f4c56aa7883d3a09e54fdae",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 67
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 67
+      }
+    },
+    "449382038": {
+      "transactions": 71,
+      "sha256": "28c185a9df5142c4813157cbd80d42cacc73b4934bf198b55bf5886a786848fd",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 71
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 65
+      }
+    },
+    "449382039": {
+      "transactions": 75,
+      "sha256": "a0c9f69d11bf79c148429c79426db69e53fa98bbc2faffda65680f064cbe3da2",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 75
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 74
+      }
+    },
+    "449382040": {
+      "transactions": 33,
+      "sha256": "b4d5ac047bd43df231c09df394b896be21cfe4a8d5a7d81471c4f848ca8f73bb",
+      "lamport_counts": {
+        "LAMPORTS_RECONCILED": 33
+      },
+      "fee_counts": {
+        "CORE_FEES_RECONCILED": 26
+      }
+    }
+  },
+  "lamport_unresolved": [],
+  "fee_unresolved": [],
+  "sol_movement_status": "ALL_2873_RECONCILED",
+  "previously_correct_transactions_unchanged": 2791,
+  "solved_transactions": [
+    {
+      "slot": 449382000,
+      "tx_index": 44,
+      "signature": "4B7gRhD5jc7JrWmBKG3U1D7JqTbUUhUm3vLdNSDDooKcwRtBbPAn8nfduoH1V415MxvwFMr9SFW3FmmEx7K5qPTC",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "CD32vhwLbfLnFdaT75C7N2mtXrsPipnT5yybHQzcLvsS",
+          "lamports": 79668,
+          "position": {
+            "after_instruction_subtree": 33,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "lamports": 112305,
+          "position": {
+            "after_instruction_subtree": 33,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 145,
+      "signature": "FKXjHQJDNREU5fSvsVqE9g2asjS4YV8YEXaDks6VQgnRNWG7gJGfVD8StYFjVA6nuK1zsyC4xHLmp6XMko8n3yY",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 1000000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 209,
+      "signature": "Mb2yJQiBUd5G5JMs2ZKgtff1vp1wjspwUSsUdrGG5SUapxaubVq4GymWPX2ey8oDdbxgsn5AcZr3WJq5Xw5bFUg",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "5hZx4HorqNy5UrfjNZSL8EmCLDip9HLmhZhxrUTkZezJ",
+          "lamports": 837044,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 1395075,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382002,
+      "tx_index": 1,
+      "signature": "ztVWEJHUYmLCtF2Ay7VBoaCZgRzEjUWcxEf3TE59YGzFJBgXqvxPvohWdkPTndvKwVbLhcxhGKwfSCoY4aEJf2d",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "2Lc5VE68GUgmbTNBKNpSNFDzrGRZ7ZakNj3Z1kefyMez",
+          "lamports": 1687500,
+          "position": {
+            "after_instruction_subtree": 30,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "DZfEurFKFtSbdWZsKSDTqpqsQgvXxmESpvRtXkAdgLwM",
+          "lamports": 3312500,
+          "position": {
+            "after_instruction_subtree": 30,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382002,
+      "tx_index": 773,
+      "signature": "3uWYFUSsCRd7M4Y4xosqkcFC5bNHej3yzu9wBemY5UpVFnqwvGqh1ghPiFoVP1TP2975rbmagEjvjpvTpF1d7p21",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 4731462,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382003,
+      "tx_index": 67,
+      "signature": "5ann3UXF2CaQdwn3wik4ah5ajWdZZG7NCMuKJGQNtPrtDtS4CUPMaYjsekAmSpufXcCMzfYd6NjBZKFu8e4BEDPE",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "CzZJxzvpQw8y9uXF3rbK6PUS7UWXtXyQ4d1MKBKaVZHu",
+          "lamports": 2165034,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "4frtzrNTMD33BFyUWzXDEE3gmf46xN7tRQs5RFubvCcr",
+          "lamports": 216503,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "846ah7iBSu9ApuCyEhA5xpnjHHX7d4QJKetWLbwzmJZ8",
+          "lamports": 21674407,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382003,
+      "tx_index": 547,
+      "signature": "uzjknU7ikiR4wNVCCTTbJYcmSiUvBzUnEyDDZhndvq14JTvJkZ3XsTWqx2w26fjY2FwnZ63a5RPeq5FuV7aLVZE",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "AF5wdMZ2Dhmc3tkZBYv9mu4FBpfewvmAu3tWoGWrrzT6",
+          "lamports": 685219,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "lamports": 1852632,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382004,
+      "tx_index": 104,
+      "signature": "31WkiqEv6KdC6gwo8iWDHxHiio68h7GR4SBDZPaZFhtEfofCAQsbZS5UXJ6K2fbd9HeyyfGoM57xnvYq1XbFRPW3",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "8kXENd71BLswuUr9mWGyHqqu8eiZCVwqK2X133vSdzY",
+          "lamports": 18000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 82000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382004,
+      "tx_index": 468,
+      "signature": "2ptr2bbETwGPf4dhqtnMskKzu85TGBHsZNVRuy3dwNLuCBfE3UfvwqD3Gk6LAoqbLJdcKzcbBvymwscX1Y9EpFPn",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382004,
+      "tx_index": 640,
+      "signature": "5mxLapXNR1PzAbQZ2wXkxKwPd93pW4xcoySAkisfMjjnLnFDoY7RXrx9LbtCfgkCU4x2hcYpPjKHDMDtKqXFxhKZ",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "9DXuPjFj2fD1kTMfbW7DQ9TnQKpWhzuFQdtpetjq7nuD",
+          "lamports": 225000,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 775000,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382005,
+      "tx_index": 91,
+      "signature": "2vEgCaiytFii8jvdvwZU5ryenuDq7UGiLLhU6giS1TZgpjb1vGggQUWZfoVTNHZ1ks6dtHraHfMJUWYwu9d3v2Jb",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "DZfEurFKFtSbdWZsKSDTqpqsQgvXxmESpvRtXkAdgLwM",
+          "lamports": 1120166,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382005,
+      "tx_index": 385,
+      "signature": "61gS6ifsLznGVTJnf94QiLRCWhH7vchSF1Ss8aFTSdSUqNAXwD3KNa3tzM4mL9sAst7ToyLuMKCyEUTtjmAJGjYM",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "DKyUs1xXMDy8Z11zNsLnUg3dy9HZf6hYZidB6WodcaGy",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 75,
+      "signature": "5zJsNsychj93AiMo8cxw3CzVt1UtomkSuK51DtLCyjCXQcXC2EnZok6NDnGxoHcnnVxWmQddzBGXi5eFS87foBzf",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "82wuMNSc9obsSwEvEaWiwRvJyutrQ5koecQ5byTjHk7T",
+          "lamports": 1473303,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "lamports": 2455505,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 78,
+      "signature": "t1NkuCGQ8h7w8vJ55g8dnhXhfXGVZsvRVAugixj8VVHCsV6eXAVeEGvSTxcnuHZ8xwuLoDcZNCNgi3AB535bQTX",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "82wuMNSc9obsSwEvEaWiwRvJyutrQ5koecQ5byTjHk7T",
+          "lamports": 1264196,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "lamports": 2106995,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 82,
+      "signature": "5iBLr7AmMTz3DLkJruAVKcJQfcaoi9zkUGw7YGCXQU5ESrZZR1bRYD2Jc91m7qCPtRA4VETQfUEfMMg6SDp3dse6",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "FQ62fvpt1VGKsscxZNGuQCt8zkcLmbHer2jo8Vyn2X7y",
+          "lamports": 27000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "Gy3FTe634wifpjbW2b9i8zvTJT9sbxY9dn1XkeUDM12Y",
+          "lamports": 2700,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 70300,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382006,
+      "tx_index": 274,
+      "signature": "2EhdeyoAx4MHrvyuTC5XSR5rn86icJq3bHPNpy5rQNrJH5tebrUcmiifHjhxgdiLWgd6wjcDReU34p9xrkUHxdUg",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "82wuMNSc9obsSwEvEaWiwRvJyutrQ5koecQ5byTjHk7T",
+          "lamports": 589364,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "H2cDR3EkJjtTKDQKk8SJS48du9mhsdzQhy8xJx5UMqQK",
+          "lamports": 982274,
+          "position": {
+            "after_instruction_subtree": 24,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382007,
+      "tx_index": 229,
+      "signature": "3wrxzhhsxKmBvaWCdraHeDMX7pKegcQd5pD6KLrGXfMr6NpbLAJmUuWYB1jUnv6rDYikg8JmfVRbMtxvf8rgyuKF",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "846ah7iBSu9ApuCyEhA5xpnjHHX7d4QJKetWLbwzmJZ8",
+          "lamports": 2000000,
+          "position": {
+            "after_instruction_subtree": 40,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382007,
+      "tx_index": 255,
+      "signature": "3mfL8zwSnPw7V48RUCasTHweEmYcERWQU6dYmTsHuLAmnYAK2HhKgF89Ae3JycFLDx1hHHCHHgRkoNzxx5ARWnGn",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 25500,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382007,
+      "tx_index": 303,
+      "signature": "5dHJCHtcSfSMq5DUk6mdgRTuq97fdRz4w7czKf4Y3xRPekpdnBjWC2mdNQ5bFfTfUWrBugDfqoPJBo7cYDztrZGn",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "5L2QKqDn5ukJSWGyqR4RPvFvwnBabKWqAqMzH4heaQNB",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382008,
+      "tx_index": 159,
+      "signature": "pVyJFTfwyXvCpive7jPJ2L9KHh7vydB2vTEVKRyj7j47TFcj24VwHHFr3qsx1jyJMLDzLBFQvXtZgRortJ12RW9",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 1000000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382009,
+      "tx_index": 631,
+      "signature": "4QuygQQz36rmsFNh2stNfLabJ17cZcP9xszucjmrTc9XAesTWQje3xmYahzFoW7ZyTaKiXhwfeNVj2ESjJgQHSNs",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382009,
+      "tx_index": 639,
+      "signature": "A6AcjWJbVYhJPFDfExWA4mZcRer4hB2bWdPmaB5oSZf85iL75gAwCSJpA2kKQAhxAEJbX1dp95j3eg6bf9s7Gdm",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 19488,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382010,
+      "tx_index": 865,
+      "signature": "4ng7Tno7bHP35nmoLp9aPbZMXaVUb8ehW3YMUCAN74M8P8AWZsNThzajEPKyn4bxHJ2iJJ3xeZ9bCBdTY1x4BLHR",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382010,
+      "tx_index": 1080,
+      "signature": "4yMh5PJS4j8T7ibWmY445assAsnJcBh8MDpu75T7oGFcTiwCQRswHcYH4vbAvi6q7qB169TfFUy2GWazZwKw4EtC",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "2biDGh52mZTrUBzm27Ydz2f9JRwYf6ALFSDFMLm8F1im",
+          "lamports": 105720,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 308870,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 21,
+      "signature": "3FHgmA9sCoaCYdd5wpciuZ636YrsbxGf57ADYEev4ZTaXmpzh7Xu7CLqYWfXQVdv8QUL9CygWeMc9g3GYdmEAcJF",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 506,
+      "signature": "hNaEnWg8y65nPGfC7BPrZnZ7JYCNpXdF9RF4FxhXTpnWyfEcjvHvdpvjo65UF19z2NMNB8frfXg5cD6YpYPsGvQ",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "6u3Vuisp2mZ356pBVpLYz6ciFEJUd24TXoRu7RyLfcff",
+          "lamports": 2490000,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "8ehaFjF6LHUtEYcv7S6xAgSEqT464ydP2PhVk7cWjdMG",
+          "lamports": 249000,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "4e1Po5rc2dqzvx2yTExjJ2Xp8TBpjotWx6qoeSCKy1Wy",
+          "lamports": 166000,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "Hbj6XdxX6eV4nfbYTseysibp4zZJtVRRPn2J3BhGRuK9",
+          "lamports": 7095000,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 535,
+      "signature": "2LbtPcHmxQCLxMap69p6XByrcm1VdRMwvHDGWqbtobxEHXNfhLAuiD72ELynJWbnE7S2bPDY3QahrXekVhkSk3es",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "Hbj6XdxX6eV4nfbYTseysibp4zZJtVRRPn2J3BhGRuK9",
+          "lamports": 3337555,
+          "position": {
+            "after_instruction_subtree": 15,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382011,
+      "tx_index": 550,
+      "signature": "21mzPJV8dWXu2qm7vEdGfQ5PUbWnVp1xYRfFbhTPSphEnH2UWEhf1G597w9fBLn41a867Cg4Ph1oqSCHV4S35fjA",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5194,
+          "position": {
+            "after_instruction_subtree": 14,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382012,
+      "tx_index": 887,
+      "signature": "2gHYZx4CXoWuZnAj6yxrmNrqYfzXM1uNbviW8ZFqMxG7CeoHPR2o88UoHrxrQSDRzu918bfjt4aAQhHzfiAK8oLr",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "H2cDR3EkJjtTKDQKk8SJS48du9mhsdzQhy8xJx5UMqQK",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382012,
+      "tx_index": 1049,
+      "signature": "4jv7KQnpkGtn9UrtfBc9e85gZMUD31bhL3StEiVM63L1XpWYWHnsSX7haoQ4Uwu3aGhQkFKfrQr9ZNbEtst8jaRT",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "HRVxJeocvArCbkQCXvrNbGRJH2eu6F8SVmoW497hzZ2D",
+          "lamports": 297323,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "J8zKcH9UyDvX73Z6d98jdeUiXqrC115VpEz5hKmRvzWQ",
+          "lamports": 29732,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "EmbNpoNAv6extW7ugRZjmR3VSxLs6tzZ4NVFDRw5YaxU",
+          "lamports": 19821,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "5L2QKqDn5ukJSWGyqR4RPvFvwnBabKWqAqMzH4heaQNB",
+          "lamports": 974560,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382013,
+      "tx_index": 94,
+      "signature": "38NvH74u1X64beZa99UenKEfYtcU5z5b9qcDc69kq657ZMQuapM1s3VrqPh57vUk2Zf57bpMXwhcsZxj9LiUbr8v",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 9902663,
+          "position": {
+            "after_instruction_subtree": 40,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382013,
+      "tx_index": 95,
+      "signature": "5hHSKB9zcCfPF9u4SVBJhaAvbZ9fbyQgRFZnRBUkHGbUL7y3KMPnPdbhwY7RKiJeXq9wdQvW8xGBsQKSxere1atd",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 10097336,
+          "position": {
+            "after_instruction_subtree": 40,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382013,
+      "tx_index": 101,
+      "signature": "4FKnckccdFAMkQH9eKxQUT6TMa5Rp8vDouteqhS7a2k2r3nBnLQ35wBf7ENxTua42sfyqNK8eeoNPM1WfXLhncha",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "DqZKnShYaxihk3FiBpyFF21T5b9rLKSERWhRWdfBDcHc",
+          "lamports": 2160000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "4FobGn5ZWYquoJkxMzh2VUAWvV36xMgxQ3M7uG1pGGhd",
+          "lamports": 9840000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382014,
+      "tx_index": 354,
+      "signature": "591tC3N2nZnwA3U2QFtq8dRr7Bozg8gBDXLELi6QwxnFP4UWRPMrcDcXP1Y2mzZjBr3ZMu7aWeX6WxBXX44vMQtr",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382015,
+      "tx_index": 626,
+      "signature": "QjKp5p42xYbui1dW8LA27chGYwg9jDiZa9F9D81vk1VeXDf93SsukBFd54WnnLqXwuHVGDQEvG8SZY6dUFgmJ4h",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "HRVxJeocvArCbkQCXvrNbGRJH2eu6F8SVmoW497hzZ2D",
+          "lamports": 229942,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "J8zKcH9UyDvX73Z6d98jdeUiXqrC115VpEz5hKmRvzWQ",
+          "lamports": 22994,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "EmbNpoNAv6extW7ugRZjmR3VSxLs6tzZ4NVFDRw5YaxU",
+          "lamports": 15329,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 753701,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382016,
+      "tx_index": 645,
+      "signature": "3pKpmbs65G8yj3cWgwDNDJwgNRExZ5UGevzt6PGPTEKQRJgpz8AG7uQ3cw8M4GvwzXx9LjF8GGW4mYNYGJNKNRnn",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "EBPSdk4FyJicPexqhc6VchGigkpm91GodDAkd7sbebSr",
+          "lamports": 1277941,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "4FobGn5ZWYquoJkxMzh2VUAWvV36xMgxQ3M7uG1pGGhd",
+          "lamports": 3733596,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382016,
+      "tx_index": 749,
+      "signature": "4i3Ru4yMmRdJZWpBgxobjHxH9tPcEaurcZasoLMWbsuBQMsSNkVKHdbHvBMJXw2ybvpVJNP2JHHQ1iBohxEDFGma",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "DZfEurFKFtSbdWZsKSDTqpqsQgvXxmESpvRtXkAdgLwM",
+          "lamports": 5186294,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382016,
+      "tx_index": 1401,
+      "signature": "ZdAdFQiKvFzD16BBbsJAehnZDZ94PJ8WR14KPBvYLMadQymBbfzJL1mr6YGFCnhGrLcT2u1bVY1Gsk3nfbNrtCm",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "4EAYHgW2DVpm9wTTbruaJWPHvyy32RS2g1hQ5sj6XUxQ",
+          "lamports": 2250000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "HFHU2w8HZduvc28gKBMgCur7GLXxujRMBwYai5cDDHan",
+          "lamports": 225000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "5NQtDJKS7R3fVuGB9Au8Ac6VrE3nLDQQQXPAKDbfu6p",
+          "lamports": 150000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "lamports": 7375000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 160,
+      "signature": "zQdjkEMqLJzWqnF3z8BBbR43kesJ5Wu1jnNHSUpSVK8kmYXq3EWvtuQqfgv27BJ9uHm1pHc69dcGnZo6c814mpT",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 225,
+      "signature": "3nvikRwWkFd8SfLsv1NtmmPiBZ4GxQKKntNSzjM1TG4sVruZAwyA3X7iBpUUfjsy5QhVzGWB8Bcxjqkrhna99NVc",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 10200,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 281,
+      "signature": "3UA2kq3zAJwyKbr5QVoiZ8pvZzHT9ggxLmuzhLY4dmW7roegSqEjfJrdXX9qbnbZxewzTH6N3y7afpd9vKL88pP2",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "5L2QKqDn5ukJSWGyqR4RPvFvwnBabKWqAqMzH4heaQNB",
+          "lamports": 100000,
+          "position": {
+            "after_instruction_subtree": 10,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 553,
+      "signature": "WGA7p5mg5YGCtLz6qLs1fNQHE32R8CQ8jyuqxKEXE3Ko2YXD1Y1fbQZFPVRqgaPZHpCtEdUUK6ZXHA2nnU1iRou",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "HRVxJeocvArCbkQCXvrNbGRJH2eu6F8SVmoW497hzZ2D",
+          "lamports": 507801,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "J8zKcH9UyDvX73Z6d98jdeUiXqrC115VpEz5hKmRvzWQ",
+          "lamports": 50780,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "EmbNpoNAv6extW7ugRZjmR3VSxLs6tzZ4NVFDRw5YaxU",
+          "lamports": 33853,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "DKyUs1xXMDy8Z11zNsLnUg3dy9HZf6hYZidB6WodcaGy",
+          "lamports": 1664461,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 560,
+      "signature": "236cpEUHSqAm8XkKSzzzA4APwueKvqK9UFCshc4WXKSL2WUY8KcYTKdEY1XtCSSGDcQda6BfbkFwAx3T5G9BD4iH",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "DqZKnShYaxihk3FiBpyFF21T5b9rLKSERWhRWdfBDcHc",
+          "lamports": 262295,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 903464,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382017,
+      "tx_index": 626,
+      "signature": "2D9g6mWhbk8XB4mf9uK1CYduvqU698zQLuCUKJEGZmyZYmWEPCn7UeiYYw6QqucekF8LJnMxrGfWgkiFoQGQMJqU",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "BG7cqKGPXhJarSxXNGjhF8fixF8LhTR4Fctuux3yacat",
+          "lamports": 528000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "8oK1cUWz28HodS8wyR6EKZv46DYwukrWeQqgTzyuMVRi",
+          "lamports": 52800,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "5EiFTfyhFwTyFvXMBSnR3xWuXGHjNMfcwTvPn2r5fmto",
+          "lamports": 35200,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "Hbj6XdxX6eV4nfbYTseysibp4zZJtVRRPn2J3BhGRuK9",
+          "lamports": 1384000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382018,
+      "tx_index": 254,
+      "signature": "4hVx35YMV7fLXu9gHSbsP5JZVc3YcDusiFpn6cZ8Sne4p8TZv7gVSfHtYvM3DmU5KrKF5DsDJq5ZG8BXhhDMZE7S",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382018,
+      "tx_index": 273,
+      "signature": "5LHiWMj8v7B88BGkQEpf532LExnr4C2C6BhuSzzneAmr9dN9pM1hB7RN6K28x8VyfCoMhoUv9VfhP4pD4yB5FJ7U",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "9Dx5RraAcqaTRJP26NKFrsYajKf6UXojVRysBjFnqMpr",
+          "lamports": 947890,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "lamports": 3264958,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382018,
+      "tx_index": 967,
+      "signature": "3omvVafzkptQPtHN8wDZsTngdioKdftSvPreCmaPJHqefsc7qapMJNSbn45JQRioaWD8pxjg3MbvoCdFf5SDHHz2",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 25000,
+          "position": {
+            "after_instruction_subtree": 10,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382019,
+      "tx_index": 506,
+      "signature": "4XqrrWVd1M9akiZwLijzrE9C86KXF2RHmQ5JxWA4pEGKj5yggJaNtFSTuJijMd33yaRDbb9joKdPjobE21vGxduB",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 993,
+      "signature": "5jhYGEnoaWokjEpyAF8YkwsQdkdCVDdahMze8QYxJhLDQUuV6AWDfiX4kWjAx2aKyQE7XxugmRGzkhGLMKf7X8jr",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 9630971,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 997,
+      "signature": "55AYJdXiMLGX1RipJ9fscCaiQmJYLLG7KG9pPJ1YHSrRhJv7F1gMA44LQuquM4zhmK53PDi2rZA4Bt8VCaePhJ1k",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 9307317,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382022,
+      "tx_index": 443,
+      "signature": "5usr857LZGyYvaF6ALj5BuJBcSjUUKAzWzRTseyFZFGdUq9mHECTvkMecEboJcpsrkEx9CD7oSAm4ugbuv6hfx7Y",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "lamports": 1500000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382023,
+      "tx_index": 790,
+      "signature": "5mJKJpSQGxdwuQxvaSQx7pWB5mUVRR9kujWfDVZ6Q9Y2WT8L1kcsFbaxT2KMeH5y3beDPNp4shX8JoaPvDFFzmyV",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "5VfFPJLaFJy86a91T6uov44LYW9Cz31CRKdt5n3diLxh",
+          "lamports": 74700,
+          "position": {
+            "after_instruction_subtree": 40,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "5L2QKqDn5ukJSWGyqR4RPvFvwnBabKWqAqMzH4heaQNB",
+          "lamports": 125300,
+          "position": {
+            "after_instruction_subtree": 40,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382024,
+      "tx_index": 644,
+      "signature": "3jvazkX4miaFWs2K8GssEXiT4kKAUB4nB2ScdcLM1fb29bq2kNM1SWGgwJRg9fSdmVzAARCDwGoBNXG6EN5dW8cR",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "6xSL2ZzhQinUb2L8fhJ1BoTJPGw43KyMeHv9VZRNtrMg",
+          "lamports": 324584,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "6tLvSv8nfDzYVRuuBkfg3At9UzL9UroGo6RNj4ZFNifD",
+          "lamports": 24343,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "6eLzHvs5vNcqjjweFgPZwUnZbkaC12dKAyuAaYS9qH2k",
+          "lamports": 16229,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 612507,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382024,
+      "tx_index": 939,
+      "signature": "61DpiuMtpb73juCK4QBeZGGpVN93GnCdLZuWoyuVsM6y1inUxMnsBqHKKmm1MWm5CX5DcZsnq3GpbPWymeRykbtw",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "6u3Vuisp2mZ356pBVpLYz6ciFEJUd24TXoRu7RyLfcff",
+          "lamports": 1153618,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "8ehaFjF6LHUtEYcv7S6xAgSEqT464ydP2PhVk7cWjdMG",
+          "lamports": 115361,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "4e1Po5rc2dqzvx2yTExjJ2Xp8TBpjotWx6qoeSCKy1Wy",
+          "lamports": 76907,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 3287121,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382025,
+      "tx_index": 32,
+      "signature": "22nakJinregTXpTZy3nDCsVMtygVzxPup8ZBZnTnSEz5iuNjdiw9X5uUpCfji9hRoaZCzfziLnsPBXGY1qUcfG4w",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "2Lc5VE68GUgmbTNBKNpSNFDzrGRZ7ZakNj3Z1kefyMez",
+          "lamports": 1612048,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "HkJYryz2BNeMQfuuSWDYktWt5fZLV26eK6nqu7EJycoG",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 3164394,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382025,
+      "tx_index": 722,
+      "signature": "3tLc8jx6E4qLnseb73XNuLf3xiHW5io2ttLjAYc9RtcSufJU7SfSgqACZ3kridC8Y5dzEcn72jjbVk4RBYtm1hgq",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 2500000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382025,
+      "tx_index": 917,
+      "signature": "2FTj8VGgpToJEmhd5zKZqNnuvkZJDJZdUM8L2SoB3Gva3Rf7rku5fFBsz3xADm78Eyyj3CZSTz4N2w17NicdLB4U",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "89ob7Mfe4CQHGwWwYzwb2t8NBX7dU2UzkLb1nZkR5uSJ",
+          "lamports": 255000,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "BhNam7buoozE8pk4ybu4FHNEGHHkVJjJtcjB1eHtc7xo",
+          "lamports": 25500,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "DKyUs1xXMDy8Z11zNsLnUg3dy9HZf6hYZidB6WodcaGy",
+          "lamports": 719500,
+          "position": {
+            "after_instruction_subtree": 17,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382026,
+      "tx_index": 532,
+      "signature": "3br63kzYTuncwaXRzjLjaYwHAL2uyakCAPj3jXj4ZZCvbK2fRQ2zr2eMH1dgYEB8bMwD3KBHLqoGw8cov9LCziFd",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "84L6rCgs9ertkjpkX2XcR26C6xXyXZuWFosipR75VnXR",
+          "lamports": 26400,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 73600,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382026,
+      "tx_index": 604,
+      "signature": "4ZXcmkoZPW3f6GcpC5E2jfFhFEBiUP839BXegx65448XbEaeHJC3k8brWzjv1s1w2V3Yi2GVGaZZrr5QFyd1Us6k",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "lamports": 2500000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382026,
+      "tx_index": 867,
+      "signature": "3W2E6pmWaQJNCjX4sDEuTeCL9meEdcfUdVJRLrvtkcpscghSbAxZXJfg9X75GcpGmUQgQTpUvXo6zXhFWoLwBM7L",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382027,
+      "tx_index": 526,
+      "signature": "446isSxPfucJom3AqWNxZD5XFW3ZA74Jb7FTnZ55AkoSoD3snyFbGkPjHAvAvdX412GVpU7mPVrDTgU6mGUwfR4H",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "3ukMZSNWibjuewC9FMSB3bK5dDsDEHoQnRbnVkQMNg1x",
+          "lamports": 40337,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "AwhN5iyD6aLsiziVJarwgrdp8EQ67uNdF8xGy1i5KGh9",
+          "lamports": 4033,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "H2cDR3EkJjtTKDQKk8SJS48du9mhsdzQhy8xJx5UMqQK",
+          "lamports": 13401525,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382027,
+      "tx_index": 527,
+      "signature": "4J8Fachx2E8PbuSf5cwe3UN1tvCWxy9HWYFsbvZd2tAnc1yXHffVjTkx4HPCS3ZAMCX6qyEkP5goQMGhr3udrMyf",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "3ukMZSNWibjuewC9FMSB3bK5dDsDEHoQnRbnVkQMNg1x",
+          "lamports": 42812,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "AwhN5iyD6aLsiziVJarwgrdp8EQ67uNdF8xGy1i5KGh9",
+          "lamports": 4281,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "lamports": 14223682,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382027,
+      "tx_index": 528,
+      "signature": "3u4ZkuqM8r7Hsb9AJfErRYjkFafZsyVd42NbDfyE182Psg5ApX8RgATFENkzY7MdzhXsJyiR4vtKkbGaGj2Sm3tZ",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "3ukMZSNWibjuewC9FMSB3bK5dDsDEHoQnRbnVkQMNg1x",
+          "lamports": 37703,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "AwhN5iyD6aLsiziVJarwgrdp8EQ67uNdF8xGy1i5KGh9",
+          "lamports": 3770,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 12526442,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382028,
+      "tx_index": 591,
+      "signature": "35jrcY4TRZRuBcwWeimBDnhRzSs5e4MCZL2Yk8MvhwmoQKAPtbB7FWbn6Ar4kiK9Bsf18hoczgnxJ3iVfk2dRAFv",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "3iVjoHQtXyUk24kQECcG3rGX2wqZuQoz4DzBG2mdcUD7",
+          "lamports": 1083282,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "4y1PS6ixMHgRjdxDSvhDxuTzSGxzXbgkQn85RbtpwSvt",
+          "lamports": 92852,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "GHn8icCm125yu97j7wUBBiGYUMsk89cCvB5D2FwMfTYR",
+          "lamports": 61901,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "4FobGn5ZWYquoJkxMzh2VUAWvV36xMgxQ3M7uG1pGGhd",
+          "lamports": 5639952,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382028,
+      "tx_index": 593,
+      "signature": "2WGo5Fz8HJ4FB962Vnn7EN9u2e1aihwiRradnkctWJFabrBzbbNE3iGGCEakgP1YG5mvRAorDu5Fxu9rmHcn1tKN",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "3iVjoHQtXyUk24kQECcG3rGX2wqZuQoz4DzBG2mdcUD7",
+          "lamports": 959198,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "4y1PS6ixMHgRjdxDSvhDxuTzSGxzXbgkQn85RbtpwSvt",
+          "lamports": 82216,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "GHn8icCm125yu97j7wUBBiGYUMsk89cCvB5D2FwMfTYR",
+          "lamports": 54811,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 4993923,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382029,
+      "tx_index": 739,
+      "signature": "ZcU3JRW6rPSgVM8ax9b2FquQeYmvpz2tp71SwwFFqZyuJsYjgSvAXM24RaU6CxALHoCLG73Vu2KknHcK41yY6Yt",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "lamports": 1867834,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382029,
+      "tx_index": 749,
+      "signature": "foCUFuWpWMqNxEjMDsGS41FsKkYS8azRZSpW4tNK4TV5kkfzN66z1CqCQAehd6cgiFvxdmYr6QXcyjriQRgJiNo",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "A5LjgG1HAXtMXfWjFTiHAuKcZgJQZwJVBa44r7mgDHyo",
+          "lamports": 255000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "8EQ5QDBgezbSGBfSW7k8dKzTkhhkHsAdjBWcFgJUi9uN",
+          "lamports": 25500,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "F4Xijrf85xChkXHN9dzxqZWPF4MS8UdTFE1xadti17N6",
+          "lamports": 17000,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "846ah7iBSu9ApuCyEhA5xpnjHHX7d4QJKetWLbwzmJZ8",
+          "lamports": 702500,
+          "position": {
+            "after_instruction_subtree": 11,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 538,
+      "signature": "5jA5FczvGTouFYiV3b7qoEDmDxgBTDnZom7FHTT7mRi9GN2VKkQADcDngvSnJrhT6eKTV5vPiQrb5MtPDuKFu9at",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "846ah7iBSu9ApuCyEhA5xpnjHHX7d4QJKetWLbwzmJZ8",
+          "lamports": 1400000,
+          "position": {
+            "after_instruction_subtree": 16,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 587,
+      "signature": "5QwmeJ5jNhBKn9kLqFdXman8YuYrB8e73rjLNGQqZU4pZvrPXo4ofSpMTqfieXkZMPdZQwAeCTQc3275KPzdqJtw",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "5cQQDVdsBX65SufLeBpZcVJarS2AXHZefKmf8iaebkB7",
+          "lamports": 675,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "3Vfkx4gLDTjmoH8dcpj8Tt2Weh6qKRzu7h9pGfR2FpBM",
+          "lamports": 67,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3Tu1Y9aNveLFN4WTAwnAwXL6tbUp5MMe3RxyybG4jTAS",
+          "destination": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "lamports": 2258,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382030,
+      "tx_index": 606,
+      "signature": "2nWP5b87pjmgsRh3YibiiC51HKyGPtv6KbRVHNDZVvbiBg6gQnX5aSsp8kYJ9oCyii1sNzBvERNoCATzTPjPRsYM",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "destination": "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "lamports": 16000,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382031,
+      "tx_index": 236,
+      "signature": "5QkZd2xEL7QfTmHgVrT6zekb6ibyCtTUVscX2uJabEkLnjtDxN2mT1da1Qwxo1UBnAp3x1ZPcRRQ3p1mjgorkAGR",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "BfFX9rUm8qTZiZjmeq9BktWVTNuG3YWMc5AvkrCKJike",
+          "destination": "76sxKrPtgoJHDJvxwFHqb3cAXWfRHFLe3VpKcLCAHSEf",
+          "lamports": 841729,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 107,
+      "signature": "2MEfd1Y5Fgr5QUVpeB8SFrUTNab7jCSA7s7jw3FGDv9WQncU4zyc5kcud9ZKZKFebRRaSNFQftWeZmoxtSaT1zv9",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "EeqrTeixYXf4CPngbcwd6ztmLLPkrxir9osdwZksNkx6",
+          "lamports": 26400,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "BF4AmXiV4n9x6hWGrbonEMA9h2PKQK1WaJ72B9kq2V4B",
+          "lamports": 2640,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_referral",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "ABBPsJZUjEsSmhBHuUDsjfHgXUnnLoAU1xnox8GdgKCU",
+          "lamports": 1760,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "5vPNE6VFyXmCmzmWotdxmRk57LEWiXxuAfZL3hKbi2LH",
+          "destination": "8vFGAKdwpn4hk7kc1cBgfWZzpyW3MEMDATDzVZhddeQb",
+          "lamports": 69200,
+          "position": {
+            "after_instruction_subtree": 22,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 110,
+      "signature": "59L86knVm2zPHzN62Ew8Vs7PGcCM9xqz5oGm6UXG21SdUPF4KjtvZSyp7eomDkS5VLxLESbXXRuQKx9hKftj9yy",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 26629,
+          "position": {
+            "after_instruction_subtree": 14,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 129,
+      "signature": "pDFRVmjqDWMZB3YAeXUA5ioEcxavJnYdF9YpYZyN3pEQmo2RWgVaFdFPdbNYSMsNeM2DUvRaYTddSkqK84jE2f7",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 19,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382033,
+      "tx_index": 503,
+      "signature": "5qnkrnLHJtSNwCAPcYCrFr735QuLrD5BUZ1TFSGjpDSFsMZCeM8fzgdBNP3CyVMRfS1ipWGRCJhubY2iDnni3ZZD",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "8kXENd71BLswuUr9mWGyHqqu8eiZCVwqK2X133vSdzY",
+          "lamports": 1759289,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "lamports": 8014543,
+          "position": {
+            "after_instruction_subtree": 7,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1116,
+      "signature": "skaQjAzr86gMyM3ZgbqeHvZDa7LBTpb2vtutdENFqe2xZTL57RU2oeEVcUjkr6JsgBRoQuN4jdVn83o9egpaq3Y",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1158,
+      "signature": "AzQQdTw4NBwSXvCFJHoxnM3XaM1GwGaw9RNr5YriJHag84M5KBLU5WrygY1FYNcXvfh9JTRYn5WyFL8SqLY4Ee6",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 5100,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1245,
+      "signature": "qB9F5Gv81jJqXwnfuN4US36k4ze1nm8QiDjpvzWkQiS6WxoHipuGmQ15jrQK5A4nFDNoHufhutuQgUGpCDoK32M",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "router_balance_replenishment",
+          "source": "HWGoJ1HaMFUiDgfD7FVxMaYJAE2A5JjF7si6CgWSvRFQ",
+          "destination": "HuTshmtwcQkWBLzgW3m4uwcmik7Lmz4YFpYcTqMJpXiP",
+          "lamports": 10200,
+          "position": {
+            "after_instruction_subtree": 13,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382036,
+      "tx_index": 1348,
+      "signature": "2p4pdJDsDjsuiahXdrsGqWFyQUeMFyARvikXt1GbZ5inoeysWGLGRVqDQ57RsxLzDUvw49imMck415VaaCh1Tjfv",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "ECDrSz47nXihe5kyK4oWEePPsPi9qz6u5d6Fa2sDj3uM",
+          "destination": "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "lamports": 8000000,
+          "position": {
+            "after_instruction_subtree": 20,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382037,
+      "tx_index": 98,
+      "signature": "3s8S4ziFfGguGZ56S3qDpNaJimhPq9aVceZmKsojFFCqKmiXk3tXnxBeTwHYt2WXvw4aZRUYtXr1RUAdcazb7467",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_fee_remainder",
+          "source": "EqGzowSp6cKAsMSRyyrFTaBxnZEVeNY81LC18YFy8Cx9",
+          "destination": "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "lamports": 30000,
+          "position": {
+            "after_instruction_subtree": 15,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382038,
+      "tx_index": 429,
+      "signature": "4hFKMBFFULpLBehyGiZAxgA65SwupmVrsP7NQLMVyyJVZUiJ8XCp4Dpieejwi5zA4JgbCtWzPb6sGrn1nS8FM8JF",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "82wuMNSc9obsSwEvEaWiwRvJyutrQ5koecQ5byTjHk7T",
+          "lamports": 353082,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "lamports": 588471,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    },
+    {
+      "slot": 449382038,
+      "tx_index": 434,
+      "signature": "3J2wmWjjiVcwQrPMMktK5noSkCswEtTGK8BWrret4TYg5ndQokkepBeZPwNFJusKmQPM6pNtH3gf8FnTAaN4efXK",
+      "before": "UNEXPLAINED_LAMPORT_CHANGES",
+      "after": "LAMPORTS_RECONCILED",
+      "new_movements": [
+        {
+          "kind": "flash_referral",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "82wuMNSc9obsSwEvEaWiwRvJyutrQ5koecQ5byTjHk7T",
+          "lamports": 245421,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        },
+        {
+          "kind": "flash_fee_remainder",
+          "source": "3PvqoztjnRxaAiFmLuEfqZkU4GSbjUareks8S2xCZaTa",
+          "destination": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "lamports": 409037,
+          "position": {
+            "after_instruction_subtree": 23,
+            "event_index": null
+          }
+        }
+      ]
+    }
+  ],
+  "solved_count": 82,
+  "previous_details_sha256": "82e545f575631bba634ec28497fe8341137dda25cae439908c6c2210e212d322",
+  "new_program_state_requests": 3,
+  "network_requests_for_full_replay": 0
+}

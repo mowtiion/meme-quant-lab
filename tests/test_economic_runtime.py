@@ -32,23 +32,21 @@ class EconomicRuntime(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'NULL_BLOCK_TIME'):
             replay_one(item, self.decoders)
 
-    def test_balanced_router_residuals_remain_unresolved(self):
+    def test_former_router_residuals_have_explicit_modeled_movements(self):
         for item, program, amount in zip(self.cases, [FLASH, OTHER], [191973, 25500]):
             _, result, _ = replay_one(item, self.decoders)
-            row = diagnose_residual(item, result)
-            self.assertEqual(row['status'], 'UNEXPLAINED_LAMPORT_CHANGES')
-            self.assertEqual(row['associated_programs'], [program])
-            self.assertEqual(row['residual_sum'], 0)
-            self.assertEqual(row['positive_residual_lamports'], amount)
-            self.assertFalse(row['causal_mapping_verified'])
+            check = result['lamport_check']
+            self.assertEqual(check['status'], 'LAMPORTS_RECONCILED')
+            kinds = ('flash_referral','flash_fee_remainder') if program==FLASH else ('router_balance_replenishment',)
+            self.assertEqual(sum(m['lamports'] for m in check['movements'] if m['kind'] in kinds), amount)
 
     def test_replenishment_is_not_assumed_equal_to_transaction_fee(self):
         item = self.cases[1]
         _, result, _ = replay_one(item, self.decoders)
-        row = diagnose_residual(item, result)
-        self.assertEqual(row['payer_residual_lamports'], 25500)
-        self.assertEqual(row['transaction_fee_lamports'], 5100)
-        self.assertEqual(row['payer_post_lamports'], 100000000)
+        check = result['lamport_check']
+        self.assertEqual(next(m['lamports'] for m in check['movements'] if m['kind']=='router_balance_replenishment'),25500)
+        self.assertEqual(check['fee'],5100)
+        self.assertEqual(item['tx']['meta']['postBalances'][0],100000000)
 
     def test_diagnosis_does_not_hide_one_lamport_tamper(self):
         item = copy.deepcopy(self.cases[0])
