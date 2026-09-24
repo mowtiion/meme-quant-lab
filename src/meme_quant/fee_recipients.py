@@ -24,3 +24,7 @@ def associated_token(owner,mint,program):
 
 def volume_accumulator(user,program):
     return str(Pubkey.find_program_address([b'user_volume_accumulator',bytes(Pubkey.from_string(user))],Pubkey.from_string(program))[0])
+
+
+def derived_address(program, seed, account):
+    return str(Pubkey.find_program_address([seed,bytes(Pubkey.from_string(account))],Pubkey.from_string(program))[0])
