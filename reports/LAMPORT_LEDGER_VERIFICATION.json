@@ -1,0 +1,987 @@
+{
+  "status": "SCOPED_LAMPORT_AUDIT",
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "network_requests": 0,
+  "failed_target_transactions_excluded": 1085,
+  "details_sha256": "7c9c22c0550c1b84c0ad418453d950b6151a40c89d5933d719c8d606139d9f33",
+  "counts": {
+    "UNEXPLAINED_LAMPORT_CHANGES": 234,
+    "LAMPORTS_RECONCILED": 2607,
+    "UNRESOLVED": 32
+  },
+  "reasons": {
+    "MODELED_INTERMEDIATE_FUNDS_DEFICIT": 23,
+    "UNSUPPORTED_TOKEN_INSTRUCTION_26": 3,
+    "UNSUPPORTED_TOKEN_INSTRUCTION_39": 5,
+    "UNSUPPORTED_TOKEN_INSTRUCTION_45": 1
+  },
+  "reconciled_native_account_observations": 8197,
+  "reconciled_reused_account_observations": 32,
+  "reconciled_lifecycle_counts": {
+    "initialize": 2510,
+    "sync_native": 1704,
+    "close": 2520
+  },
+  "rent_assumed": false,
+  "full_economic_ledger": false,
+  "sync_token_amounts_independently_verified": false,
+  "slots": {
+    "449382000": {
+      "counts": {
+        "UNEXPLAINED_LAMPORT_CHANGES": 4,
+        "LAMPORTS_RECONCILED": 34,
+        "UNRESOLVED": 1
+      },
+      "sha256": "186cb5beecedb8d1d74a8e7d896df648bc75a11247bfb27f46c586ff03f48b48"
+    },
+    "449382001": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 27,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4
+      },
+      "sha256": "47e250b1df14cb297addca1fb73fc28701eb269f564c73f594d38881d12a995d"
+    },
+    "449382002": {
+      "counts": {
+        "UNEXPLAINED_LAMPORT_CHANGES": 4,
+        "LAMPORTS_RECONCILED": 28
+      },
+      "sha256": "c1f1a064e49fec5e79dbd5b573dad5398fc0f824bc70e019382d75aeb80924fd"
+    },
+    "449382003": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 37,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7
+      },
+      "sha256": "67b7774098ff4751f7d472ef66bf1fcdbe443e5967019d45fd8330b6bb1fd706"
+    },
+    "449382004": {
+      "counts": {
+        "UNEXPLAINED_LAMPORT_CHANGES": 5,
+        "LAMPORTS_RECONCILED": 188,
+        "UNRESOLVED": 1
+      },
+      "sha256": "679f829744d21e2f60c6cd05c1d256271e3f6aef33e4a1df8d6a7ca59d8abe1e"
+    },
+    "449382005": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 71,
+        "UNEXPLAINED_LAMPORT_CHANGES": 5
+      },
+      "sha256": "9527232a90e9aae9845053de8d2f866668d8106461e795fc588adf276b1c5d3a"
+    },
+    "449382006": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 54,
+        "UNEXPLAINED_LAMPORT_CHANGES": 6,
+        "UNRESOLVED": 2
+      },
+      "sha256": "f8795fbcad15481660f2a1ec7a6c87e93f064514194f7a67a7e4b9ac7cffe564"
+    },
+    "449382007": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 67,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4
+      },
+      "sha256": "41bdee8c48c994d20356c01f86086ace976e0dd0459694203058a5ef637fe455"
+    },
+    "449382008": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 101,
+        "UNEXPLAINED_LAMPORT_CHANGES": 8
+      },
+      "sha256": "ff2585ba699d909a85322c4e5c0ceec14d2ac11d661dd2e9df93b1acecb1ec22"
+    },
+    "449382009": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 58,
+        "UNEXPLAINED_LAMPORT_CHANGES": 6
+      },
+      "sha256": "b147bb42e0dde7135f5163da7f51fb414f6bde8f5aa94a10ec28b74c0cdbf791"
+    },
+    "449382010": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 79,
+        "UNEXPLAINED_LAMPORT_CHANGES": 6
+      },
+      "sha256": "9ad0bb32f7dec194a4f7d9d327880fb73e2da6caeaa59a27d196a112b3f8fdac"
+    },
+    "449382011": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 94,
+        "UNEXPLAINED_LAMPORT_CHANGES": 8,
+        "UNRESOLVED": 2
+      },
+      "sha256": "95b52f7725e3e0868df4acce17d9a90f643ed3cbb8c5a1f44a513385ec330c80"
+    },
+    "449382012": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 76,
+        "UNRESOLVED": 2,
+        "UNEXPLAINED_LAMPORT_CHANGES": 5
+      },
+      "sha256": "6b9f1a19c1f6ab6e5b1406a8034455ab34803f06492297ad71cfd9ad895e6a5c"
+    },
+    "449382013": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 64,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7
+      },
+      "sha256": "42eaaea8a6eda27e08b377f82e55cb9d5449e00046ebcdcc7342577eec3a9a7d"
+    },
+    "449382014": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 72,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4,
+        "UNRESOLVED": 1
+      },
+      "sha256": "77f8cb6c744bf33922572aa29de572b2498a6a3c02b261e2caffc7d00d7e476f"
+    },
+    "449382015": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 43,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4
+      },
+      "sha256": "9d9ba80def31b5885e2be44485bd61e7709c0e57fac53440e0667b3204934601"
+    },
+    "449382016": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 58,
+        "UNRESOLVED": 1,
+        "UNEXPLAINED_LAMPORT_CHANGES": 10
+      },
+      "sha256": "c2611b598776c7b27ed5dc34a643fab0ef14983dfecb671a124ca8f77b1de7ac"
+    },
+    "449382017": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 100,
+        "UNEXPLAINED_LAMPORT_CHANGES": 11
+      },
+      "sha256": "985b5d44f2464ea4d262df93d531c6efd1793b9d460ce4af22d61b3eeb36e39a"
+    },
+    "449382018": {
+      "counts": {
+        "UNRESOLVED": 2,
+        "LAMPORTS_RECONCILED": 39,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7
+      },
+      "sha256": "632d46bb93af92696372249d7dba071f95984758286902bc3cbfc14c62e5f7ee"
+    },
+    "449382019": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 91,
+        "UNEXPLAINED_LAMPORT_CHANGES": 3
+      },
+      "sha256": "ff1c8a253be4ca0902e18145f60ab77d38e905a852d7903a92e08d134434c48a"
+    },
+    "449382020": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 71,
+        "UNEXPLAINED_LAMPORT_CHANGES": 10,
+        "UNRESOLVED": 2
+      },
+      "sha256": "16517622ee315c3c99145bff5a4d493dc312a556a1560c2cdd77b4bc7bb1ea77"
+    },
+    "449382021": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 36,
+        "UNRESOLVED": 2,
+        "UNEXPLAINED_LAMPORT_CHANGES": 3
+      },
+      "sha256": "50eb2fce08c8b4eef5aa06af976fe1ca657fc6eac41d6f50cd6435218939e9ca"
+    },
+    "449382022": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 77,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7
+      },
+      "sha256": "2257b4bcf47c1d5c6e0aa60526cd2e001e4f81d73e80c865212b1db1faea1e52"
+    },
+    "449382023": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 78,
+        "UNEXPLAINED_LAMPORT_CHANGES": 2
+      },
+      "sha256": "91f06b752167c671615d73d4bf40414b64ee700139898a8dc5e7d89c1912e49c"
+    },
+    "449382024": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 58,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7,
+        "UNRESOLVED": 1
+      },
+      "sha256": "76f40a0c8f865722bc7b42af4fa39485c587fa381362ed470b58a351b0d214ac"
+    },
+    "449382025": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 72,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4
+      },
+      "sha256": "f1fb202af884d7b9f365458fc846eae8b2aa425eff33b91577d30cc726e6fd0b"
+    },
+    "449382026": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 64,
+        "UNEXPLAINED_LAMPORT_CHANGES": 5,
+        "UNRESOLVED": 1
+      },
+      "sha256": "b09cd8dbe7f171dc3f20088c3eefed35999fbc9870e3eb5ef530c3a8aa594975"
+    },
+    "449382027": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 61,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4
+      },
+      "sha256": "2ae84f927ac204eab16a2d8b35380c9a0b806666263351cc3045255a4b549706"
+    },
+    "449382028": {
+      "counts": {
+        "UNRESOLVED": 2,
+        "LAMPORTS_RECONCILED": 9,
+        "UNEXPLAINED_LAMPORT_CHANGES": 3
+      },
+      "sha256": "f4387ea35a970f62efd112cf72c87d3c9e5fb61c72d1cf947e7d7bc8717f83fa"
+    },
+    "449382029": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 22,
+        "UNEXPLAINED_LAMPORT_CHANGES": 6
+      },
+      "sha256": "1481bbdd187d4f99ff87338789768c3ab12dba9592365dca00dd9ae0bb3fe297"
+    },
+    "449382030": {
+      "counts": {
+        "UNEXPLAINED_LAMPORT_CHANGES": 8,
+        "LAMPORTS_RECONCILED": 33,
+        "UNRESOLVED": 1
+      },
+      "sha256": "8595d661a2e16f424c2baf61f3718ff21402c9871f358cf7c66ae0aaa6d3db4b"
+    },
+    "449382031": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 37,
+        "UNEXPLAINED_LAMPORT_CHANGES": 3,
+        "UNRESOLVED": 1
+      },
+      "sha256": "5dac9825fc0e47e4bb7e1e2f48886ac49454ee01bac910c4d9a3e5bf7d812587"
+    },
+    "449382032": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 31,
+        "UNEXPLAINED_LAMPORT_CHANGES": 5
+      },
+      "sha256": "ee12b9405a933a5cc3d8a637399231f76a10bb93f1c268e533e2b28859ee1113"
+    },
+    "449382033": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 44,
+        "UNRESOLVED": 1,
+        "UNEXPLAINED_LAMPORT_CHANGES": 9
+      },
+      "sha256": "c74699ce1e48be2b97635519138e03e06ac24ce1bbfa9a1543cd0f0d23c26a45"
+    },
+    "449382034": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 24,
+        "UNEXPLAINED_LAMPORT_CHANGES": 7
+      },
+      "sha256": "ad4f56c6daca78eadb2460468b8d87ece1076dfa07c64a0f1f85e858afdc0278"
+    },
+    "449382035": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 25,
+        "UNEXPLAINED_LAMPORT_CHANGES": 2,
+        "UNRESOLVED": 4
+      },
+      "sha256": "a0b2e1876d00757dd4373fb432d49264460c672c7dfcf2947f84cd3a31e745f6"
+    },
+    "449382036": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 258,
+        "UNEXPLAINED_LAMPORT_CHANGES": 15,
+        "UNRESOLVED": 1
+      },
+      "sha256": "92d31657a8b7d0d19a3921120d8e43771f074171ee544ef826bd7b5ffd19d0e7"
+    },
+    "449382037": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 62,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4,
+        "UNRESOLVED": 1
+      },
+      "sha256": "928f1e479ad249952752e63bf4138f24764f1c13e60e92fa0ab12d8d9d9e1871"
+    },
+    "449382038": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 66,
+        "UNEXPLAINED_LAMPORT_CHANGES": 4,
+        "UNRESOLVED": 1
+      },
+      "sha256": "0e80f6967e4fe7b8ad83df283cac08ec412953f4bc6b499813b8859d10ce5d3f"
+    },
+    "449382039": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 72,
+        "UNEXPLAINED_LAMPORT_CHANGES": 3
+      },
+      "sha256": "43ebb5e1c91daeaa409a7c167c62028aee51c2abe13b8ea4d3c06f19fe2a1e85"
+    },
+    "449382040": {
+      "counts": {
+        "LAMPORTS_RECONCILED": 26,
+        "UNEXPLAINED_LAMPORT_CHANGES": 5,
+        "UNRESOLVED": 2
+      },
+      "sha256": "2c7f537a654ad9227d7c87fab26bc823cbeccc958698a7d5893dfa53a9917fc6"
+    }
+  },
+  "examples": [
+    {
+      "slot": 449382000,
+      "tx_index": 44,
+      "signature": "4B7gRhD5jc7JrWmBKG3U1D7JqTbUUhUm3vLdNSDDooKcwRtBbPAn8nfduoH1V415MxvwFMr9SFW3FmmEx7K5qPTC",
+      "status": "UNEXPLAINED_LAMPORT_CHANGES",
+      "movements": [
+        {
+          "kind": "create",
+          "source": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "destination": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+          "lamports": 2039280,
+          "position": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "destination": "6xkDdnJpDsZs6pBpzbyTpC7xDRDjpZDMbx2Lu84AepgV",
+          "lamports": 1559560,
+          "position": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "destination": "EZZ3vnbtoBYuhZqbY3TQavsZKDsGR94tLkfhLbjakryZ",
+          "lamports": 1488440,
+          "position": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "DQyrAcCrDXQ7NeoqGgDCZwBvWDcYmFCjSb9JtteuvPpz",
+          "destination": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+          "lamports": 19197303,
+          "position": [
+            3,
+            13
+          ]
+        },
+        {
+          "kind": "close_token_account",
+          "source": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+          "destination": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "lamports": 21236583,
+          "position": [
+            3,
+            14
+          ]
+        },
+        {
+          "kind": "transfer",
+          "source": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "destination": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "lamports": 191973,
+          "position": [
+            3,
+            16
+          ]
+        },
+        {
+          "kind": "transfer",
+          "source": "AJQohfJPFwthjcQTtLvyg5gzDj1oum3vsQaKUERyrDyj",
+          "destination": "8d5jPhXwjEa9cPkQG2aFHw5cwE6KjytnPFJbmH1RgN1M",
+          "lamports": 10000,
+          "position": [
+            4,
+            null
+          ]
+        }
+      ],
+      "lifecycles": [
+        {
+          "kind": "initialize",
+          "account": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports": 2039280,
+          "position": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "initialize",
+          "account": "6xkDdnJpDsZs6pBpzbyTpC7xDRDjpZDMbx2Lu84AepgV",
+          "mint": "Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu",
+          "generation": 1,
+          "lamports": 1559560,
+          "position": [
+            1,
+            4
+          ]
+        },
+        {
+          "kind": "initialize",
+          "account": "EZZ3vnbtoBYuhZqbY3TQavsZKDsGR94tLkfhLbjakryZ",
+          "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "generation": 1,
+          "lamports": 1488440,
+          "position": [
+            2,
+            4
+          ]
+        },
+        {
+          "kind": "close",
+          "account": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports_returned": 21236583,
+          "position": [
+            3,
+            14
+          ]
+        }
+      ],
+      "mismatches": [
+        {
+          "account": "2ApLdwLrGayEmxgpLX9BTR47Q2QprfMg5SpjrLeaK8s7",
+          "predicted": 492328607,
+          "observed": 492136634,
+          "residual": -191973
+        },
+        {
+          "account": "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg",
+          "predicted": 474081280604,
+          "observed": 474081392909,
+          "residual": 112305
+        },
+        {
+          "account": "CD32vhwLbfLnFdaT75C7N2mtXrsPipnT5yybHQzcLvsS",
+          "predicted": 164888246,
+          "observed": 164967914,
+          "residual": 79668
+        }
+      ],
+      "native_accounts": [
+        "DQyrAcCrDXQ7NeoqGgDCZwBvWDcYmFCjSb9JtteuvPpz",
+        "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW"
+      ],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 15000,
+      "reused_accounts": []
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 46,
+      "signature": "4SDdKSzopomNyvmCx5CGcV6DuB6JP6cULX7uH7q1FkGsts35UrCZxfu5c25mfSrPYqRWFJz3gXyoXgsNY4TaUyQo",
+      "status": "LAMPORTS_RECONCILED",
+      "movements": [
+        {
+          "kind": "create",
+          "source": "BosQdnC3SnewhspSrdzTzUSgHMrtf3jhg2dC12h68kQg",
+          "destination": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "lamports": 1488440,
+          "position": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "transfer",
+          "source": "BosQdnC3SnewhspSrdzTzUSgHMrtf3jhg2dC12h68kQg",
+          "destination": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "lamports": 7639873864,
+          "position": [
+            3,
+            null
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "destination": "H7zjWRcVQtEKNPtUDYUFB6Zue9UXrUZrJ5r3tSEHVZ7W",
+          "lamports": 7639873864,
+          "position": [
+            8,
+            1
+          ]
+        },
+        {
+          "kind": "close_token_account",
+          "source": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "destination": "BosQdnC3SnewhspSrdzTzUSgHMrtf3jhg2dC12h68kQg",
+          "lamports": 1488440,
+          "position": [
+            9,
+            null
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "7ChGMLP8mybVdci29a1FrhiSehnpGLCevLzx8ofpXL2y",
+          "destination": "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+          "lamports": 1488440,
+          "position": [
+            10,
+            1
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "H7zjWRcVQtEKNPtUDYUFB6Zue9UXrUZrJ5r3tSEHVZ7W",
+          "destination": "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+          "lamports": 8644334755,
+          "position": [
+            14,
+            1
+          ]
+        },
+        {
+          "kind": "close_token_account",
+          "source": "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+          "destination": "7ChGMLP8mybVdci29a1FrhiSehnpGLCevLzx8ofpXL2y",
+          "lamports": 8645823195,
+          "position": [
+            15,
+            null
+          ]
+        }
+      ],
+      "lifecycles": [
+        {
+          "kind": "initialize",
+          "account": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports": 1488440,
+          "position": [
+            2,
+            3
+          ]
+        },
+        {
+          "kind": "sync_native",
+          "account": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "generation": 1,
+          "lamports": 7641362304,
+          "position": [
+            4,
+            null
+          ]
+        },
+        {
+          "kind": "close",
+          "account": "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports_returned": 1488440,
+          "position": [
+            9,
+            null
+          ]
+        },
+        {
+          "kind": "initialize",
+          "account": "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports": 1488440,
+          "position": [
+            10,
+            3
+          ]
+        },
+        {
+          "kind": "close",
+          "account": "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports_returned": 8645823195,
+          "position": [
+            15,
+            null
+          ]
+        }
+      ],
+      "mismatches": [],
+      "native_accounts": [
+        "E2ipbw4EUDHrg9c8oEDSFYxQXQe3sEEnYcw1igmGvy8V",
+        "BDRpLA4q6fcLvKTDDPAAz7vFkJ39SgcLDXveMs7vaQU4",
+        "H7zjWRcVQtEKNPtUDYUFB6Zue9UXrUZrJ5r3tSEHVZ7W"
+      ],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 10000,
+      "reused_accounts": []
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 95,
+      "signature": "pMAmKTkh88DqiLXZKJSbjX987rXo7sLhMQq1zgbciHyZHUdJtQs11CVmYEZfaj6GNrq8xAcbkq9EvgwQWtJZFsF",
+      "status": "LAMPORTS_RECONCILED",
+      "movements": [
+        {
+          "kind": "create",
+          "source": "3yzxVb8xUwtRPBLLAvNcYBNkNmKw4NgXHhQz67DzocLj",
+          "destination": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "lamports": 1488440,
+          "position": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "transfer",
+          "source": "3yzxVb8xUwtRPBLLAvNcYBNkNmKw4NgXHhQz67DzocLj",
+          "destination": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "lamports": 13800399352,
+          "position": [
+            1,
+            null
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "destination": "5x2vc7iMBMXeKzo22nyvsmAsd2BEFXZVp6EUic2QSnnS",
+          "lamports": 13800399352,
+          "position": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "close_token_account",
+          "source": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "destination": "3yzxVb8xUwtRPBLLAvNcYBNkNmKw4NgXHhQz67DzocLj",
+          "lamports": 1488440,
+          "position": [
+            4,
+            null
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "3yzxVb8xUwtRPBLLAvNcYBNkNmKw4NgXHhQz67DzocLj",
+          "destination": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "lamports": 1488440,
+          "position": [
+            5,
+            1
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "5x2vc7iMBMXeKzo22nyvsmAsd2BEFXZVp6EUic2QSnnS",
+          "destination": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "lamports": 13851626434,
+          "position": [
+            6,
+            1
+          ]
+        },
+        {
+          "kind": "close_token_account",
+          "source": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "destination": "3yzxVb8xUwtRPBLLAvNcYBNkNmKw4NgXHhQz67DzocLj",
+          "lamports": 13853114874,
+          "position": [
+            7,
+            null
+          ]
+        }
+      ],
+      "lifecycles": [
+        {
+          "kind": "initialize",
+          "account": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports": 1488440,
+          "position": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "sync_native",
+          "account": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "generation": 1,
+          "lamports": 13801887792,
+          "position": [
+            2,
+            null
+          ]
+        },
+        {
+          "kind": "close",
+          "account": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports_returned": 1488440,
+          "position": [
+            4,
+            null
+          ]
+        },
+        {
+          "kind": "initialize",
+          "account": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 2,
+          "lamports": 1488440,
+          "position": [
+            5,
+            3
+          ]
+        },
+        {
+          "kind": "close",
+          "account": "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 2,
+          "lamports_returned": 13853114874,
+          "position": [
+            7,
+            null
+          ]
+        }
+      ],
+      "mismatches": [],
+      "native_accounts": [
+        "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C",
+        "5x2vc7iMBMXeKzo22nyvsmAsd2BEFXZVp6EUic2QSnnS"
+      ],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 5000,
+      "reused_accounts": [
+        "ZP18Y1yBzXfMB5FtLfu2LsMuJGgyAPQzBa9wVqHyU5C"
+      ]
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 837,
+      "signature": "3ZwTaKf8HsCLnCREQa7xR4kCyeKa9BSSDz56TBzGMy5W6tunKqTV7pWiYfyNuXpayviC8uHhuTUW7GwbREY2kLqH",
+      "status": "UNRESOLVED",
+      "movements": [
+        {
+          "kind": "transfer",
+          "source": "9CaQLdhZ8t4bzRVsqbA5kdB864zxYyvhp3yPBQvUHP71",
+          "destination": "moonCJg8476LNFLptX1qrK8PdRsA1HD1R6XWyu9MB93",
+          "lamports": 1000000,
+          "position": [
+            0,
+            null
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "9CaQLdhZ8t4bzRVsqbA5kdB864zxYyvhp3yPBQvUHP71",
+          "destination": "EsVfpr7uJjotS6QuCemWtVYnxGANA4MKNJcPge7gfywn",
+          "lamports": 1488440,
+          "position": [
+            3,
+            2
+          ]
+        }
+      ],
+      "lifecycles": [
+        {
+          "kind": "initialize",
+          "account": "EsVfpr7uJjotS6QuCemWtVYnxGANA4MKNJcPge7gfywn",
+          "mint": "So11111111111111111111111111111111111111112",
+          "generation": 1,
+          "lamports": 1488440,
+          "position": [
+            3,
+            4
+          ]
+        }
+      ],
+      "mismatches": [],
+      "native_accounts": [],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 568068,
+      "blocked_movement": {
+        "kind": "transfer",
+        "source": "CD3f5rY68atWGjsvnHNS2TWprqNgexYaHbHNVgKJj3Uc",
+        "destination": "EsVfpr7uJjotS6QuCemWtVYnxGANA4MKNJcPge7gfywn",
+        "lamports": 1062597817,
+        "modeled_source_balance": 47565731,
+        "position": [
+          3,
+          9
+        ]
+      },
+      "reason": "MODELED_INTERMEDIATE_FUNDS_DEFICIT"
+    },
+    {
+      "slot": 449382004,
+      "tx_index": 464,
+      "signature": "5rzE6GE1yZtk3eE2ATNts1XhcKiVEyzuwLTBqrBtxi2qCWStXJ8p37ouTUrph9ohuJ9BnRLNWqx5PrCh9ea4dB9V",
+      "status": "UNRESOLVED",
+      "movements": [
+        {
+          "kind": "transfer",
+          "source": "4vgKuiktnNfXsoa9YTCUz9fRpfYDpDko4cBG15nkqazo",
+          "destination": "D2L6yPZ2FmmmTKPgzaMKdhu6EWZcTpLy1Vhx8uvZe7NZ",
+          "lamports": 1000000,
+          "position": [
+            2,
+            null
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "4vgKuiktnNfXsoa9YTCUz9fRpfYDpDko4cBG15nkqazo",
+          "destination": "GTnWPwxk7xBnukhf1gwoviqB6wZsSQExkVs94TBc2oyo",
+          "lamports": 1513840,
+          "position": [
+            3,
+            1
+          ]
+        },
+        {
+          "kind": "create",
+          "source": "4vgKuiktnNfXsoa9YTCUz9fRpfYDpDko4cBG15nkqazo",
+          "destination": "DVPwb9GrxePr7G7JcMPRrXbZmytkWf9tx43xDUkPuCa6",
+          "lamports": 1559560,
+          "position": [
+            4,
+            1
+          ]
+        }
+      ],
+      "lifecycles": [
+        {
+          "kind": "initialize",
+          "account": "GTnWPwxk7xBnukhf1gwoviqB6wZsSQExkVs94TBc2oyo",
+          "mint": "5PHj3mmQ65eAHnyBypiHT733q7HCptGpV1QmCNadpump",
+          "generation": 1,
+          "lamports": 1513840,
+          "position": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "initialize",
+          "account": "DVPwb9GrxePr7G7JcMPRrXbZmytkWf9tx43xDUkPuCa6",
+          "mint": "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB",
+          "generation": 1,
+          "lamports": 1559560,
+          "position": [
+            4,
+            3
+          ]
+        }
+      ],
+      "mismatches": [],
+      "native_accounts": [],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 1804465,
+      "reason": "UNSUPPORTED_TOKEN_INSTRUCTION_26"
+    },
+    {
+      "slot": 449382020,
+      "tx_index": 749,
+      "signature": "42pjwTNMtF1gCehMXRV34ieDQ9pANcKdmqKYUSSRpZxVDjGGBJ2ysNoKgA5BtUPh2NmFqzBJYyj9W1yxjhrsci9w",
+      "status": "UNRESOLVED",
+      "movements": [
+        {
+          "kind": "create",
+          "source": "Eo6cxgHzfut1ZRjHZBJnThZUTeJz6rPFHXLfCgCcAxqj",
+          "destination": "2mhjbvEJ9d4TCnHRxeRfkaRxoSBdFtrFVXEg3uScpump",
+          "lamports": 1838960,
+          "position": [
+            1,
+            0
+          ]
+        }
+      ],
+      "lifecycles": [],
+      "mismatches": [],
+      "native_accounts": [],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 10000,
+      "reason": "UNSUPPORTED_TOKEN_INSTRUCTION_39"
+    },
+    {
+      "slot": 449382024,
+      "tx_index": 746,
+      "signature": "5LzcgW26MoETDd8uk1x9g1KvEDgZ6fimUNFxkSU2UwUX8qakia5JtuDm4zK3Fb9o9foc1inij3jUX2SbEcjFU411",
+      "status": "UNRESOLVED",
+      "movements": [
+        {
+          "kind": "native_token_transfer",
+          "source": "Gv54rUCMus7D65SYQeu6jcW5JbG427ev6YyeVjQ4v8mZ",
+          "destination": "6j1eiB1sFG5pUdwjwbEBx6mtntzDtvoW1vzLQufku7Xm",
+          "lamports": 1920297446,
+          "position": [
+            3,
+            2
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "Gv54rUCMus7D65SYQeu6jcW5JbG427ev6YyeVjQ4v8mZ",
+          "destination": "94qWNrtmfn42h3ZjUZwWvK1MEo9uVmmrBPd2hpNjYDjb",
+          "lamports": 485660,
+          "position": [
+            3,
+            3
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "Gv54rUCMus7D65SYQeu6jcW5JbG427ev6YyeVjQ4v8mZ",
+          "destination": "7BfWZmHP1TjVbBPFjA5umNMh3zvNoViouExdSyDAXE1V",
+          "lamports": 17483741,
+          "position": [
+            3,
+            4
+          ]
+        },
+        {
+          "kind": "native_token_transfer",
+          "source": "Gv54rUCMus7D65SYQeu6jcW5JbG427ev6YyeVjQ4v8mZ",
+          "destination": "HjQjngTDqoHE6aaGhUqfz9aQ7WZcBRjy5xB8PScLSr8i",
+          "lamports": 485659,
+          "position": [
+            3,
+            5
+          ]
+        }
+      ],
+      "lifecycles": [],
+      "mismatches": [],
+      "native_accounts": [],
+      "rent_assumed": false,
+      "sync_token_amounts_independently_verified": false,
+      "fee": 154600,
+      "reason": "UNSUPPORTED_TOKEN_INSTRUCTION_45"
+    }
+  ]
+}

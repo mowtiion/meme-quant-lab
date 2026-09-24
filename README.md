@@ -13,7 +13,7 @@ Onderzoek of vroege on-chain signalen toekomstige Solana/Pump.fun-runners kunnen
 - Handelsstromen, buyer/trade/volume-dynamiek en conditionele prijs/curve-afgeleiden.
 - Gescheiden diagnostische outcomes; onuitvoerbare prijzen worden geen winstlabels.
 - Parquet-tabellen, DuckDB-database, reproduceerbare configuratie en runrapporten.
-- 120 tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
+- Tests voor tijdsgrenzen, look-ahead, ontbrekende data, duplicates, censoring, echte transacties en opslag.
 - Protocol buy-and-burn-acties apart gereconcilieerd; ze tellen niet als walletkopers of gewone koopdruk.
 
 De census-audit reconcilieert zes launches in 44 blokken, inclusief Mayhem en holder rewards.
@@ -32,7 +32,9 @@ en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
 met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
 De [token- en fee-audit](reports/TOKEN_LEDGER_REPORT.md) verklaart 17.186 accountobservaties
-en 2.110 core-feecontroles; wrapped-SOL-levenscycli en andere expliciete uitzonderingen blijven open.
+en 2.110 core-feecontroles. De [SOL-geldstroomaudit](reports/LAMPORT_LEDGER_REPORT.md)
+reconcilieert nu 2.607 van 2.873 transacties, inclusief 32 gevallen van accounthergebruik.
+266 transacties en de aparte SyncNative-tokenbedragcontrole blijven open.
 
 ## Starten — Python 3.12
 
