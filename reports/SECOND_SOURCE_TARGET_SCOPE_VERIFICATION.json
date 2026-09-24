@@ -1,0 +1,103 @@
+{
+  "artifact_sha256": "6a1f5823f631deaa7c9becd17f77845e6c3fb434b623584e803596980b57ce61",
+  "run": 36018149420,
+  "full_block_equivalence": false,
+  "full_41_block_check": false,
+  "slots": {
+    "449382000": {
+      "transactions": 925,
+      "matching_target_events": 43,
+      "preexecution_null_empty_fields": {
+        "logMessages": 4,
+        "innerInstructions": 4
+      },
+      "truncated_unrelated_transactions": [],
+      "other_metadata_differences": []
+    },
+    "449382001": {
+      "transactions": 924,
+      "matching_target_events": 30,
+      "preexecution_null_empty_fields": {
+        "logMessages": 10,
+        "innerInstructions": 10
+      },
+      "truncated_unrelated_transactions": [],
+      "other_metadata_differences": []
+    },
+    "449382002": {
+      "transactions": 1029,
+      "matching_target_events": 34,
+      "preexecution_null_empty_fields": {
+        "logMessages": 6,
+        "innerInstructions": 6
+      },
+      "truncated_unrelated_transactions": [
+        {
+          "tx_index": 14,
+          "signature": "4g5kQkyRPv8GW1gEzChsbsZE2VAVrLjeTYvPuE2JR9nFGkB4AvJ6XDjDEMF4puUNJYEf9914hnxEFjuGuNv89tDL",
+          "primary_lines": 252,
+          "secondary_lines": 163,
+          "missing_primary_lines": 90,
+          "target_program": false,
+          "programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+          ]
+        },
+        {
+          "tx_index": 15,
+          "signature": "5e9CcryQUqc7jZDwzPiBhWkTJGuHAtbXFvSCtaB6UBB2rP7uNkNX6sqN6akkXuyCPpx14uzQ3C1a8xPCYwimRyJq",
+          "primary_lines": 252,
+          "secondary_lines": 163,
+          "missing_primary_lines": 90,
+          "target_program": false,
+          "programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+          ]
+        },
+        {
+          "tx_index": 16,
+          "signature": "5G1oEXi7tWHAsGUEspL169VFDS7CL9Xq6CZF6wRkCYiZkWjYZQ6jKvrHCzoqoBKNLue7ovcXbUtjzLrAXBgNaWW9",
+          "primary_lines": 252,
+          "secondary_lines": 163,
+          "missing_primary_lines": 90,
+          "target_program": false,
+          "programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+          ]
+        },
+        {
+          "tx_index": 17,
+          "signature": "3xsVhxghqnR69bG3dwn5ZikpvBQ8KStpSunU5U1UHKAcyfbrwK5MV7zyqUHiV1V7B5A6MZzHA7JdrmvQTaxsQVD8",
+          "primary_lines": 252,
+          "secondary_lines": 163,
+          "missing_primary_lines": 90,
+          "target_program": false,
+          "programs": [
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+          ]
+        },
+        {
+          "tx_index": 18,
+          "signature": "2J3xWn77sZLeTHAM7dYWS2hkmvannmdkPf3chiZAdEsPvF21ARnRmQKdXiXfiUHCaAFKnn4KwCzw95YquBEJhp7S",
+          "primary_lines": 254,
+          "secondary_lines": 163,
+          "missing_primary_lines": 92,
+          "target_program": false,
+          "programs": [
+            "11111111111111111111111111111111",
+            "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb"
+          ]
+        }
+      ],
+      "other_metadata_differences": []
+    }
+  },
+  "matching_target_events": 107,
+  "scoped_observation": "MATCH_FOR_THREE_INSPECTED_BLOCKS_ONLY",
+  "primary_41_block_log_risk": {
+    "target_over_10000_bytes": 35,
+    "unrelated_over_10000_bytes": 30,
+    "primary_target_truncated": 0,
+    "primary_unrelated_truncated": 0
+  }
+}
