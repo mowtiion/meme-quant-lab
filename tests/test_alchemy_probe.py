@@ -31,12 +31,14 @@ class ArchiveProbe(unittest.TestCase):
                                            'loadedAddresses': {}, 'preBalances': [], 'postBalances': [],
                                            'preTokenBalances': [], 'postTokenBalances': []}}]}
 
-    def run_probe(self, mutate=None):
+    def run_probe(self, mutate=None, failure=None):
         calls = []
 
         def fake_call(endpoint, method, params, deadline, remaining_bytes):
             slot = params[0]
             calls.append(slot)
+            if failure:
+                raise RuntimeError(failure)
             envelope = json.loads(json.dumps({'jsonrpc': '2.0', 'result': self.blocks[slot]}))
             if mutate and slot == probe.SLOTS[0]:
                 mutate(envelope['result'])
@@ -70,6 +72,13 @@ class ArchiveProbe(unittest.TestCase):
         code, calls, report = self.run_probe()
         self.assertEqual((code, calls, report['status']),
                          (0, list(probe.SLOTS), 'MATCH_FOR_TWO_BLOCKS'))
+
+    def test_forbidden_counts_attempt_and_stops(self):
+        code, calls, report = self.run_probe(failure='HTTP 403')
+        self.assertEqual((code, calls, report['requests']), (2, [probe.SLOTS[0]], 1))
+        self.assertEqual(report['status'], 'INCOMPLETE')
+        self.assertEqual(report['issue'], 'HTTP 403')
+        self.assertEqual(report['slots'], {})
 
     def test_truncated_long_log_stops_after_one_call(self):
         def truncate(block):
