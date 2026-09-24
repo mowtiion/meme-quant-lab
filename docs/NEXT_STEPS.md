@@ -3,7 +3,10 @@
 **Update 24 september:** de 41-blokkencontrole is geslaagd met Alchemy en offline herberekend.
 43.417 transacties en 3.082 genormaliseerde events komen overeen; zie
 [het resultaat](../reports/ALCHEMY_PHASE_B_REPORT.md). De eerstvolgende uitvoerbare stap
-is punt 3: een begrensde offline ledger op deze bewezen steekproef. Herhaal de provider-setup niet.
+is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
+(2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
+Transfer/mint/burn, fee-ontvangers en continuïteit tussen transacties blijven open.
+Herhaal de provider-setup niet.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
