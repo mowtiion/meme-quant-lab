@@ -1,0 +1,31 @@
+{
+  "archive_bytes": 2840223,
+  "archive_sha256": "12a08e6f4b61c62daa4bdcf93cf7dbec898b4b376dd39a48e71fc9f18387c94e",
+  "continue_to_exp001": false,
+  "full_census": "UNPROVEN",
+  "original_report_sha256": "2aca98e6caa70cc7ee7b10fa2dff1b51ffdee083e0de7c0386076195ff75ce01",
+  "primary_and_helius_same_contents": true,
+  "raw_block_bytes": 14843999,
+  "reference_manifest_sha256": "2b1a82e1062f068ff884a34b34ca1c7c94400fa99bba4fa7fffafca9f7695683",
+  "reported_requests": 4,
+  "reported_response_bytes": 14844064,
+  "slots": {
+    "447000000": {
+      "raw_sha256": "685cbb1650604949690712a87df76cdf9f645a2e0482373ab66c64892f6a4674",
+      "transactions": 1256,
+      "verified_groups": 9
+    },
+    "447000001": {
+      "raw_sha256": "5a0f66b476b4825c332fd8df389e397d6d5e549264e375c60c43f3808090b7e0",
+      "transactions": 1216,
+      "verified_groups": 9
+    },
+    "447000002": {
+      "raw_sha256": "504394244fed288f11c0a0e02770a3f5f0be71977f823dc1a3caed6fef0539b8",
+      "transactions": 1369,
+      "verified_groups": 9
+    }
+  },
+  "status": "MATCH",
+  "upstream_independence": "UNPROVEN"
+}

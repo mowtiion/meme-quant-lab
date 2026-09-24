@@ -46,22 +46,24 @@ geredigeerde `comparison.json` onder een nieuwe `data/secondary/helius-...` map.
 `comparison.json` als resultaat. Een `MATCH` bevestigt veld-voor-veld gelijkheid van deze drie
 blokken tussen twee endpoints; het legt de upstream-onafhankelijkheid nog niet vast.
 
-De proef van 24 september meldt `MATCH` voor alle drie slots; zie
-`reports/SECOND_SOURCE_PHASE_A_REPORT.md`. Het ontvangen `comparison.json` is gecontroleerd,
-maar de drie ruwe Helius-responses zijn nog niet overgedragen. Voor herberekening van de
-hashes in deze werkruimte kan de gebruiker uitsluitend deze vier JSON-bestanden archiveren:
-
-```powershell
-Compress-Archive -Path '.\data\secondary\helius-20260924T130539717096Z\*.json' -DestinationPath '.\data\secondary\helius-phase-a-evidence.zip'
-```
-
-Deel alleen dat archief; de lokaal gebruikte sleutel of volledige RPC-URL hoort er niet in.
+De proef van 24 september is afgerond: het `comparison.json` en alle drie ruwe
+Helius-responses zijn ontvangen en hier onafhankelijk op hashes en inhoud herberekend;
+zie `reports/SECOND_SOURCE_PHASE_A_REPORT.md`. De API-key blijft privé.
+De controle op het ontvangen archief is herhaalbaar met `scripts/verify_second_source_archive.py`;
+ook een opzettelijk gewijzigd balansveld wordt geweigerd.
 
 ## Fase B — alleen na een geslaagde fase A
 
 Vergelijk de 41 bestaande slots 449382000–449382040, met vooraf vastgelegde request-, byte-,
 runtime- en gratis-quotumgrenzen. Maak daarna een apart plan voor controle van de bufferhistorie
 en historische binaries. Drie of 44 overeenkomende blokken bewijzen geen volledige dagcensus.
+
+Gemeten primaire omvang: 140.090.475 bytes voor 41 blokken, maximaal 7.984.212 bytes per
+blok. Stel het maximum op 42 requests (één slotlijst + 41 blokken), 192 MiB responsdata
+en 600 seconden totale runtime. Elk blok moet apart dezelfde volledige veldgroepen doorlopen.
+Helius publiceert een Free-plan met één miljoen maandcredits; historische calls kosten
+volgens de [prijskaart](https://www.helius.dev/pricing) doorgaans tien credits per call.
+Een schatting van maximaal 420 credits is geen garantie op beschikbaarheid of backend-onafhankelijkheid.
 
 Geen proef hierboven geeft automatisch EXP-001 vrij. De 1.000-launchpilot start pas na
 voldoende historische programmakoppeling, volledige velddekking en het resterende integriteitswerk.

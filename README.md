@@ -21,9 +21,9 @@ De oude Pump-upload van 12 september is volledig gereconstrueerd: 1.638.312 byte
 1.619 schrijfacties. De onafhankelijke census en binary/IDL-koppeling blijven open.
 Zie [het historische binaryrapport](reports/HISTORICAL_BINARY_REPORT.md) en
 [het census- en regimerapport](reports/CENSUS_REGIME_REPORT.md).
-Een lokaal Helius-rapport meldt gelijke volledige blokinhoud voor drie archiefslots;
-zie [de tweede-broncontrole](reports/SECOND_SOURCE_PHASE_A_REPORT.md). De ruwe
-Helius-responses zijn nog niet onafhankelijk in deze werkruimte herberekend.
+Drie ruwe Helius-blokken zijn op 27 veldgroepen opnieuw tegen de primaire archiefdata
+herberekend: volledige overeenkomst. Zie [de tweede-broncontrole](reports/SECOND_SOURCE_PHASE_A_REPORT.md).
+Een volledige historische census en upstream-onafhankelijkheid blijven onbewezen.
 
 ## Starten — Python 3.12
 
