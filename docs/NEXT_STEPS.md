@@ -16,8 +16,10 @@ zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EX
    De Pump-upload van 12 september is nu volledig uit de historische buffer gereconstrueerd
    (54 blokken, 1.638.312 bytes). Koppel deze binary nog aan verifieerbare broncode/IDL en
    bevestig het geldigheidsinterval. PublicNode/dRPC gaven HTTP 403, OnFinality HTTP 429.
-   Test een toegankelijke tweede bron volgens `docs/SECOND_SOURCE_CHECK.md`. Een gratis
-   account is een mogelijke vervolgstap; een betaald abonnement is niet noodzakelijk gebleken.
+   De lokale Helius Free-proef meldt nu identieke inhoud voor drie blokken; alleen het
+   vergelijkingsrapport is ontvangen. Controleer eerst de drie ruwe Helius-bestanden opnieuw
+   en leg de upstream-herkomst vast. Bereken daarna een begrensd budget voor de 41 proefslots.
+   Een betaald abonnement is niet noodzakelijk gebleken. Zie `docs/SECOND_SOURCE_CHECK.md`.
    Zie `reports/HISTORICAL_BINARY_REPORT.md`.
 3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn
    beïnvloedt reserves/supply, maar telt niet als walletvraag. Reconcile ook fees en niet-SOL-quotes.

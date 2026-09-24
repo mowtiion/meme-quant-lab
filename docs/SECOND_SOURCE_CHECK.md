@@ -46,6 +46,17 @@ geredigeerde `comparison.json` onder een nieuwe `data/secondary/helius-...` map.
 `comparison.json` als resultaat. Een `MATCH` bevestigt veld-voor-veld gelijkheid van deze drie
 blokken tussen twee endpoints; het legt de upstream-onafhankelijkheid nog niet vast.
 
+De proef van 24 september meldt `MATCH` voor alle drie slots; zie
+`reports/SECOND_SOURCE_PHASE_A_REPORT.md`. Het ontvangen `comparison.json` is gecontroleerd,
+maar de drie ruwe Helius-responses zijn nog niet overgedragen. Voor herberekening van de
+hashes in deze werkruimte kan de gebruiker uitsluitend deze vier JSON-bestanden archiveren:
+
+```powershell
+Compress-Archive -Path '.\data\secondary\helius-20260924T130539717096Z\*.json' -DestinationPath '.\data\secondary\helius-phase-a-evidence.zip'
+```
+
+Deel alleen dat archief; de lokaal gebruikte sleutel of volledige RPC-URL hoort er niet in.
+
 ## Fase B — alleen na een geslaagde fase A
 
 Vergelijk de 41 bestaande slots 449382000–449382040, met vooraf vastgelegde request-, byte-,
