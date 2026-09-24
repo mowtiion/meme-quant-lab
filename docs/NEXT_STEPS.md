@@ -6,8 +6,11 @@
 is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
 (2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
 De eerste [token- en fee-audit](../reports/TOKEN_LEDGER_REPORT.md) is ook uitgevoerd.
-Eerstvolgend: lamport/SOL-levenscycli voor wrapped SOL, vervolgens de resterende fee-varianten
-en continuïteit tussen transacties.
+De [lamport/SOL-audit](../reports/LAMPORT_LEDGER_REPORT.md) verklaart nu alle eindsaldi
+voor 2.607 van 2.873 transacties, inclusief 32 gevallen van accounthergebruik.
+Eerstvolgend: directe programmabewegingen achter 234 saldo-afwijkingen en 23 tussentijdse
+financieringsgaten, 9 niet-ondersteunde tokeninstructies, en afzonderlijk de historische
+reserve voor SyncNative-tokenbedragen. Daarna resterende fee-varianten en continuïteit.
 Herhaal de provider-setup niet.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in

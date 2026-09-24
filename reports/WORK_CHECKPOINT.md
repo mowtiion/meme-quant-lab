@@ -33,13 +33,28 @@ Unresolved: 2,522 WSOL account observations, 63 observations with unsupported in
 Residual buyback amount matches; official buyback recipient identity remains unverified.
 19 additional tests, including one real fee-split fixture. No new chain requests.
 
+## Additional completed step: SOL/lamport lifecycle replay
+Read `reports/LAMPORT_LEDGER_REPORT.md` and `LAMPORT_LEDGER_VERIFICATION.json`.
+2,607/2,873 successful target transactions reconcile every account's exact post-lamports.
+8,197 native account observations; 32 reused account observations; 2,510 WSOL initializations,
+1,704 SyncNative calls, 2,520 WSOL closes in passed transactions. No assumed rent constant.
+266 remain open: 234 post-state residuals, 23 modeled intermediate funding deficits,
+9 unsupported token instructions (tags 26:3, 39:5, 45:1).
+One inspected deficit follows a Pump Sell call before a System transfer; implement direct
+program movements from validated semantics/event evidence, never solve gaps from post-state.
+13 new tests, including a real two-lifetime WSOL account and one-lamport tamper check.
+179 tests pass locally with pinned dependencies. Zero new chain requests.
+This is a scoped cash-flow model matching boundaries, not proof of every gross direct program
+movement. Stored rent reserve / SyncNative token amounts are not independently verified.
+The previous token-ledger and fee results remain separate; their gates are not overwritten.
+
 ## Resume action
-Prioritize a lamport/SOL account-lifecycle ledger on the same verified artifact to explain
-wrapped-SOL creation, SyncNative, closing and reuse. Do not infer historical rent constants or
-missing balances from the desired answer. Then address multi-action fee attribution,
-cashback/holder rewards, unsupported Token-2022 instructions and buyback recipient provenance.
-Modules: `token_ledger.py`, `fee_audit.py`, `reserve_ledger.py`; scripts:
-`audit_token_ledger.py`, `audit_reserve_ledger.py` (PYTHONPATH=src, offline).
+Explain direct program lamport movements behind the 234 residuals / 23 deficits, then handle
+unsupported Token-2022 instructions and obtain historical stored native rent-reserve evidence
+for an independent SyncNative token-amount proof. Preserve explicit unknowns.
+Then address multi-action fee attribution, cashback/holder rewards and buyback recipient provenance.
+Modules: `lamport_ledger.py`, `token_ledger.py`, `fee_audit.py`, `reserve_ledger.py`; scripts:
+`audit_lamport_ledger.py`, `audit_token_ledger.py`, `audit_reserve_ledger.py` (PYTHONPATH=src, offline).
 The complete ledger, historical census, binary/IDL mapping, upstream independence and
 1,000-launch pilot gates remain open. No live trading or bulk collection has been enabled.
 
