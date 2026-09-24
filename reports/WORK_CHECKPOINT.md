@@ -59,16 +59,31 @@ reserve evidence. Closed/new lifetimes are not included in that native boundary 
 15 additional tests; all 194 pass locally. Zero chain requests. The previous reports are
 historical checkpoints, not current combined results. Reproduce with `audit_economic_ledger.py`.
 
+## Latest checkpoint: token boundary continuity and migration
+Read `reports/CONTINUITY_CHECKPOINT.md`, `ECONOMIC_CONTINUITY_VERIFICATION.json` and
+`TOKEN_CONTINUITY_VERIFICATION.json` first. Earlier reports remain historical checkpoints.
+2,791/2,873 SOL transactions pass; 82 residuals remain. Four extra sell accounts are validated
+curve-v2 PDAs. The migration expense budget and quote funding now reconcile from event amounts.
+All 2,663 ordinary AMM fee checks and three protocol burns still pass.
+All 43,417 transactions, including 3,431 failures, have been traversed for token continuity:
+44,046 matching links (43,908 token + 138 absent), 10,047 observed accounts, zero issues.
+14,716 links cross slots; all 40 internal parent/hash links across 41 blocks are consistent. This does not prove transient
+intra-transaction native accounts or stored reserves. 5,971 surviving native token boundaries
+in SOL-passed transactions match; 20 require stored reserve evidence.
+14 new tests; 208 pass locally. Zero new blockchain requests.
+
 ## Resume action
-The provider and scoped AMM fee problems are resolved for this sample. Start with the 87
-indexed unresolved cases in the combined JSON, especially four fee-sharing sell layouts and
-migration funding. 67 cases invoke FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9; co-occurrence
-is not causal attribution. Do not solve residuals from post-state or silently drop transactions.
-Obtain historical stored-reserve evidence for SyncNative/new native accounts and finish token
-lifetimes / continuity. The old token aggregate gate still holds 36 reused-account transactions.
-Then historical binary/IDL mapping, census completeness and provider upstream independence.
+Start from the 82 indexed residual cases in `ECONOMIC_CONTINUITY_VERIFICATION.json`.
+Model direct program mutations from validated semantics and attributable evidence; never fit
+transfers to a desired residual. Obtain historical stored-native-reserve/account-state evidence
+and finish token lifetimes. The old aggregate token gate still holds 36 reused transactions.
+The migration model matches event amounts, child instructions and all end balances; exact
+intra-instruction historical execution state and binary mapping remain distinct open gates.
+Then historical binary/config/IDL mapping, census completeness and provider upstream independence.
 The 1,000-launch pilot remains BLOCKED. No bulk collection, paid plan or trading was enabled.
-The combined script verifies the existing artifact and makes no blockchain calls.
+Reproduction: `audit_economic_ledger.py` and `audit_token_continuity.py`, existing artifact,
+PYTHONPATH=src with pinned dependencies. Do not repeat provider setup, ordinary fee attribution
+or the completed boundary continuity audit after a context reset.
 
 ## Execution route and limits
 GitHub is the durable source of code and reports. The initial scratch checkout may be older

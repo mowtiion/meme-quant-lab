@@ -62,7 +62,7 @@ def audit(path):
                 for a in r['lamport_check'].get('native_token_boundaries',[]))),
             'direct_movement_counts_in_sol_passes':dict(Counter(m['kind'] for r in details
                 if r['lamport_check']['status']=='LAMPORTS_RECONCILED' for m in r['lamport_check']['movements']
-                if m['kind'].startswith('pump_') or m['kind'] in ('close_volume_account','claim_cashback','unwrap_lamports'))),
+                if m['kind'].startswith(('pump_','migration_')) or m['kind'] in ('close_volume_account','claim_cashback','unwrap_lamports'))),
             'fee_variant_counts':{'cashback':sum(bool(f.get('cashback')) for r in details for f in r['fee_checks'] if f['status']=='CORE_FEES_RECONCILED'),
                 'holder_rewards':sum(bool(f.get('holder_rewards')) for r in details for f in r['fee_checks'] if f['status']=='CORE_FEES_RECONCILED'),
                 'multi_event_transactions':sum(len(r['fee_checks'])>1 and all(f['status']=='CORE_FEES_RECONCILED' for f in r['fee_checks']) for r in details)},

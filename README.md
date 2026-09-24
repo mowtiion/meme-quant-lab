@@ -31,12 +31,11 @@ en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE
 en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
 met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
-Het [economische controlepunt](reports/ECONOMIC_CHECKPOINT.md) reconcilieert **2.786 van
-2.873 SOL-transacties** en alle **2.663 gewone AMM-feecontroles**, inclusief meerdere trades
-per transactie en cashback/holder rewards. Nog 87 SOL-transacties en historische tokenstaat
-blijven open; de pilot is geblokkeerd. De eerdere
-[tokenaudit](reports/TOKEN_LEDGER_REPORT.md) en [SOL-audit](reports/LAMPORT_LEDGER_REPORT.md)
-blijven beschikbaar als historische controlepunten.
+Het [nieuwste controlepunt](reports/CONTINUITY_CHECKPOINT.md) reconcilieert **2.791 van
+2.873 SOL-transacties** en alle **2.663 gewone AMM-feecontroles**. De continuïteitscontrole
+bestrijkt alle **43.417 transacties** en vindt **44.046 aansluitende tokenaccountwaarnemingen**
+zonder verschillen. Nog 82 SOL-transacties en historische tokenstaat blijven open; de pilot
+is geblokkeerd. Eerdere rapporten blijven beschikbaar als historische controlepunten.
 
 ## Starten — Python 3.12
 

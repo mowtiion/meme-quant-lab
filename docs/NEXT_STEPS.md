@@ -6,11 +6,12 @@
 is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
 (2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
 De eerste [token- en fee-audit](../reports/TOKEN_LEDGER_REPORT.md) is ook uitgevoerd.
-Het [economische controlepunt](../reports/ECONOMIC_CHECKPOINT.md) sluit nu alle 2.663 gewone
-AMM-feecontroles en 2.786 van 2.873 SOL-transacties. De 87 resterende SOL-cases staan volledig
-geïndexeerd in het verificatierapport. Eerstvolgend: fee-sharing verkoopvarianten, migratiefinanciering,
-directe programmabewegingen en historische reservegegevens voor nieuwe/gesynchroniseerde
-wrapped-SOL-accounts. Daarna tokencontinuïteit, historische binary/IDL-koppeling en census.
+Het [nieuwste controlepunt](../reports/CONTINUITY_CHECKPOINT.md) sluit alle 2.663 gewone
+AMM-feecontroles en 2.791 van 2.873 SOL-transacties. Ook de tokencontinuïteit door alle 43.417
+transacties is gecontroleerd: 44.046 aansluitende accountwaarnemingen, nul verschillen.
+De extra verkoopaccounts en migratiefinanciering zijn afgehandeld. Eerstvolgend: de 82 exact
+geïndexeerde SOL-residuals en historische tokenstaat voor nieuwe/gesynchroniseerde wrapped-SOL-
+accounts. Daarna intra-transactielevenscycli, historische binary/config/IDL-koppeling en census.
 De 1.000-launchpilot blijft geblokkeerd tot die gates slagen.
 Herhaal de provider-setup niet.
 

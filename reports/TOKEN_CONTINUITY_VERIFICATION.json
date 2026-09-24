@@ -1,0 +1,448 @@
+{
+  "status": "TOKEN_BOUNDARY_CONTINUITY_RECONCILED",
+  "counts": {
+    "transactions": 43417,
+    "failed_transactions_included": 3431,
+    "first_observations": 10047,
+    "closure_boundaries": 521,
+    "matching_links": 44046,
+    "matching_token_links": 43908,
+    "cross_slot_matching_links": 14716,
+    "creation_boundaries": 1094,
+    "matching_absent_links": 138
+  },
+  "unique_observed_accounts": 10047,
+  "slots": {
+    "449382000": {
+      "transactions": 925,
+      "failed_transactions_included": 70,
+      "first_observations": 456,
+      "closure_boundaries": 22,
+      "matching_links": 593,
+      "matching_token_links": 593,
+      "creation_boundaries": 18
+    },
+    "449382001": {
+      "transactions": 924,
+      "failed_transactions_included": 84,
+      "first_observations": 177,
+      "closure_boundaries": 3,
+      "matching_links": 721,
+      "matching_token_links": 721,
+      "cross_slot_matching_links": 169,
+      "creation_boundaries": 21
+    },
+    "449382002": {
+      "transactions": 1029,
+      "failed_transactions_included": 54,
+      "first_observations": 294,
+      "closure_boundaries": 3,
+      "matching_links": 602,
+      "matching_token_links": 602,
+      "cross_slot_matching_links": 165,
+      "creation_boundaries": 17
+    },
+    "449382003": {
+      "transactions": 880,
+      "failed_transactions_included": 61,
+      "first_observations": 242,
+      "closure_boundaries": 31,
+      "matching_links": 598,
+      "matching_token_links": 598,
+      "cross_slot_matching_links": 173,
+      "creation_boundaries": 14
+    },
+    "449382004": {
+      "transactions": 1428,
+      "failed_transactions_included": 226,
+      "first_observations": 646,
+      "closure_boundaries": 4,
+      "matching_links": 2255,
+      "matching_token_links": 2255,
+      "cross_slot_matching_links": 179,
+      "creation_boundaries": 60
+    },
+    "449382005": {
+      "transactions": 1072,
+      "failed_transactions_included": 123,
+      "first_observations": 271,
+      "closure_boundaries": 5,
+      "matching_links": 1225,
+      "matching_token_links": 1225,
+      "cross_slot_matching_links": 322,
+      "creation_boundaries": 27
+    },
+    "449382006": {
+      "transactions": 995,
+      "failed_transactions_included": 62,
+      "first_observations": 203,
+      "closure_boundaries": 12,
+      "matching_links": 843,
+      "matching_token_links": 843,
+      "cross_slot_matching_links": 303,
+      "creation_boundaries": 12
+    },
+    "449382007": {
+      "transactions": 1028,
+      "failed_transactions_included": 62,
+      "first_observations": 206,
+      "closure_boundaries": 4,
+      "matching_links": 938,
+      "matching_token_links": 938,
+      "cross_slot_matching_links": 331,
+      "creation_boundaries": 34
+    },
+    "449382008": {
+      "transactions": 1161,
+      "failed_transactions_included": 141,
+      "first_observations": 410,
+      "closure_boundaries": 6,
+      "matching_links": 2038,
+      "matching_token_links": 2038,
+      "cross_slot_matching_links": 473,
+      "creation_boundaries": 23
+    },
+    "449382009": {
+      "transactions": 930,
+      "failed_transactions_included": 67,
+      "first_observations": 193,
+      "closure_boundaries": 2,
+      "matching_links": 963,
+      "matching_token_links": 963,
+      "cross_slot_matching_links": 319,
+      "creation_boundaries": 20
+    },
+    "449382010": {
+      "transactions": 1091,
+      "failed_transactions_included": 48,
+      "first_observations": 307,
+      "closure_boundaries": 4,
+      "matching_links": 1011,
+      "matching_token_links": 1011,
+      "cross_slot_matching_links": 354,
+      "creation_boundaries": 18
+    },
+    "449382011": {
+      "transactions": 979,
+      "failed_transactions_included": 42,
+      "first_observations": 292,
+      "closure_boundaries": 14,
+      "matching_links": 985,
+      "matching_token_links": 985,
+      "cross_slot_matching_links": 370,
+      "creation_boundaries": 23
+    },
+    "449382012": {
+      "transactions": 1255,
+      "failed_transactions_included": 75,
+      "first_observations": 340,
+      "closure_boundaries": 20,
+      "matching_links": 1191,
+      "matching_token_links": 1191,
+      "cross_slot_matching_links": 415,
+      "creation_boundaries": 40
+    },
+    "449382013": {
+      "transactions": 437,
+      "failed_transactions_included": 69,
+      "first_observations": 227,
+      "closure_boundaries": 4,
+      "matching_links": 1044,
+      "matching_token_links": 1044,
+      "cross_slot_matching_links": 429,
+      "creation_boundaries": 32
+    },
+    "449382014": {
+      "transactions": 957,
+      "failed_transactions_included": 48,
+      "first_observations": 184,
+      "closure_boundaries": 3,
+      "matching_links": 1023,
+      "matching_token_links": 1020,
+      "cross_slot_matching_links": 393,
+      "creation_boundaries": 29,
+      "matching_absent_links": 3
+    },
+    "449382015": {
+      "transactions": 1351,
+      "failed_transactions_included": 72,
+      "first_observations": 182,
+      "closure_boundaries": 4,
+      "matching_links": 797,
+      "matching_token_links": 797,
+      "cross_slot_matching_links": 310,
+      "creation_boundaries": 7
+    },
+    "449382016": {
+      "transactions": 1586,
+      "failed_transactions_included": 158,
+      "first_observations": 252,
+      "closure_boundaries": 6,
+      "matching_links": 1465,
+      "matching_token_links": 1464,
+      "cross_slot_matching_links": 436,
+      "creation_boundaries": 21,
+      "matching_absent_links": 1
+    },
+    "449382017": {
+      "transactions": 1296,
+      "failed_transactions_included": 213,
+      "first_observations": 276,
+      "closure_boundaries": 23,
+      "matching_links": 2503,
+      "matching_token_links": 2503,
+      "cross_slot_matching_links": 613,
+      "creation_boundaries": 36
+    },
+    "449382018": {
+      "transactions": 1004,
+      "failed_transactions_included": 55,
+      "first_observations": 261,
+      "closure_boundaries": 5,
+      "matching_links": 763,
+      "matching_token_links": 761,
+      "cross_slot_matching_links": 315,
+      "creation_boundaries": 13,
+      "matching_absent_links": 2
+    },
+    "449382019": {
+      "transactions": 1110,
+      "failed_transactions_included": 65,
+      "first_observations": 363,
+      "closure_boundaries": 1,
+      "matching_links": 1332,
+      "matching_token_links": 1332,
+      "cross_slot_matching_links": 482,
+      "creation_boundaries": 33
+    },
+    "449382020": {
+      "transactions": 1167,
+      "failed_transactions_included": 66,
+      "first_observations": 285,
+      "closure_boundaries": 67,
+      "matching_links": 1046,
+      "matching_token_links": 1045,
+      "cross_slot_matching_links": 451,
+      "creation_boundaries": 37,
+      "matching_absent_links": 1
+    },
+    "449382021": {
+      "transactions": 1011,
+      "failed_transactions_included": 42,
+      "first_observations": 237,
+      "closure_boundaries": 57,
+      "matching_links": 821,
+      "matching_token_links": 817,
+      "cross_slot_matching_links": 368,
+      "creation_boundaries": 15,
+      "matching_absent_links": 4
+    },
+    "449382022": {
+      "transactions": 1033,
+      "failed_transactions_included": 32,
+      "first_observations": 201,
+      "closure_boundaries": 2,
+      "matching_links": 829,
+      "matching_token_links": 829,
+      "cross_slot_matching_links": 399,
+      "creation_boundaries": 22
+    },
+    "449382023": {
+      "transactions": 978,
+      "failed_transactions_included": 38,
+      "first_observations": 212,
+      "closure_boundaries": 20,
+      "matching_links": 968,
+      "matching_token_links": 968,
+      "cross_slot_matching_links": 396,
+      "creation_boundaries": 51
+    },
+    "449382024": {
+      "transactions": 1089,
+      "failed_transactions_included": 46,
+      "first_observations": 323,
+      "closure_boundaries": 92,
+      "matching_links": 1047,
+      "matching_token_links": 1045,
+      "cross_slot_matching_links": 419,
+      "creation_boundaries": 80,
+      "matching_absent_links": 2
+    },
+    "449382025": {
+      "transactions": 975,
+      "failed_transactions_included": 26,
+      "first_observations": 129,
+      "closure_boundaries": 3,
+      "matching_links": 816,
+      "matching_token_links": 816,
+      "cross_slot_matching_links": 371,
+      "creation_boundaries": 28
+    },
+    "449382026": {
+      "transactions": 1008,
+      "failed_transactions_included": 42,
+      "first_observations": 139,
+      "closure_boundaries": 16,
+      "matching_links": 918,
+      "matching_token_links": 916,
+      "cross_slot_matching_links": 359,
+      "creation_boundaries": 17,
+      "matching_absent_links": 2
+    },
+    "449382027": {
+      "transactions": 997,
+      "failed_transactions_included": 40,
+      "first_observations": 188,
+      "closure_boundaries": 4,
+      "matching_links": 888,
+      "matching_token_links": 888,
+      "cross_slot_matching_links": 393,
+      "creation_boundaries": 29
+    },
+    "449382028": {
+      "transactions": 649,
+      "failed_transactions_included": 24,
+      "first_observations": 59,
+      "closure_boundaries": 4,
+      "matching_links": 289,
+      "matching_token_links": 288,
+      "cross_slot_matching_links": 158,
+      "creation_boundaries": 12,
+      "matching_absent_links": 1
+    },
+    "449382029": {
+      "transactions": 1001,
+      "failed_transactions_included": 52,
+      "first_observations": 129,
+      "closure_boundaries": 3,
+      "matching_links": 546,
+      "matching_token_links": 546,
+      "cross_slot_matching_links": 273,
+      "creation_boundaries": 25
+    },
+    "449382030": {
+      "transactions": 842,
+      "failed_transactions_included": 60,
+      "first_observations": 152,
+      "closure_boundaries": 4,
+      "matching_links": 723,
+      "matching_token_links": 722,
+      "cross_slot_matching_links": 299,
+      "creation_boundaries": 21,
+      "matching_absent_links": 1
+    },
+    "449382031": {
+      "transactions": 1097,
+      "failed_transactions_included": 83,
+      "first_observations": 303,
+      "closure_boundaries": 9,
+      "matching_links": 961,
+      "matching_token_links": 961,
+      "cross_slot_matching_links": 318,
+      "creation_boundaries": 17
+    },
+    "449382032": {
+      "transactions": 1037,
+      "failed_transactions_included": 86,
+      "first_observations": 174,
+      "closure_boundaries": 10,
+      "matching_links": 1012,
+      "matching_token_links": 1012,
+      "cross_slot_matching_links": 317,
+      "creation_boundaries": 21
+    },
+    "449382033": {
+      "transactions": 1087,
+      "failed_transactions_included": 132,
+      "first_observations": 154,
+      "closure_boundaries": 6,
+      "matching_links": 1072,
+      "matching_token_links": 1070,
+      "cross_slot_matching_links": 374,
+      "creation_boundaries": 19,
+      "matching_absent_links": 2
+    },
+    "449382034": {
+      "transactions": 1078,
+      "failed_transactions_included": 168,
+      "first_observations": 172,
+      "closure_boundaries": 8,
+      "matching_links": 1020,
+      "matching_token_links": 1018,
+      "cross_slot_matching_links": 359,
+      "creation_boundaries": 15,
+      "matching_absent_links": 2
+    },
+    "449382035": {
+      "transactions": 1008,
+      "failed_transactions_included": 101,
+      "first_observations": 143,
+      "closure_boundaries": 5,
+      "matching_links": 923,
+      "matching_token_links": 923,
+      "cross_slot_matching_links": 298,
+      "creation_boundaries": 12
+    },
+    "449382036": {
+      "transactions": 1656,
+      "failed_transactions_included": 212,
+      "first_observations": 453,
+      "closure_boundaries": 13,
+      "matching_links": 3061,
+      "matching_token_links": 2949,
+      "cross_slot_matching_links": 950,
+      "creation_boundaries": 83,
+      "matching_absent_links": 112
+    },
+    "449382037": {
+      "transactions": 976,
+      "failed_transactions_included": 55,
+      "first_observations": 129,
+      "closure_boundaries": 2,
+      "matching_links": 1018,
+      "matching_token_links": 1018,
+      "cross_slot_matching_links": 422,
+      "creation_boundaries": 20
+    },
+    "449382038": {
+      "transactions": 983,
+      "failed_transactions_included": 45,
+      "first_observations": 233,
+      "closure_boundaries": 2,
+      "matching_links": 878,
+      "matching_token_links": 877,
+      "cross_slot_matching_links": 365,
+      "creation_boundaries": 13,
+      "matching_absent_links": 1
+    },
+    "449382039": {
+      "transactions": 1161,
+      "failed_transactions_included": 102,
+      "first_observations": 278,
+      "closure_boundaries": 13,
+      "matching_links": 1401,
+      "matching_token_links": 1398,
+      "cross_slot_matching_links": 528,
+      "creation_boundaries": 34,
+      "matching_absent_links": 3
+    },
+    "449382040": {
+      "transactions": 1146,
+      "failed_transactions_included": 184,
+      "first_observations": 172,
+      "closure_boundaries": 5,
+      "matching_links": 919,
+      "matching_token_links": 918,
+      "cross_slot_matching_links": 348,
+      "creation_boundaries": 25,
+      "matching_absent_links": 1
+    }
+  },
+  "issues": [],
+  "stored_native_reserve_verified": false,
+  "instruction_economics_verified": false,
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "network_requests": 0,
+  "end_states_sha256": "5acf821c02105f2f4a2527cce87e7fee42eaec62310cdbb6aaee024fa1cc3a97",
+  "issues_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+}
