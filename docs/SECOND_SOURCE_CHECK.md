@@ -65,5 +65,22 @@ Helius publiceert een Free-plan met één miljoen maandcredits; historische call
 volgens de [prijskaart](https://www.helius.dev/pricing) doorgaans tien credits per call.
 Een schatting van maximaal 420 credits is geen garantie op beschikbaarheid of backend-onafhankelijkheid.
 
+De begrensde lokale fase-B-controle staat klaar. Download eerst de nieuwste GitHub-versie van
+de repository op de eigen computer (de eerdere ZIP bevat dit script nog niet), open PowerShell
+in de nieuwe projectmap en voer uit:
+
+```powershell
+py scripts/compare_second_source.py --phase-b
+```
+
+De API-key wordt alleen verborgen gevraagd; het script doet maximaal 42 read-only verzoeken,
+stopt bij een afwijkend blok of een budgetfout en slaat geen sleutel of volledige URL op.
+Bij een resultaat maakt het naast `comparison.json` maximaal zes kleine `evidence-*.zip`-bestanden
+in `data/secondary/helius41-...`. Deel het rapport en die zes ZIP-bestanden voor herberekening
+met `scripts/verify_second_source_archives.py`. De gehele primaire 41-blokkenreferentie is
+vooraf lokaal op alle veldgroep-hashes gecontroleerd. Een mock-run van de volledige keten
+voltooide 42 requests, 41 matches en zes archieven onder de uploadlimiet; opzettelijke
+verandering van één balansveld werd geweigerd. Live Helius fase B moet nog worden uitgevoerd.
+
 Geen proef hierboven geeft automatisch EXP-001 vrij. De 1.000-launchpilot start pas na
 voldoende historische programmakoppeling, volledige velddekking en het resterende integriteitswerk.

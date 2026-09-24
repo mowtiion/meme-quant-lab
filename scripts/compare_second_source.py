@@ -1,16 +1,19 @@
-"""Bounded, read-only Helius check against three frozen Solana reference blocks.
+"""Bounded, read-only Helius check against frozen Solana reference blocks.
 
 The key is prompted locally and never written to the report, raw data or Git.
 Run from the repository root with Python 3.12; no third-party dependencies.
 """
+import argparse
 import getpass
 import hashlib
 import json
+import os
 import sys
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -21,6 +24,10 @@ MAX_REQUESTS = 4
 MAX_TOTAL_BYTES = 32 * 1024 * 1024
 MAX_SECONDS = 120
 ENDPOINT = 'https://mainnet.helius-rpc.com/?api-key='
+PHASE_B_REFERENCE = Path('configs/second_source_reference41.json')
+PHASE_B_SLOTS = tuple(range(449382000, 449382041))
+PHASE_B_MAX_BYTES = 192 * 1024 * 1024
+PHASE_B_MAX_SECONDS = 600
 
 
 def digest(value):
@@ -103,34 +110,63 @@ def call(endpoint, method, params, deadline, remaining_bytes):
     return envelope, raw
 
 
+def package_phase_b(out, slot_numbers):
+    """Small, verified parts can be uploaded without sharing credentials."""
+    for start in range(0, len(slot_numbers), 8):
+        part = out / f'evidence-{start//8+1:02d}.zip'
+        partial = out / f'evidence-{start//8+1:02d}.zip.partial'
+        with zipfile.ZipFile(partial, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+            z.write(out / 'comparison.json', 'comparison.json')
+            for slot in slot_numbers[start:start+8]:
+                z.write(out / f'{slot}.json', f'{slot}.json')
+        with zipfile.ZipFile(partial) as z:
+            if z.testzip() is not None: raise RuntimeError('Damaged evidence ZIP')
+        if partial.stat().st_size > 32*1024*1024:
+            raise RuntimeError('Evidence ZIP exceeds upload limit')
+        os.replace(partial, part)
+
+
 def main():
-    reference = json.loads(REFERENCE.read_text(encoding='utf-8'))
-    if sorted(reference['slots']) != [str(slot) for slot in SLOTS]:
+    parser=argparse.ArgumentParser(description='Read-only Helius block comparison')
+    parser.add_argument('--phase-b',action='store_true',help='Compare 41 more slots, strictly bounded')
+    args=parser.parse_args()
+    phase_b=args.phase_b
+    reference_path=PHASE_B_REFERENCE if phase_b else REFERENCE
+    slot_numbers=PHASE_B_SLOTS if phase_b else SLOTS
+    max_requests=len(slot_numbers)+1
+    max_bytes=PHASE_B_MAX_BYTES if phase_b else MAX_TOTAL_BYTES
+    max_seconds=PHASE_B_MAX_SECONDS if phase_b else MAX_SECONDS
+    reference = json.loads(reference_path.read_text(encoding='utf-8'))
+    if sorted(reference['slots']) != [str(slot) for slot in slot_numbers]:
         raise RuntimeError('Reference slot list changed')
     key = getpass.getpass('Helius meme-quant-lab API-key (blijft lokaal): ').strip()
     if not key or len(key) > 256 or any(c.isspace() for c in key):
         print('Ongeldige sleutel; geen verzoek verzonden.'); return 2
     endpoint = ENDPOINT + urllib.parse.quote(key, safe='')
-    deadline = time.monotonic() + MAX_SECONDS
+    deadline = time.monotonic() + max_seconds
     # Fresh output path; no secrets in file names, report, or response data.
-    out = Path('data/secondary') / ('helius-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
+    label='helius41-' if phase_b else 'helius-'
+    out = Path('data/secondary') / (label + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     out.mkdir(parents=True, exist_ok=False)
     report = {'provider': 'Helius', 'endpoint_host': 'mainnet.helius-rpc.com',
               'reference_manifest_sha256': reference['manifest_sha256'], 'requests': 0,
               'raw_bytes': 0, 'slots': {}, 'status': 'INCOMPLETE'}
+    if phase_b:report['limits']={'requests':max_requests,'response_bytes':max_bytes,
+                                  'network_seconds':max_seconds}
     try:
-        slots, raw = call(endpoint, 'getBlocks', [SLOTS[0], SLOTS[-1],
-                          {'commitment': 'finalized'}], deadline, MAX_TOTAL_BYTES)
+        slots, raw = call(endpoint, 'getBlocks', [slot_numbers[0], slot_numbers[-1],
+                          {'commitment': 'finalized'}], deadline, max_bytes)
         report['requests'] += 1; report['raw_bytes'] += len(raw)
-        if slots['result'] != list(SLOTS):
+        if slots['result'] != list(slot_numbers):
             raise RuntimeError('Slot enumeration differs from reference')
-        for slot in SLOTS:
-            if report['requests'] >= MAX_REQUESTS:
+        for slot in slot_numbers:
+            if report['requests'] >= max_requests:
                 raise RuntimeError('Request budget reached')
+            if phase_b:time.sleep(min(.35,max(0,deadline-time.monotonic())))
             result, raw = call(endpoint, 'getBlock', [slot, {'encoding': 'json',
                 'transactionDetails': 'full', 'rewards': False, 'commitment': 'finalized',
                 'maxSupportedTransactionVersion': 1}], deadline,
-                MAX_TOTAL_BYTES - report['raw_bytes'])
+                max_bytes - report['raw_bytes'])
             report['requests'] += 1; report['raw_bytes'] += len(raw)
             if result['result'] is None:
                 raise RuntimeError(f'Block {slot} is null')
@@ -141,15 +177,23 @@ def main():
             with path.open('xb') as handle: handle.write(raw)
             report['slots'][str(slot)] = {'raw_sha256': hashlib.sha256(raw).hexdigest(),
                 **compare(result['result'], reference['slots'][str(slot)])}
-        report['status'] = ('MATCH' if all(v['status'] == 'MATCH'
-                                    for v in report['slots'].values()) else 'MISMATCH')
+            if report['slots'][str(slot)]['status'] != 'MATCH' and phase_b:
+                report['status']='MISMATCH'
+                break
+        else:
+            report['status'] = ('MATCH' if all(v['status'] == 'MATCH'
+                                        for v in report['slots'].values()) else 'MISMATCH')
     except RuntimeError as exc:
         report['status'] = 'INCOMPLETE'; report['issue'] = str(exc)
     finally:
         # Explicitly redact everything except provider, comparisons and budget counters.
         (out / 'comparison.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    if phase_b and report['slots']:
+        try:package_phase_b(out, tuple(map(int,report['slots'])))
+        except RuntimeError as exc:print('Archiefmelding:', str(exc))
     print('Status:', report['status'], '| verzoeken:', report['requests'])
     print('Rapport:', out / 'comparison.json')
+    if phase_b:print('Bewijsdelen:',out / 'evidence-*.zip')
     if 'issue' in report: print('Melding:', report['issue'])
     return 0 if report['status'] == 'MATCH' else 2
 

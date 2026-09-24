@@ -18,7 +18,8 @@ zonder dubbeltelling bevestigd. Eén administratief event blijft onbevestigd. EX
    bevestig het geldigheidsinterval. PublicNode/dRPC gaven HTTP 403, OnFinality HTTP 429.
    Drie ruwe Helius-blokken zijn nu onafhankelijk tegen de primaire veldgroep-hashes
    herberekend. Leg de upstream-herkomst vast en voer vervolgens de begrensde 41-slotproef
-   uit (42 requests, 192 MiB, 600 seconden), pas na implementatie van de afkapgrenzen.
+   uit (42 requests, 192 MiB, 600 seconden). Het begrensde script en de controle op de zes
+   resultaatarchieven zijn voorbereid en met de bevroren 41-blokkenreferentie doorgelopen.
    Een betaald abonnement is niet noodzakelijk gebleken. Zie `docs/SECOND_SOURCE_CHECK.md`.
    Zie `reports/HISTORICAL_BINARY_REPORT.md`.
 3. Bouw en valideer historische pool/reserve- en transfer/mint/burn-ledgers. Protocol buy-and-burn

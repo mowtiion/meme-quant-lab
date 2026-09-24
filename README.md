@@ -24,6 +24,8 @@ Zie [het historische binaryrapport](reports/HISTORICAL_BINARY_REPORT.md) en
 Drie ruwe Helius-blokken zijn op 27 veldgroepen opnieuw tegen de primaire archiefdata
 herberekend: volledige overeenkomst. Zie [de tweede-broncontrole](reports/SECOND_SOURCE_PHASE_A_REPORT.md).
 Een volledige historische census en upstream-onafhankelijkheid blijven onbewezen.
+Een begrensde 41-blokkencontrole staat klaar voor lokale uitvoering met
+`py scripts/compare_second_source.py --phase-b`; zie `docs/SECOND_SOURCE_CHECK.md`.
 
 ## Starten — Python 3.12
 
