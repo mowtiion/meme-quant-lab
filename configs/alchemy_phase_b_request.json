@@ -1,0 +1,10 @@
+{
+  "request_id": "2026-09-24-alchemy-phase-b-1",
+  "reason": "User authorized continuing after Solana Mainnet activation and uiAmount comparison repair",
+  "slots": [449382000, 449382040],
+  "max_requests": 42,
+  "max_bytes": 201326592,
+  "max_seconds": 600,
+  "paid_budget_eur": 0,
+  "automatic_retries": 0
+}
