@@ -1,0 +1,315 @@
+{
+  "schema": "economic-stream-replay-v1",
+  "pilot_ready": false,
+  "network_requests": 0,
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "details_sha256": "82e545f575631bba634ec28497fe8341137dda25cae439908c6c2210e212d322",
+  "checkpoint_results_unchanged": true,
+  "counts": {
+    "blocks": 41,
+    "all_transactions": 43417,
+    "decoded_events": 3258,
+    "target_transactions": 2873,
+    "sol_unresolved": 82,
+    "sol_reconciled": 2791,
+    "fees": {
+      "CORE_FEES_RECONCILED": 2663,
+      "PROTOCOL_BURN_RECONCILED": 3
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "machine": "x86_64",
+    "system": "Linux",
+    "parallel_workers": 1
+  },
+  "timing": {
+    "archive_integrity_seconds": 7.695328598998458,
+    "replay_including_block_loading_and_result_hashing_seconds": 5.796265951999885,
+    "entire_diagnostic_seconds": 13.494436794999274,
+    "single_transaction_combined": {
+      "count": 2873,
+      "total_seconds": 2.6282182399991143,
+      "median_ms": 0.8383840013266308,
+      "p95_ms": 1.594242999999551,
+      "p99_ms": 2.6749230000859825,
+      "max_ms": 3.488058000584715,
+      "percentile_method": "nearest_rank"
+    },
+    "gc_pauses_during_replay": [
+      {
+        "seconds": 0.0038876000016898615,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0040010009997786256,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0026236650010105222,
+        "generation": 0
+      },
+      {
+        "seconds": 0.002314999999725842,
+        "generation": 0
+      },
+      {
+        "seconds": 0.009613690999685787,
+        "generation": 1
+      },
+      {
+        "seconds": 5.2339000831125304e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004586813998685102,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0036437519993341994,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004069253998750355,
+        "generation": 0
+      },
+      {
+        "seconds": 0.005908315999477054,
+        "generation": 0
+      },
+      {
+        "seconds": 5.213899930822663e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004036083999380935,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0046184210004867055,
+        "generation": 0
+      },
+      {
+        "seconds": 0.005644459000905044,
+        "generation": 0
+      },
+      {
+        "seconds": 6.807300087530166e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.008006799000213505,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004537720000371337,
+        "generation": 1
+      },
+      {
+        "seconds": 0.008082993001153227,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004713615000582649,
+        "generation": 0
+      },
+      {
+        "seconds": 0.009533900998576428,
+        "generation": 0
+      },
+      {
+        "seconds": 6.430699977499899e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.008775787000558921,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0001559450010972796,
+        "generation": 0
+      },
+      {
+        "seconds": 0.009375892999742064,
+        "generation": 0
+      },
+      {
+        "seconds": 0.01515561399901344,
+        "generation": 0
+      },
+      {
+        "seconds": 5.596500159299467e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.006424634000723017,
+        "generation": 0
+      },
+      {
+        "seconds": 0.006566577998455614,
+        "generation": 0
+      },
+      {
+        "seconds": 0.003688950000650948,
+        "generation": 1
+      },
+      {
+        "seconds": 0.013008977999561466,
+        "generation": 2
+      },
+      {
+        "seconds": 0.004532041999482317,
+        "generation": 0
+      },
+      {
+        "seconds": 0.00278131199956988,
+        "generation": 0
+      },
+      {
+        "seconds": 0.003159193000101368,
+        "generation": 0
+      },
+      {
+        "seconds": 0.003678704999401816,
+        "generation": 0
+      },
+      {
+        "seconds": 0.001076001999535947,
+        "generation": 0
+      },
+      {
+        "seconds": 0.002591165999547229,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0023699329994997242,
+        "generation": 0
+      },
+      {
+        "seconds": 0.0036647540000558365,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004441694998604362,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004291608998755692,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004757490998599678,
+        "generation": 0
+      },
+      {
+        "seconds": 0.00726828600090812,
+        "generation": 1
+      },
+      {
+        "seconds": 0.0150087629990594,
+        "generation": 0
+      },
+      {
+        "seconds": 7.39009992685169e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 2.4657001631567255e-05,
+        "generation": 0
+      },
+      {
+        "seconds": 0.005505249000634649,
+        "generation": 0
+      },
+      {
+        "seconds": 0.004782758998771897,
+        "generation": 0
+      },
+      {
+        "seconds": 0.006648841999776778,
+        "generation": 0
+      },
+      {
+        "seconds": 0.005766971999037196,
+        "generation": 0
+      }
+    ],
+    "slowest_transactions": [
+      {
+        "slot": 449382013,
+        "tx_index": 239,
+        "combined_ms": 3.488058000584715,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382036,
+        "tx_index": 890,
+        "combined_ms": 3.4360589997959323,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382012,
+        "tx_index": 1200,
+        "combined_ms": 3.3221479989151703,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382039,
+        "tx_index": 20,
+        "combined_ms": 3.1592619998264126,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382019,
+        "tx_index": 465,
+        "combined_ms": 3.1436290009878576,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382011,
+        "tx_index": 595,
+        "combined_ms": 3.093192999585881,
+        "gc_pause_ms": 0.06807300087530166
+      },
+      {
+        "slot": 449382039,
+        "tx_index": 507,
+        "combined_ms": 3.0497570005536545,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382019,
+        "tx_index": 210,
+        "combined_ms": 3.0363070000021253,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382013,
+        "tx_index": 275,
+        "combined_ms": 2.993833000800805,
+        "gc_pause_ms": 0
+      },
+      {
+        "slot": 449382036,
+        "tx_index": 252,
+        "combined_ms": 2.986791998409899,
+        "gc_pause_ms": 0
+      }
+    ]
+  },
+  "retention": "One decoded block and one transaction result; compressed evidence part, timing scalars and unresolved summaries also retained.",
+  "limitations": [
+    "Offline sample; live RPC, queueing and finality not measured.",
+    "GC remains enabled with unchanged thresholds; per-transaction measurement excludes JSON loading and result hashing.",
+    "Same 20 target transactions warmed once before their measured call.",
+    "Archive verifier still loads the full sample; bounded retention applies to replay.",
+    "Block and single-transaction decoders both run to prove event equality.",
+    "No throughput SLA, statistical latency bound or gate promotion."
+  ],
+  "residual_groups": {
+    "FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9": 67,
+    "3s1rAymURnacreXreMy718GfqW6kygQsLNka1xDyW8pC": 15
+  },
+  "residuals_sha256": "bf03eabc2c4b9d504732df13918ab14de6e679fb24e6a274b1afc7533f3e114c",
+  "residual_index_report": "reports/ECONOMIC_RUNTIME_DIAGNOSIS.json"
+}

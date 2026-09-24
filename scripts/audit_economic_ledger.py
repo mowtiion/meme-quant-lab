@@ -4,15 +4,14 @@ import hashlib
 import io
 import json
 import zipfile
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from compare_second_source import digest
 from verify_alchemy_phase_b import verify
 from meme_quant.decoder import PUMP, AMM, IDLDecoder, decode_block
 from meme_quant.reserve_ledger import account_keys
-from meme_quant.fee_audit import audit_amm_fees
-from meme_quant.lamport_ledger import reconcile_lamports
-from meme_quant.token_ledger import ordered_instructions, reconcile_token_accounts
+from meme_quant.economic import audit_transaction
+from meme_quant.token_ledger import ordered_instructions
 
 
 def audit(path):
@@ -31,6 +30,9 @@ def audit(path):
                     decoded, decode_issues = decode_block(block,slot,hashlib.sha256(raw).hexdigest(),decoders)
                     if decode_issues:
                         raise ValueError('Decoder issues block fee attribution')
+                    by_transaction = defaultdict(list)
+                    for row in decoded:
+                        by_transaction[row['tx_index']].append(row)
                     for index, tx in enumerate(block['transactions']):
                         if tx['meta'] is None:
                             continue
@@ -40,9 +42,7 @@ def audit(path):
                         if tx['meta']['err'] is not None:
                             failed += 1
                             continue
-                        result = reconcile_token_accounts(tx)
-                        result['lamport_check'] = reconcile_lamports(tx,[r for r in decoded if r['tx_index']==index],decoders)
-                        result['fee_checks'] = audit_amm_fees(tx,[r for r in decoded if r['tx_index']==index],decoders[AMM])
+                        result = audit_transaction(tx, by_transaction[index], decoders)
                         details.append({'slot': slot, 'tx_index': index,
                                         'signature': tx['transaction']['signatures'][0], **result})
     return {'artifact_sha256': verified['artifact_sha256'], 'status': 'ECONOMIC_CHECKPOINT_BLOCKED',
