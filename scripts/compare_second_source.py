@@ -4,6 +4,9 @@ The key is prompted locally and never written to the report, raw data or Git.
 Run from the repository root with Python 3.12; no third-party dependencies.
 """
 import argparse
+import copy
+import math
+from decimal import Decimal, localcontext
 import getpass
 import hashlib
 import json
@@ -81,6 +84,42 @@ def normalize_preexecution_empty(block):
     return normalized, changes
 
 
+def canonical_token_ui(block):
+    """Validate redundant numeric UI amounts, then canonicalize within one binary64 ULP.
+
+    Integer amount, decimals, uiAmountString, owner and every other field stay intact.
+    Null stays null. Raw evidence is never modified. No relative-error tolerance.
+    """
+    result = copy.deepcopy(block)
+    changed = []
+    for index, tx in enumerate(result['transactions']):
+        for field in ('preTokenBalances', 'postTokenBalances'):
+            for balance_index, balance in enumerate(tx['meta'][field]):
+                token = balance['uiTokenAmount']
+                ui = token['uiAmount']
+                if ui is None:
+                    continue
+                amount, decimals = token['amount'], token['decimals']
+                if (not isinstance(amount, str) or not amount.isascii() or not amount.isdigit()
+                        or len(amount) > 20 or int(amount) > 2**64-1
+                        or type(decimals) is not int or not 0 <= decimals <= 255
+                        or type(ui) not in (int, float) or not math.isfinite(ui)):
+                    raise ValueError('Invalid token amount representation')
+                with localcontext() as ctx:
+                    ctx.prec = 300
+                    exact = Decimal(amount).scaleb(-decimals)
+                    if Decimal(token['uiAmountString']) != exact:
+                        raise ValueError('Inconsistent uiAmountString')
+                    canonical = float(exact)
+                if abs(ui - canonical) > math.ulp(canonical):
+                    raise ValueError('uiAmount exceeds one ULP')
+                if ui != canonical or type(ui) is not float:
+                    changed.append({'index': index, 'field': field,
+                                    'balance_index': balance_index})
+                token['uiAmount'] = canonical
+    return result, changed
+
+
 def compare(block, expected):
     try:
         count = len(block['transactions'])
@@ -88,6 +127,9 @@ def compare(block, expected):
         matches = {name: value == expected['group_sha256'][name]
                    for name, value in observed.items()}
         changes = []
+        ui_changes = []
+        exact_matches = dict(matches)
+        mode = 'EXACT'
         if not all(matches.values()):
             normalized, candidates = normalize_preexecution_empty(block)
             if candidates:
@@ -96,11 +138,25 @@ def compare(block, expected):
                                       for name, value in normalized_hashes.items()}
                 if all(normalized_matches.values()):
                     matches, changes = normalized_matches, candidates
+                    mode = 'PREEXECUTION_ENCODING'
+        if not all(matches.values()) and 'canonical_group_sha256' in expected:
+            normalized, candidates = normalize_preexecution_empty(block)
+            try:
+                canonical, ui_candidates = canonical_token_ui(normalized)
+                canonical_matches = {name: digest(value) == expected['canonical_group_sha256'][name]
+                                     for name, value in groups(canonical).items()}
+                if all(canonical_matches.values()):
+                    matches, changes, ui_changes = canonical_matches, candidates, ui_candidates
+                    mode = 'CANONICAL_TOKEN_UI_V1'
+            except (ValueError, ArithmeticError):
+                pass  # Invalid UI metadata must never turn a mismatch into a match.
     except (KeyError, TypeError, ValueError):
         return {'status': 'MISSING_FIELDS', 'transactions': None, 'groups': {}}
     return {'status': 'MATCH' if count == expected['transactions'] and all(matches.values())
             else 'MISMATCH', 'transactions': count, 'groups': matches,
-            'normalized_preexecution_fields': changes}
+            'normalized_preexecution_fields': changes,
+            'normalized_ui_amounts': ui_changes, 'exact_groups': exact_matches,
+            'comparison_mode': mode if all(matches.values()) else 'MISMATCH'}
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
