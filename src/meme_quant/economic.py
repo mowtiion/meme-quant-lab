@@ -4,12 +4,15 @@ import json
 from .decoder import AMM
 from .fee_audit import audit_amm_fees
 from .lamport_ledger import reconcile_lamports
-from .token_ledger import reconcile_token_accounts
+from .token_lifecycles import replay_token_lifecycles
 
 
 def audit_transaction(tx, rows, decoders):
-    result = reconcile_token_accounts(tx)
-    result['lamport_check'] = reconcile_lamports(tx, rows, decoders)
+    lamports = reconcile_lamports(tx, rows, decoders)
+    slots = {row['slot'] for row in rows}
+    slot = next(iter(slots)) if len(slots) == 1 else None
+    result = replay_token_lifecycles(tx, lamports, slot)
+    result['lamport_check'] = lamports
     result['fee_checks'] = audit_amm_fees(tx, rows, decoders[AMM])
     return result
 
