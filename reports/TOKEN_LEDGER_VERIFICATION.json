@@ -1,0 +1,320 @@
+{
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "status": "SCOPED_TOKEN_FLOW_AUDIT",
+  "network_requests": 0,
+  "failed_target_transactions_excluded": 1085,
+  "counts": {
+    "PARTIAL": 2360,
+    "UNRESOLVED": 36,
+    "RECONCILED": 477
+  },
+  "details_sha256": "052426c9a4c0221f389cf180270a8475dd9fe679ce07a254b7adae62fc985893",
+  "transaction_reasons": {
+    "ACCOUNT_REINITIALIZATION": 36
+  },
+  "account_counts": {
+    "RECONCILED": 17186,
+    "UNRESOLVED": 2585
+  },
+  "account_reasons": {
+    "WSOL_LIFECYCLE_REQUIRES_LAMPORT_LEDGER": 2522,
+    "UNSUPPORTED_TOKEN_EXTENSION": 63
+  },
+  "flow_counts": {
+    "transfer": 12963,
+    "burn": 5,
+    "mint": 8
+  },
+  "unknown_instructions": {
+    "26": 3,
+    "39": 5,
+    "210": 5,
+    "215": 5,
+    "45": 1
+  },
+  "fee_counts": {
+    "CORE_FEES_RECONCILED": 2110,
+    "UNRESOLVED": 288,
+    "PROTOCOL_BURN_RECONCILED": 3
+  },
+  "fee_reasons": {
+    "MULTI_EVENT_FEE_ATTRIBUTION": 256,
+    "FEE_VARIANT_REQUIRES_SEPARATE_MAPPING": 31,
+    "UNSUPPORTED_TOKEN_EXTENSION": 1
+  },
+  "full_supply_or_lamport_ledger": false,
+  "slots": {
+    "449382000": {
+      "transactions": 39,
+      "sha256": "9f257c4385eafa9df2da9dafcc8b049da41ebd7ef5182bc78172d6f614524b0e"
+    },
+    "449382001": {
+      "transactions": 31,
+      "sha256": "b7038dcde0bd25485ddb57516bd2d15678fdeb6d8ed86ce34e4776d1b6886a8f"
+    },
+    "449382002": {
+      "transactions": 32,
+      "sha256": "d913a888dfe903bf0826ae05a0bda2d57f31a81af26a33d6ffdf04078e8eab69"
+    },
+    "449382003": {
+      "transactions": 44,
+      "sha256": "9ab194f37241f79d58523117d332575959afd535c56e0bf373e3bbbf19a6db75"
+    },
+    "449382004": {
+      "transactions": 194,
+      "sha256": "fe7597aa0d02d3775db703899cb5f44ffb8df6ca3b3af56e1bde011dd35beb92"
+    },
+    "449382005": {
+      "transactions": 76,
+      "sha256": "abcdf51647efdb4c6538f7389dade4d7eeec4b00e8636282843f42014b2fa082"
+    },
+    "449382006": {
+      "transactions": 62,
+      "sha256": "db9cb9f1053845cce298adee2956b4ee1c180a74c62b0a8373233908afdfc868"
+    },
+    "449382007": {
+      "transactions": 71,
+      "sha256": "daa7a58e47f990ee7b8ae54f61f30a5047f80d6a2d6c8598628497180b978de4"
+    },
+    "449382008": {
+      "transactions": 109,
+      "sha256": "1ed3141102a4c3c603b0968b0205ef3a7455912d0cf5a459226f5eaed5ef242f"
+    },
+    "449382009": {
+      "transactions": 64,
+      "sha256": "0e3fec389e386b7ef31757ecee061dab8ef9595dcc1fccd916c5a92d04c74e7c"
+    },
+    "449382010": {
+      "transactions": 85,
+      "sha256": "39cb7adbbe3758b8f367a31880e2275f7aa9ca03f0a49ab632fa3912ed4ca1f2"
+    },
+    "449382011": {
+      "transactions": 104,
+      "sha256": "d58ff4c919901c3327da9e5ae9eb0d7c778bbe6313b331e1a20c655a9f989d00"
+    },
+    "449382012": {
+      "transactions": 83,
+      "sha256": "d72f0a2fc601c52e825f5f79e66ad9f2c632e4c0928951840a9fab92849ee7a1"
+    },
+    "449382013": {
+      "transactions": 71,
+      "sha256": "fcaec4a0bfa1e1ebf8f3a1a7eca2b92ce7ee058ed06e9e3d7930fb432a007e52"
+    },
+    "449382014": {
+      "transactions": 77,
+      "sha256": "0540fec23cf834b0884569468a6abae7d7ef16eaf1bb2a40bbd07080f5477921"
+    },
+    "449382015": {
+      "transactions": 47,
+      "sha256": "f4f939a74bea179efc0e9f660aac14ca2d87d8c6c6cf2b9d92ff171b29a7af8a"
+    },
+    "449382016": {
+      "transactions": 69,
+      "sha256": "d41232606d47f1a5b1b0a7803d86c1be8cd4ccf6b1c493e7032a0986181facfc"
+    },
+    "449382017": {
+      "transactions": 111,
+      "sha256": "cc4309a455ac9b1618fdf8a2ead6f1ed2883bec8ac049c35ba43e113f31cfdb2"
+    },
+    "449382018": {
+      "transactions": 48,
+      "sha256": "6a9723f1d6100c7e632bcc4f53ffb1ad15f4d3c4930fb484ab17be0e0844abe8"
+    },
+    "449382019": {
+      "transactions": 94,
+      "sha256": "2b73caffb42ead21ef4ed05294b878ccca59b9ae7cceb2fa098ba0008d7b2f08"
+    },
+    "449382020": {
+      "transactions": 83,
+      "sha256": "849bfcd465a97d65cdc0ce8de93e6766055c21571155b7c564dcf96ea6a27fd9"
+    },
+    "449382021": {
+      "transactions": 41,
+      "sha256": "5f0b72a6f1721f23a8102a06072df5a5ca7945e13b64b29ed2eb4c918aeac3dd"
+    },
+    "449382022": {
+      "transactions": 84,
+      "sha256": "fe09c1af033af342f3057baa5de7657984344c62644f7b216d5de8228341f67a"
+    },
+    "449382023": {
+      "transactions": 80,
+      "sha256": "f2d61b262c4d3f06a40663a87d1635a2436fcbf722038c3d01690a0b49eebfe2"
+    },
+    "449382024": {
+      "transactions": 66,
+      "sha256": "fad773bd4ef6d1cbba64faad9ea6032b630b75ad9050047bc574db0de5f9ad4c"
+    },
+    "449382025": {
+      "transactions": 76,
+      "sha256": "3392e17b66a6a9faf740d17fdf046bbb9678e588bfac6faafc5614f959006e91"
+    },
+    "449382026": {
+      "transactions": 70,
+      "sha256": "db4776aef3cbb3c93690e16b0c44282ea8ebb6b9d5da8dcf01b584d8b92f53b8"
+    },
+    "449382027": {
+      "transactions": 65,
+      "sha256": "505c3e775af91d019d03c19cef2518f54c79c2a6defdc01e6a917dbd859d2fef"
+    },
+    "449382028": {
+      "transactions": 14,
+      "sha256": "ca507f702f45cf622833b030604135a6d14d4eb21ed2048363b0f6325712bd43"
+    },
+    "449382029": {
+      "transactions": 28,
+      "sha256": "542f80239a981c080bd373cb3d63fa711454fef3dc76923391897e463b64d83e"
+    },
+    "449382030": {
+      "transactions": 42,
+      "sha256": "9f37e82fa59d8c7c3cf5cec50bd9d5c3142cdb88628b6fffee51c7f30dc0032b"
+    },
+    "449382031": {
+      "transactions": 41,
+      "sha256": "feab659c22ec442387a25779bb8cdf18d26ea14bedc5470bac3892760689c3c1"
+    },
+    "449382032": {
+      "transactions": 36,
+      "sha256": "7382a85e0a31c88cc9b0a46ac320cb5ae4ff2eee45db63f28f0f957f2bafc67d"
+    },
+    "449382033": {
+      "transactions": 54,
+      "sha256": "f5f8fae6bd591d32faf545c06e044d9269af79902b80de0501e04657d49d34cb"
+    },
+    "449382034": {
+      "transactions": 31,
+      "sha256": "67164d8e40798c15d7e2a18d70260dc870a8a2856026723e9ffed6f696dc3bc7"
+    },
+    "449382035": {
+      "transactions": 31,
+      "sha256": "b2dbaa9965ac6de2bef08a45c08cde8eb3105301bc61d00ab894daa2a31b3170"
+    },
+    "449382036": {
+      "transactions": 274,
+      "sha256": "a0835a83c99f4696be30c2d7c68fd438f1b43230adf83cba8ba7ac22fe6dcb68"
+    },
+    "449382037": {
+      "transactions": 67,
+      "sha256": "76a4dea6a7ebfcac9bc4d0b8cb504b37b92d57f62452b95de452091919bab205"
+    },
+    "449382038": {
+      "transactions": 71,
+      "sha256": "084dcf512e7532f334eb2741b1f141eb33edf456f4e63380f1bf9b24629f1ede"
+    },
+    "449382039": {
+      "transactions": 75,
+      "sha256": "69b826849380d869f9a47e73f2f5f797ff93c94a8caa928705ffdb17f080ed73"
+    },
+    "449382040": {
+      "transactions": 33,
+      "sha256": "e7c56c680b84b662f410384b031fc0acd4ccc2e6c073bb163a6e389bdbd2dfaf"
+    }
+  },
+  "unresolved_examples": [
+    {
+      "slot": 449382000,
+      "signature": "4B7gRhD5jc7JrWmBKG3U1D7JqTbUUhUm3vLdNSDDooKcwRtBbPAn8nfduoH1V415MxvwFMr9SFW3FmmEx7K5qPTC",
+      "account": "E3nkyCEEdPtwnH1dknweaGqAxyWgDVq9rQ3udJjJ3mUW",
+      "mint": "So11111111111111111111111111111111111111112",
+      "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "instruction_delta": 19197303,
+      "status": "UNRESOLVED",
+      "before": null,
+      "after": null,
+      "reason": "WSOL_LIFECYCLE_REQUIRES_LAMPORT_LEDGER"
+    },
+    {
+      "slot": 449382004,
+      "signature": "5rzE6GE1yZtk3eE2ATNts1XhcKiVEyzuwLTBqrBtxi2qCWStXJ8p37ouTUrph9ohuJ9BnRLNWqx5PrCh9ea4dB9V",
+      "account": "2x2ZZnao9FwvHi6AabUuwCeqK1P2zRLddoMgz5q8Dm6F",
+      "mint": "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB",
+      "program": "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb",
+      "instruction_delta": 0,
+      "status": "UNRESOLVED",
+      "before": 23197372707,
+      "after": 23131265369,
+      "reason": "UNSUPPORTED_TOKEN_EXTENSION"
+    }
+  ],
+  "protocol_burns": [
+    {
+      "slot": 449382008,
+      "signature": "XWwUaaBFihvWZqKd2VkkMMAJ83jDpcjjh4mDyS8SCaaijpJ2LK1gF6weKhNcAHziDDLzQehqwTLuYmMbFNRqixp",
+      "status": "PROTOCOL_BURN_RECONCILED",
+      "pool": "BRUGxbL29SzRAf7B9HnJYgZ8KwjtNZDfrAZ5HK6uxSxw",
+      "event_count": 1,
+      "base_mint": "6hCR9AmhSMbrCUjEEU5qR2bfcjWT7qqHx5PWTLEypump",
+      "quote_mint": "So11111111111111111111111111111111111111112",
+      "burned": 97841686487,
+      "quote_used": 358886388,
+      "companion_event_index": 17
+    },
+    {
+      "slot": 449382021,
+      "signature": "4Kfmt8TEWT9WxEGoCot6W5oEfqHxCeKpTXFJkT8CUCcMQY3ThdHnUJE5iLoBGNtV8AV1vaoSJjgyyvH69G4fpwKB",
+      "status": "PROTOCOL_BURN_RECONCILED",
+      "pool": "AdEMY8tpBsGSgkEefZhRgAhAKmmbRbZnXqJ3CjRfGBbd",
+      "event_count": 1,
+      "base_mint": "jyurFsb717v6kNJZLk9LRbHdN1y5ddHTyXP3yrZpump",
+      "quote_mint": "So11111111111111111111111111111111111111112",
+      "burned": 175892295483,
+      "quote_used": 781595681,
+      "companion_event_index": 17
+    },
+    {
+      "slot": 449382027,
+      "signature": "gjV9yxYofgc72ng7C7ceuB2mkEhdY5Mh3FF6HBZQi7GPBJ7vYTmXz1CXZTHGEAVYQ1uxwHfSzcMQ3ptw6uZWP8L",
+      "status": "PROTOCOL_BURN_RECONCILED",
+      "pool": "BxBD7QgyWEByS3VLHLzc9GXrW5BDEGhXjx3BiuLg14BV",
+      "event_count": 1,
+      "base_mint": "2mhjbvEJ9d4TCnHRxeRfkaRxoSBdFtrFVXEg3uScpump",
+      "quote_mint": "So11111111111111111111111111111111111111112",
+      "burned": 230676585266,
+      "quote_used": 694587958,
+      "companion_event_index": 17
+    }
+  ],
+  "core_fee_examples": [
+    {
+      "slot": 449382000,
+      "signature": "4B7gRhD5jc7JrWmBKG3U1D7JqTbUUhUm3vLdNSDDooKcwRtBbPAn8nfduoH1V415MxvwFMr9SFW3FmmEx7K5qPTC",
+      "status": "CORE_FEES_RECONCILED",
+      "pool": "Cju7t5AndhKGKAi4T59drhAtHMEaBWSQkQpjfrHYQUmt",
+      "event_count": 1,
+      "protocol_recipient": "2GWZRFJxxV2ntz7TLywmqTqQsiscbkk59nHDXkt1m2fw",
+      "protocol_net": 79,
+      "creator_recipient": "GpnHC8cUn3eSdT8f1ADaJP4kMrML1dKothJkHzXG7Ejc",
+      "creator_fee": 6282,
+      "buyback_amount": 79,
+      "buyback_recipient_identity_verified": false,
+      "residual_transfers": [
+        {
+          "mint": "Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu",
+          "source": "Ekx8wtWMMSh4huRnPwdY35Xep5WfqpUDdXVMpnjQrJ3P",
+          "destination": "22XkUD4EXNGLGuumHNBgHF1VF9sVGtHkHVGeBMR8yT6p",
+          "amount": 79
+        }
+      ]
+    },
+    {
+      "slot": 449382000,
+      "signature": "4GLYhJx3MyATaWPi6CqBpzbBznsu89ui4MM7NUH1WZDWHFbv5xMtvhf1nX6TsrsmS1BekaXYj4vHDYmZwohNZTjJ",
+      "status": "CORE_FEES_RECONCILED",
+      "pool": "BPLSQip1RTYogdHKm1z8TSKsTyDLt2W2LRbyb2Z8AVS8",
+      "event_count": 1,
+      "protocol_recipient": "X5QPJcpph4mBAJDzc4hRziFftSbcygV59kRb2Fu6Je1",
+      "protocol_net": 29,
+      "creator_recipient": "3JRDCQfoZfGWrok17GEJSr7q2dzsxVEp1xHDMeBrjqvF",
+      "creator_fee": 227,
+      "buyback_amount": 28,
+      "buyback_recipient_identity_verified": false,
+      "residual_transfers": [
+        {
+          "mint": "So11111111111111111111111111111111111111112",
+          "source": "GGxS5R9y93PLytujA66VzDqXVnapnGr6ecKLbv4fABnM",
+          "destination": "qkYdTGRPHbWTWuBMz45bCiU6a23axRqf6sBHm9295WY",
+          "amount": 28
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,9 @@
 [het resultaat](../reports/ALCHEMY_PHASE_B_REPORT.md). De eerstvolgende uitvoerbare stap
 is nu uitbreiding van de reserve-ledger: de gewone PumpSwap-vaultstromen zijn al gecontroleerd
 (2.663 acties, 187 pools). Zie [het ledger-rapport](../reports/RESERVE_LEDGER_REPORT.md).
-Transfer/mint/burn, fee-ontvangers en continuïteit tussen transacties blijven open.
+De eerste [token- en fee-audit](../reports/TOKEN_LEDGER_REPORT.md) is ook uitgevoerd.
+Eerstvolgend: lamport/SOL-levenscycli voor wrapped SOL, vervolgens de resterende fee-varianten
+en continuïteit tussen transacties.
 Herhaal de provider-setup niet.
 
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
