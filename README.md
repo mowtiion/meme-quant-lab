@@ -36,6 +36,10 @@ Het [nieuwste controlepunt](reports/CONTINUITY_CHECKPOINT.md) reconcilieert **2.
 bestrijkt alle **43.417 transacties** en vindt **44.046 aansluitende tokenaccountwaarnemingen**
 zonder verschillen. Nog 82 SOL-transacties en historische tokenstaat blijven open; de pilot
 is geblokkeerd. Eerdere rapporten blijven beschikbaar als historische controlepunten.
+De [runtime- en foutdiagnose](reports/RUNTIME_AND_RESIDUAL_REPORT.md) groepeert de 82 resterende
+gevallen bij twee programma’s (67 + 15). Verwerking per blok geeft dezelfde economische uitkomst;
+de grootste gemeten transactievertraging daalde van 182 naar 3,49 ms in deze offline proef.
+Netwerkvertraging en een live feed zijn nog niet gemeten.
 
 ## Starten — Python 3.12
 

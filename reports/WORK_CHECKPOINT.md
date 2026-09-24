@@ -1,6 +1,14 @@
 # Resume checkpoint — 2026-09-24
 
 ## Start here after a reset
+
+Latest: read `reports/RUNTIME_AND_RESIDUAL_REPORT.md`, then `ECONOMIC_STREAM_REPLAY.json`.
+The two residual groups are 67 FLASHX8 and 15 3s1rA transactions; none were silently promoted.
+Block-at-a-time replay gives the exact prior details hash with a 3.49 ms largest measured
+per-target observation versus 182.04 ms in cached replay. Offline only; live ingress unbuilt.
+214 local tests pass. Shared transaction checks and incremental result hashing are implemented.
+Do not repeat broad provider or parser diagnosis; use the exact indexed residual instructions.
+
 The Alchemy access/second-source problem is **resolved for the frozen 41-block sample**.
 Read `reports/ALCHEMY_PHASE_B_REPORT.md` and its two verification JSON files first.
 Do not repeat account setup or rerun the sample merely because conversation context is lost.

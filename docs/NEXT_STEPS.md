@@ -15,6 +15,14 @@ accounts. Daarna intra-transactielevenscycli, historische binary/config/IDL-kopp
 De 1.000-launchpilot blijft geblokkeerd tot die gates slagen.
 Herhaal de provider-setup niet.
 
+**Nieuwste diagnose:** zie [runtime en resterende bewegingen](../reports/RUNTIME_AND_RESIDUAL_REPORT.md).
+De 82 SOL-gevallen vallen in twee programmagroepen: FLASHX8 (67) en 3s1rA (15).
+Werk gericht aan geverifieerde instructie-/historische-state-mapping voor die groepen.
+De tweede groep is geen eenvoudige fee-refund: 5 van de 15 bedragen verschillen van meta.fee.
+De replay per blok behoudt exact alle audituitkomsten en vermijdt de grote gemeten GC-pauze.
+Gebruik `scripts/replay_economic_stream.py` voor herhaling van de begrensde offline proef;
+alleen de replay houdt maximaal één gedecodeerd blok vast. Dit start geen live feed.
+
 GitHub is gekoppeld; de actuele code, tests en rapporten staan in
 [mowtiion/meme-quant-lab](https://github.com/mowtiion/meme-quant-lab).
 
