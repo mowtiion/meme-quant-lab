@@ -84,6 +84,7 @@ class IDLDecoder:
         self.hash = hashlib.sha256(raw).hexdigest()
         idl = json.loads(raw)
         self.program = idl["address"]
+        self.accounts = {a['name']:bytes(a['discriminator']) for a in idl.get('accounts',[])}
         self.events = {bytes(e["discriminator"]):e["name"] for e in idl["events"]}
         self.types = {t["name"]:t["type"] for t in idl["types"]}
         self.instructions = {bytes(i["discriminator"]):i for i in idl["instructions"]}

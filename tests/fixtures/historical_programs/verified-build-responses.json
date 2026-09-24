@@ -1,0 +1,27 @@
+{
+  "service": "https://verify.osec.io",
+  "normalization": "sha256(binary.rstrip(b\"\\0\"))",
+  "responses": [
+    {
+      "regime": "pump_old",
+      "response": {
+        "executable_hash": "83bcfdc0431844574a98ed897b6698835c9ad67cb953bcca4edbdbc6d667b1a4",
+        "builds": []
+      }
+    },
+    {
+      "regime": "pump_sample",
+      "response": {
+        "executable_hash": "9b1cd161177c9e31e7d6967e2d9b58c61ed2d51f9aabbe04905f8fed628b2470",
+        "builds": []
+      }
+    },
+    {
+      "regime": "amm",
+      "response": {
+        "executable_hash": "c04bea8bee62502c62a9fa796fc99ce0d616469908b85595a517ade2bfe36522",
+        "builds": []
+      }
+    }
+  ]
+}
