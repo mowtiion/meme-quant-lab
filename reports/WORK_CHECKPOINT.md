@@ -48,15 +48,27 @@ This is a scoped cash-flow model matching boundaries, not proof of every gross d
 movement. Stored rent reserve / SyncNative token amounts are not independently verified.
 The previous token-ledger and fee results remain separate; their gates are not overwritten.
 
+## Major checkpoint: scoped AMM fees closed
+Read `reports/ECONOMIC_CHECKPOINT.md` and `ECONOMIC_LEDGER_VERIFICATION.json` first.
+2,786/2,873 SOL transactions pass; 87 remain (82 residuals, four extra sell layouts, one
+migration funding deficit). 2,663 ordinary AMM fee events and all three protocol burns pass.
+256 multi-event transactions, two cashback and 30 holder-reward events now have exact scopes.
+Buyback ATA identity and documented recipient membership verified; historical Global config is not.
+5,963 surviving native token observations in SOL-passed transactions match; 18 need stored
+reserve evidence. Closed/new lifetimes are not included in that native boundary count.
+15 additional tests; all 194 pass locally. Zero chain requests. The previous reports are
+historical checkpoints, not current combined results. Reproduce with `audit_economic_ledger.py`.
+
 ## Resume action
-Explain direct program lamport movements behind the 234 residuals / 23 deficits, then handle
-unsupported Token-2022 instructions and obtain historical stored native rent-reserve evidence
-for an independent SyncNative token-amount proof. Preserve explicit unknowns.
-Then address multi-action fee attribution, cashback/holder rewards and buyback recipient provenance.
-Modules: `lamport_ledger.py`, `token_ledger.py`, `fee_audit.py`, `reserve_ledger.py`; scripts:
-`audit_lamport_ledger.py`, `audit_token_ledger.py`, `audit_reserve_ledger.py` (PYTHONPATH=src, offline).
-The complete ledger, historical census, binary/IDL mapping, upstream independence and
-1,000-launch pilot gates remain open. No live trading or bulk collection has been enabled.
+The provider and scoped AMM fee problems are resolved for this sample. Start with the 87
+indexed unresolved cases in the combined JSON, especially four fee-sharing sell layouts and
+migration funding. 67 cases invoke FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9; co-occurrence
+is not causal attribution. Do not solve residuals from post-state or silently drop transactions.
+Obtain historical stored-reserve evidence for SyncNative/new native accounts and finish token
+lifetimes / continuity. The old token aggregate gate still holds 36 reused-account transactions.
+Then historical binary/IDL mapping, census completeness and provider upstream independence.
+The 1,000-launch pilot remains BLOCKED. No bulk collection, paid plan or trading was enabled.
+The combined script verifies the existing artifact and makes no blockchain calls.
 
 ## Execution route and limits
 GitHub is the durable source of code and reports. The initial scratch checkout may be older
