@@ -29,6 +29,8 @@ De 41-blokkencontrole is nu met Alchemy uitgevoerd en offline herberekend:
 of normalisatiefouten. Numerieke UI-afronding wordt expliciet gecontroleerd; exacte bedragen
 en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE_B_REPORT.md)
 en [de hervatstatus](reports/WORK_CHECKPOINT.md).
+De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
+met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
 
 ## Starten — Python 3.12
 

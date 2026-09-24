@@ -1,0 +1,401 @@
+{
+  "status": "SCOPED_RESERVE_AUDIT",
+  "artifact_sha256": "bed259be2395aab0deccf1bf31a888b2af22923cc339f242c5c41d37a6c3f6bc",
+  "decoder_sha256": "2091433899b07d003d98118ae6cd3c628960fd393b40710b6e15bce6d0e7f2d1",
+  "network_requests": 0,
+  "counts": {
+    "RECONCILED": 2404,
+    "UNRESOLVED": 3
+  },
+  "unresolved_reasons": {
+    "PROTOCOL_BURN_SEPARATE_LEDGER": 3
+  },
+  "reconciled_events": 2663,
+  "decode_issues": [],
+  "details_sha256": "d1644c371ac297299ca6f24fc6549ddc7aaf9f73b57fe9cb17c280960bd5d11e",
+  "full_historical_ledger": false,
+  "scope": "Transaction-bounded ordinary PumpSwap vault flows. Does not validate pricing, all fee recipients, mint/burn/transfer supply ledger, or continuity between transactions.",
+  "ordinary_vault_flow_gate": "PASS",
+  "unique_reconciled_pools": 187,
+  "multi_action_groups": 250,
+  "slots": {
+    "449382000": {
+      "counts": {
+        "RECONCILED": 34
+      },
+      "ledger_sha256": "0045c855016730232dc14523c3fa96fc3396bb1d9af557713d8abc405ffcdebd"
+    },
+    "449382001": {
+      "counts": {
+        "RECONCILED": 20
+      },
+      "ledger_sha256": "b7fc6b7d0cf51ca9cf994e17ee92870857ca4148e99156454c1d399e48728bdb"
+    },
+    "449382002": {
+      "counts": {
+        "RECONCILED": 17
+      },
+      "ledger_sha256": "75dd848e556d548fbe9916296f6366bd6fe025b98c3f155f813ae9b458473a02"
+    },
+    "449382003": {
+      "counts": {
+        "RECONCILED": 30
+      },
+      "ledger_sha256": "05f7f8f722c01e9ff12dc22299bc435485c5f94554c04b79dbcaae7e3164e600"
+    },
+    "449382004": {
+      "counts": {
+        "RECONCILED": 181
+      },
+      "ledger_sha256": "573436dd01c8e997d45958ee87e86607457c4754af34f347f9cfbc9364539503"
+    },
+    "449382005": {
+      "counts": {
+        "RECONCILED": 68
+      },
+      "ledger_sha256": "9a2f624b2f75c5aca122a25e44903902371ad1824f8e9b4907eb6a6be49ebe90"
+    },
+    "449382006": {
+      "counts": {
+        "RECONCILED": 53
+      },
+      "ledger_sha256": "fac4deff806e30997d84930e53aebba24a92a9271dea68358578d571aed1e2f4"
+    },
+    "449382007": {
+      "counts": {
+        "RECONCILED": 62
+      },
+      "ledger_sha256": "b116b94ecf83c2d8d2151c8c5490a9c00584ed917367f3b2371f75f7abc4b294"
+    },
+    "449382008": {
+      "counts": {
+        "RECONCILED": 94,
+        "UNRESOLVED": 1
+      },
+      "ledger_sha256": "c4c6c1be2cc6aeb09261b397c6de4ac0e31234240f82cd0ada4b245c70a46a56"
+    },
+    "449382009": {
+      "counts": {
+        "RECONCILED": 52
+      },
+      "ledger_sha256": "dead52a832665ee3b59aef460e5efb34c1500821233b51d90e5398d6037ab36a"
+    },
+    "449382010": {
+      "counts": {
+        "RECONCILED": 53
+      },
+      "ledger_sha256": "9dac33bdcd9d9e9d0ce5205c6a2df8ee3e1695f0f51560d6e21e380b93f388c2"
+    },
+    "449382011": {
+      "counts": {
+        "RECONCILED": 72
+      },
+      "ledger_sha256": "dddf33ae9dfc633b941939565be2bf249f3465695c49c7c42cc257676830ad9c"
+    },
+    "449382012": {
+      "counts": {
+        "RECONCILED": 78
+      },
+      "ledger_sha256": "6004789f0a5e80c0eba949dd1746ef71a6ca8fdd739ccba5fc5c5508456a4ec2"
+    },
+    "449382013": {
+      "counts": {
+        "RECONCILED": 61
+      },
+      "ledger_sha256": "1d8ca54f3f1ec7fd9bd807465c11177e8fbe134048a6438a6e8bae6f38452091"
+    },
+    "449382014": {
+      "counts": {
+        "RECONCILED": 69
+      },
+      "ledger_sha256": "6d4d5402f066426ef9d8cf01dc396822e997edc0b896ff1617b511f246077893"
+    },
+    "449382015": {
+      "counts": {
+        "RECONCILED": 39
+      },
+      "ledger_sha256": "f05abe50660e26c0743ead6bee1cfc7aa918ebae4f0cf641f972e4c4538b081c"
+    },
+    "449382016": {
+      "counts": {
+        "RECONCILED": 52
+      },
+      "ledger_sha256": "3280e1305e3a50ac72c4f1b818d415e6a94c4b32191520d59e5c36e8cef6d511"
+    },
+    "449382017": {
+      "counts": {
+        "RECONCILED": 83
+      },
+      "ledger_sha256": "84cde91347f6eb5fe5be3f37c1b26858415ae2bf13c1166a56f71062fffc55d1"
+    },
+    "449382018": {
+      "counts": {
+        "RECONCILED": 33
+      },
+      "ledger_sha256": "74f6f3e820e8a1aa3323e734375d13d28899d8f033deb21bcd3d605a4d8f986d"
+    },
+    "449382019": {
+      "counts": {
+        "RECONCILED": 90
+      },
+      "ledger_sha256": "063484e3745c772b2206fed5af87a565c2b3888eaeebb5ebe291feffb8c973fa"
+    },
+    "449382020": {
+      "counts": {
+        "RECONCILED": 68
+      },
+      "ledger_sha256": "de8c581991f3cc08d57689d9a504a07685cb3487fd177506864224583db947b1"
+    },
+    "449382021": {
+      "counts": {
+        "RECONCILED": 38,
+        "UNRESOLVED": 1
+      },
+      "ledger_sha256": "e097d98b40b53bb25e8eca3c2ac43d9d38ff526c17bd94a79a1297e2bf0ca533"
+    },
+    "449382022": {
+      "counts": {
+        "RECONCILED": 75
+      },
+      "ledger_sha256": "5d1698c41751f76af08b1dd9c91401080cfa6f1b70b400da41b1cc7fbec153b0"
+    },
+    "449382023": {
+      "counts": {
+        "RECONCILED": 77
+      },
+      "ledger_sha256": "dcd643e9c587fee2a955d2d6234a2ca6d6f379cf861af31fd62caa9497de736f"
+    },
+    "449382024": {
+      "counts": {
+        "RECONCILED": 54
+      },
+      "ledger_sha256": "0f3e707cf1dec999c8bb1360cd1263df50e8232ec58971226a4e53891d4487e0"
+    },
+    "449382025": {
+      "counts": {
+        "RECONCILED": 68
+      },
+      "ledger_sha256": "cafab50108377c76a8318612e7614fe5af6a8cc187102aa5aea70fcb675ef0c9"
+    },
+    "449382026": {
+      "counts": {
+        "RECONCILED": 62
+      },
+      "ledger_sha256": "59e8ff62e82b27c9ee5d757579f8dfd817c02bedb8beea22232645be35fcee6a"
+    },
+    "449382027": {
+      "counts": {
+        "RECONCILED": 57,
+        "UNRESOLVED": 1
+      },
+      "ledger_sha256": "d07f9c618a9ea9427b8a3f631cff4a9790c9ac4ce042ed4dd8dbf2f8368540d5"
+    },
+    "449382028": {
+      "counts": {
+        "RECONCILED": 5
+      },
+      "ledger_sha256": "accbc9e8b125b5d752c95caaf1acdc84f21fe1e90bff3d7e16ef37f73b513bd5"
+    },
+    "449382029": {
+      "counts": {
+        "RECONCILED": 20
+      },
+      "ledger_sha256": "21b31b3f3bd4946ffd49a31765986f6d21707dc601ea06e11aad3f3cae6fb833"
+    },
+    "449382030": {
+      "counts": {
+        "RECONCILED": 27
+      },
+      "ledger_sha256": "f1901bb3f753ff54985a384893310c6760f34d753f3bddde108241faeb8eb26c"
+    },
+    "449382031": {
+      "counts": {
+        "RECONCILED": 36
+      },
+      "ledger_sha256": "2697e03dfb605106239b30b5a41c09f4ce332893ca99f060fda3f4527b08dac9"
+    },
+    "449382032": {
+      "counts": {
+        "RECONCILED": 19
+      },
+      "ledger_sha256": "c116b12302c4a8af61e39c688786d2765cc42a1833fa2a9c798e0c9eeeee8743"
+    },
+    "449382033": {
+      "counts": {
+        "RECONCILED": 40
+      },
+      "ledger_sha256": "5942ffffeacdee7a888e29ceee2f022fa0eafcf54517f57fe4f1f41c7fff9a6a"
+    },
+    "449382034": {
+      "counts": {
+        "RECONCILED": 22
+      },
+      "ledger_sha256": "5f0abd9cbcfbb675b76bed02da7d113fabeb686a64016ae402a92de245ff2a07"
+    },
+    "449382035": {
+      "counts": {
+        "RECONCILED": 23
+      },
+      "ledger_sha256": "e4f12d306ddfe146db2e7f1c802ba6322f82e9996507fb0162a4de8cdda3c0ca"
+    },
+    "449382036": {
+      "counts": {
+        "RECONCILED": 254
+      },
+      "ledger_sha256": "c1410a6379b34fc96cdfc9c0ec98fa3b9c6fc176d2218a4674cd248cbd8007da"
+    },
+    "449382037": {
+      "counts": {
+        "RECONCILED": 63
+      },
+      "ledger_sha256": "f8c1538919da71cda1708d8e14bfc97c1dcd501c0ca06c048f6c6f96d9f3360f"
+    },
+    "449382038": {
+      "counts": {
+        "RECONCILED": 63
+      },
+      "ledger_sha256": "68de0667e7805a92c52ac01c262ea0e9ebc59b284aa69592667b7ff1a270d77d"
+    },
+    "449382039": {
+      "counts": {
+        "RECONCILED": 68
+      },
+      "ledger_sha256": "1912ab8777b2b6b591757b16a116801121f79f684720d946760f38b9bc6dac47"
+    },
+    "449382040": {
+      "counts": {
+        "RECONCILED": 24
+      },
+      "ledger_sha256": "1bb572ec5894beef514718d77629ae85d05b6a45b45380fc8405190fe9168a05"
+    }
+  },
+  "unresolved": [
+    {
+      "slot": 449382008,
+      "tx_index": 922,
+      "pool": "BRUGxbL29SzRAf7B9HnJYgZ8KwjtNZDfrAZ5HK6uxSxw",
+      "signature": "XWwUaaBFihvWZqKd2VkkMMAJ83jDpcjjh4mDyS8SCaaijpJ2LK1gF6weKhNcAHziDDLzQehqwTLuYmMbFNRqixp",
+      "event_count": 1,
+      "status": "UNRESOLVED",
+      "reason": "PROTOCOL_BURN_SEPARATE_LEDGER"
+    },
+    {
+      "slot": 449382021,
+      "tx_index": 755,
+      "pool": "AdEMY8tpBsGSgkEefZhRgAhAKmmbRbZnXqJ3CjRfGBbd",
+      "signature": "4Kfmt8TEWT9WxEGoCot6W5oEfqHxCeKpTXFJkT8CUCcMQY3ThdHnUJE5iLoBGNtV8AV1vaoSJjgyyvH69G4fpwKB",
+      "event_count": 1,
+      "status": "UNRESOLVED",
+      "reason": "PROTOCOL_BURN_SEPARATE_LEDGER"
+    },
+    {
+      "slot": 449382027,
+      "tx_index": 935,
+      "pool": "BxBD7QgyWEByS3VLHLzc9GXrW5BDEGhXjx3BiuLg14BV",
+      "signature": "gjV9yxYofgc72ng7C7ceuB2mkEhdY5Mh3FF6HBZQi7GPBJ7vYTmXz1CXZTHGEAVYQ1uxwHfSzcMQ3ptw6uZWP8L",
+      "event_count": 1,
+      "status": "UNRESOLVED",
+      "reason": "PROTOCOL_BURN_SEPARATE_LEDGER"
+    }
+  ],
+  "examples": [
+    {
+      "slot": 449382000,
+      "tx_index": 55,
+      "pool": "BPLSQip1RTYogdHKm1z8TSKsTyDLt2W2LRbyb2Z8AVS8",
+      "signature": "4GLYhJx3MyATaWPi6CqBpzbBznsu89ui4MM7NUH1WZDWHFbv5xMtvhf1nX6TsrsmS1BekaXYj4vHDYmZwohNZTjJ",
+      "event_count": 1,
+      "status": "RECONCILED",
+      "base_vault": "GRbSPUA2NNBKq3KXZ4V2bQvxadATAQ7ru3hi281u3hka",
+      "quote_vault": "ESUVPgXGfVb2Jyf9RvsdyXmbbHhBWh8c3fjan6n7BWde",
+      "base_mint": "J1hKVPkz3Z4AdrvcPkptRrYZZTzUKdobtzeMYxwWpump",
+      "quote_mint": "So11111111111111111111111111111111111111112",
+      "base_decimals": 6,
+      "quote_decimals": 9,
+      "pre_base": 15955213888509,
+      "pre_quote": 1086836579652,
+      "post_base": 15955212255934,
+      "post_quote": 1086836692886,
+      "predicted_post_base": 15955212255934,
+      "predicted_post_quote": 1086836692886,
+      "steps": [
+        {
+          "event_index": 53,
+          "kind": "BuyEvent",
+          "base_delta": -1632575,
+          "quote_delta": 113234,
+          "base_after": 15955212255934,
+          "quote_after": 1086836692886
+        }
+      ]
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 44,
+      "pool": "Cju7t5AndhKGKAi4T59drhAtHMEaBWSQkQpjfrHYQUmt",
+      "signature": "4B7gRhD5jc7JrWmBKG3U1D7JqTbUUhUm3vLdNSDDooKcwRtBbPAn8nfduoH1V415MxvwFMr9SFW3FmmEx7K5qPTC",
+      "event_count": 1,
+      "status": "RECONCILED",
+      "base_vault": "Fz9FfGmo2cskbP6c1NGUdm95odAEXmGggWdHRv5wATiz",
+      "quote_vault": "Ekx8wtWMMSh4huRnPwdY35Xep5WfqpUDdXVMpnjQrJ3P",
+      "base_mint": "Cf5oefTR54C986wvG49wRYwKkoCaRHDnhuZpd96dpump",
+      "quote_mint": "Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu",
+      "base_decimals": 6,
+      "quote_decimals": 8,
+      "pre_base": 170085074713688,
+      "pre_quote": 2023372316,
+      "post_base": 170107036130133,
+      "post_quote": 2023058890,
+      "predicted_post_base": 170107036130133,
+      "predicted_post_quote": 2023058890,
+      "steps": [
+        {
+          "event_index": 80,
+          "kind": "SellEvent",
+          "base_delta": 21961416445,
+          "quote_delta": -313426,
+          "base_after": 170107036130133,
+          "quote_after": 2023058890
+        }
+      ]
+    },
+    {
+      "slot": 449382000,
+      "tx_index": 46,
+      "pool": "5UWpZtVcKWcNonvg7x8ANY33nzpfEtryrzi8ymMH1YxN",
+      "signature": "4SDdKSzopomNyvmCx5CGcV6DuB6JP6cULX7uH7q1FkGsts35UrCZxfu5c25mfSrPYqRWFJz3gXyoXgsNY4TaUyQo",
+      "event_count": 2,
+      "status": "RECONCILED",
+      "base_vault": "H7zjWRcVQtEKNPtUDYUFB6Zue9UXrUZrJ5r3tSEHVZ7W",
+      "quote_vault": "6qTi4vey4SeBnD1nXQ7topj3MbmMd7hpt4cqhKBQfqty",
+      "base_mint": "So11111111111111111111111111111111111111112",
+      "quote_mint": "8x9ohy2kfxng1uwSXTG5UWhSYL5mEMN6G9UeC8oxkrHg",
+      "base_decimals": 9,
+      "quote_decimals": 6,
+      "pre_base": 611530471235,
+      "pre_quote": 878133123144327,
+      "post_base": 610526010344,
+      "post_quote": 879636033829732,
+      "predicted_post_base": 610526010344,
+      "predicted_post_quote": 879636033829732,
+      "steps": [
+        {
+          "event_index": 57,
+          "kind": "SellEvent",
+          "base_delta": 7639873864,
+          "quote_delta": -10808098746737,
+          "base_after": 619170345099,
+          "quote_after": 867325024397590
+        },
+        {
+          "event_index": 114,
+          "kind": "BuyEvent",
+          "base_delta": -8644334755,
+          "quote_delta": 12311009432142,
+          "base_after": 610526010344,
+          "quote_after": 879636033829732
+        }
+      ]
+    }
+  ]
+}
