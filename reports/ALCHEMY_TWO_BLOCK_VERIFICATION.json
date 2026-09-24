@@ -1,0 +1,130 @@
+{
+  "run_id": 36022303474,
+  "attempt": 2,
+  "artifact_id": 10818382262,
+  "artifact_sha256": "1fb066b48936345105e68632695d1a23f71e0a765b60fc58018aa2a3343bcbdc",
+  "network_requests_for_reanalysis": 0,
+  "slots": {
+    "449382002": {
+      "raw_sha256": "82e4bac186b1f3897efd4d4e42d63f528c20ffd4af280b0db2560d45b3bda558",
+      "status": "MATCH",
+      "transactions": 1029,
+      "groups": {
+        "header": true,
+        "signatures_and_versions": true,
+        "messages": true,
+        "execution": true,
+        "inner_instructions": true,
+        "logs": true,
+        "loaded_addresses": true,
+        "balances": true,
+        "all_result": true
+      },
+      "normalized_preexecution_fields": [],
+      "normalized_ui_amounts": [],
+      "exact_groups": {
+        "header": true,
+        "signatures_and_versions": true,
+        "messages": true,
+        "execution": true,
+        "inner_instructions": true,
+        "logs": true,
+        "loaded_addresses": true,
+        "balances": true,
+        "all_result": true
+      },
+      "comparison_mode": "EXACT"
+    },
+    "449382004": {
+      "raw_sha256": "0311c740ea344077bf91e9fb2935a4cf2c9c26f887e5c33cb13583b8862225f9",
+      "status": "MATCH",
+      "transactions": 1428,
+      "groups": {
+        "header": true,
+        "signatures_and_versions": true,
+        "messages": true,
+        "execution": true,
+        "inner_instructions": true,
+        "logs": true,
+        "loaded_addresses": true,
+        "balances": true,
+        "all_result": true
+      },
+      "normalized_preexecution_fields": [],
+      "normalized_ui_amounts": [
+        {
+          "index": 377,
+          "field": "preTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 377,
+          "field": "postTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 379,
+          "field": "preTokenBalances",
+          "balance_index": 7
+        },
+        {
+          "index": 379,
+          "field": "postTokenBalances",
+          "balance_index": 7
+        },
+        {
+          "index": 379,
+          "field": "postTokenBalances",
+          "balance_index": 13
+        },
+        {
+          "index": 379,
+          "field": "postTokenBalances",
+          "balance_index": 21
+        },
+        {
+          "index": 430,
+          "field": "postTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 488,
+          "field": "preTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 495,
+          "field": "preTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 495,
+          "field": "postTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 505,
+          "field": "preTokenBalances",
+          "balance_index": 2
+        },
+        {
+          "index": 649,
+          "field": "postTokenBalances",
+          "balance_index": 3
+        }
+      ],
+      "exact_groups": {
+        "header": true,
+        "signatures_and_versions": true,
+        "messages": true,
+        "execution": true,
+        "inner_instructions": true,
+        "logs": true,
+        "loaded_addresses": true,
+        "balances": false,
+        "all_result": false
+      },
+      "comparison_mode": "CANONICAL_TOKEN_UI_V1"
+    }
+  }
+}
