@@ -44,11 +44,11 @@ def main():
     deadline = time.monotonic() + LIMIT_SECONDS
     try:
         for slot in SLOTS:
+            report['requests'] += 1
             envelope, raw = call(endpoint, 'getBlock', [slot, {
                 'encoding': 'json', 'transactionDetails': 'full', 'rewards': False,
                 'commitment': 'finalized', 'maxSupportedTransactionVersion': 1}],
                 deadline, LIMIT_BYTES - report['response_bytes'])
-            report['requests'] += 1
             report['response_bytes'] += len(raw)
             if key.encode() in raw:
                 raise RuntimeError('Credential unexpectedly present in response')
@@ -80,6 +80,8 @@ def main():
         for slot in report['slots']:
             z.write(out / f'{slot}.json', f'{slot}.json')
     print('Status:', report['status'], '| verzoeken:', report['requests'])
+    if 'issue' in report:
+        print('Fout:', report['issue'])
     print('Rapport:', out / 'comparison.json')
     print('Bewijs:', archive)
     return 0 if report['status'] == 'MATCH_FOR_TWO_BLOCKS' else 2
