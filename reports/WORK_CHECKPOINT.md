@@ -23,14 +23,25 @@ exact integer pre/post vault balances. 250 groups contain multiple events replay
 The 3 protocol burns remain explicitly separate; no other unresolved groups or decoder issues.
 Eight known-answer/adversarial tests pass. This work made zero new network requests.
 
+## Additional completed step: token instructions and core fees
+Read `reports/TOKEN_LEDGER_REPORT.md` and `TOKEN_LEDGER_VERIFICATION.json`.
+2,873 successful target transactions audited; 477 fully reconcile inspected token accounts,
+2,360 partial, 36 held back for account reinitialization. 17,186 account observations reconcile.
+2,110 AMM core fee checks and all 3 protocol burns pass their scoped checks.
+Unresolved: 2,522 WSOL account observations, 63 observations with unsupported instructions,
+256 multi-event fee groups, 31 cashback/holder variants, 1 unsupported-instruction fee group.
+Residual buyback amount matches; official buyback recipient identity remains unverified.
+19 additional tests, including one real fee-split fixture. No new chain requests.
+
 ## Resume action
-Extend the transaction-bounded reserve ledger with instruction-level SPL Token/Token-2022
-transfer/mint/burn accounting, fee-recipient reconciliation and continuity between transactions.
-Existing module: `src/meme_quant/reserve_ledger.py`; offline runner:
-`scripts/audit_reserve_ledger.py`. Use the already verified artifact, not another download run.
-Keep protocol burn separate from wallet demand and unsupported cases explicitly unresolved.
-Other gates remain: upstream independence, complete historical census, binary/IDL mapping,
-known-answer parser checks, and bounded planning for 1,000 real launches. EXP-000 remains blocked.
+Prioritize a lamport/SOL account-lifecycle ledger on the same verified artifact to explain
+wrapped-SOL creation, SyncNative, closing and reuse. Do not infer historical rent constants or
+missing balances from the desired answer. Then address multi-action fee attribution,
+cashback/holder rewards, unsupported Token-2022 instructions and buyback recipient provenance.
+Modules: `token_ledger.py`, `fee_audit.py`, `reserve_ledger.py`; scripts:
+`audit_token_ledger.py`, `audit_reserve_ledger.py` (PYTHONPATH=src, offline).
+The complete ledger, historical census, binary/IDL mapping, upstream independence and
+1,000-launch pilot gates remain open. No live trading or bulk collection has been enabled.
 
 ## Execution route and limits
 GitHub is the durable source of code and reports. The initial scratch checkout may be older

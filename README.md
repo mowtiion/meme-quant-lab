@@ -31,6 +31,8 @@ en alle logs blijven vergeleken. Zie [het Alchemy-rapport](reports/ALCHEMY_PHASE
 en [de hervatstatus](reports/WORK_CHECKPOINT.md).
 De eerste reserve-ledger reconcilieert daarnaast 2.663 gewone PumpSwap-acties op 187 pools
 met exacte integerbalansen; [reikwijdte en vervolg](reports/RESERVE_LEDGER_REPORT.md).
+De [token- en fee-audit](reports/TOKEN_LEDGER_REPORT.md) verklaart 17.186 accountobservaties
+en 2.110 core-feecontroles; wrapped-SOL-levenscycli en andere expliciete uitzonderingen blijven open.
 
 ## Starten — Python 3.12
 
