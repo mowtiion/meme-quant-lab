@@ -44,6 +44,15 @@ geen logs zonder afkapping in de twee genoemde slots; de proef moet dat
 daadwerkelijk vaststellen. Er is nog geen account of sleutel voor een nieuwe
 provider ingesteld. EXP-000 blijft FAIL en EXP-001 blijft geblokkeerd.
 
+Voor deze twee verzoeken staat een aparte handmatige workflow klaar:
+`.github/workflows/alchemy-archive-probe.yml`. Een nieuw Alchemy-account geeft
+een eigen Solana Mainnet API-key; die hoort eenmalig in GitHub Actions als
+repository-secret `ALCHEMY_API_KEY`. De workflow gebruikt uitsluitend `getBlock`
+voor de twee vastgezette slots en begrenst responsdata op 24 MiB en uitvoering
+op 90 seconden. De raw antwoorden en een geredigeerd rapport blijven zeven
+dagen als artifact beschikbaar. De workflow start niet automatisch en raakt
+de Helius-secret niet.
+
 De drie-blokkenaudit is herhaalbaar met
 `scripts/audit_phase_b_scope.py` en het JSON-bewijs
 `reports/SECOND_SOURCE_TARGET_SCOPE_VERIFICATION.json`.
